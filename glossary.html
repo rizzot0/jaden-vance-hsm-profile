@@ -270,6 +270,90 @@
       border-left-color: var(--accent-terminal-cyan);
       background: #131520;
     }
+    .term-layout {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .term-media {
+      flex: 0 0 135px;
+      max-width: 135px;
+      width: 135px;
+    }
+    .term-frame {
+      background: #07080d;
+      border: 1px solid #3d1b28;
+      padding: 5px;
+      box-shadow: 2px 2px 0px #000;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+    .term-entry:hover .term-frame {
+      border-color: var(--accent-wine-bright);
+      box-shadow: 0 0 10px rgba(255, 51, 102, 0.35);
+    }
+    .term-thumb {
+      width: 100%;
+      height: 125px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid #1a1e2d;
+      background: #000;
+    }
+    .term-thumb-contain {
+      object-fit: contain;
+      background: #07080f;
+      padding: 6px;
+    }
+    .term-caption {
+      display: block;
+      font-family: var(--font-pixel);
+      font-size: 7.5px;
+      color: #9ba4bc;
+      margin-top: 5px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      word-break: break-word;
+    }
+    .term-body {
+      flex: 1;
+      min-width: 0;
+    }
+    .term-showcase-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 8px 4px;
+      background: #06070a;
+      border: 1px solid #232738;
+      align-items: center;
+      justify-content: center;
+      min-height: 125px;
+    }
+    .term-showcase-row {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .term-showcase-box img {
+      image-rendering: pixelated;
+    }
+
+    @media (max-width: 640px) {
+      .term-layout {
+        flex-direction: column;
+      }
+      .term-media {
+        flex: auto;
+        max-width: 100%;
+        width: 100%;
+      }
+      .term-thumb {
+        height: 160px;
+      }
+    }
     .term-top {
       display: flex;
       justify-content: space-between;
@@ -383,106 +467,176 @@
 
           <!-- American Football -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">American Football (y la canción "Never Meant")</span>
-              <span class="term-category">Midwest Emo / Math Rock (1999)</span>
-            </div>
-            <div class="term-meta">Álbum homónimo grabado en Champaign-Urbana, Illinois (Polyvinyl Records).</div>
-            <div class="term-definition">
-              Banda pionera del sonido <em>Midwest Emo</em>. Se caracteriza por guitarras entrelazadas en afinaciones abiertas no convencionales (típicamente <code>FACGCE</code>), métricas de tiempo sincopadas e irregulares, y letras melancólicas sobre rupturas y nostalgia adolescente de pueblo pequeño.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Su canción "Never Meant" es la pista #1 de su reproductor Winamp y la frase <em>«I'll see you when we're both not so emotional»</em> encabeza la marquesina superior. Jaden la usa para contrastar la emoción real con el melodrama plástico de Troy y Gabriella.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/american_football.jpg" alt="American Football House Urbana Illinois" class="term-thumb" loading="lazy">
+                  <span class="term-caption">URBANA, IL // LP1 (1999)</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">American Football (y la canción "Never Meant")</span>
+                  <span class="term-category">Midwest Emo / Math Rock (1999)</span>
+                </div>
+                <div class="term-meta">Álbum homónimo grabado en Champaign-Urbana, Illinois (Polyvinyl Records).</div>
+                <div class="term-definition">
+                  Banda pionera del sonido <em>Midwest Emo</em>. Se caracteriza por guitarras entrelazadas en afinaciones abiertas no convencionales (típicamente <code>FACGCE</code>), métricas de tiempo sincopadas e irregulares, y letras melancólicas sobre rupturas y nostalgia adolescente de pueblo pequeño.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Su canción "Never Meant" es la pista #1 de su reproductor Winamp y la frase <em>«I'll see you when we're both not so emotional»</em> encabeza la marquesina superior. Jaden la usa para contrastar la emoción real con el melodrama plástico de Troy y Gabriella.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Slint -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Slint &amp; el álbum "Spiderland" (1991)</span>
-              <span class="term-category">Post-Rock / Math Rock / Proto-Emo</span>
-            </div>
-            <div class="term-meta">Banda de Louisville, Kentucky. Grabado por Brian Paulson; masterizado por Bob Weston.</div>
-            <div class="term-definition">
-              Considerado uno de los discos más influyentes del rock independiente de los 90. Reemplazó los estribillos tradicionales con narraciones en voz baja (spoken word) sobre arpegios disonantes de guitarra limpia, que de pronto explotan en muros ensordecedores de distorsión dinámica ("loud-quiet-loud").
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> La canción "Breadcrumb Trail" y "Washer" son su religión. Jaden cita la famosa frase del fanzine de culto: <em>«I miss you, not in a Slint way, but in a real way»</em>.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/slint_spiderland.jpg" alt="Slint Spiderland Louisville Kentucky" class="term-thumb" loading="lazy">
+                  <span class="term-caption">SLINT // LOUISVILLE, KY (1991)</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Slint &amp; el álbum "Spiderland" (1991)</span>
+                  <span class="term-category">Post-Rock / Math Rock / Proto-Emo</span>
+                </div>
+                <div class="term-meta">Banda de Louisville, Kentucky. Grabado por Brian Paulson; masterizado por Bob Weston.</div>
+                <div class="term-definition">
+                  Considerado uno de los discos más influyentes del rock independiente de los 90. Reemplazó los estribillos tradicionales con narraciones en voz baja (spoken word) sobre arpegios disonantes de guitarra limpia, que de pronto explotan en muros ensordecedores de distorsión dinámica ("loud-quiet-loud").
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> La canción "Breadcrumb Trail" y "Washer" son su religión. Jaden cita la famosa frase del fanzine de culto: <em>«I miss you, not in a Slint way, but in a real way»</em>.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Neutral Milk Hotel -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Neutral Milk Hotel ("In the Aeroplane Over the Sea", 1998)</span>
-              <span class="term-category">Indie Rock Lo-Fi / Psych-Folk</span>
-            </div>
-            <div class="term-meta">Liderados por Jeff Mangum. Parte del colectivo The Elephant 6.</div>
-            <div class="term-definition">
-              Una obra maestra de folk crudo grabado en cinta saturada. Destaca por sus guitarras acústicas rasgueadas con ferocidad, sierras musicales, trompetas distorsionadas y letras poéticas surrealistas sobre la Segunda Guerra Mundial y Ana Frank. Uno de los discos con puntaje más alto en la historia de RateYourMusic.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> La pista #2 del Winamp ("Holland, 1945") y la cita en la marquesina superior: <em>«And in my dreams you're alive and you're crying...»</em>. Jeff Mangum ocupa un lugar honorífico en su Top 8.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/neutral_milk_hotel.jpg" alt="Jeff Mangum Neutral Milk Hotel" class="term-thumb" loading="lazy">
+                  <span class="term-caption">JEFF MANGUM // ELEPHANT 6 (1998)</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Neutral Milk Hotel ("In the Aeroplane Over the Sea", 1998)</span>
+                  <span class="term-category">Indie Rock Lo-Fi / Psych-Folk</span>
+                </div>
+                <div class="term-meta">Liderados por Jeff Mangum. Parte del colectivo The Elephant 6.</div>
+                <div class="term-definition">
+                  Una obra maestra de folk crudo grabado en cinta saturada. Destaca por sus guitarras acústicas rasgueadas con ferocidad, sierras musicales, trompetas distorsionadas y letras poéticas surrealistas sobre la Segunda Guerra Mundial y Ana Frank. Uno de los discos con puntaje más alto en la historia de RateYourMusic.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> La pista #2 del Winamp ("Holland, 1945") y la cita en la marquesina superior: <em>«And in my dreams you're alive and you're crying...»</em>. Jeff Mangum ocupa un lugar honorífico en su Top 8.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Joy Division -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Joy Division &amp; "Disorder" (1979)</span>
-              <span class="term-category">Post-Punk Británico / Factory Records</span>
-            </div>
-            <div class="term-meta">Manchester, Inglaterra. Producido por Martin Hannett con técnicas pioneras de eco y espacio.</div>
-            <div class="term-definition">
-              La banda de Ian Curtis definió el sonido gótico y post-punk: bajos melódicos conducidos por Peter Hook tocados en los trastes agudos, baterías precisas tipo metrónomo y letras sombrías sobre alienación existencial.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Pista #4 del reproductor. Jaden se queja de los estudiantes de East High que compran la camiseta con las ondas de <em>Unknown Pleasures</em> en tiendas departamentales sin saber quién fue Ian Curtis.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/joy_division_pulsar.jpg" alt="Joy Division Unknown Pleasures Pulsar CP1919" class="term-thumb" loading="lazy">
+                  <span class="term-caption">PULSAR CP 1919 // FACTORY RECORDS</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Joy Division &amp; "Disorder" (1979)</span>
+                  <span class="term-category">Post-Punk Británico / Factory Records</span>
+                </div>
+                <div class="term-meta">Manchester, Inglaterra. Producido por Martin Hannett con técnicas pioneras de eco y espacio.</div>
+                <div class="term-definition">
+                  La banda de Ian Curtis definió el sonido gótico y post-punk: bajos melódicos conducidos por Peter Hook tocados en los trastes agudos, baterías precisas tipo metrónomo y letras sombrías sobre alienación existencial.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Pista #4 del reproductor. Jaden se queja de los estudiantes de East High que compran la camiseta con las ondas de <em>Unknown Pleasures</em> en tiendas departamentales sin saber quién fue Ian Curtis.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Steve Albini -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Steve Albini &amp; Shellac</span>
-              <span class="term-category">Ingeniería de Audio Analógica / Ética DIY</span>
-            </div>
-            <div class="term-meta">Grabó <em>In Utero</em> de Nirvana, <em>Surfer Rosa</em> de Pixies y fundó el estudio Electrical Audio.</div>
-            <div class="term-definition">
-              Ingeniero de audio de culto. Se negaba a llamarse "productor" y jamás cobraba regalías de los discos que grababa. Famoso por su ética anti-corporativa implacable, captura de micrófonos ambientales crudos y su rechazo militante a los retoques digitales de estudio.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Ocupa el puesto #1 del Top 8 de amigos de Jaden bajo el título <em>"El Único Humano que Entiende de Audio"</em>.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/steve_albini.jpg" alt="Steve Albini Electrical Audio" class="term-thumb" loading="lazy">
+                  <span class="term-caption">STEVE ALBINI // ELECTRICAL AUDIO</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Steve Albini &amp; Shellac</span>
+                  <span class="term-category">Ingeniería de Audio Analógica / Ética DIY</span>
+                </div>
+                <div class="term-meta">Grabó <em>In Utero</em> de Nirvana, <em>Surfer Rosa</em> de Pixies y fundó el estudio Electrical Audio.</div>
+                <div class="term-definition">
+                  Ingeniero de audio de culto. Se negaba a llamarse "productor" y jamás cobraba regalías de los discos que grababa. Famoso por su ética anti-corporativa implacable, captura de micrófonos ambientales crudos y su rechazo militante a los retoques digitales de estudio.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Ocupa el puesto #1 del Top 8 de amigos de Jaden bajo el título <em>"El Único Humano que Entiende de Audio"</em>.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Radiohead -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Radiohead ("OK Computer" &amp; "Kid A")</span>
-              <span class="term-category">Art Rock / Electrónica Experimental</span>
-            </div>
-            <div class="term-meta">Oxfordshire, Reino Unido. Producido por Nigel Godrich.</div>
-            <div class="term-definition">
-              El grupo que abandonó el britpop en 1997 para crear <em>OK Computer</em> (un lamento sobre la deshumanización tecnológica) y en el 2000 lanzó <em>Kid A</em>, destruyendo las guitarras para componer con sintetizadores modulares, cajas de ritmo y free jazz.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Representado con el blinkie animado de Radiohead en su colección y la referencia a "Paranoid Android" en sus stamps.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/radiohead_thom.jpg" alt="Thom Yorke Radiohead Kid A" class="term-thumb" loading="lazy">
+                  <span class="term-caption">THOM YORKE // ERA KID A (2000)</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Radiohead ("OK Computer" &amp; "Kid A")</span>
+                  <span class="term-category">Art Rock / Electrónica Experimental</span>
+                </div>
+                <div class="term-meta">Oxfordshire, Reino Unido. Producido por Nigel Godrich.</div>
+                <div class="term-definition">
+                  El grupo que abandonó el britpop en 1997 para crear <em>OK Computer</em> (un lamento sobre la deshumanización tecnológica) y en el 2000 lanzó <em>Kid A</em>, destruyendo las guitarras para componer con sintetizadores modulares, cajas de ritmo y free jazz.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Representado con el blinkie animado de Radiohead en su colección y la referencia a "Paranoid Android" en sus stamps.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Fugazi -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Fugazi &amp; Ian MacKaye</span>
-              <span class="term-category">Post-Hardcore / Dischord Records</span>
-            </div>
-            <div class="term-meta">Washington, D.C. Pioneros de la filosofía Straight Edge y el circuito DIY.</div>
-            <div class="term-definition">
-              Banda legendaria por tocar shows a $5 dólares de entrada para todas las edades, sin vender merchandising corporativo y manteniendo independencia total de las grandes discográficas multinacionales.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Ian MacKaye está en el Top 8 con la etiqueta <em>"Entradas a $5 dólares. Cero comerciales"</em>, en directa oposición a los boletos inflados de los musicales escolares.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/fugazi_ian.jpg" alt="Ian MacKaye Fugazi Live" class="term-thumb" loading="lazy">
+                  <span class="term-caption">IAN MACKAYE // FUGAZI (DISCHORD)</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Fugazi &amp; Ian MacKaye</span>
+                  <span class="term-category">Post-Hardcore / Dischord Records</span>
+                </div>
+                <div class="term-meta">Washington, D.C. Pioneros de la filosofía Straight Edge y el circuito DIY.</div>
+                <div class="term-definition">
+                  Banda legendaria por tocar shows a $5 dólares de entrada para todas las edades, sin vender merchandising corporativo y manteniendo independencia total de las grandes discográficas multinacionales.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Ian MacKaye está en el Top 8 con la etiqueta <em>"Entradas a $5 dólares. Cero comerciales"</em>, en directa oposición a los boletos inflados de los musicales escolares.
+                </div>
+              </div>
             </div>
           </article>
 
@@ -499,72 +653,122 @@
 
           <!-- FLAC vs MP3 -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">FLAC vs. MP3 (Lossless vs. Lossy)</span>
-              <span class="term-category">Formatos de Compresión Digital</span>
-            </div>
-            <div class="term-definition">
-              <strong>MP3:</strong> Formato con pérdida (lossy) inventado en los 90 que recorta frecuencias inaudibles para reducir el peso del archivo a 128 o 192 kbps. Para un audiófilo, mutila la profundidad espacial y la respuesta de graves.<br>
-              <strong>FLAC (Free Lossless Audio Codec):</strong> Compresión sin pérdida de información matemática. Conserva el 100% de la onda acústica original del máster de estudio.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Su reproductor Winamp dice <em>«44.1 kHz FLAC»</em> y en su mochila presume que su iPod solo guarda pistas sin comprimir.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/flac_lossless.png" alt="FLAC Free Lossless Audio Codec Logo" class="term-thumb term-thumb-contain" loading="lazy">
+                  <span class="term-caption">CODEC FLAC // AUDIO LOSSLESS</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">FLAC vs. MP3 (Lossless vs. Lossy)</span>
+                  <span class="term-category">Formatos de Compresión Digital</span>
+                </div>
+                <div class="term-definition">
+                  <strong>MP3:</strong> Formato con pérdida (lossy) inventado en los 90 que recorta frecuencias inaudibles para reducir el peso del archivo a 128 o 192 kbps. Para un audiófilo, mutila la profundidad espacial y la respuesta de graves.<br>
+                  <strong>FLAC (Free Lossless Audio Codec):</strong> Compresión sin pérdida de información matemática. Conserva el 100% de la onda acústica original del máster de estudio.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Su reproductor Winamp dice <em>«44.1 kHz FLAC»</em> y en su mochila presume que su iPod solo guarda pistas sin comprimir.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Compases Impares -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Métricas Impares &amp; Polirritmia (Compases de 5/4, 7/8)</span>
-              <span class="term-category">Teoría Musical &amp; Compás</span>
-            </div>
-            <div class="term-definition">
-              La inmensa mayoría de las canciones pop comerciales y bailables utilizan un compás de 4/4 (cuatro tiempos estándar por compás: bombo, caja, bombo, caja). Los géneros como el math rock y el jazz usan compases asimétricos (como 5 tiempos o 7 corcheas), lo que genera una sensación de caída y complejidad rítmica.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Jaden se burla de Chad Danforth diciendo: <em>«Entiendo que contar hasta cinco supere la capacidad cognitiva del equipo de básquetbol»</em> cuando Chad se queja de su música.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/time_signature_54.png" alt="Time Signature 5/4 Notation" class="term-thumb term-thumb-contain" loading="lazy">
+                  <span class="term-caption">COMPÁS 5/4 // MATH ROCK NOTATION</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Métricas Impares &amp; Polirritmia (Compases de 5/4, 7/8)</span>
+                  <span class="term-category">Teoría Musical &amp; Compás</span>
+                </div>
+                <div class="term-definition">
+                  La inmensa mayoría de las canciones pop comerciales y bailables utilizan un compás de 4/4 (cuatro tiempos estándar por compás: bombo, caja, bombo, caja). Los géneros como el math rock y el jazz usan compases asimétricos (como 5 tiempos o 7 corcheas), lo que genera una sensación de caída y complejidad rítmica.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Jaden se burla de Chad Danforth diciendo: <em>«Entiendo que contar hasta cinco supere la capacidad cognitiva del equipo de básquetbol»</em> cuando Chad se queja de su música.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Recorte de Agudos / EQ -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Recorte de Agudos (High-Cut / De-essing) &amp; Faders</span>
-              <span class="term-category">Operación de Consola de Mezclas</span>
-            </div>
-            <div class="term-definition">
-              Técnica de ecualización que reduce decibelios en el rango de los 4 kHz a 10 kHz para suavizar sibilancias molestas (el sonido de las 'S') o voces demasiado chillonas que pueden generar distorsión armónica en los altavoces.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> En la reseña de "Bop to the Top", Jaden confiesa: <em>«Tuve que recortar 14dB en los agudos de la consola para evitar hemorragias en el público con los gritos de Sharpay Evans»</em>.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/mixer_faders.jpg" alt="SSL Analog Mixing Console EQ Faders" class="term-thumb" loading="lazy">
+                  <span class="term-caption">CONSOLA SSL // FADERS &amp; EQ</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Recorte de Agudos (High-Cut / De-essing) &amp; Faders</span>
+                  <span class="term-category">Operación de Consola de Mezclas</span>
+                </div>
+                <div class="term-definition">
+                  Técnica de ecualización que reduce decibelios en el rango de los 4 kHz a 10 kHz para suavizar sibilancias molestas (el sonido de las 'S') o voces demasiado chillonas que pueden generar distorsión armónica en los altavoces.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> En la reseña de "Bop to the Top", Jaden confiesa: <em>«Tuve que recortar 14dB en los agudos de la consola para evitar hemorragias en el público con los gritos de Sharpay Evans»</em>.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Sony MDR-7506 -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Audífonos Sony MDR-7506</span>
-              <span class="term-category">Hardware de Estudio de Grabación</span>
-            </div>
-            <div class="term-definition">
-              Audífonos profesionales cerrados lanzados en 1991, famosos en estudios de radio y cabinas de sonido por su cable en espiral azul, respuesta plana (sin graves inflados artificialmente) y altísimo aislamiento pasivo del ruido ambiente.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Forman parte de su atuendo diario indispensable; los usa como "escudo sónico" para bloquear los gritos de los pep rallies de East High.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/gallery/sony_mdr7506.jpg" alt="Sony MDR-7506 Studio Monitor Headphones" class="term-thumb" loading="lazy">
+                  <span class="term-caption">SONY MDR-7506 // MONITOR PRO</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Audífonos Sony MDR-7506</span>
+                  <span class="term-category">Hardware de Estudio de Grabación</span>
+                </div>
+                <div class="term-definition">
+                  Audífonos profesionales cerrados lanzados en 1991, famosos en estudios de radio y cabinas de sonido por su cable en espiral azul, respuesta plana (sin graves inflados artificialmente) y altísimo aislamiento pasivo del ruido ambiente.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Forman parte de su atuendo diario indispensable; los usa como "escudo sónico" para bloquear los gritos de los pep rallies de East High.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Rockbox Firmware -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Firmware Rockbox para iPod Classic</span>
-              <span class="term-category">Software Libre para Reproductores</span>
-            </div>
-            <div class="term-definition">
-              Un sistema operativo de código abierto alternativo que reemplazaba el software de fábrica de Apple en los iPods de disco duro de los 2000. Permitía reproducir archivos FLAC y ecualizar por bandas paramétricas sin pasar por iTunes.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Su Last.fm indica <em>«iPod Classic Rockbox»</em> para recalcar que jamás utiliza el software comercial de Apple.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/rockbox_ipod.jpg" alt="iPod Classic running Rockbox Firmware" class="term-thumb" loading="lazy">
+                  <span class="term-caption">IPOD CLASSIC // ROCKBOX FLAC OS</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Firmware Rockbox para iPod Classic</span>
+                  <span class="term-category">Software Libre para Reproductores</span>
+                </div>
+                <div class="term-definition">
+                  Un sistema operativo de código abierto alternativo que reemplazaba el software de fábrica de Apple en los iPods de disco duro de los 2000. Permitía reproducir archivos FLAC y ecualizar por bandas paramétricas sin pasar por iTunes.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Su Last.fm indica <em>«iPod Classic Rockbox»</em> para recalcar que jamás utiliza el software comercial de Apple.
+                </div>
+              </div>
             </div>
           </article>
 
@@ -581,72 +785,126 @@
 
           <!-- RateYourMusic -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">RateYourMusic (RYM)</span>
-              <span class="term-category">Base de Datos Comunitaria</span>
-            </div>
-            <div class="term-definition">
-              Sitio web fundado en el año 2000 donde melómanos y aficionados al rock alternativo catalogan discografías enteras, emiten calificaciones numéricas estrictas con decimales (de 0.5 a 5.0 estrellas) y escriben ensayos críticos exhaustivos.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Toda la sección central es una tabla de RYM donde califica las canciones de East High ("Bop to the Top", "Get'cha Head in the Game", "Start of Something New") con puntajes humillantes como 0.5 y 1.0.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/rym_rateyourmusic.png" alt="Rate Your Music RYM Logo" class="term-thumb term-thumb-contain" loading="lazy">
+                  <span class="term-caption">RYM // RATEYOURMUSIC.COM</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">RateYourMusic (RYM)</span>
+                  <span class="term-category">Base de Datos Comunitaria</span>
+                </div>
+                <div class="term-definition">
+                  Sitio web fundado en el año 2000 donde melómanos y aficionados al rock alternativo catalogan discografías enteras, emiten calificaciones numéricas estrictas con decimales (de 0.5 a 5.0 estrellas) y escriben ensayos críticos exhaustivos.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Toda la sección central es una tabla de RYM donde califica las canciones de East High ("Bop to the Top", "Get'cha Head in the Game", "Start of Something New") con puntajes humillantes como 0.5 y 1.0.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Top 8 MySpace -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">El Top 8 de MySpace</span>
-              <span class="term-category">Fenómeno Social de 2005</span>
-            </div>
-            <div class="term-definition">
-              En MySpace, los perfiles permitían mostrar una cuadrícula pública con tus 8 amigos más cercanos. El orden determinaba quién era tu mejor amigo y cambiaba semanalmente, provocando dramas reales en las secundarias de los 2000.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Su Top 8 no contiene a ningún estudiante de East High (salvo Kelsi en el puesto #5). Sus amigos son productores de culto como Steve Albini, Ian MacKaye, su café frío y una pantalla de estática que dice "Nadie Más / No calificas".
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/myspace_top8.jpg" alt="Tom Anderson MySpace First Friend" class="term-thumb" loading="lazy">
+                  <span class="term-caption">TOM // AMIGO #1 DE MYSPACE</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">El Top 8 de MySpace</span>
+                  <span class="term-category">Fenómeno Social de 2005</span>
+                </div>
+                <div class="term-definition">
+                  En MySpace, los perfiles permitían mostrar una cuadrícula pública con tus 8 amigos más cercanos. El orden determinaba quién era tu mejor amigo y cambiaba semanalmente, provocando dramas reales en las secundarias de los 2000.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Su Top 8 no contiene a ningún estudiante de East High (salvo Kelsi en el puesto #5). Sus amigos son productores de culto como Steve Albini, Ian MacKaye, su café frío y una pantalla de estática que dice "Nadie Más / No calificas".
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Audioscrobbler & Last.fm -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Audioscrobbler / Last.fm ("Scrobbling")</span>
-              <span class="term-category">Red Social de Hábitos Musicales</span>
-            </div>
-            <div class="term-definition">
-              Servicio de 2003 que instalaba un plugin en reproductores como Winamp para enviar a internet en tiempo real cada canción reproducida. Si escuchabas 100 veces a Joy Division, tus amigos podían ver el registro exacto de tu obsesión.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> El recuadro <em>«SCROBBLING VÍA AUDIOSCROBBLER ● LIVE»</em> en su barra lateral simula este widget en tiempo real con las canciones del sintetizador.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/lastfm_scrobble.png" alt="Audioscrobbler Last.fm Logo" class="term-thumb term-thumb-contain" loading="lazy">
+                  <span class="term-caption">AUDIOSCROBBLER // LAST.FM</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Audioscrobbler / Last.fm ("Scrobbling")</span>
+                  <span class="term-category">Red Social de Hábitos Musicales</span>
+                </div>
+                <div class="term-definition">
+                  Servicio de 2003 que instalaba un plugin en reproductores como Winamp para enviar a internet en tiempo real cada canción reproducida. Si escuchabas 100 veces a Joy Division, tus amigos podían ver el registro exacto de tu obsesión.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> El recuadro <em>«SCROBBLING VÍA AUDIOSCROBBLER ● LIVE»</em> en su barra lateral simula este widget en tiempo real con las canciones del sintetizador.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- 88x31 Badges & Blinkies -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Botones 88x31 &amp; Blinkies Animados</span>
-              <span class="term-category">Heráldica Pixel-Art de la Web 1.0</span>
-            </div>
-            <div class="term-definition">
-              <strong>Botones 88x31:</strong> Banners diminutos de exactamente 88 píxeles de ancho por 31 de alto utilizados para promover programas, filosofías web (<em>"Made with Notepad"</em>, <em>"Firefox 2.0"</em>, <em>"Winamp"</em>) o intercambiar enlaces.<br>
-              <strong>Blinkies:</strong> Barras animadas intermitentes en formato GIF de 150x20 píxeles que declaraban tribus urbanas o estados de ánimo (<em>"Emo Online"</em>, <em>"Anti-Social"</em>, <em>"Radiohead"</em>).
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> Los botones animan el pie de página y la sección de stamps, rescatados directamente de archivos auténticos de Neocities y GeoCities.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <div class="term-showcase-box">
+                    <img src="assets/badges/winamp.gif" alt="Winamp 88x31 badge" width="88" height="31">
+                    <img src="assets/badges/firefox2.gif" alt="Firefox 2 88x31 badge" width="88" height="31">
+                    <img src="assets/blinkies/radiohead.gif" alt="Radiohead blinkie" style="max-width: 120px; height: auto;">
+                  </div>
+                  <span class="term-caption">BOTONES 88x31 &amp; BLINKIES GIF</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Botones 88x31 &amp; Blinkies Animados</span>
+                  <span class="term-category">Heráldica Pixel-Art de la Web 1.0</span>
+                </div>
+                <div class="term-definition">
+                  <strong>Botones 88x31:</strong> Banners diminutos de exactamente 88 píxeles de ancho por 31 de alto utilizados para promover programas, filosofías web (<em>"Made with Notepad"</em>, <em>"Firefox 2.0"</em>, <em>"Winamp"</em>) o intercambiar enlaces.<br>
+                  <strong>Blinkies:</strong> Barras animadas intermitentes en formato GIF de 150x20 píxeles que declaraban tribus urbanas o estados de ánimo (<em>"Emo Online"</em>, <em>"Anti-Social"</em>, <em>"Radiohead"</em>).
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> Los botones animan el pie de página y la sección de stamps, rescatados directamente de archivos auténticos de Neocities y GeoCities.
+                </div>
+              </div>
             </div>
           </article>
 
           <!-- Webrings -->
           <article class="term-entry">
-            <div class="term-top">
-              <span class="term-name">Webrings (Anillos de Páginas Web)</span>
-              <span class="term-category">Sistema de Navegación Pre-Algoritmos</span>
-            </div>
-            <div class="term-definition">
-              Antes de que existieran los feeds algorítmicos o las recomendaciones de Instagram, los sitios independientes se agrupaban en cadenas circulares donde cada página tenía enlaces de <em>«« Sitio Anterior»</em>, <em>«[ ? ] Aleatorio»</em> y <em>«Sitio Siguiente »»</em>.
-            </div>
-            <div class="term-jaden-context">
-              <strong>En el perfil de Jaden:</strong> El bloque del <em>Midwest Emo &amp; Misunderstood Sound Techs Webring</em> al final del perfil recrea esta navegación con alertas interactivas.
+            <div class="term-layout">
+              <div class="term-media">
+                <div class="term-frame">
+                  <img src="assets/glossary/webring_logo.png" alt="Webring Hub Diagram" class="term-thumb term-thumb-contain" loading="lazy">
+                  <span class="term-caption">WEBRING // RED EN ANILLO</span>
+                </div>
+              </div>
+              <div class="term-body">
+                <div class="term-top">
+                  <span class="term-name">Webrings (Anillos de Páginas Web)</span>
+                  <span class="term-category">Sistema de Navegación Pre-Algoritmos</span>
+                </div>
+                <div class="term-definition">
+                  Antes de que existieran los feeds algorítmicos o las recomendaciones de Instagram, los sitios independientes se agrupaban en cadenas circulares donde cada página tenía enlaces de <em>«« Sitio Anterior»</em>, <em>«[ ? ] Aleatorio»</em> y <em>«Sitio Siguiente »»</em>.
+                </div>
+                <div class="term-jaden-context">
+                  <strong>En el perfil de Jaden:</strong> El bloque del <em>Midwest Emo &amp; Misunderstood Sound Techs Webring</em> al final del perfil recrea esta navegación con alertas interactivas.
+                </div>
+              </div>
             </div>
           </article>
 
@@ -703,7 +961,7 @@
 
       const p = document.createElement('span');
       p.className = 'cursor-particle';
-      p.textContent = chars[Math.floor(Math.random() * particleChars.length)];
+      p.textContent = chars[Math.floor(Math.random() * chars.length)];
       p.style.left = (e.pageX + (Math.random() * 8 - 4)) + 'px';
       p.style.top = (e.pageY + (Math.random() * 8 - 4)) + 'px';
       p.style.color = colors[Math.floor(Math.random() * colors.length)];
