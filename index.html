@@ -700,80 +700,62 @@
     .score-25 { background: #222533; color: #ced6e0; }
     .score-45 { background: #0c3319; color: #51cf66; border: 1px solid #2b8a3e; }
 
-    /* Stamps & Blinkies */
+    /* Authentic Stamps & Blinkies */
     .stamps-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+      padding: 10px;
+      background: #08090e;
+      border: 1px dotted #3d4257;
+    }
+    .stamp-item {
+      width: 99px;
+      height: 56px;
+      object-fit: cover;
+      image-rendering: pixelated;
+      display: inline-block;
+      border: 1px solid #282a3a;
+      background: #111;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+      cursor: pointer;
+    }
+    .stamp-item:hover {
+      transform: scale(1.12);
+      border-color: var(--accent-wine-bright);
+      box-shadow: 0 0 10px rgba(255, 107, 139, 0.55);
+      z-index: 5;
+    }
+
+    /* Authentic Animated Blinkies */
+    .blinkies-container {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       justify-content: center;
-      padding: 8px;
-      background: #0b0c11;
-      border: 1px dotted #3d4257;
-    }
-    .pixel-stamp {
-      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      width: 99px;
-      height: 56px;
-      background: #181a24;
-      border: 2px dashed #4e536d;
-      padding: 2px;
-      text-align: center;
-      font-family: var(--font-pixel);
-      font-size: 8px;
-      color: #fff;
-      font-weight: bold;
-      text-transform: uppercase;
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-      user-select: none;
-      transition: transform 0.15s, border-color 0.15s;
-    }
-    .pixel-stamp:hover {
-      transform: scale(1.05);
-      border-color: var(--accent-wine-bright);
-    }
-    .pixel-stamp.emo { background: linear-gradient(135deg, #2b0c16, #000); color: #ff7597; border-color: #891b38; }
-    .pixel-stamp.vinyl { background: linear-gradient(135deg, #111, #252834); color: #f8c025; border-color: #6d5412; }
-    .pixel-stamp.midwest { background: linear-gradient(135deg, #0e1e24, #050b0e); color: #5ef1f2; border-color: #175a68; }
-    .pixel-stamp.antipop { background: linear-gradient(135deg, #330000, #110000); color: #ff3344; border-color: #990011; }
-
-    /* Blinkies */
-    .blinkies-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      justify-content: center;
       margin: 8px 0;
+      padding: 6px 4px;
+      background: #07080c;
+      border: 1px dashed #242738;
     }
-    .blinkie {
+    .blinkie-badge {
+      height: 20px;
+      max-height: 20px;
+      image-rendering: pixelated;
       display: inline-block;
-      padding: 2px 6px;
-      height: 18px;
-      line-height: 14px;
-      border: 1px solid #fff;
-      font-family: var(--font-pixel);
-      font-size: 8px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      user-select: none;
+      border: 1px solid #202330;
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      transition: transform 0.15s, border-color 0.15s;
+      cursor: pointer;
     }
-    @keyframes blink-wine {
-      0%, 49% { background: #891b38; color: #fff; border-color: #ff6b8b; }
-      50%, 100% { background: #000; color: #ff6b8b; border-color: #891b38; }
+    .blinkie-badge:hover {
+      transform: scale(1.08);
+      border-color: #ff6b8b;
+      filter: brightness(1.15);
     }
-    @keyframes blink-green {
-      0%, 49% { background: #003311; color: #39ff14; border-color: #00ff66; }
-      50%, 100% { background: #000; color: #00aa33; border-color: #003311; }
-    }
-    @keyframes blink-yellow {
-      0%, 49% { background: #443300; color: #ffd700; border-color: #ffaa00; }
-      50%, 100% { background: #111; color: #aa8800; border-color: #554400; }
-    }
-    .blinkie.b-wine { animation: blink-wine 1.2s infinite; }
-    .blinkie.b-green { animation: blink-green 0.9s infinite; }
-    .blinkie.b-yellow { animation: blink-yellow 1.4s infinite; }
 
     /* Top 8 Friends Grid & Avatars */
     .top8-grid {
@@ -959,39 +941,32 @@
       background: var(--accent-wine-bright);
     }
 
-    /* 88x31 Badges */
+    /* Authentic 88x31 Badges & Animations */
     .buttons-88x31-rack {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
       justify-content: center;
-      padding: 10px;
+      padding: 12px;
       background: #08090d;
       border-top: 1px dashed var(--border-dotted);
     }
-    .btn-88x31 {
+    .badge-88x31 {
       width: 88px;
       height: 31px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 7px;
-      font-weight: bold;
-      text-transform: uppercase;
-      border: 1px solid #444;
-      box-shadow: inset 1px 1px 0 #777, inset -1px -1px 0 #111;
-      user-select: none;
-      text-align: center;
-      line-height: 1.1;
+      image-rendering: pixelated;
+      border: 1px solid #2a2d3e;
+      display: inline-block;
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      transition: transform 0.15s ease, border-color 0.15s ease, filter 0.15s ease;
+      cursor: pointer;
     }
-    .b-notepad { background: #002244; color: #66ccff; border-color: #0055aa; }
-    .b-winamp { background: #222; color: #ffaa00; border-color: #775500; }
-    .b-firefox { background: #441100; color: #ff9944; border-color: #aa3300; }
-    .b-antipop { background: #440011; color: #ff6688; border-color: #aa0022; }
-    .b-flac { background: #003311; color: #00ff66; border-color: #008833; }
-    .b-neocities { background: #1a0033; color: #dd99ff; border-color: #6600aa; }
-    .b-cassette { background: #332200; color: #ffcc66; border-color: #996600; }
+    .badge-88x31:hover {
+      transform: scale(1.12);
+      border-color: var(--accent-wine-bright);
+      filter: brightness(1.2);
+      z-index: 2;
+    }
 
     /* Footer */
     .neo-footer {
@@ -1172,6 +1147,13 @@
               <div class="avatar-sticker">100% ANALOG</div>
             </div>
 
+            <!-- Authentic Mini Blinkies -->
+            <div style="display:flex; justify-content:center; align-items:center; gap:4px; margin: 6px 0 8px; flex-wrap: wrap;">
+              <img src="assets/blinkies/emo-online.gif" style="height:18px; image-rendering:pixelated;" alt="Emo Online" title="Emo Online 2005">
+              <img src="assets/blinkies/antisocial.gif" style="height:18px; image-rendering:pixelated;" alt="Anti-Social" title="Anti-Social">
+              <img src="assets/blinkies/blackcoffee.gif" style="height:18px; image-rendering:pixelated;" alt="Black Coffee" title="Black Coffee Fuel">
+            </div>
+
             <!-- Mood & Status Widget -->
             <div class="status-widget">
               <strong>SENTIMIENTO HOY:</strong> Desprecio acústico <img src="assets/icons/coffee.svg" class="inline-pixel-icon" alt="Café"><br>
@@ -1254,6 +1236,9 @@
             <div class="winamp-item" onclick="selectTrack(2)">3. Slint - Breadcrumb Trail (1991)</div>
             <div class="winamp-item" onclick="selectTrack(3)">4. Joy Division - Disorder (1979)</div>
             <div class="winamp-item" onclick="selectTrack(4)">5. [DEMO SECRETA] Kelsi - Piano Solo Take #3</div>
+          </div>
+          <div style="text-align:center; padding: 6px 0 4px; background: #000; border-top: 1px solid #1a1a1a;">
+            <img src="assets/badges/winamp.gif" style="width:88px; height:31px; image-rendering:pixelated; border: 1px solid #333;" alt="Winamp Llama" title="Winamp - It Really Whips The Llama's Ass">
           </div>
         </div>
 
@@ -1373,41 +1358,48 @@
         <!-- Stamps & Blinkies -->
         <div class="neo-box" id="stamps">
           <div class="neo-box-header">
-            <span>COLECCIÓN DE STAMPS &amp; BLINKIES // WEB BADGES</span>
-            <span class="tag">AESTHETIC 2007</span>
+            <span>COLECCIÓN DE STAMPS &amp; BLINKIES // ARCHIVOS VINTAGE 2000-2007</span>
+            <span class="tag">WEB 1.0 PRESERVADA</span>
           </div>
           <div class="neo-box-body">
 
-            <!-- Flashing Blinkies -->
-            <div class="blinkies-container">
-              <div class="blinkie b-wine"><img src="assets/icons/cross.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"> EMO ONLINE <img src="assets/icons/cross.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"></div>
-              <div class="blinkie b-green"><img src="assets/icons/cassette.svg" class="inline-pixel-icon" style="width:12px;height:12px;margin:0 2px;"> CASSETTE CULTURE <img src="assets/icons/cassette.svg" class="inline-pixel-icon" style="width:12px;height:12px;margin:0 2px;"></div>
-              <div class="blinkie b-yellow"><img src="assets/icons/star_full.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"> VINYL PURIST <img src="assets/icons/star_full.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"></div>
-              <div class="blinkie b-wine"><img src="assets/icons/skull.svg" class="inline-pixel-icon" style="width:11px;height:11px;margin:0 2px;"> NO POP RADIO <img src="assets/icons/skull.svg" class="inline-pixel-icon" style="width:11px;height:11px;margin:0 2px;"></div>
-              <div class="blinkie b-green"><img src="assets/icons/equalizer.svg" class="inline-pixel-icon" style="width:11px;height:11px;margin:0 2px;"> WINAMP POWERED <img src="assets/icons/equalizer.svg" class="inline-pixel-icon" style="width:11px;height:11px;margin:0 2px;"></div>
-              <div class="blinkie b-yellow"><img src="assets/icons/lightning.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"> SLOWCORE ADDICT <img src="assets/icons/lightning.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"></div>
+            <div style="font-size: 9px; color: #8c92a4; margin-bottom: 6px; font-family: var(--font-mono); text-align: center; letter-spacing: 0.5px;">
+              [ ARCHIVO SÓNICO: Blinkies animados y postage stamps rescatados de la web underground ]
             </div>
 
-            <!-- Neocities Postage Stamps Grid -->
+            <!-- Authentic Animated Blinkies -->
+            <div class="blinkies-container">
+              <img src="assets/blinkies/radiohead.gif" class="blinkie-badge" alt="Radiohead Blinky" title="Radiohead - OK Computer / Kid A">
+              <img src="assets/blinkies/musicislife.gif" class="blinkie-badge" alt="Music is Life Blinky" title="Music is Life">
+              <img src="assets/blinkies/prettyhatemachine.gif" class="blinkie-badge" alt="Pretty Hate Machine Blinky" title="Nine Inch Nails - Pretty Hate Machine">
+              <img src="assets/blinkies/blackcoffee.gif" class="blinkie-badge" alt="Black Coffee Blinky" title="Dark Roast Coffee">
+              <img src="assets/blinkies/antisocial.gif" class="blinkie-badge" alt="Anti-Social Blinky" title="Anti-Social Sound Booth Operator">
+              <img src="assets/blinkies/emo-online.gif" class="blinkie-badge" alt="Emo Online Blinky" title="Emo Online 2005">
+              <img src="assets/blinkies/shutup.gif" class="blinkie-badge" alt="Shut Up Blinky" title="Shut Up - Sound Tech At Work">
+              <img src="assets/blinkies/leavemealone.gif" class="blinkie-badge" alt="Leave Me Alone Blinky" title="Leave Me Alone">
+              <img src="assets/blinkies/dontlabel.gif" class="blinkie-badge" alt="Don't Label Me Blinky" title="Don't Label Me">
+              <img src="assets/blinkies/nightowl.gif" class="blinkie-badge" alt="Night Owl Blinky" title="Night Owl 4:00 AM Mixing">
+              <img src="assets/blinkies/idontcare.gif" class="blinkie-badge" alt="I Don't Care Blinky" title="I Don't Care">
+            </div>
+
+            <!-- Authentic Postage Stamps Grid -->
             <div class="stamps-grid">
-              <div class="pixel-stamp emo">
-                <div>♰ EMO<br>NOT DEAD<br>1999</div>
-              </div>
-              <div class="pixel-stamp vinyl">
-                <div><img src="assets/icons/equalizer.svg" style="width:13px;height:13px;display:block;margin:0 auto 2px;">180g<br>VINYL ONLY<br>NO MP3</div>
-              </div>
-              <div class="pixel-stamp midwest">
-                <div>☁ MIDWEST<br>EMO KID<br>URBANA IL</div>
-              </div>
-              <div class="pixel-stamp antipop">
-                <div><img src="assets/icons/skull.svg" style="width:14px;height:14px;display:block;margin:0 auto 2px;">ANTI<br>BOLTON<br>WILDCATS</div>
-              </div>
-              <div class="pixel-stamp emo">
-                <div><img src="assets/icons/coffee.svg" style="width:14px;height:14px;display:block;margin:0 auto 2px;">COFFEE<br>&amp; SLINT<br>ALL NIGHT</div>
-              </div>
-              <div class="pixel-stamp vinyl">
-                <div><img src="assets/icons/star_full.svg" style="width:13px;height:13px;display:block;margin:0 auto 2px;">RYM TOP<br>REVIEWER<br>VERIFIED</div>
-              </div>
+              <img src="assets/stamps/guitar.png" class="stamp-item" title="Indie Guitarist / Emo" alt="Guitar Stamp">
+              <img src="assets/stamps/nihilism.gif" class="stamp-item" title="Nihilism" alt="Nihilism Stamp">
+              <img src="assets/stamps/paranoid.gif" class="stamp-item" title="Paranoid Android" alt="Paranoid Stamp">
+              <img src="assets/stamps/staying_up_late.gif" class="stamp-item" title="Staying Up Late" alt="Staying Up Late Stamp">
+              <img src="assets/stamps/this_is_how_i_feel.gif" class="stamp-item" title="This is How I Feel" alt="Feelings Stamp">
+              <img src="assets/stamps/attitude_problem.png" class="stamp-item" title="Attitude Problem" alt="Attitude Stamp">
+              <img src="assets/stamps/old_web.png" class="stamp-item" title="Old Web 2000s" alt="Old Web Stamp">
+              <img src="assets/stamps/bad_decisions.png" class="stamp-item" title="Pretty Good at Bad Decisions" alt="Bad Decisions Stamp">
+              <img src="assets/stamps/scene_queen.png" class="stamp-item" title="Scene / Emo Era" alt="Scene Emo Stamp">
+              <img src="assets/stamps/glow_in_dark.png" class="stamp-item" title="Glow in the Dark" alt="Glow Stamp">
+              <img src="assets/stamps/stars_stamp.gif" class="stamp-item" title="Glitter Stars" alt="Stars Stamp">
+              <img src="assets/stamps/neocities_stamp.gif" class="stamp-item" title="Neocities Webring" alt="Neocities Stamp">
+              <img src="assets/stamps/listen_to_1.png" class="stamp-item" title="Listen to Real Music 01" alt="Listen Stamp 1">
+              <img src="assets/stamps/listen_to_2.png" class="stamp-item" title="Listen to Real Music 02" alt="Listen Stamp 2">
+              <img src="assets/stamps/listen_to_3.png" class="stamp-item" title="Listen to Real Music 03" alt="Listen Stamp 3">
+              <img src="assets/stamps/listen_to_4.png" class="stamp-item" title="Listen to Real Music 04" alt="Listen Stamp 4">
             </div>
 
           </div>
@@ -1694,14 +1686,28 @@
 
     <!-- 88x31 Badges -->
     <div class="buttons-88x31-rack">
-      <div class="btn-88x31 b-notepad">MADE WITH<br>NOTEPAD</div>
-      <div class="btn-88x31 b-winamp">WINAMP<br>LLAMA'S ASS</div>
-      <div class="btn-88x31 b-firefox">FIREFOX 2.0<br>BEST VIEWED</div>
-      <div class="btn-88x31 b-flac">FLAC ONLY<br>NO LOSSY</div>
-      <div class="btn-88x31 b-antipop">BOYCOTT<br>TOP 40</div>
-      <div class="btn-88x31 b-neocities">NEOCITIES<br>POWERED</div>
-      <div class="btn-88x31 b-cassette">ANALOGUE<br>CASSETTE</div>
-      <div class="btn-88x31 b-antipop">NO DISNEY<br>PROPAGANDA</div>
+      <img src="assets/badges/winamp.gif" class="badge-88x31" alt="Winamp" title="Winamp - It Really Whips The Llama's Ass">
+      <img src="assets/badges/winamp2.gif" class="badge-88x31" alt="Winamp v2" title="Winamp 2.x Audio Engine">
+      <img src="assets/badges/cassette.gif" class="badge-88x31" alt="Cassette" title="Analogue Cassette Culture">
+      <img src="assets/badges/dailymp3.gif" class="badge-88x31" alt="Daily MP3" title="Daily MP3 Underground Blog">
+      <img src="assets/badges/cd_rom.gif" class="badge-88x31" alt="CD-ROM" title="Compact Disc Audio">
+      <img src="assets/badges/realaudio.gif" class="badge-88x31" alt="RealAudio" title="RealAudio 28.8k Streaming">
+      <img src="assets/badges/radio-pixel-88x31.gif" class="badge-88x31" alt="College Radio" title="Indie College Radio">
+      <img src="assets/badges/boombarmusic.gif" class="badge-88x31" alt="Boombar Music" title="Boombar Music">
+      <img src="assets/badges/mp3com.gif" class="badge-88x31" alt="MP3.com" title="MP3.com Classic">
+      <img src="assets/badges/underground.gif" class="badge-88x31" alt="Underground" title="Underground Net">
+      <img src="assets/badges/jurassicpunk.gif" class="badge-88x31" alt="Jurassic Punk" title="Punk / DIY Hardcore">
+      <img src="assets/badges/piracy.gif" class="badge-88x31" alt="Home Taping" title="Home Taping is Killing Music... And It's Fun">
+      <img src="assets/badges/notepad.gif" class="badge-88x31" alt="Notepad" title="Coded in Microsoft Notepad">
+      <img src="assets/badges/notepadpp.gif" class="badge-88x31" alt="Notepad++" title="Notepad++ Syntax">
+      <img src="assets/badges/firefox2.gif" class="badge-88x31" alt="Firefox 2.0" title="Best Viewed with Mozilla Firefox 2.0">
+      <img src="assets/badges/geocities.gif" class="badge-88x31" alt="GeoCities" title="GeoCities Archived Site">
+      <img src="assets/badges/neocities.gif" class="badge-88x31" alt="Neocities" title="Powered by Neocities">
+      <img src="assets/badges/myspace.gif" class="badge-88x31" alt="MySpace" title="Find Me on MySpace">
+      <img src="assets/badges/coffee.gif" class="badge-88x31" alt="Coffee" title="Dark Roast Audio Fuel">
+      <img src="assets/badges/acidicdarkness.gif" class="badge-88x31" alt="Acidic Darkness" title="Dark Room Acoustics">
+      <img src="assets/badges/hatems.gif" class="badge-88x31" alt="Hate MS" title="Anti-Proprietary Formats">
+      <img src="assets/badges/jetaudio.gif" class="badge-88x31" alt="JetAudio" title="JetAudio Media Player">
     </div>
 
     <!-- Footer -->
