@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cursor Showcase // Jaden Vance</title>
+  <style>
+    body {
+      background: #0d0e15;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      padding: 30px;
+      text-align: center;
+    }
+    .card {
+      background: #141722;
+      border: 1px solid #33384c;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    .btn {
+      background: #891b38;
+      color: #fff;
+      border: 1px solid #ff4d6d;
+      padding: 8px 16px;
+      margin: 8px;
+      font-family: inherit;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #ff4d6d;
+    }
+    .preview-box {
+      border: 2px dashed #ff4d6d;
+      padding: 40px;
+      margin: 20px 0;
+      background: #08090e;
+    }
+    /* Particle style */
+    .cursor-particle {
+      position: absolute;
+      pointer-events: none;
+      font-size: 11px;
+      font-weight: bold;
+      z-index: 99999;
+      user-select: none;
+      animation: particle-fade 0.5s forwards cubic-bezier(0.1, 0.8, 0.3, 1);
+    }
+    @keyframes particle-fade {
+      0% { opacity: 1; transform: translate(0, 0) scale(1); }
+      100% { opacity: 0; transform: translate(0, 16px) scale(0.3); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>♰ CURSORES PERSONALIZADOS RETRO (2000-2005) ♰</h2>
+    <p style="color:#aaa; font-size:12px;">Haz clic en cada botón para probar el cursor en tiempo real:</p>
+    
+    <div>
+      <button class="btn" onclick="setCursor('dagger')">1. Daga / Cruz Gótica (♰)</button>
+      <button class="btn" onclick="setCursor('audiojack')">2. Jack de Audio 1/4" (AV Tech)</button>
+      <button class="btn" onclick="setCursor('emo_arrow')">3. Flecha Emo Invertida</button>
+    </div>
+
+    <div class="preview-box" id="testArea">
+      <h3 style="color:#5ef1f2;">ÁREA DE PRUEBA</h3>
+      <p>Pasa el ratón por aquí para sentir el cursor.</p>
+      <a href="javascript:void(0)" style="color:#ff4d6d; font-size:14px; font-weight:bold;">[!] Pasa sobre este enlace para ver la mano con esmalte negro</a>
+    </div>
+
+    <label style="font-size:12px; color:#5ef1f2; cursor:pointer;">
+      <input type="checkbox" id="trailToggle" checked> Activar estela de partículas MySpace (♰, ♪, ✦)
+    </label>
+  </div>
+
+  <script>
+    function setCursor(type) {
+      const defaultUrl = `assets/cursors/cursor_${type}.png`;
+      const pointerUrl = `assets/cursors/cursor_emo_hand.png`;
+      
+      document.body.style.cursor = `url('${defaultUrl}') 0 0, auto`;
+      
+      document.querySelectorAll('a, button, label, input').forEach(el => {
+        el.style.cursor = `url('${pointerUrl}') 5 0, pointer`;
+      });
+    }
+
+    // Default
+    setCursor('dagger');
+
+    // Particle Trail
+    let lastTime = 0;
+    const chars = ['♰', '♪', '✦', '·', '♫'];
+    const colors = ['#ff4d6d', '#5ef1f2', '#f8c025', '#ff99bb', '#fff'];
+
+    document.addEventListener('mousemove', (e) => {
+      if (!document.getElementById('trailToggle').checked) return;
+      const now = Date.now();
+      if (now - lastTime < 40) return;
+      lastTime = now;
+
+      const p = document.createElement('span');
+      p.className = 'cursor-particle';
+      p.textContent = chars[Math.floor(Math.random() * chars.length)];
+      p.style.left = (e.pageX + (Math.random() * 8 - 4)) + 'px';
+      p.style.top = (e.pageY + (Math.random() * 8 - 4)) + 'px';
+      p.style.color = colors[Math.floor(Math.random() * colors.length)];
+      document.body.appendChild(p);
+
+      setTimeout(() => p.remove(), 500);
+    });
+  </script>
+</body>
+</html>

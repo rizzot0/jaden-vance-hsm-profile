@@ -71,7 +71,37 @@
       font-size: 11.5px;
       line-height: 1.55;
       padding: 10px 5px 40px;
-      cursor: crosshair;
+      cursor: url('assets/cursors/cursor_dagger.png') 0 0, crosshair, auto;
+    }
+
+    /* Custom 2000s Retro Cursors */
+    html {
+      cursor: url('assets/cursors/cursor_dagger.png') 0 0, crosshair, auto;
+    }
+    a, button, [onclick], input[type="submit"], input[type="button"], select,
+    .btn-action, .top8-slot, .bag-inspect-item, .winamp-item, .stamp-item,
+    .badge-88x31, .blinkie-badge, .album-thumb-container, .w-btn, .btn-post,
+    .crt-toggle-btn, .webring-nav a, .retro-nav-links a {
+      cursor: url('assets/cursors/cursor_emo_hand.png') 5 0, pointer !important;
+    }
+    input[type="text"], textarea {
+      cursor: text;
+    }
+
+    /* 2005 MySpace Mouse Sparkle / Particle Trail */
+    .cursor-particle {
+      position: absolute;
+      pointer-events: none;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: bold;
+      z-index: 999999;
+      user-select: none;
+      animation: particle-fade 0.5s forwards cubic-bezier(0.1, 0.8, 0.3, 1);
+    }
+    @keyframes particle-fade {
+      0% { opacity: 1; transform: translate(0, 0) scale(1); }
+      100% { opacity: 0; transform: translate(0, 14px) scale(0.2); }
     }
 
     
@@ -1121,8 +1151,9 @@
         <a href="#guestbook">♰ /guestbook</a>
         <a href="javascript:void(0)" onclick="document.getElementById('secretVault').showModal()" style="color:#ff3b66;">[!] /secret_confession.txt</a>
       </div>
-      <div>
+      <div style="display:flex; gap:6px;">
         <button class="crt-toggle-btn" onclick="toggleCRT()">CRT: ON/OFF</button>
+        <button class="crt-toggle-btn" id="trailToggleBtn" onclick="toggleCursorTrail()">SPARKLES: ON</button>
       </div>
     </nav>
 
@@ -1768,6 +1799,38 @@
     function toggleCRT() {
       const crt = document.getElementById('crtOverlay');
       crt.style.display = (crt.style.display === 'none') ? 'block' : 'none';
+    }
+
+    // 2005 MySpace Mouse Sparkle / Particle Trail Effect
+    let isCursorTrailActive = true;
+    let lastParticleTime = 0;
+    const particleChars = ['♰', '♪', '✦', '·', '♫', '★'];
+    const particleColors = ['#ff4d6d', '#5ef1f2', '#f8c025', '#ff99bb', '#ffffff', '#891b38'];
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isCursorTrailActive) return;
+      const now = Date.now();
+      if (now - lastParticleTime < 45) return;
+      lastParticleTime = now;
+
+      const p = document.createElement('span');
+      p.className = 'cursor-particle';
+      p.textContent = particleChars[Math.floor(Math.random() * particleChars.length)];
+      p.style.left = `${e.pageX + (Math.random() * 8 - 4)}px`;
+      p.style.top = `${e.pageY + (Math.random() * 8 - 4)}px`;
+      p.style.color = particleColors[Math.floor(Math.random() * particleColors.length)];
+      document.body.appendChild(p);
+
+      setTimeout(() => p.remove(), 480);
+    });
+
+    function toggleCursorTrail() {
+      isCursorTrailActive = !isCursorTrailActive;
+      const btn = document.getElementById('trailToggleBtn');
+      if (btn) {
+        btn.textContent = `SPARKLES: ${isCursorTrailActive ? 'ON' : 'OFF'}`;
+        btn.style.color = isCursorTrailActive ? '#ff4d6d' : '#888';
+      }
     }
 
     // Web Audio Synthesizer
