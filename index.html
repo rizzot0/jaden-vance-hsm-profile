@@ -33,6 +33,10 @@
       padding: 0;
     }
 
+    img {
+      max-width: 100%;
+    }
+
     /* Custom Retro Scrollbar */
     ::-webkit-scrollbar {
       width: 10px;
@@ -751,6 +755,85 @@
     .blinkie.b-green { animation: blink-green 0.9s infinite; }
     .blinkie.b-yellow { animation: blink-yellow 1.4s infinite; }
 
+    /* Top 8 Friends Grid & Avatars */
+    .top8-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 8px 0;
+    }
+    @media (max-width: 650px) {
+      .top8-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+    }
+    .top8-slot {
+      background: #0d0f15;
+      border: 1px solid #282c3c;
+      padding: 8px 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-width: 0;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .top8-slot:hover {
+      border-color: var(--accent-wine-bright);
+      background: #141722;
+      box-shadow: 0 4px 15px rgba(137, 27, 56, 0.45);
+      transform: translateY(-2px);
+    }
+    .top8-img-box {
+      width: 100%;
+      max-width: 105px;
+      aspect-ratio: 1 / 1;
+      height: 105px;
+      background: #000;
+      border: 1px solid #444b60;
+      overflow: hidden;
+      margin: 0 auto 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 1px 1px 0 #222, inset -1px -1px 0 #000;
+    }
+    .top8-img-box img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center;
+      display: block;
+      filter: contrast(1.06) saturate(0.92);
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+    .top8-slot:hover .top8-img-box img {
+      transform: scale(1.08);
+      filter: contrast(1.15) saturate(1.05);
+    }
+    .top8-name {
+      font-size: 10px;
+      color: #5ef1f2;
+      font-family: var(--font-mono);
+      font-weight: bold;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      display: block;
+      text-decoration: underline;
+    }
+    .top8-sub {
+      font-size: 8px;
+      font-family: var(--font-mono);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
     /* Webring */
     .webring-cluster {
       background: #0e0f14;
@@ -1432,7 +1515,7 @@
             <span class="tag">ORDEN ESTRICTO</span>
           </div>
           <div class="neo-box-body">
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center;">
+            <div class="top8-grid">
               
               <!-- 1. Jeff Mangum -->
               <div class="top8-slot">
