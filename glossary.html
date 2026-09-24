@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +39,7 @@
 
     body {
       background-color: var(--bg-dark);
-      background-image: 
+      background-image:
         radial-gradient(ellipse at 50% 0%, rgba(137, 27, 56, 0.25) 0%, transparent 75%),
         url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23190810' fill-opacity='0.45' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
       color: var(--text-main);
@@ -53,16 +54,25 @@
       cursor: url('assets/cursors/cursor_dagger.png') 0 0, crosshair, auto;
     }
 
-    a, button, [onclick], select, .nav-tab, .filter-chip, .term-title {
+    a,
+    button,
+    [onclick],
+    select,
+    .nav-tab,
+    .filter-chip,
+    .term-title {
       cursor: url('assets/cursors/cursor_emo_hand.png') 5 0, pointer !important;
     }
 
     /* CRT Overlay */
     .crt-overlay {
       position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       pointer-events: none;
-      background: 
+      background:
         linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.45) 50%),
         radial-gradient(circle at center, transparent 60%, rgba(0, 0, 0, 0.65) 100%);
       background-size: 100% 4px, 100% 100%;
@@ -71,6 +81,7 @@
       transition: opacity 0.2s ease;
       display: block;
     }
+
     .crt-overlay.crt-off {
       display: none !important;
       opacity: 0 !important;
@@ -87,9 +98,17 @@
       user-select: none;
       animation: particle-fade 0.5s forwards cubic-bezier(0.1, 0.8, 0.3, 1);
     }
+
     @keyframes particle-fade {
-      0% { opacity: 1; transform: translate(0, 0) scale(1); }
-      100% { opacity: 0; transform: translate(0, 14px) scale(0.2); }
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(0, 14px) scale(0.2);
+      }
     }
 
     /* Wrapper */
@@ -113,6 +132,7 @@
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .nav-tabs {
       display: flex;
       gap: 8px;
@@ -120,6 +140,7 @@
       font-family: var(--font-ui);
       font-size: 11px;
     }
+
     .nav-tab {
       background: #1c0a12;
       border: 1px solid var(--accent-wine);
@@ -132,10 +153,12 @@
       gap: 4px;
       transition: all 0.15s ease;
     }
+
     .nav-tab:hover {
       background: var(--accent-wine);
       color: #fff;
     }
+
     .nav-tab.active {
       background: #380c1a;
       border-color: var(--accent-wine-bright);
@@ -155,6 +178,7 @@
       border-radius: 2px;
       user-select: none;
     }
+
     .crt-btn.active {
       background: #00220d;
       border-color: #00ff66;
@@ -168,6 +192,7 @@
       padding: 24px 20px;
       border-bottom: 1px dashed var(--border-dotted);
     }
+
     .glossary-badge {
       border: 2px dashed var(--accent-terminal-cyan);
       color: var(--accent-terminal-cyan);
@@ -179,6 +204,7 @@
       margin-bottom: 8px;
       background: rgba(94, 241, 242, 0.08);
     }
+
     .glossary-title {
       font-family: var(--font-title);
       font-size: 26px;
@@ -186,6 +212,7 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+
     .glossary-intro {
       margin-top: 8px;
       font-size: 12.5px;
@@ -201,6 +228,7 @@
       gap: 8px;
       margin-top: 14px;
     }
+
     .filter-chip {
       background: #151824;
       border: 1px solid #2f3448;
@@ -212,6 +240,7 @@
       text-decoration: none;
       transition: all 0.15s ease;
     }
+
     .filter-chip:hover {
       background: var(--accent-wine);
       border-color: var(--accent-wine-bright);
@@ -230,8 +259,9 @@
     .category-card {
       background: var(--bg-box);
       border: 1px solid var(--border-main);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
+
     .category-header {
       background: linear-gradient(90deg, #2b0b15, #16080e);
       border-bottom: 1px solid var(--accent-wine);
@@ -244,6 +274,7 @@
       justify-content: space-between;
       align-items: center;
     }
+
     .category-header .tag {
       font-family: var(--font-pixel);
       font-size: 8px;
@@ -251,6 +282,7 @@
       color: #fff;
       padding: 2px 6px;
     }
+
     .category-items {
       padding: 16px;
       display: flex;
@@ -266,20 +298,24 @@
       border-left: 3px solid var(--accent-wine-bright);
       transition: border-color 0.2s ease, background 0.2s ease;
     }
+
     .term-entry:hover {
       border-left-color: var(--accent-terminal-cyan);
       background: #131520;
     }
+
     .term-layout {
       display: flex;
       gap: 16px;
       align-items: flex-start;
     }
+
     .term-media {
       flex: 0 0 135px;
       max-width: 135px;
       width: 135px;
     }
+
     .term-frame {
       background: #07080d;
       border: 1px solid #3d1b28;
@@ -288,10 +324,12 @@
       text-align: center;
       transition: all 0.2s ease;
     }
+
     .term-entry:hover .term-frame {
       border-color: var(--accent-wine-bright);
       box-shadow: 0 0 10px rgba(255, 51, 102, 0.35);
     }
+
     .term-thumb {
       width: 100%;
       height: 125px;
@@ -300,11 +338,13 @@
       border: 1px solid #1a1e2d;
       background: #000;
     }
+
     .term-thumb-contain {
       object-fit: contain;
       background: #07080f;
       padding: 6px;
     }
+
     .term-caption {
       display: block;
       font-family: var(--font-pixel);
@@ -315,10 +355,12 @@
       text-transform: uppercase;
       word-break: break-word;
     }
+
     .term-body {
       flex: 1;
       min-width: 0;
     }
+
     .term-showcase-box {
       display: flex;
       flex-direction: column;
@@ -330,6 +372,7 @@
       justify-content: center;
       min-height: 125px;
     }
+
     .term-showcase-row {
       display: flex;
       gap: 4px;
@@ -337,6 +380,7 @@
       justify-content: center;
       flex-wrap: wrap;
     }
+
     .term-showcase-box img {
       image-rendering: pixelated;
     }
@@ -345,15 +389,18 @@
       .term-layout {
         flex-direction: column;
       }
+
       .term-media {
         flex: auto;
         max-width: 100%;
         width: 100%;
       }
+
       .term-thumb {
         height: 160px;
       }
     }
+
     .term-top {
       display: flex;
       justify-content: space-between;
@@ -364,12 +411,14 @@
       border-bottom: 1px dashed #282d3e;
       padding-bottom: 4px;
     }
+
     .term-name {
       font-family: var(--font-title);
       font-size: 15px;
       font-weight: bold;
       color: #ffffff;
     }
+
     .term-category {
       font-family: var(--font-mono);
       font-size: 12px;
@@ -378,6 +427,7 @@
       padding: 1px 6px;
       border: 1px solid #1f2334;
     }
+
     .term-meta {
       font-family: var(--font-ui);
       font-size: 11px;
@@ -385,6 +435,7 @@
       margin-bottom: 8px;
       font-style: italic;
     }
+
     .term-definition {
       font-size: 13px;
       color: #cfd4e4;
@@ -401,12 +452,14 @@
       font-size: 12px;
       color: #63697e;
     }
+
     .glossary-footer a {
       color: #ff6b8b;
       text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Toggleable CRT Overlay -->
@@ -429,17 +482,10 @@
 
     <!-- Hero / Title -->
     <div class="glossary-hero">
-      <div class="glossary-badge">[ GUÍA DE DESCIFRADO PARA VISITANTES ]</div>
-      <h1 class="glossary-title">DICCIONARIO DE CULTO &amp; REFERENCIAS MUSICALES</h1>
+      <h1 class="glossary-title">DICCIONARIO</h1>
       <p class="glossary-intro">
-        Esta guía explica cada banda, disco, término técnico de audio y código de internet de los 2000 que Jaden Vance menciona en su perfil. Pensado para que cualquier persona que visite la página entienda el contexto de sus chistes, sus ataques a High School Musical y su obsesión con el sonido analógico.
+        Guia para poder entender de mejor manera el contenido de la pagina.
       </p>
-
-      <div class="filter-bar">
-        <a href="#bandas" class="filter-chip">🎸 1. Bandas &amp; Álbumes de Culto</a>
-        <a href="#audio" class="filter-chip">🎛️ 2. Términos de Sonido &amp; Audio</a>
-        <a href="#internet" class="filter-chip">🌐 3. Jerga de Internet 2000–2007</a>
-      </div>
     </div>
 
     <!-- Glossary Content Body -->
@@ -448,8 +494,7 @@
       <!-- ================= 1. BANDAS Y ÁLBUMES ================= -->
       <section class="category-card" id="bandas">
         <div class="category-header">
-          <span>01. BANDAS &amp; DISCOS DE CULTO MENCIONADOS</span>
-          <span class="tag">CANON INDIE / EMO</span>
+          <span>01. BANDAS, DISCOS</span>
         </div>
         <div class="category-items">
 
@@ -458,8 +503,9 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/american_football.jpg" alt="American Football House Urbana Illinois" class="term-thumb" loading="lazy">
-                  <span class="term-caption">URBANA, IL // LP1 (1999)</span>
+                  <img src="assets/glossary/american_football.jpg" alt="American Football LP1 Portada del Álbum (1999)"
+                    class="term-thumb" loading="lazy">
+                  <span class="term-caption">PORTADA // LP1 (1999)</span>
                 </div>
               </div>
               <div class="term-body">
@@ -469,7 +515,10 @@
                 </div>
                 <div class="term-meta">Álbum homónimo grabado en Champaign-Urbana, Illinois (Polyvinyl Records).</div>
                 <div class="term-definition">
-                  Banda pionera del sonido <em>Midwest Emo</em>. Se caracteriza por guitarras entrelazadas en afinaciones abiertas no convencionales (típicamente <code>FACGCE</code>), métricas de tiempo sincopadas e irregulares, y letras melancólicas sobre rupturas y nostalgia adolescente de pueblo pequeño.
+                  Banda pionera del sonido <em>Midwest Emo</em>. Se caracteriza por guitarras entrelazadas en
+                  afinaciones abiertas no convencionales (típicamente <code>FACGCE</code>), métricas de tiempo
+                  sincopadas e irregulares, y letras melancólicas sobre rupturas y nostalgia adolescente de pueblo
+                  pequeño.
                 </div>
               </div>
             </div>
@@ -480,7 +529,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/slint_spiderland.jpg" alt="Slint Spiderland Louisville Kentucky" class="term-thumb" loading="lazy">
+                  <img src="assets/glossary/slint_spiderland.jpg" alt="Slint Spiderland Louisville Kentucky"
+                    class="term-thumb" loading="lazy">
                   <span class="term-caption">SLINT // LOUISVILLE, KY (1991)</span>
                 </div>
               </div>
@@ -489,9 +539,13 @@
                   <span class="term-name">Slint &amp; el álbum "Spiderland" (1991)</span>
                   <span class="term-category">Post-Rock / Math Rock / Proto-Emo</span>
                 </div>
-                <div class="term-meta">Banda de Louisville, Kentucky. Grabado por Brian Paulson; masterizado por Bob Weston.</div>
+                <div class="term-meta">Banda de Louisville, Kentucky. Grabado por Brian Paulson; masterizado por Bob
+                  Weston.</div>
                 <div class="term-definition">
-                  Considerado uno de los discos más influyentes del rock independiente de los 90. Reemplazó los estribillos tradicionales con narraciones en voz baja (spoken word) sobre arpegios disonantes de guitarra limpia, que de pronto explotan en muros ensordecedores de distorsión dinámica ("loud-quiet-loud").
+                  Considerado uno de los discos más influyentes del rock independiente de los 90. Reemplazó los
+                  estribillos tradicionales con narraciones en voz baja (spoken word) sobre arpegios disonantes de
+                  guitarra limpia, que de pronto explotan en muros ensordecedores de distorsión dinámica
+                  ("loud-quiet-loud").
                 </div>
               </div>
             </div>
@@ -502,7 +556,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/neutral_milk_hotel.jpg" alt="Jeff Mangum Neutral Milk Hotel" class="term-thumb" loading="lazy">
+                  <img src="assets/glossary/neutral_milk_hotel.jpg" alt="Jeff Mangum Neutral Milk Hotel"
+                    class="term-thumb" loading="lazy">
                   <span class="term-caption">JEFF MANGUM // ELEPHANT 6 (1998)</span>
                 </div>
               </div>
@@ -513,7 +568,10 @@
                 </div>
                 <div class="term-meta">Liderados por Jeff Mangum. Parte del colectivo The Elephant 6.</div>
                 <div class="term-definition">
-                  Una obra maestra de folk crudo grabado en cinta saturada. Destaca por sus guitarras acústicas rasgueadas con ferocidad, sierras musicales, trompetas distorsionadas y letras poéticas surrealistas sobre la Segunda Guerra Mundial y Ana Frank. Uno de los discos con puntaje más alto en la historia de RateYourMusic.
+                  Una obra maestra de folk crudo grabado en cinta saturada. Destaca por sus guitarras acústicas
+                  rasgueadas con ferocidad, sierras musicales, trompetas distorsionadas y letras poéticas surrealistas
+                  sobre la Segunda Guerra Mundial y Ana Frank. Uno de los discos con puntaje más alto en la historia de
+                  RateYourMusic.
                 </div>
               </div>
             </div>
@@ -524,7 +582,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/joy_division_pulsar.jpg" alt="Joy Division Unknown Pleasures Pulsar CP1919" class="term-thumb" loading="lazy">
+                  <img src="assets/glossary/joy_division_pulsar.jpg" alt="Joy Division Unknown Pleasures Pulsar CP1919"
+                    class="term-thumb" loading="lazy">
                   <span class="term-caption">PULSAR CP 1919 // FACTORY RECORDS</span>
                 </div>
               </div>
@@ -533,9 +592,12 @@
                   <span class="term-name">Joy Division &amp; "Disorder" (1979)</span>
                   <span class="term-category">Post-Punk Británico / Factory Records</span>
                 </div>
-                <div class="term-meta">Manchester, Inglaterra. Producido por Martin Hannett con técnicas pioneras de eco y espacio.</div>
+                <div class="term-meta">Manchester, Inglaterra. Producido por Martin Hannett con técnicas pioneras de eco
+                  y espacio.</div>
                 <div class="term-definition">
-                  La banda de Ian Curtis definió el sonido gótico y post-punk: bajos melódicos conducidos por Peter Hook tocados en los trastes agudos, baterías precisas tipo metrónomo y letras sombrías sobre alienación existencial.
+                  La banda de Ian Curtis definió el sonido gótico y post-punk: bajos melódicos conducidos por Peter Hook
+                  tocados en los trastes agudos, baterías precisas tipo metrónomo y letras sombrías sobre alienación
+                  existencial.
                 </div>
               </div>
             </div>
@@ -546,7 +608,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/steve_albini.jpg" alt="Steve Albini Electrical Audio" class="term-thumb" loading="lazy">
+                  <img src="assets/glossary/steve_albini.jpg" alt="Steve Albini Electrical Audio" class="term-thumb"
+                    loading="lazy">
                   <span class="term-caption">STEVE ALBINI // ELECTRICAL AUDIO</span>
                 </div>
               </div>
@@ -555,9 +618,12 @@
                   <span class="term-name">Steve Albini &amp; Shellac</span>
                   <span class="term-category">Ingeniería de Audio Analógica / Ética DIY</span>
                 </div>
-                <div class="term-meta">Grabó <em>In Utero</em> de Nirvana, <em>Surfer Rosa</em> de Pixies y fundó el estudio Electrical Audio.</div>
+                <div class="term-meta">Grabó <em>In Utero</em> de Nirvana, <em>Surfer Rosa</em> de Pixies y fundó el
+                  estudio Electrical Audio.</div>
                 <div class="term-definition">
-                  Ingeniero de audio de culto. Se negaba a llamarse "productor" y jamás cobraba regalías de los discos que grababa. Famoso por su ética anti-corporativa implacable, captura de micrófonos ambientales crudos y su rechazo militante a los retoques digitales de estudio.
+                  Ingeniero de audio de culto. Se negaba a llamarse "productor" y jamás cobraba regalías de los discos
+                  que grababa. Famoso por su ética anti-corporativa implacable, captura de micrófonos ambientales crudos
+                  y su rechazo militante a los retoques digitales de estudio.
                 </div>
               </div>
             </div>
@@ -568,7 +634,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/fugazi_ian.jpg" alt="Ian MacKaye Fugazi Live" class="term-thumb" loading="lazy">
+                  <img src="assets/glossary/fugazi_ian.jpg" alt="Ian MacKaye Fugazi Live" class="term-thumb"
+                    loading="lazy">
                   <span class="term-caption">IAN MACKAYE // FUGAZI (DISCHORD)</span>
                 </div>
               </div>
@@ -579,7 +646,9 @@
                 </div>
                 <div class="term-meta">Washington, D.C. Pioneros de la filosofía Straight Edge y el circuito DIY.</div>
                 <div class="term-definition">
-                  Banda legendaria por tocar shows a $5 dólares de entrada para todas las edades, sin vender merchandising corporativo y manteniendo independencia total de las grandes discográficas multinacionales.
+                  Banda legendaria por tocar shows a $5 dólares de entrada para todas las edades, sin vender
+                  merchandising corporativo y manteniendo independencia total de las grandes discográficas
+                  multinacionales.
                 </div>
               </div>
             </div>
@@ -601,7 +670,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/flac_lossless.png" alt="FLAC Free Lossless Audio Codec Logo" class="term-thumb term-thumb-contain" loading="lazy">
+                  <img src="assets/glossary/flac_lossless.png" alt="FLAC Free Lossless Audio Codec Logo"
+                    class="term-thumb term-thumb-contain" loading="lazy">
                   <span class="term-caption">CODEC FLAC // AUDIO LOSSLESS</span>
                 </div>
               </div>
@@ -611,8 +681,11 @@
                   <span class="term-category">Formatos de Compresión Digital</span>
                 </div>
                 <div class="term-definition">
-                  <strong>MP3:</strong> Formato con pérdida (lossy) inventado en los 90 que recorta frecuencias inaudibles para reducir el peso del archivo a 128 o 192 kbps. Para un audiófilo, mutila la profundidad espacial y la respuesta de graves.<br>
-                  <strong>FLAC (Free Lossless Audio Codec):</strong> Compresión sin pérdida de información matemática. Conserva el 100% de la onda acústica original del máster de estudio.
+                  <strong>MP3:</strong> Formato con pérdida (lossy) inventado en los 90 que recorta frecuencias
+                  inaudibles para reducir el peso del archivo a 128 o 192 kbps. Para un audiófilo, mutila la profundidad
+                  espacial y la respuesta de graves.<br>
+                  <strong>FLAC (Free Lossless Audio Codec):</strong> Compresión sin pérdida de información matemática.
+                  Conserva el 100% de la onda acústica original del máster de estudio.
                 </div>
               </div>
             </div>
@@ -623,7 +696,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/time_signature_54.png" alt="Time Signature 5/4 Notation" class="term-thumb term-thumb-contain" loading="lazy">
+                  <img src="assets/glossary/time_signature_54.png" alt="Time Signature 5/4 Notation"
+                    class="term-thumb term-thumb-contain" loading="lazy">
                   <span class="term-caption">COMPÁS 5/4 // MATH ROCK NOTATION</span>
                 </div>
               </div>
@@ -633,7 +707,10 @@
                   <span class="term-category">Teoría Musical &amp; Compás</span>
                 </div>
                 <div class="term-definition">
-                  La inmensa mayoría de las canciones pop comerciales y bailables utilizan un compás de 4/4 (cuatro tiempos estándar por compás: bombo, caja, bombo, caja). Los géneros como el math rock y el jazz usan compases asimétricos (como 5 tiempos o 7 corcheas), lo que genera una sensación de caída y complejidad rítmica.
+                  La inmensa mayoría de las canciones pop comerciales y bailables utilizan un compás de 4/4 (cuatro
+                  tiempos estándar por compás: bombo, caja, bombo, caja). Los géneros como el math rock y el jazz usan
+                  compases asimétricos (como 5 tiempos o 7 corcheas), lo que genera una sensación de caída y complejidad
+                  rítmica.
                 </div>
               </div>
             </div>
@@ -644,7 +721,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/mixer_faders.jpg" alt="SSL Analog Mixing Console EQ Faders" class="term-thumb" loading="lazy">
+                  <img src="assets/glossary/mixer_faders.jpg" alt="SSL Analog Mixing Console EQ Faders"
+                    class="term-thumb" loading="lazy">
                   <span class="term-caption">CONSOLA SSL // FADERS &amp; EQ</span>
                 </div>
               </div>
@@ -654,7 +732,9 @@
                   <span class="term-category">Operación de Consola de Mezclas</span>
                 </div>
                 <div class="term-definition">
-                  Técnica de ecualización que reduce decibelios en el rango de los 4 kHz a 10 kHz para suavizar sibilancias molestas (el sonido de las 'S') o voces demasiado chillonas que pueden generar distorsión armónica en los altavoces.
+                  Técnica de ecualización que reduce decibelios en el rango de los 4 kHz a 10 kHz para suavizar
+                  sibilancias molestas (el sonido de las 'S') o voces demasiado chillonas que pueden generar distorsión
+                  armónica en los altavoces.
                 </div>
               </div>
             </div>
@@ -665,7 +745,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/gallery/sony_mdr7506.jpg" alt="Sony MDR-7506 Studio Monitor Headphones" class="term-thumb" loading="lazy">
+                  <img src="assets/gallery/sony_mdr7506.jpg" alt="Sony MDR-7506 Studio Monitor Headphones"
+                    class="term-thumb" loading="lazy">
                   <span class="term-caption">SONY MDR-7506 // MONITOR PRO</span>
                 </div>
               </div>
@@ -675,7 +756,9 @@
                   <span class="term-category">Hardware de Estudio de Grabación</span>
                 </div>
                 <div class="term-definition">
-                  Audífonos profesionales cerrados lanzados en 1991, famosos en estudios de radio y cabinas de sonido por su cable en espiral azul, respuesta plana (sin graves inflados artificialmente) y altísimo aislamiento pasivo del ruido ambiente.
+                  Audífonos profesionales cerrados lanzados en 1991, famosos en estudios de radio y cabinas de sonido
+                  por su cable en espiral azul, respuesta plana (sin graves inflados artificialmente) y altísimo
+                  aislamiento pasivo del ruido ambiente.
                 </div>
               </div>
             </div>
@@ -686,7 +769,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/rockbox_ipod.jpg" alt="iPod Classic running Rockbox Firmware" class="term-thumb" loading="lazy">
+                  <img src="assets/glossary/rockbox_ipod.jpg" alt="iPod Classic running Rockbox Firmware"
+                    class="term-thumb" loading="lazy">
                   <span class="term-caption">IPOD CLASSIC // ROCKBOX FLAC OS</span>
                 </div>
               </div>
@@ -696,7 +780,9 @@
                   <span class="term-category">Software Libre para Reproductores</span>
                 </div>
                 <div class="term-definition">
-                  Un sistema operativo de código abierto alternativo que reemplazaba el software de fábrica de Apple en los iPods de disco duro de los 2000. Permitía reproducir archivos FLAC y ecualizar por bandas paramétricas sin pasar por iTunes.
+                  Un sistema operativo de código abierto alternativo que reemplazaba el software de fábrica de Apple en
+                  los iPods de disco duro de los 2000. Permitía reproducir archivos FLAC y ecualizar por bandas
+                  paramétricas sin pasar por iTunes.
                 </div>
               </div>
             </div>
@@ -718,7 +804,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/rym_rateyourmusic.png" alt="Rate Your Music RYM Logo" class="term-thumb term-thumb-contain" loading="lazy">
+                  <img src="assets/glossary/rym_rateyourmusic.png" alt="Rate Your Music RYM Logo"
+                    class="term-thumb term-thumb-contain" loading="lazy">
                   <span class="term-caption">RYM // RATEYOURMUSIC.COM</span>
                 </div>
               </div>
@@ -728,7 +815,9 @@
                   <span class="term-category">Base de Datos Comunitaria</span>
                 </div>
                 <div class="term-definition">
-                  Sitio web fundado en el año 2000 donde melómanos y aficionados al rock alternativo catalogan discografías enteras, emiten calificaciones numéricas estrictas con decimales (de 0.5 a 5.0 estrellas) y escriben ensayos críticos exhaustivos.
+                  Sitio web fundado en el año 2000 donde melómanos y aficionados al rock alternativo catalogan
+                  discografías enteras, emiten calificaciones numéricas estrictas con decimales (de 0.5 a 5.0 estrellas)
+                  y escriben ensayos críticos exhaustivos.
                 </div>
               </div>
             </div>
@@ -739,7 +828,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/myspace_top8.jpg" alt="Tom Anderson MySpace First Friend" class="term-thumb" loading="lazy">
+                  <img src="assets/glossary/myspace_top8.jpg" alt="Tom Anderson MySpace First Friend" class="term-thumb"
+                    loading="lazy">
                   <span class="term-caption">TOM // AMIGO #1 DE MYSPACE</span>
                 </div>
               </div>
@@ -749,7 +839,9 @@
                   <span class="term-category">Fenómeno Social de 2005</span>
                 </div>
                 <div class="term-definition">
-                  En MySpace, los perfiles permitían mostrar una cuadrícula pública con tus 8 amigos más cercanos. El orden determinaba quién era tu mejor amigo y cambiaba semanalmente, provocando dramas reales en las secundarias de los 2000.
+                  En MySpace, los perfiles permitían mostrar una cuadrícula pública con tus 8 amigos más cercanos. El
+                  orden determinaba quién era tu mejor amigo y cambiaba semanalmente, provocando dramas reales en las
+                  secundarias de los 2000.
                 </div>
               </div>
             </div>
@@ -760,7 +852,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/lastfm_scrobble.png" alt="Audioscrobbler Last.fm Logo" class="term-thumb term-thumb-contain" loading="lazy">
+                  <img src="assets/glossary/lastfm_scrobble.png" alt="Audioscrobbler Last.fm Logo"
+                    class="term-thumb term-thumb-contain" loading="lazy">
                   <span class="term-caption">AUDIOSCROBBLER // LAST.FM</span>
                 </div>
               </div>
@@ -770,7 +863,9 @@
                   <span class="term-category">Red Social de Hábitos Musicales</span>
                 </div>
                 <div class="term-definition">
-                  Servicio de 2003 que instalaba un plugin en reproductores como Winamp para enviar a internet en tiempo real cada canción reproducida. Si escuchabas 100 veces a Joy Division, tus amigos podían ver el registro exacto de tu obsesión.
+                  Servicio de 2003 que instalaba un plugin en reproductores como Winamp para enviar a internet en tiempo
+                  real cada canción reproducida. Si escuchabas 100 veces a Joy Division, tus amigos podían ver el
+                  registro exacto de tu obsesión.
                 </div>
               </div>
             </div>
@@ -784,7 +879,8 @@
                   <div class="term-showcase-box">
                     <img src="assets/badges/winamp.gif" alt="Winamp 88x31 badge" width="88" height="31">
                     <img src="assets/badges/firefox2.gif" alt="Firefox 2 88x31 badge" width="88" height="31">
-                    <img src="assets/blinkies/radiohead.gif" alt="Radiohead blinkie" style="max-width: 120px; height: auto;">
+                    <img src="assets/blinkies/radiohead.gif" alt="Radiohead blinkie"
+                      style="max-width: 120px; height: auto;">
                   </div>
                   <span class="term-caption">BOTONES 88x31 &amp; BLINKIES GIF</span>
                 </div>
@@ -795,8 +891,12 @@
                   <span class="term-category">Heráldica Pixel-Art de la Web 1.0</span>
                 </div>
                 <div class="term-definition">
-                  <strong>Botones 88x31:</strong> Banners diminutos de exactamente 88 píxeles de ancho por 31 de alto utilizados para promover programas, filosofías web (<em>"Made with Notepad"</em>, <em>"Firefox 2.0"</em>, <em>"Winamp"</em>) o intercambiar enlaces.<br>
-                  <strong>Blinkies:</strong> Barras animadas intermitentes en formato GIF de 150x20 píxeles que declaraban tribus urbanas o estados de ánimo (<em>"Emo Online"</em>, <em>"Anti-Social"</em>, <em>"Radiohead"</em>).
+                  <strong>Botones 88x31:</strong> Banners diminutos de exactamente 88 píxeles de ancho por 31 de alto
+                  utilizados para promover programas, filosofías web (<em>"Made with Notepad"</em>, <em>"Firefox
+                    2.0"</em>, <em>"Winamp"</em>) o intercambiar enlaces.<br>
+                  <strong>Blinkies:</strong> Barras animadas intermitentes en formato GIF de 150x20 píxeles que
+                  declaraban tribus urbanas o estados de ánimo (<em>"Emo Online"</em>, <em>"Anti-Social"</em>,
+                  <em>"Radiohead"</em>).
                 </div>
               </div>
             </div>
@@ -807,7 +907,8 @@
             <div class="term-layout">
               <div class="term-media">
                 <div class="term-frame">
-                  <img src="assets/glossary/webring_logo.png" alt="Webring Hub Diagram" class="term-thumb term-thumb-contain" loading="lazy">
+                  <img src="assets/glossary/webring_logo.png" alt="Webring Hub Diagram"
+                    class="term-thumb term-thumb-contain" loading="lazy">
                   <span class="term-caption">WEBRING // RED EN ANILLO</span>
                 </div>
               </div>
@@ -817,7 +918,9 @@
                   <span class="term-category">Sistema de Navegación Pre-Algoritmos</span>
                 </div>
                 <div class="term-definition">
-                  Antes de que existieran los feeds algorítmicos o las recomendaciones de Instagram, los sitios independientes se agrupaban en cadenas circulares donde cada página tenía enlaces de <em>«« Sitio Anterior»</em>, <em>«[ ? ] Aleatorio»</em> y <em>«Sitio Siguiente »»</em>.
+                  Antes de que existieran los feeds algorítmicos o las recomendaciones de Instagram, los sitios
+                  independientes se agrupaban en cadenas circulares donde cada página tenía enlaces de <em>«« Sitio
+                    Anterior»</em>, <em>«[ ? ] Aleatorio»</em> y <em>«Sitio Siguiente »»</em>.
                 </div>
               </div>
             </div>
@@ -832,7 +935,7 @@
     <footer class="glossary-footer">
       <p>♰ JADEN VANCE // EAST HIGH AUDITORIUM AV CREW // ALBUQUERQUE, NM ♰</p>
       <p style="margin-top: 6px;">
-        <a href="index.html">« Regresar al Perfil MySpace</a> • 
+        <a href="index.html">« Regresar al Perfil MySpace</a> •
         <a href="character.html">Ver el Expediente Completo del Personaje »</a>
       </p>
     </footer>
@@ -900,4 +1003,5 @@
     }
   </script>
 </body>
+
 </html>
