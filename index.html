@@ -1346,7 +1346,7 @@
             </div>
             <!-- Vintage Winamp Seek Progress Bar -->
             <div class="winamp-seek-container">
-              <input type="range" id="winampSeek" class="winamp-seek-slider" min="0" max="100" value="0" step="0.1" oninput="seekAudio(this.value)" title="Seek">
+              <input type="range" id="winampSeek" class="winamp-seek-slider" min="0" max="100" value="0" step="0.1" title="Haz clic o arrastra para saltar a un segundo específico">
             </div>
           </div>
           <div class="winamp-controls-bar">
@@ -1994,30 +1994,45 @@
       }
     ];
 
+    function formatTime(sec) {
+      if (!isFinite(sec) || isNaN(sec) || sec < 0) return '00:00';
+      const m = String(Math.floor(sec / 60)).padStart(2, '0');
+      const s = String(Math.floor(sec % 60)).padStart(2, '0');
+      return `${m}:${s}`;
+    }
+
+    function updateWinampTimeDisplay() {
+      if (!winampAudio) return;
+      const cur = winampAudio.currentTime || 0;
+      const dur = winampAudio.duration;
+      const timeElem = document.getElementById('timeDisplay');
+      if (timeElem) {
+        const durStr = (dur && isFinite(dur) && dur > 0) ? formatTime(dur) : '--:--';
+        timeElem.textContent = `${formatTime(cur)} / ${durStr}`;
+      }
+      const seekSlider = document.getElementById('winampSeek');
+      if (seekSlider && !isUserSeeking && dur && isFinite(dur) && dur > 0) {
+        seekSlider.value = (cur / dur) * 100;
+      }
+    }
+
     function initWinampAudio() {
       if (!winampAudio) {
         winampAudio = new Audio();
-        winampAudio.preload = "metadata";
+        winampAudio.preload = "auto";
         winampAudio.src = playlist[currentTrackIdx].file;
 
+        winampAudio.addEventListener('loadedmetadata', () => {
+          updateWinampTimeDisplay();
+        });
+
+        winampAudio.addEventListener('durationchange', () => {
+          updateWinampTimeDisplay();
+        });
+
         winampAudio.addEventListener('timeupdate', () => {
-          const cur = winampAudio.currentTime || 0;
-          const dur = winampAudio.duration || 0;
-
-          const curM = String(Math.floor(cur / 60)).padStart(2, '0');
-          const curS = String(Math.floor(cur % 60)).padStart(2, '0');
-          const durM = String(Math.floor(dur / 60)).padStart(2, '0');
-          const durS = String(Math.floor(dur % 60)).padStart(2, '0');
-
-          const timeElem = document.getElementById('timeDisplay');
-          if (timeElem) {
-            timeElem.textContent = `${curM}:${curS} / ${dur ? durM + ':' + durS : '--:--'}`;
-          }
-
-          const seekSlider = document.getElementById('winampSeek');
-          if (seekSlider && dur > 0) {
-            seekSlider.value = (cur / dur) * 100;
-          }
+          if (isUserSeeking) return; // Don't fight the user during seek interaction
+          updateWinampTimeDisplay();
         });
 
         winampAudio.addEventListener('ended', () => {
@@ -2032,7 +2047,66 @@
             status.style.color = "#ff4d6d";
           }
         });
+
+        initSeekSlider();
       }
+    }
+
+    function initSeekSlider() {
+      const seekSlider = document.getElementById('winampSeek');
+      if (!seekSlider || seekSlider.dataset.initialized) return;
+      seekSlider.dataset.initialized = "true";
+
+      const startSeek = () => {
+        isUserSeeking = true;
+      };
+
+      const handleInput = (e) => {
+        isUserSeeking = true;
+        const pct = parseFloat(e.target.value) / 100;
+        if (winampAudio && isFinite(winampAudio.duration) && winampAudio.duration > 0) {
+          const previewSec = pct * winampAudio.duration;
+          const timeElem = document.getElementById('timeDisplay');
+          if (timeElem) {
+            timeElem.textContent = `${formatTime(previewSec)} / ${formatTime(winampAudio.duration)}`;
+          }
+        }
+      };
+
+      const commitSeek = (val) => {
+        if (!winampAudio) {
+          initWinampAudio();
+        }
+        if (winampAudio && isFinite(winampAudio.duration) && winampAudio.duration > 0) {
+          const targetTime = (parseFloat(val) / 100) * winampAudio.duration;
+          try {
+            winampAudio.currentTime = targetTime;
+          } catch (err) {
+            console.warn("Seek error:", err);
+          }
+          updateWinampTimeDisplay();
+        }
+        setTimeout(() => {
+          isUserSeeking = false;
+        }, 120);
+      };
+
+      seekSlider.addEventListener('mousedown', startSeek);
+      seekSlider.addEventListener('touchstart', startSeek, { passive: true });
+
+      seekSlider.addEventListener('input', handleInput);
+
+      seekSlider.addEventListener('change', (e) => {
+        commitSeek(e.target.value);
+      });
+
+      seekSlider.addEventListener('mouseup', (e) => {
+        if (isUserSeeking) commitSeek(e.target.value);
+      });
+
+      seekSlider.addEventListener('touchend', (e) => {
+        if (isUserSeeking) commitSeek(seekSlider.value);
+      });
     }
 
     // Retro beep sound for custom alerts
@@ -2185,8 +2259,7 @@
         status.textContent = "STOPPED";
         status.style.color = "#ff4d6d";
       }
-      const timeElem = document.getElementById('timeDisplay');
-      if (timeElem) timeElem.textContent = "00:00 / --:--";
+      updateWinampTimeDisplay();
       const seekSlider = document.getElementById('winampSeek');
       if (seekSlider) seekSlider.value = 0;
     }
@@ -2224,15 +2297,12 @@
       playAudio();
     }
 
-    function seekAudio(val) {
-      if (winampAudio && winampAudio.duration) {
-        winampAudio.currentTime = (val / 100) * winampAudio.duration;
-      }
-    }
-
     function setVolume(val) {
+      if (!winampAudio) {
+        initWinampAudio();
+      }
       if (winampAudio) {
-        winampAudio.volume = parseFloat(val);
+        winampAudio.volume = Math.max(0, Math.min(1, parseFloat(val)));
       }
     }
 
@@ -2290,6 +2360,13 @@
       const d = document.createElement('div');
       d.textContent = text;
       return d.innerHTML;
+    }
+
+    // Auto-init audio metadata on page load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initWinampAudio);
+    } else {
+      initWinampAudio();
     }
   </script>
 
