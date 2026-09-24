@@ -283,25 +283,29 @@
       position: relative;
     }
     .neo-box-header {
-      background: linear-gradient(90deg, #2b0b15, #16080e);
-      border-bottom: 1px solid var(--accent-wine);
-      padding: 6px 10px;
-      color: #fff;
+      background: #180911;
+      border-bottom: 2px solid var(--accent-wine);
+      padding: 7px 12px;
+      color: #ff99b0;
       font-family: var(--font-title);
       font-weight: bold;
-      font-size: 11.5px;
-      letter-spacing: 0.5px;
+      font-size: 12px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .neo-box-header .tag {
-      font-size: 8.5px;
-      font-family: var(--font-pixel);
-      background: var(--accent-wine);
+    .header-sublink {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-terminal-cyan);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .header-sublink:hover {
       color: #fff;
-      padding: 2px 5px;
-      border-radius: 2px;
+      text-decoration: underline;
     }
     .neo-box-body {
       padding: 10px;
@@ -1250,8 +1254,7 @@
         <!-- Profile Box -->
         <div class="neo-box" id="about">
           <div class="neo-box-header">
-            <span>WEBMASTER PROFILE</span>
-            <span class="tag">EXILIO SÓNICO</span>
+            <span>PERFIL</span>
           </div>
           <div class="neo-box-body profile-card">
             <h1 class="profile-name">JADEN VANCE</h1>
@@ -1377,8 +1380,7 @@
         <!-- Bag Tour / Everyday Carry with Custom Alerts -->
         <div class="neo-box" id="bag">
           <div class="neo-box-header">
-            <span>INSPECCIÓN DE MOCHILA // EDC</span>
-            <span class="tag">CLICK PARA REVISAR</span>
+            <span>MOCHILA &amp; EQUIPO</span>
           </div>
           <div class="neo-box-body">
             <div class="bag-inspect-item" onclick="showRetroAlert('EQUIPO: AUDÍFONOS SONY MDR-7506', 'Audífonos con cable en espiral de 3 metros:\nSu escudo acústico impenetrable para no escuchar los alaridos de Sharpay ni el rebote incesante de balones en el pasillo escolar.', 'headphones')">
@@ -1426,13 +1428,9 @@
         <!-- Photo Wall -->
         <div class="neo-box" id="photos">
           <div class="neo-box-header">
-            <span>DIGITAL CAM DUMP // POLAROIDS &amp; CABINA DE AUDIO</span>
-            <span class="tag">ALBUQUERQUE 2006-2007</span>
+            <span>FOTOS &amp; POLAROIDS</span>
           </div>
           <div class="neo-box-body">
-            <p style="color: #9aa1b5; font-size: 10px; margin-bottom: 10px;">
-              Registros visuales capturados con mi cámara digital de 3.2 megapíxeles con flash directo. Evidencia gráfica de mi supervivencia en East High.
-            </p>
 
             <div class="photo-wall-grid">
 
@@ -1490,14 +1488,9 @@
         <!-- Stamps & Blinkies -->
         <div class="neo-box" id="stamps">
           <div class="neo-box-header">
-            <span>COLECCIÓN DE STAMPS &amp; BLINKIES // ARCHIVOS VINTAGE 2000-2007</span>
-            <span class="tag">WEB 1.0 PRESERVADA</span>
+            <span>STAMPS &amp; BLINKIES</span>
           </div>
           <div class="neo-box-body">
-
-            <div style="font-size: 9px; color: #8c92a4; margin-bottom: 6px; font-family: var(--font-mono); text-align: center; letter-spacing: 0.5px;">
-              [ ARCHIVO SÓNICO: Blinkies animados y postage stamps rescatados de la web underground ]
-            </div>
 
             <!-- Authentic Animated Blinkies -->
             <div class="blinkies-container">
@@ -1540,8 +1533,8 @@
         <!-- RateYourMusic Table -->
         <div class="neo-box" id="rym">
           <div class="neo-box-header">
-            <span>RATE YOUR MUSIC // ARCHIVO DE CRÍTICAS A EAST HIGH</span>
-            <a href="glossary.html" target="_blank" style="font-family:var(--font-mono); font-size:10px; color:#5ef1f2; text-decoration:none; background:#071820; border:1px solid #1a3c48; padding:2px 7px;">[ ? ] ¿NO ENTIENDES LAS REFERENCIAS? VER GLOSARIO ➔</a>
+            <span>CRÍTICAS MUSICALES (RATE YOUR MUSIC)</span>
+            <a href="glossary.html" target="_blank" class="header-sublink">Glosario ➔</a>
           </div>
           <div class="neo-box-body">
             <table class="rym-table">
@@ -1662,8 +1655,7 @@
         <!-- Top 8 -->
         <div class="neo-box" id="top8">
           <div class="neo-box-header">
-            <span>EL "TOP 8" DE JADEN // ALMAS TOLERADAS EN LA TIERRA</span>
-            <span class="tag">ORDEN ESTRICTO</span>
+            <span>TOP 8 DE AMIGOS</span>
           </div>
           <div class="neo-box-body">
             <div class="top8-grid">
@@ -1747,8 +1739,7 @@
         <!-- Guestbook -->
         <div class="neo-box" id="guestbook">
           <div class="neo-box-header">
-            <span>LIBRO DE VISITAS // PLEITOS DE EAST HIGH</span>
-            <span class="tag">MODERADO CON DESDÉN</span>
+            <span>COMENTARIOS &amp; LIBRO DE VISITAS</span>
           </div>
           <div class="neo-box-body">
 
