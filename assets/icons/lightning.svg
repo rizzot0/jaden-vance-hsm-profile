@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Retro Electric Lightning Bolt -->
+  <polygon points="18,1 7,17 15,17 12,31 25,13 17,13" fill="#ffea00" stroke="#b39b00" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="17,3 9,16 15,16 13,27 23,14 17,14" fill="#ffffff" opacity="0.8"/>
+</svg>

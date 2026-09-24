@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Windows XP Style Notepad Document with Pencil -->
+  <!-- Notepad Paper -->
+  <rect x="4" y="3" width="20" height="26" rx="1.5" fill="#ffffd9" stroke="#b0a875" stroke-width="1.2"/>
+  <!-- Blue Ruled Lines -->
+  <line x1="8" y1="8" x2="20" y2="8" stroke="#a0c0e0" stroke-width="1"/>
+  <line x1="8" y1="12" x2="20" y2="12" stroke="#a0c0e0" stroke-width="1"/>
+  <line x1="8" y1="16" x2="20" y2="16" stroke="#a0c0e0" stroke-width="1"/>
+  <line x1="8" y1="20" x2="17" y2="20" stroke="#a0c0e0" stroke-width="1"/>
+  <!-- Pencil -->
+  <g transform="rotate(35 22 20)">
+    <polygon points="18,10 22,10 20,6" fill="#f0d0b0"/>
+    <polygon points="19.5,7 20.5,7 20,6" fill="#222"/>
+    <rect x="18" y="10" width="4" height="15" fill="#ffcc00" stroke="#997700" stroke-width="0.5"/>
+    <rect x="18" y="25" width="4" height="2" fill="#silver"/>
+    <rect x="18" y="27" width="4" height="2.5" rx="1" fill="#ff6688"/>
+  </g>
+</svg>

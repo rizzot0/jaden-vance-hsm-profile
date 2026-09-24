@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♰ JADEN.ONLINE // sound booth exile // east high 2007 ♰</title>
+  <style>
+    /* ==========================================================================
+       NEOCITIES / WEBCORE / 2000s EMO INTERNET AESTHETIC
+       Inspired by: lyer-online, eggmothsoup, classic MySpace & Neocities webrings
+       ========================================================================== */
+    :root {
+      --bg-dark: #090a0d;
+      --bg-page: #0f1116;
+      --bg-box: #151821;
+      --border-main: #331622;
+      --border-dotted: #4d1e2e;
+      --accent-wine: #891b38;
+      --accent-wine-bright: #d12353;
+      --accent-neon-green: #39ff14;
+      --accent-terminal-cyan: #5ef1f2;
+      --accent-rym-yellow: #f8c025;
+      --text-main: #c9ccd6;
+      --text-dim: #7f8699;
+      --text-links: #f2688b;
+      --font-body: "Verdana", "Tahoma", sans-serif;
+      --font-mono: "Courier New", Courier, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Custom Retro Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090a0d;
+      border-left: 1px solid #222;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-wine);
+      border: 1px solid #ff4d79;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-wine-bright);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(137, 27, 56, 0.25) 0%, transparent 75%),
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0px, rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 2px),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23190810' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 11px;
+      line-height: 1.5;
+      padding: 10px 5px 40px;
+      cursor: crosshair;
+    }
+
+    
+    /* Inline Retro Pixel Icons */
+    .inline-pixel-icon {
+      width: 14px;
+      height: 14px;
+      vertical-align: -2px;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+      display: inline-block;
+      margin-right: 4px;
+    }
+    .bag-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: -4px;
+      margin-right: 7px;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+    .webring-icon {
+      width: 14px;
+      height: 14px;
+      vertical-align: -2px;
+      image-rendering: pixelated;
+      margin: 0 3px;
+    }
+    .rym-stars {
+      display: inline-flex;
+      gap: 2px;
+      align-items: center;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    .rym-star {
+      width: 13px;
+      height: 13px;
+      image-rendering: pixelated;
+    }
+    .retro-alert-icon-img {
+      width: 32px;
+      height: 32px;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+
+    /* CRT Scanlines Overlay */
+    .crt-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      pointer-events: none;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.28) 50%);
+      background-size: 100% 4px;
+      z-index: 9999;
+      opacity: 0.7;
+    }
+
+    a {
+      color: var(--text-links);
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #fff;
+      background: var(--accent-wine);
+      text-decoration: none;
+    }
+
+    /* Main Container (Neocities Frame) */
+    .neocities-wrapper {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--bg-page);
+      border: 3px double var(--accent-wine);
+      box-shadow: 0 0 35px rgba(137, 27, 56, 0.45), 0 0 12px #000;
+      position: relative;
+    }
+
+    /* Top Emo Marquee */
+    .emo-marquee-container {
+      background: #000;
+      border-bottom: 2px solid var(--accent-wine);
+      padding: 5px 0;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #ff6688;
+    }
+    .emo-marquee-container span.accent {
+      color: var(--accent-neon-green);
+    }
+    .emo-marquee-container span.lyrics {
+      color: #fff;
+      font-style: italic;
+    }
+
+    /* Retro Navigation */
+    .retro-nav {
+      background: #14060a;
+      border-bottom: 1px dashed var(--border-dotted);
+      padding: 8px 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+    }
+    .retro-nav-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .retro-nav-links a {
+      color: var(--text-main);
+      text-transform: lowercase;
+    }
+    .retro-nav-links a:hover {
+      color: #fff;
+    }
+    .crt-toggle-btn {
+      background: #250912;
+      border: 1px solid var(--accent-wine);
+      color: var(--accent-neon-green);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      padding: 2px 6px;
+      cursor: pointer;
+    }
+
+    /* Layout Columns */
+    .content-layout {
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 15px;
+      padding: 15px;
+    }
+    @media (max-width: 820px) {
+      .content-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Generic Neocities Box */
+    .neo-box {
+      background: var(--bg-box);
+      border: 1px solid var(--border-main);
+      margin-bottom: 15px;
+      position: relative;
+    }
+    .neo-box-header {
+      background: linear-gradient(90deg, #2b0b15, #16080e);
+      border-bottom: 1px solid var(--accent-wine);
+      padding: 5px 10px;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-weight: bold;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .neo-box-header .tag {
+      font-size: 9px;
+      background: var(--accent-wine);
+      color: #fff;
+      padding: 1px 5px;
+      border-radius: 2px;
+    }
+    .neo-box-body {
+      padding: 10px;
+    }
+
+    /* Left Sidebar: Profile Card */
+    .profile-card {
+      text-align: center;
+    }
+    .profile-name {
+      font-family: var(--font-mono);
+      font-size: 17px;
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px rgba(255, 77, 121, 0.6);
+      margin-bottom: 2px;
+    }
+    .profile-sub {
+      color: var(--text-dim);
+      font-size: 10px;
+      font-family: var(--font-mono);
+      margin-bottom: 10px;
+    }
+    .avatar-frame {
+      border: 2px solid #4a2130;
+      padding: 4px;
+      background: #000;
+      margin: 0 auto 10px;
+      max-width: 270px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    }
+    .avatar-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: contrast(1.08) saturate(0.95);
+    }
+    .avatar-sticker {
+      position: absolute;
+      bottom: -6px;
+      right: -6px;
+      background: #000;
+      color: var(--accent-neon-green);
+      border: 1px solid var(--accent-neon-green);
+      font-family: var(--font-mono);
+      font-size: 8px;
+      padding: 2px 5px;
+      transform: rotate(-3deg);
+    }
+
+    /* Mood & Status Box */
+    .status-widget {
+      background: #0d0e12;
+      border: 1px dashed var(--accent-wine);
+      padding: 8px;
+      margin-bottom: 12px;
+      font-size: 10px;
+      line-height: 1.6;
+      font-family: var(--font-mono);
+      text-align: left;
+    }
+    .status-widget strong {
+      color: var(--accent-wine-bright);
+    }
+
+    /* Bio Details Table */
+    .bio-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+    .bio-table td {
+      padding: 4px;
+      border-bottom: 1px dotted #2b2e3c;
+    }
+    .bio-table td.key {
+      color: #9aa1b5;
+      font-weight: bold;
+      width: 40%;
+    }
+    .bio-table td.val {
+      color: #fff;
+    }
+
+    /* Action Buttons */
+    .action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 12px;
+    }
+    .btn-action {
+      background: #1f212c;
+      border: 1px solid #3c4054;
+      color: #d1d5e4;
+      font-size: 9px;
+      font-family: var(--font-mono);
+      padding: 5px 4px;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-action:hover {
+      background: var(--accent-wine);
+      color: #fff;
+      border-color: #ff4d79;
+    }
+
+    /* Last.fm Scrobbler */
+    .lastfm-box {
+      background: #12131a;
+      border-left: 3px solid #ba0000;
+      padding: 6px 8px;
+      margin-bottom: 12px;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      text-align: left;
+    }
+    .lastfm-title {
+      color: #ff4d4d;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .lastfm-track {
+      color: #fff;
+      font-size: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Winamp Player */
+    .winamp-skin {
+      background: #1c1d24;
+      border: 2px solid #5a5d6e;
+      box-shadow: inset 1px 1px 0 #888, inset -1px -1px 0 #111;
+      padding: 5px;
+      margin-bottom: 15px;
+      font-family: var(--font-mono);
+    }
+    .winamp-top {
+      background: linear-gradient(90deg, #0b1a44, #1b387e);
+      color: #fff;
+      font-size: 9px;
+      font-weight: bold;
+      padding: 2px 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .winamp-lcd {
+      background: #000;
+      border: 1px solid #444;
+      padding: 5px;
+      margin: 5px 0;
+      color: var(--accent-neon-green);
+      font-size: 10px;
+    }
+    .winamp-song-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: bold;
+    }
+    .winamp-subtext {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9px;
+      color: #00dd55;
+      margin-top: 3px;
+    }
+    .winamp-buttons {
+      display: flex;
+      gap: 3px;
+      justify-content: center;
+      margin: 4px 0;
+    }
+    .w-btn {
+      background: #2b2e3a;
+      border: 1px solid #555;
+      box-shadow: inset 1px 1px 0 #888, inset -1px -1px 0 #111;
+      color: #eee;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      padding: 2px 6px;
+      cursor: pointer;
+    }
+    .w-btn:active {
+      box-shadow: inset 1px 1px 0 #111, inset -1px -1px 0 #888;
+    }
+    .winamp-list {
+      background: #08090b;
+      border: 1px solid #333;
+      max-height: 80px;
+      overflow-y: auto;
+      font-size: 9px;
+      margin-top: 4px;
+    }
+    .winamp-item {
+      padding: 3px 5px;
+      color: #999;
+      cursor: pointer;
+      border-bottom: 1px solid #16181f;
+    }
+    .winamp-item:hover, .winamp-item.active {
+      background: var(--accent-wine);
+      color: #fff;
+    }
+
+    /* Backpack Inspection (EDC) */
+    .bag-inspect-item {
+      background: #111218;
+      border: 1px solid #292c3a;
+      padding: 6px 8px;
+      margin-bottom: 5px;
+      font-size: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .bag-inspect-item:hover {
+      border-color: var(--accent-wine-bright);
+      background: #1b1c26;
+    }
+
+    /* Photo Wall */
+    .photo-wall-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 10px 0;
+    }
+    @media (max-width: 650px) {
+      .photo-wall-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .polaroid-card {
+      background: #f4eedb;
+      color: #111;
+      padding: 8px 8px 14px;
+      box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
+      border: 1px solid #ccc;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .polaroid-card:hover {
+      transform: scale(1.02) rotate(0deg) !important;
+      z-index: 10;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+    }
+    .polaroid-card.tilt-left {
+      transform: rotate(-1.5deg);
+    }
+    .polaroid-card.tilt-right {
+      transform: rotate(1.5deg);
+    }
+    .polaroid-tape {
+      position: absolute;
+      top: -8px;
+      left: 35%;
+      width: 70px;
+      height: 18px;
+      background: rgba(230, 220, 180, 0.65);
+      border-left: 2px dashed rgba(0,0,0,0.1);
+      border-right: 2px dashed rgba(0,0,0,0.1);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .polaroid-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid #333;
+      filter: contrast(1.05) saturate(1.02);
+    }
+    .polaroid-caption {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      margin-top: 8px;
+      line-height: 1.35;
+      color: #222;
+    }
+    .polaroid-caption strong {
+      color: #8b1122;
+    }
+
+    /* Main Content */
+    .headline-box {
+      background: #141720;
+      border: 1px solid var(--border-main);
+      padding: 12px;
+      margin-bottom: 15px;
+    }
+    .headline-box h2 {
+      font-size: 15px;
+      color: #fff;
+      font-family: var(--font-mono);
+      border-bottom: 1px dashed var(--accent-wine);
+      padding-bottom: 5px;
+      margin-bottom: 8px;
+    }
+    .headline-box p {
+      color: #b5bacb;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    /* ASCII Art */
+    .ascii-art {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      line-height: 1.15;
+      color: var(--accent-wine-bright);
+      white-space: pre;
+      background: #08090d;
+      padding: 8px;
+      border: 1px dotted #3d1b28;
+      margin-bottom: 12px;
+      overflow-x: auto;
+    }
+
+    /* Likes & Dislikes */
+    .likes-dislikes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 12px 0;
+    }
+    @media (max-width: 600px) {
+      .likes-dislikes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .likes-column, .dislikes-column {
+      background: #10121a;
+      border: 1px dashed #2f3448;
+      padding: 10px;
+    }
+    .likes-column h4 {
+      color: var(--accent-neon-green);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      margin-bottom: 6px;
+      border-bottom: 1px dotted #1d4022;
+      padding-bottom: 3px;
+    }
+    .dislikes-column h4 {
+      color: #ff4d6d;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      margin-bottom: 6px;
+      border-bottom: 1px dotted #541926;
+      padding-bottom: 3px;
+    }
+    .list-items {
+      list-style-type: square;
+      padding-left: 15px;
+      font-size: 10px;
+      color: #b8bdce;
+      line-height: 1.6;
+    }
+
+    /* RYM Table with Album Art Thumbs */
+    .rym-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      margin: 8px 0;
+    }
+    .rym-table th {
+      background: #0d0f15;
+      color: #fff;
+      padding: 6px 8px;
+      border-bottom: 2px solid var(--accent-wine);
+      text-align: left;
+      font-family: var(--font-mono);
+    }
+    .rym-table td {
+      padding: 8px;
+      border-bottom: 1px solid #202432;
+      vertical-align: top;
+    }
+    .rym-table tr:hover td {
+      background: #181b26;
+    }
+    .album-thumb-container {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .album-mini-art {
+      width: 48px;
+      height: 48px;
+      border: 1px solid #444;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: bold;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    .mini-bop { background: linear-gradient(135deg, #ff0055, #ffcc00); color: #000; border-color: #ff6699; }
+    .mini-game { background: linear-gradient(135deg, #cc2200, #440000); color: #fff; border-color: #ff4422; }
+    .mini-break { background: linear-gradient(135deg, #001133, #004488); color: #ffccff; border-color: #4488ff; }
+    .mini-kelsi { background: linear-gradient(135deg, #222, #111); color: #00ff66; border-color: #00aa44; }
+
+    .song-title {
+      font-size: 11px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .song-artist {
+      color: var(--text-links);
+      font-size: 10px;
+    }
+    .song-review {
+      margin-top: 4px;
+      padding: 5px 7px;
+      background: #0e0f14;
+      border-left: 2px solid var(--accent-wine);
+      font-style: italic;
+      color: #c7cbd8;
+      line-height: 1.4;
+    }
+    .score-badge {
+      display: inline-block;
+      padding: 1px 5px;
+      font-weight: bold;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      border-radius: 2px;
+    }
+    .score-05 { background: #4a0815; color: #ff5779; }
+    .score-10 { background: #3d1b09; color: #ff9f43; }
+    .score-25 { background: #222533; color: #ced6e0; }
+    .score-45 { background: #0c3319; color: #51cf66; border: 1px solid #2b8a3e; }
+
+    /* Stamps & Blinkies */
+    .stamps-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      padding: 8px;
+      background: #0b0c11;
+      border: 1px dotted #3d4257;
+    }
+    .pixel-stamp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 99px;
+      height: 56px;
+      background: #181a24;
+      border: 2px dashed #4e536d;
+      padding: 2px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 8px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      user-select: none;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .pixel-stamp:hover {
+      transform: scale(1.05);
+      border-color: var(--accent-wine-bright);
+    }
+    .pixel-stamp.emo { background: linear-gradient(135deg, #2b0c16, #000); color: #ff7597; border-color: #891b38; }
+    .pixel-stamp.vinyl { background: linear-gradient(135deg, #111, #252834); color: #f8c025; border-color: #6d5412; }
+    .pixel-stamp.midwest { background: linear-gradient(135deg, #0e1e24, #050b0e); color: #5ef1f2; border-color: #175a68; }
+    .pixel-stamp.antipop { background: linear-gradient(135deg, #330000, #110000); color: #ff3344; border-color: #990011; }
+
+    /* Blinkies */
+    .blinkies-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      justify-content: center;
+      margin: 8px 0;
+    }
+    .blinkie {
+      display: inline-block;
+      padding: 2px 6px;
+      height: 18px;
+      line-height: 14px;
+      border: 1px solid #fff;
+      font-family: var(--font-mono);
+      font-size: 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      user-select: none;
+    }
+    @keyframes blink-wine {
+      0%, 49% { background: #891b38; color: #fff; border-color: #ff6b8b; }
+      50%, 100% { background: #000; color: #ff6b8b; border-color: #891b38; }
+    }
+    @keyframes blink-green {
+      0%, 49% { background: #003311; color: #39ff14; border-color: #00ff66; }
+      50%, 100% { background: #000; color: #00aa33; border-color: #003311; }
+    }
+    @keyframes blink-yellow {
+      0%, 49% { background: #443300; color: #ffd700; border-color: #ffaa00; }
+      50%, 100% { background: #111; color: #aa8800; border-color: #554400; }
+    }
+    .blinkie.b-wine { animation: blink-wine 1.2s infinite; }
+    .blinkie.b-green { animation: blink-green 0.9s infinite; }
+    .blinkie.b-yellow { animation: blink-yellow 1.4s infinite; }
+
+    /* Webring */
+    .webring-cluster {
+      background: #0e0f14;
+      border: 1px solid #282a39;
+      padding: 10px;
+      margin-top: 15px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+    }
+    .webring-title {
+      color: var(--accent-terminal-cyan);
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .webring-nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 4px;
+    }
+    .webring-nav a {
+      color: #ff6b8b;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .webring-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Guestbook */
+    .comment-entry {
+      background: #0f1016;
+      border: 1px solid #262938;
+      padding: 8px;
+      margin-bottom: 8px;
+    }
+    .comment-head {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-dim);
+      font-size: 9px;
+      border-bottom: 1px dotted #333;
+      padding-bottom: 3px;
+      margin-bottom: 4px;
+    }
+    .comment-head .user {
+      color: var(--text-links);
+      font-weight: bold;
+    }
+    .comment-text {
+      color: #d8dce8;
+      font-size: 10px;
+    }
+    .jaden-retort {
+      background: #200810;
+      border-left: 2px solid var(--accent-wine-bright);
+      color: #ff85a1;
+      padding: 4px 6px;
+      font-size: 9px;
+      margin-top: 5px;
+    }
+
+    /* Form */
+    .comment-box-form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 8px;
+    }
+    .comment-box-form input, .comment-box-form textarea {
+      background: #08090d;
+      border: 1px solid #3c4056;
+      color: #fff;
+      padding: 5px;
+      font-size: 10px;
+      font-family: var(--font-body);
+    }
+    .comment-box-form input:focus, .comment-box-form textarea:focus {
+      outline: none;
+      border-color: var(--accent-wine-bright);
+    }
+    .btn-post {
+      background: var(--accent-wine);
+      color: #fff;
+      border: 1px solid #b82247;
+      padding: 5px 12px;
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: bold;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+    .btn-post:hover {
+      background: var(--accent-wine-bright);
+    }
+
+    /* 88x31 Badges */
+    .buttons-88x31-rack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      padding: 10px;
+      background: #08090d;
+      border-top: 1px dashed var(--border-dotted);
+    }
+    .btn-88x31 {
+      width: 88px;
+      height: 31px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 7px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 1px solid #444;
+      box-shadow: inset 1px 1px 0 #777, inset -1px -1px 0 #111;
+      user-select: none;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .b-notepad { background: #002244; color: #66ccff; border-color: #0055aa; }
+    .b-winamp { background: #222; color: #ffaa00; border-color: #775500; }
+    .b-firefox { background: #441100; color: #ff9944; border-color: #aa3300; }
+    .b-antipop { background: #440011; color: #ff6688; border-color: #aa0022; }
+    .b-flac { background: #003311; color: #00ff66; border-color: #008833; }
+    .b-neocities { background: #1a0033; color: #dd99ff; border-color: #6600aa; }
+    .b-cassette { background: #332200; color: #ffcc66; border-color: #996600; }
+
+    /* Footer */
+    .neo-footer {
+      background: #06070a;
+      border-top: 2px solid var(--accent-wine);
+      padding: 15px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: #6d7386;
+    }
+    .counter-screen {
+      background: #000;
+      color: #ff2a2a;
+      border: 1px solid #444;
+      padding: 2px 7px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    /* Secret Modal */
+    dialog#secretVault {
+      margin: auto;
+      background: #111218;
+      color: #fff;
+      border: 2px solid #ff2a55;
+      box-shadow: 0 0 35px rgba(255, 42, 85, 0.6);
+      padding: 18px;
+      max-width: 480px;
+      font-family: var(--font-mono);
+    }
+    dialog#secretVault::backdrop {
+      background: rgba(0, 0, 0, 0.88);
+    }
+
+    /* ==========================================================================
+       AUTHENTIC 2000s RETRO WINDOWS XP / NEOCITIES MODAL ALERT
+       ========================================================================== */
+    dialog#retroAlertModal {
+      margin: auto;
+      background: #14161f;
+      color: #fff;
+      border: 2px solid var(--accent-wine-bright);
+      box-shadow: 0 0 35px rgba(209, 35, 83, 0.55), inset 1px 1px 0 #555, inset -1px -1px 0 #000;
+      padding: 0;
+      max-width: 440px;
+      width: 90%;
+      font-family: var(--font-body);
+    }
+    dialog#retroAlertModal::backdrop {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(2px);
+    }
+    .retro-alert-titlebar {
+      background: linear-gradient(90deg, #661025, #9c1b3c);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-weight: bold;
+      font-size: 11px;
+      padding: 5px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ff4d79;
+    }
+    .retro-alert-body {
+      padding: 15px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: #13151e;
+    }
+    .retro-alert-icon-box {
+      font-size: 26px;
+      flex-shrink: 0;
+      background: #090a0e;
+      border: 1px solid #3c4056;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 1px 1px 0 #222, inset -1px -1px 0 #000;
+    }
+    .retro-alert-text {
+      font-size: 11px;
+      line-height: 1.5;
+      color: #d8dce8;
+      white-space: pre-line;
+    }
+    .retro-alert-text strong {
+      color: #ff6b8b;
+    }
+    .retro-alert-footer {
+      background: #0a0b0f;
+      border-top: 1px solid #232635;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .retro-alert-btn {
+      background: #252834;
+      border: 1px solid #555;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 4px 14px;
+      cursor: pointer;
+      box-shadow: inset 1px 1px 0 #888, inset -1px -1px 0 #111;
+      text-transform: uppercase;
+    }
+    .retro-alert-btn:hover {
+      background: var(--accent-wine);
+      border-color: #ff4d79;
+    }
+    .retro-alert-btn:active {
+      box-shadow: inset 1px 1px 0 #111, inset -1px -1px 0 #888;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toggleable CRT Scanlines Overlay -->
+  <div class="crt-overlay" id="crtOverlay"></div>
+
+  <div class="neocities-wrapper">
+
+    <!-- Top Emo Lyrics Marquee -->
+    <div class="emo-marquee-container">
+      <marquee scrollamount="6">
+        <span class="lyrics">"I'll see you when we're both not so emotional..."</span> — American Football ✦ 
+        <span class="accent">[ESTADO: Ocupando la cabina de audio #2 sin permiso de la Sra. Darbus]</span> ✦ 
+        <span class="lyrics">"I miss you, not in a slint way, but in a real way..."</span> ✦ 
+        <span class="accent">[AVISO: La música real se escucha en vinilo o casete, no comprimida en ringtones de celular]</span> ✦ 
+        <span class="lyrics">"And in my dreams you're alive and you're crying..."</span> — Neutral Milk Hotel ✦ 
+        <span>East High Status Quo = Fábrica de conformidad sonora</span>
+      </marquee>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="retro-nav">
+      <div class="retro-nav-links">
+        <a href="#about">♰ /about-me</a>
+        <a href="#photos">♰ /photo-dump</a>
+        <a href="#bag">♰ /bag-tour</a>
+        <a href="#stamps">♰ /stamps-blinkies</a>
+        <a href="#rym">♰ /rym-reviews</a>
+        <a href="#top8">♰ /top-8</a>
+        <a href="#guestbook">♰ /guestbook</a>
+        <a href="javascript:void(0)" onclick="document.getElementById('secretVault').showModal()" style="color:#ff3b66;">[!] /secret_confession.txt</a>
+      </div>
+      <div>
+        <button class="crt-toggle-btn" onclick="toggleCRT()">CRT: ON/OFF</button>
+      </div>
+    </nav>
+
+    <!-- Main Grid Content -->
+    <div class="content-layout">
+
+      <!-- ================= LEFT COLUMN ================= -->
+      <aside>
+
+        <!-- Profile Box -->
+        <div class="neo-box" id="about">
+          <div class="neo-box-header">
+            <span>WEBMASTER PROFILE</span>
+            <span class="tag">EXILIO SÓNICO</span>
+          </div>
+          <div class="neo-box-body profile-card">
+            <h1 class="profile-name">JADEN VANCE</h1>
+            <p class="profile-sub">East High AV Tech / Music Purist / 17y</p>
+
+            <div class="avatar-frame">
+              <img src="jaden_portrait.jpg" alt="Jaden Vance en la cabina de sonido" class="avatar-img">
+              <div class="avatar-sticker">100% ANALOG</div>
+            </div>
+
+            <!-- Mood & Status Widget -->
+            <div class="status-widget">
+              <strong>SENTIMIENTO HOY:</strong> Desprecio acústico <img src="assets/icons/coffee.svg" class="inline-pixel-icon" alt="Café"><br>
+              <strong>UBICACIÓN:</strong> Cabina de luces y sonido, East High<br>
+              <strong>DETENCIÓN:</strong> 12 horas acumuladas con Darbus<br>
+              <strong>PITCHFORK SCORE PROMEDIO:</strong> 8.9 / 10.0
+            </div>
+
+            <!-- Last.fm Scrobbler -->
+            <div class="lastfm-box">
+              <div class="lastfm-title">
+                <span>SCROBBLING VÍA AUDIOSCROBBLER</span>
+                <span style="color:#00ff66;">● LIVE</span>
+              </div>
+              <div class="lastfm-track" id="liveScrobble">
+                <img src="assets/icons/equalizer.svg" class="inline-pixel-icon" alt="Playing"> Slint — Washer (1991)
+              </div>
+              <div style="color:#777; font-size:8px; margin-top:2px;">hace 2 minutos • iPod Classic Rockbox</div>
+            </div>
+
+            <!-- Bio Facts Table -->
+            <table class="bio-table">
+              <tr>
+                <td class="key">Año escolar:</td>
+                <td class="val">Junior (11º Grado)</td>
+              </tr>
+              <tr>
+                <td class="key">Afiliación:</td>
+                <td class="val">Club Audiovisual (Cero espíritu escolar)</td>
+              </tr>
+              <tr>
+                <td class="key">Equipo de batalla:</td>
+                <td class="val">Sony MDR-7506 + iPod 80GB</td>
+              </tr>
+              <tr>
+                <td class="key">Formato preferido:</td>
+                <td class="val">Vinilo 180g &gt; Casete cromo &gt; FLAC</td>
+              </tr>
+              <tr>
+                <td class="key">Compañero tolerado:</td>
+                <td class="val">Kelsi (solo cuando no compone pop)</td>
+              </tr>
+            </table>
+
+            <!-- Quick Action Buttons with Custom Retro Alerts -->
+            <div class="action-grid">
+              <div class="btn-action" onclick="testCompatibility()"><img src="assets/icons/lightning.svg" class="inline-pixel-icon" alt="Test"> Test de Afinidad</div>
+              <div class="btn-action" onclick="showRetroAlert('BANDEJA DE ENTRADA BLOQUEADA', 'Jaden: \'Mi bandeja de entrada solo acepta ensayos de más de 1,000 palabras en formato PDF con análisis armónico sobre Steve Albini. Los correos sobre el pep rally son eliminados automáticamente.\'', 'mail')"><img src="assets/icons/mail.svg" class="inline-pixel-icon" alt="Mail"> Enviar Ensayo</div>
+              <div class="btn-action" onclick="showRetroAlert('ERROR 403: ACCESO DENEGADO', 'Jaden ha bloqueado permanentemente las solicitudes de amistad de toda persona que vista rojo universitario o aplauda en sincronía en el gimnasio.', 'error')"><img src="assets/icons/cross.svg" class="inline-pixel-icon" alt="Ban"> Agregar a Amigos</div>
+              <div class="btn-action" onclick="document.getElementById('secretVault').showModal()"><img src="assets/icons/lock.svg" class="inline-pixel-icon" alt="Lock"> Archivo Oculto</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Winamp v2.91 Player -->
+        <div class="winamp-skin">
+          <div class="winamp-top">
+            <span>WINAMP v2.91 - JADEN_MOD</span>
+            <span>_ □ ✕</span>
+          </div>
+          <div class="winamp-lcd">
+            <div class="winamp-song-title" id="currentTrackDisplay">1. American Football - Never Meant</div>
+            <div class="winamp-subtext">
+              <span id="playerStatus">STOPPED</span>
+              <span>44.1 kHz FLAC</span>
+              <span id="timeDisplay">00:00</span>
+            </div>
+          </div>
+          <div class="winamp-buttons">
+            <button class="w-btn" onclick="prevTrack()">|&lt;&lt;</button>
+            <button class="w-btn" onclick="playAudio()">▶ PLAY</button>
+            <button class="w-btn" onclick="pauseAudio()">❚❚ PAUSE</button>
+            <button class="w-btn" onclick="stopAudio()">■ STOP</button>
+            <button class="w-btn" onclick="nextTrack()">&gt;&gt;|</button>
+          </div>
+          <div class="winamp-list">
+            <div class="winamp-item active" onclick="selectTrack(0)">1. American Football - Never Meant (1999)</div>
+            <div class="winamp-item" onclick="selectTrack(1)">2. Neutral Milk Hotel - Holland, 1945 (1998)</div>
+            <div class="winamp-item" onclick="selectTrack(2)">3. Slint - Breadcrumb Trail (1991)</div>
+            <div class="winamp-item" onclick="selectTrack(3)">4. Joy Division - Disorder (1979)</div>
+            <div class="winamp-item" onclick="selectTrack(4)">5. [DEMO SECRETA] Kelsi - Piano Solo Take #3</div>
+          </div>
+        </div>
+
+        <!-- Bag Tour / Everyday Carry with Custom Alerts -->
+        <div class="neo-box" id="bag">
+          <div class="neo-box-header">
+            <span>INSPECCIÓN DE MOCHILA // EDC</span>
+            <span class="tag">CLICK PARA REVISAR</span>
+          </div>
+          <div class="neo-box-body">
+            <div class="bag-inspect-item" onclick="showRetroAlert('EQUIPO: AUDÍFONOS SONY MDR-7506', 'Audífonos con cable en espiral de 3 metros:\nSu escudo acústico impenetrable para no escuchar los alaridos de Sharpay ni el rebote incesante de balones en el pasillo escolar.', 'headphones')">
+              <img src="assets/icons/headphones.svg" class="bag-icon" alt="Audífonos"> <strong>Audífonos de Monitor de Estudio</strong>
+            </div>
+            <div class="bag-inspect-item" onclick="showRetroAlert('EQUIPO: IPOD CLASSIC 80GB', 'Con firmware alternativo Rockbox:\nCero canciones de Disney. Contiene 4,200 pistas en FLAC 24-bit ripeadas directamente de sus vinilos a las 3:00 AM bajo la lluvia.', 'ipod')">
+              <img src="assets/icons/ipod.svg" class="bag-icon" alt="iPod"> <strong>iPod Classic con Rueda de Clic</strong>
+            </div>
+            <div class="bag-inspect-item" onclick="showRetroAlert('HERRAMIENTA: SHARPIE NEGRO', 'Marcador permanente de punta biselada:\nUtilizado para tachar rostros sonrientes en los afiches de audiciones y escribir comentarios cínicos en los casilleros del gimnasio.', 'pen')">
+              <img src="assets/icons/sharpie.svg" class="bag-icon" alt="Sharpie"> <strong>Sharpie Negro Permanente</strong>
+            </div>
+            <div class="bag-inspect-item" onclick="showRetroAlert('SEGURIDAD: TAPONES DE SILICONA', 'Protección auditiva de grado industrial:\nIndispensables cuando la Sra. Darbus realiza sus ejercicios de vocalización y ópera a las 8:00 AM en el vestíbulo.', 'mute')">
+              <img src="assets/icons/earplugs.svg" class="bag-icon" alt="Tapones"> <strong>Tapones de Cancelación de Ruido</strong>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ================= RIGHT COLUMN ================= -->
+      <main>
+
+        <!-- ASCII ART BANNER -->
+        <div class="ascii-art">
+   _____                       _     ____              _   _     
+  / ____|                     | |   |  _ \            | | | |    
+ | (___   ___  _   _ _ __   __| |   | |_) | ___   ___ | |_| |__  
+  \___ \ / _ \| | | | '_ \ / _` |   |  _ < / _ \ / _ \| __| '_ \ 
+  ____) | (_) | |_| | | | | (_| |   | |_) | (_) | (_) | |_| | | |
+ |_____/ \___/ \__,_|_| |_|\__,_|   |____/ \___/ \___/ \__|_| |_|
+  [ EAST HIGH AUDITORIUM // FRECUENCIA PIRATA // NO POP EN LA DUELA ]
+        </div>
+
+        <!-- Manifesto / Headline -->
+        <div class="headline-box">
+          <h2>♰ MANIFIESTO DEL EXILIO EN LA CABINA DE SONIDO ♰</h2>
+          <p>
+            Permítanme aclarar una cosa: yo no formo parte de los "Wildcats". No canto sobre bandejas de almuerzo, no aplaudo en coreografías de básquetbol y definitivamente no considero que un solo de sintetizador barato con lentejuelas constituya una experiencia musical válida.
+          </p>
+          <p style="margin-top: 6px;">
+            Mientras East High vive bajo el delirio colectivo de que Troy Bolton inventó el desamor por balbucear frente a un tablero de cristal, yo documento la decadencia acústica de esta institución desde la consola de mezcla. Si buscas a alguien que te diga que *High School Musical* tiene "buenas canciones de verano", habla con Chad. Aquí solo se rinde culto a la microtonalidad y a la honestidad del ruido analógico.
+          </p>
+        </div>
+
+        <!-- Photo Wall -->
+        <div class="neo-box" id="photos">
+          <div class="neo-box-header">
+            <span>DIGITAL CAM DUMP // POLAROIDS &amp; CABINA DE AUDIO</span>
+            <span class="tag">ALBUQUERQUE 2006-2007</span>
+          </div>
+          <div class="neo-box-body">
+            <p style="color: #9aa1b5; font-size: 10px; margin-bottom: 10px;">
+              Registros visuales capturados con mi cámara digital de 3.2 megapíxeles con flash directo. Evidencia gráfica de mi supervivencia en East High.
+            </p>
+
+            <div class="photo-wall-grid">
+
+              <!-- Photo 1: Sound booth console & notebook -->
+              <div class="polaroid-card tilt-left">
+                <div class="polaroid-tape"></div>
+                <img src="soundbooth_desk.jpg" alt="Mesa de sonido de la cabina de audio con consola Mackie y casete" class="polaroid-img">
+                <div class="polaroid-caption">
+                  <strong>14/03/2007 — 18:45 hrs.</strong> Mi santuario: consola Mackie 1604, cables XLR enrollados, casete Fall Mix y libreta con calificaciones afiladas. En la pared, el cartel de la obra debidamente intervenido con Sharpie.
+                </div>
+              </div>
+
+              <!-- Photo 2: Polaroids collage, vinyl, ticket & cassette -->
+              <div class="polaroid-card tilt-right">
+                <div class="polaroid-tape"></div>
+                <img src="jaden_polaroids.jpg" alt="Collage de fotos polaroid, tocadiscos, entrada de básquetbol anulada y stickers emo" class="polaroid-img">
+                <div class="polaroid-caption">
+                  <strong>21/10/2005.</strong> Boleto de los Wildcats sellado como VOID ("f@#k off"), tocadiscos girando en la oscuridad, cinta de casete <em>'For Nobody'</em> y stickers de The Used y MCR.
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Likes & Dislikes -->
+        <div class="likes-dislikes-grid">
+          <div class="likes-column">
+            <h4>[+] COSAS QUE JADEN TOLERA</h4>
+            <ul class="list-items">
+              <li>El silencio absoluto del auditorio a las 6:30 PM</li>
+              <li>Compases irregulares en 7/8 y 11/8</li>
+              <li>El olor a cartón de vinilos usados de segunda mano</li>
+              <li>Las progresiones en menor de Kelsi cuando está sola</li>
+              <li>El chico del chelo que patina (único con cerebro)</li>
+              <li>Suéteres a rayas gastados con orificios en los pulgares</li>
+              <li>Piratear audio sin pérdida en la sala de computación</li>
+            </ul>
+          </div>
+
+          <div class="dislikes-column">
+            <h4>[-] CRÍMENES CONTRA LA HUMANIDAD</h4>
+            <ul class="list-items">
+              <li>Los giros de pelo de Troy Bolton en la cancha</li>
+              <li>Gente que aplaude en los tiempos 1 y 3 en vez de 2 y 4</li>
+              <li>Los solos de pandereta con purpurina de Ryan Evans</li>
+              <li>La pizza grasosa de la cafetería escolar</li>
+              <li>Pep rallies (violación acústica a la Convención de Ginebra)</li>
+              <li>Canciones con autotune emitidas por altavoces de gimnasio</li>
+              <li>El optimismo corporativo no fundamentado</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Stamps & Blinkies -->
+        <div class="neo-box" id="stamps">
+          <div class="neo-box-header">
+            <span>COLECCIÓN DE STAMPS &amp; BLINKIES // WEB BADGES</span>
+            <span class="tag">AESTHETIC 2007</span>
+          </div>
+          <div class="neo-box-body">
+
+            <!-- Flashing Blinkies -->
+            <div class="blinkies-container">
+              <div class="blinkie b-wine"><img src="assets/icons/cross.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"> EMO ONLINE <img src="assets/icons/cross.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"></div>
+              <div class="blinkie b-green"><img src="assets/icons/cassette.svg" class="inline-pixel-icon" style="width:12px;height:12px;margin:0 2px;"> CASSETTE CULTURE <img src="assets/icons/cassette.svg" class="inline-pixel-icon" style="width:12px;height:12px;margin:0 2px;"></div>
+              <div class="blinkie b-yellow"><img src="assets/icons/star_full.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"> VINYL PURIST <img src="assets/icons/star_full.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"></div>
+              <div class="blinkie b-wine"><img src="assets/icons/skull.svg" class="inline-pixel-icon" style="width:11px;height:11px;margin:0 2px;"> NO POP RADIO <img src="assets/icons/skull.svg" class="inline-pixel-icon" style="width:11px;height:11px;margin:0 2px;"></div>
+              <div class="blinkie b-green"><img src="assets/icons/equalizer.svg" class="inline-pixel-icon" style="width:11px;height:11px;margin:0 2px;"> WINAMP POWERED <img src="assets/icons/equalizer.svg" class="inline-pixel-icon" style="width:11px;height:11px;margin:0 2px;"></div>
+              <div class="blinkie b-yellow"><img src="assets/icons/lightning.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"> SLOWCORE ADDICT <img src="assets/icons/lightning.svg" class="inline-pixel-icon" style="width:10px;height:10px;margin:0 2px;"></div>
+            </div>
+
+            <!-- Neocities Postage Stamps Grid -->
+            <div class="stamps-grid">
+              <div class="pixel-stamp emo">
+                <div>♰ EMO<br>NOT DEAD<br>1999</div>
+              </div>
+              <div class="pixel-stamp vinyl">
+                <div><img src="assets/icons/equalizer.svg" style="width:13px;height:13px;display:block;margin:0 auto 2px;">180g<br>VINYL ONLY<br>NO MP3</div>
+              </div>
+              <div class="pixel-stamp midwest">
+                <div>☁ MIDWEST<br>EMO KID<br>URBANA IL</div>
+              </div>
+              <div class="pixel-stamp antipop">
+                <div><img src="assets/icons/skull.svg" style="width:14px;height:14px;display:block;margin:0 auto 2px;">ANTI<br>BOLTON<br>WILDCATS</div>
+              </div>
+              <div class="pixel-stamp emo">
+                <div><img src="assets/icons/coffee.svg" style="width:14px;height:14px;display:block;margin:0 auto 2px;">COFFEE<br>&amp; SLINT<br>ALL NIGHT</div>
+              </div>
+              <div class="pixel-stamp vinyl">
+                <div><img src="assets/icons/star_full.svg" style="width:13px;height:13px;display:block;margin:0 auto 2px;">RYM TOP<br>REVIEWER<br>VERIFIED</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RateYourMusic Table -->
+        <div class="neo-box" id="rym">
+          <div class="neo-box-header">
+            <span>RATE YOUR MUSIC // ARCHIVO DE CRÍTICAS A EAST HIGH</span>
+            <span class="tag">DESGLOSE MUSICOLÓGICO</span>
+          </div>
+          <div class="neo-box-body">
+            <table class="rym-table">
+              <thead>
+                <tr>
+                  <th style="width: 28%;">Canción &amp; Portada</th>
+                  <th style="width: 18%;">Puntaje RYM</th>
+                  <th style="width: 54%;">Reseña Crítica de Jaden</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- 1. Bop to the Top -->
+                <tr>
+                  <td>
+                    <div class="album-thumb-container">
+                      <div class="album-mini-art mini-bop">
+                        BOP<br>TOP
+                      </div>
+                      <div>
+                        <div class="song-title">"Bop to the Top"</div>
+                        <div class="song-artist">Sharpay &amp; Ryan Evans</div>
+                        <div style="color: #666; font-size: 8px;">Audiciones Musical</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="score-badge score-05">0.5 / 5.0</span>
+                    <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img src="assets/icons/star_half.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"></span> [Bomba]</div>
+                  </td>
+                  <td>
+                    <div class="song-review">
+                      «Un insulto descarado a la síncopa cubana y a la tradición del mambo. Sharpay canta como si intentara quebrar cristales con decibelios de histeria y Ryan baila con la motricidad de un juguete a cuerda de club de campo. Tuve que recortar 14dB en los agudos de la consola para evitar hemorragias en el público.»
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 2. Get'cha Head in the Game -->
+                <tr>
+                  <td>
+                    <div class="album-thumb-container">
+                      <div class="album-mini-art mini-game">
+                        HEAD<br>GAME
+                      </div>
+                      <div>
+                        <div class="song-title">"Get'cha Head in the Game"</div>
+                        <div class="song-artist">Troy Bolton &amp; Wildcats</div>
+                        <div style="color: #666; font-size: 8px;">Sesión en el Gimnasio</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="score-badge score-10">1.0 / 5.0</span>
+                    <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"></span> [Infrasónico]</div>
+                  </td>
+                  <td>
+                    <div class="song-review">
+                      «Intentaron plagiar la 'Música Concreta' de Pierre Schaeffer usando rechinidos de tenis de básquetbol sobre piso barnizado. La respiración entrecortada de Bolton evidencia hipoxia atlética. La lírica es de una pobreza existencial dolorosa: ¿por qué tu corazón siente que salta? Claramente arritmia por exceso de Gatorade.»
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 3. Breaking Free -->
+                <tr>
+                  <td>
+                    <div class="album-thumb-container">
+                      <div class="album-mini-art mini-break">
+                        BREAK<br>FREE
+                      </div>
+                      <div>
+                        <div class="song-title">"Breaking Free"</div>
+                        <div class="song-artist">Troy &amp; Gabriella</div>
+                        <div style="color: #666; font-size: 8px;">Callbacks Finales</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="score-badge score-25">2.5 / 5.0</span>
+                    <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_half.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"></span> [Mediocre]</div>
+                  </td>
+                  <td>
+                    <div class="song-review">
+                      «Fórmula comercial de laboratorio para conmover a masas incultas... Sin embargo, la resolución armónica de Kelsi al pasar al puente modula con una finura que supera por mucho las capacidades de los dos cantantes. Odio admitir que el estribillo se queda clavado en el lóbulo parietal durante semanas.»
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- 4. Kelsi Solo Demo -->
+                <tr>
+                  <td>
+                    <div class="album-thumb-container">
+                      <div class="album-mini-art mini-kelsi">
+                        KELSI<br>DEMO
+                      </div>
+                      <div>
+                        <div class="song-title">"Piano Soliloquy in Dm"</div>
+                        <div class="song-artist">Kelsi Nielsen</div>
+                        <div style="color: #666; font-size: 8px;">Copia en Casete #04</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="score-badge score-45">4.5 / 5.0</span>
+                    <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_half.svg" class="rym-star"></span> [Magnum Opus]</div>
+                  </td>
+                  <td>
+                    <div class="song-review">
+                      «Grabada a escondidas con mi micrófono de cañón desde el andamio del techo cuando el auditorio quedó a oscuras. Influencias sutiles de Erik Satie y post-rock instrumental. Si Kelsi dejara de componerle baladas a rubias consentidas y formara un proyecto emo conmigo, este colegio tendría redención.»
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Top 8 -->
+        <div class="neo-box" id="top8">
+          <div class="neo-box-header">
+            <span>EL "TOP 8" DE JADEN // ALMAS TOLERADAS EN LA TIERRA</span>
+            <span class="tag">ORDEN ESTRICTO</span>
+          </div>
+          <div class="neo-box-body">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center;">
+              
+              <!-- 1. Jeff Mangum -->
+              <div class="top8-slot">
+                <div class="top8-img-box">
+                  <img src="top8_images/top8_jeff.png" alt="Jeff Mangum">
+                </div>
+                <strong class="top8-name">Jeff Mangum</strong>
+                <div class="top8-sub" style="color:var(--accent-rym-yellow);">Neutral Milk Hotel</div>
+              </div>
+
+              <!-- 2. Ian Curtis -->
+              <div class="top8-slot">
+                <div class="top8-img-box">
+                  <img src="top8_images/top8_ian.jpg" alt="Ian Curtis / Joy Division">
+                </div>
+                <strong class="top8-name">Ian Curtis</strong>
+                <div class="top8-sub" style="color:var(--accent-rym-yellow);">Joy Division</div>
+              </div>
+
+              <!-- 3. Steve Albini -->
+              <div class="top8-slot">
+                <div class="top8-img-box">
+                  <img src="top8_images/top8_albini.jpg" alt="Steve Albini">
+                </div>
+                <strong class="top8-name">Steve Albini</strong>
+                <div class="top8-sub" style="color:var(--accent-rym-yellow);">Pure Analog Hero</div>
+              </div>
+
+              <!-- 4. Kelsi Nielsen -->
+              <div class="top8-slot">
+                <div class="top8-img-box">
+                  <img src="top8_images/top8_kelsi.jpg" alt="Kelsi Nielsen">
+                </div>
+                <strong class="top8-name">Kelsi Nielsen</strong>
+                <div class="top8-sub" style="color:#51cf66;">Única salvable</div>
+              </div>
+
+              <!-- 5. Ripper / Cello Skater -->
+              <div class="top8-slot">
+                <div class="top8-img-box">
+                  <img src="top8_images/top8_ripper.jpg" alt="Ripper / Skater del Chelo">
+                </div>
+                <strong class="top8-name">Skater del Chelo</strong>
+                <div class="top8-sub" style="color:var(--accent-terminal-cyan);">Ripper / Cello God</div>
+              </div>
+
+              <!-- 6. Technics 1200MK2 -->
+              <div class="top8-slot">
+                <div class="top8-img-box">
+                  <img src="top8_images/top8_turntable.jpg" alt="Tocadiscos Technics 1200">
+                </div>
+                <strong class="top8-name">Mi Tocadiscos</strong>
+                <div class="top8-sub" style="color:#aaa;">Technics 1200MK2</div>
+              </div>
+
+              <!-- 7. Black Coffee -->
+              <div class="top8-slot">
+                <div class="top8-img-box">
+                  <img src="top8_images/top8_coffee.jpg" alt="Café Negro">
+                </div>
+                <strong class="top8-name">Café Negro Frío</strong>
+                <div class="top8-sub" style="color:#888;">Combustible 4:00 AM</div>
+              </div>
+
+              <!-- 8. Nobody / White Noise -->
+              <div class="top8-slot">
+                <div class="top8-img-box">
+                  <img src="top8_images/top8_static.svg" alt="No Signal / Static">
+                </div>
+                <strong class="top8-name" style="color:#666;">Nadie Más</strong>
+                <div class="top8-sub" style="color:#555;">No calificas</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Guestbook -->
+        <div class="neo-box" id="guestbook">
+          <div class="neo-box-header">
+            <span>LIBRO DE VISITAS // PLEITOS DE EAST HIGH</span>
+            <span class="tag">MODERADO CON DESDÉN</span>
+          </div>
+          <div class="neo-box-body">
+
+            <div class="comment-entry">
+              <div class="comment-head">
+                <span class="user">Sharpay_Evans_Official ★</span>
+                <span>Ayer 16:42</span>
+              </div>
+              <div class="comment-text">
+                ¡Oye, bicho raro de la cabina! ¡Exijo que borres esa reseña de 'Bop to the Top'! ¡Mi hermano y yo ensayamos esas patadas en sincronía durante un mes! Si mi padre se entera de este sitio inmundo, comprará los equipos de sonido del colegio y los convertirá en secadores para mis caniches. XOXO.
+              </div>
+              <div class="jaden-retort">
+                <strong>Jaden:</strong> Sharpay, no existe compresor ni ecualizador en este planeta capaz de camuflar tus agudos estridentes. Sigue bailando con Ryan, los reflectores te tapan la vista.
+              </div>
+            </div>
+
+            <div class="comment-entry">
+              <div class="comment-head">
+                <span class="user">Chad_Danforth#8_Wildcats</span>
+                <span>Ayer 18:15</span>
+              </div>
+              <div class="comment-text">
+                bro por qué usas palabras tan largas para decir que no sabes encestar un triple? Mañana tenemos final contra West High, deja de poner música de velorio en los altavoces de los vestidores.
+              </div>
+              <div class="jaden-retort">
+                <strong>Jaden:</strong> Chad, lo que llamas 'música de velorio' era un cuarteto de cuerdas en compás 5/4. Entiendo que contar hasta cinco supere la capacidad cognitiva del equipo de básquetbol.
+              </div>
+            </div>
+
+            <div class="comment-entry">
+              <div class="comment-head">
+                <span class="user">Kelsi_Composer</span>
+                <span>Hoy 08:30</span>
+              </div>
+              <div class="comment-text">
+                Hola Jaden... gracias por calibrar el retorno de mi piano ayer. Y... leí tu reseña sobre mi solo. ¿De verdad crees que la modulación era sutil? Nunca nadie me había dicho eso en East High.
+              </div>
+              <div class="jaden-retort">
+                <strong>Jaden:</strong> No te acostumbres a los halagos, Nielsen. Solo digo que estás tirando tu talento a la basura componiendo himnos para gente que baila sobre mesas de cafetería.
+              </div>
+            </div>
+
+            <!-- Comment Form -->
+            <form class="comment-box-form" onsubmit="event.preventDefault(); submitComment();">
+              <input type="text" id="guestName" placeholder="Tu nombre / Nickname de East High..." required>
+              <textarea id="guestMsg" rows="2" placeholder="Déjale un comentario o insulto a Jaden (responderá automáticamente)..." required></textarea>
+              <button type="submit" class="btn-post">Publicar en el Libro de Visitas</button>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Webrings with Custom Alerts -->
+        <div class="webring-cluster">
+          <div class="webring-title">♰ MIDWEST EMO &amp; MISUNDERSTOOD SOUND TECHS WEBRING ♰</div>
+          <p style="color:#777; font-size:9px;">Eres el sitio #042 en este anillo de la web profunda de 2007</p>
+          <div class="webring-nav">
+            <a onclick="showRetroAlert('WEBRING // NAVEGACIÓN 2007', 'Conectando vía dial-up con el nodo anterior:\n[xX_kurt_cobain_shrine_03_Xx] ... Servidor GeoCities en línea.', 'globe')"><img src="assets/icons/globe.svg" class="webring-icon" alt="Globe"> « Sitio Anterior</a>
+            <a onclick="showRetroAlert('WEBRING // NAVEGACIÓN ALEATORIA', 'Redirigiendo a nodo aleatorio del anillo:\n[slint-and-spiderland-fanpage.neocities.org] ... Conexión cifrada establecida.', 'dice')"><img src="assets/icons/dice.svg" class="webring-icon" alt="Dice"> [ ? ] Aleatorio</a>
+            <a onclick="showRetroAlert('WEBRING // NAVEGACIÓN 2007', 'Conectando con el siguiente sitio del anillo:\n[tape-recorder-hiss-society] ... Transmitiendo paquete de datos FLAC.', 'globe')">Sitio Siguiente » <img src="assets/icons/globe.svg" class="webring-icon" alt="Globe"></a>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <!-- 88x31 Badges -->
+    <div class="buttons-88x31-rack">
+      <div class="btn-88x31 b-notepad">MADE WITH<br>NOTEPAD</div>
+      <div class="btn-88x31 b-winamp">WINAMP<br>LLAMA'S ASS</div>
+      <div class="btn-88x31 b-firefox">FIREFOX 2.0<br>BEST VIEWED</div>
+      <div class="btn-88x31 b-flac">FLAC ONLY<br>NO LOSSY</div>
+      <div class="btn-88x31 b-antipop">BOYCOTT<br>TOP 40</div>
+      <div class="btn-88x31 b-neocities">NEOCITIES<br>POWERED</div>
+      <div class="btn-88x31 b-cassette">ANALOGUE<br>CASSETTE</div>
+      <div class="btn-88x31 b-antipop">NO DISNEY<br>PROPAGANDA</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="neo-footer">
+      <p>© 2007 JADEN VANCE // EAST HIGH AUDITORIUM SOUND BOOTH // ALBUQUERQUE, NM</p>
+      <p style="margin-top: 4px; font-size: 9px; color: #555;">
+        Optimizado para resolución de 1024x768. Si usas Internet Explorer, hazle un favor al mundo y bórralo.
+      </p>
+      <div>
+        VISITAS REGISTRADAS: <span class="counter-screen">005184</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ================= SECRET MODAL (EASTER EGG) ================= -->
+  <dialog id="secretVault" closedby="any">
+    <div style="color: #ff3366; font-size: 13px; font-weight: bold; border-bottom: 1px dashed #ff3366; padding-bottom: 5px; margin-bottom: 10px;">
+      <img src="assets/icons/warning.svg" class="inline-pixel-icon" style="width:16px;height:16px;vertical-align:-3px;" alt="!"> ARCHIVO CONFIDENCIAL // PARTICIÓN OCULTA WINDOWS XP
+    </div>
+    <div style="font-size: 11px; line-height: 1.6; color: #d0d4e4;">
+      <p style="background: #000; padding: 8px; border: 1px solid #333; color: var(--accent-neon-green); margin-bottom: 10px;">
+        RUTA: <code>C:\WINDOWS\system32\do_not_open\breaking_free_acoustic.flac</code><br>
+        PESO: 38.4 MB (Grabado con micrófono de condensador oculto)
+      </p>
+      <p style="color: #fff;">
+        <strong>NOTA PEGADA CON CINTA AISLANTE NEGRA:</strong><br>
+        <em>«Si estás leyendo esto, lograste pasar la contraseña de mi BIOS. Si te atreves a decirle a Chad, a Troy o a Sharpay que me sé la segunda voz completa de 'Breaking Free' y que tengo el póster del musical doblado en cuatro detrás de mi vinilo de Joy Division... desconectaré los micrófonos inalámbricos durante el segundo cuarto de la final del campeonato. No me desafíes. — Jaden.»</em>
+      </p>
+      <div style="margin-top: 15px; text-align: right;">
+        <button onclick="document.getElementById('secretVault').close()" style="background:#222; border:1px solid #666; color:#fff; font-family:var(--font-mono); font-size:10px; padding:4px 10px; cursor:pointer;">
+          [ CERRAR Y GUARDAR SILENCIO ]
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ================= AUTHENTIC RETRO MODAL ALERT (WINDOWS XP / 2000s) ================= -->
+  <dialog id="retroAlertModal" closedby="any">
+    <div class="retro-alert-titlebar">
+      <span id="retroAlertTitle"><img src="assets/icons/warning.svg" id="retroAlertTitleIcon" class="inline-pixel-icon" style="width:13px;height:13px;vertical-align:-2px;" alt="!"> ALERTA DE SISTEMA // JADEN_OS</span>
+      <span onclick="closeRetroAlert()" style="cursor:pointer; color:#fff; font-family:var(--font-mono); padding:0 3px;">✕</span>
+    </div>
+    <div class="retro-alert-body">
+      <div class="retro-alert-icon-box" id="retroAlertIcon">
+        <img src="assets/icons/warning.svg" id="retroAlertIconImg" class="retro-alert-icon-img" alt="Icono de alerta">
+      </div>
+      <div class="retro-alert-text" id="retroAlertMsg">Contenido de la alerta...</div>
+    </div>
+    <div class="retro-alert-footer">
+      <button class="retro-alert-btn" onclick="closeRetroAlert()">[ ACEPTAR ]</button>
+    </div>
+  </dialog>
+
+  <!-- ================= SCRIPTS & PROCEDURAL AUDIO ================= -->
+  <script>
+    // CRT Scanline Toggle
+    function toggleCRT() {
+      const crt = document.getElementById('crtOverlay');
+      crt.style.display = (crt.style.display === 'none') ? 'block' : 'none';
+    }
+
+    // Web Audio Synthesizer
+    let audioCtx = null;
+    let isPlaying = false;
+    let currentTrackIdx = 0;
+    let timerInterval = null;
+    let secondsElapsed = 0;
+    let activeOscillators = [];
+
+    const playlist = [
+      { name: "1. American Football - Never Meant", root: 220, type: "sawtooth" },
+      { name: "2. Neutral Milk Hotel - Holland, 1945", root: 293.66, type: "square" },
+      { name: "3. Slint - Breadcrumb Trail", root: 146.83, type: "triangle" },
+      { name: "4. Joy Division - Disorder", root: 164.81, type: "sawtooth" },
+      { name: "5. [DEMO SECRETA] Kelsi - Piano Solo Take #3", root: 261.63, type: "sine" }
+    ];
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+    }
+
+    // Play retro beep sound for custom alerts
+    function playAlertChime() {
+      try {
+        initAudio();
+        const now = audioCtx.currentTime;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = "sawtooth";
+        osc.frequency.setValueAtTime(440, now);
+        osc.frequency.exponentialRampToValueAtTime(220, now + 0.15);
+
+        gain.gain.setValueAtTime(0.05, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start(now);
+        osc.stop(now + 0.2);
+      } catch (e) {}
+    }
+
+    const retroIconMap = {
+      'warning': 'assets/icons/warning.svg',
+      '⚠': 'assets/icons/warning.svg',
+      'mail': 'assets/icons/mail.svg',
+      '✉': 'assets/icons/mail.svg',
+      'error': 'assets/icons/cross.svg',
+      'cross': 'assets/icons/cross.svg',
+      '✖': 'assets/icons/cross.svg',
+      'lock': 'assets/icons/lock.svg',
+      '🔒': 'assets/icons/lock.svg',
+      'headphones': 'assets/icons/headphones.svg',
+      '🎧': 'assets/icons/headphones.svg',
+      'ipod': 'assets/icons/ipod.svg',
+      '📟': 'assets/icons/ipod.svg',
+      'pen': 'assets/icons/sharpie.svg',
+      'sharpie': 'assets/icons/sharpie.svg',
+      '🖊': 'assets/icons/sharpie.svg',
+      'mute': 'assets/icons/earplugs.svg',
+      'earplugs': 'assets/icons/earplugs.svg',
+      '🔇': 'assets/icons/earplugs.svg',
+      'globe': 'assets/icons/globe.svg',
+      '🌐': 'assets/icons/globe.svg',
+      'dice': 'assets/icons/dice.svg',
+      '🎲': 'assets/icons/dice.svg',
+      'lightning': 'assets/icons/lightning.svg',
+      '⚡': 'assets/icons/lightning.svg',
+      'coffee': 'assets/icons/coffee.svg',
+      '☕': 'assets/icons/coffee.svg',
+      'notepad': 'assets/icons/notepad.svg',
+      '✍': 'assets/icons/notepad.svg',
+      'skull': 'assets/icons/skull.svg',
+      '☠': 'assets/icons/skull.svg',
+      'cassette': 'assets/icons/cassette.svg'
+    };
+
+    // Custom Retro Alert (Replaces browser alert with authentic pixel icons)
+    function showRetroAlert(title, message, iconType = 'warning') {
+      const modal = document.getElementById('retroAlertModal');
+      const iconPath = retroIconMap[iconType] || retroIconMap['warning'];
+
+      document.getElementById('retroAlertTitle').innerHTML = `<img src="${iconPath}" class="inline-pixel-icon" style="width:13px;height:13px;vertical-align:-2px;" alt="!"> [!] ${title}`;
+      document.getElementById('retroAlertMsg').textContent = message;
+
+      const iconImg = document.getElementById('retroAlertIconImg');
+      if (iconImg) {
+        iconImg.src = iconPath;
+        iconImg.alt = iconType;
+      }
+
+      playAlertChime();
+      modal.showModal();
+    }
+
+    function closeRetroAlert() {
+      const modal = document.getElementById('retroAlertModal');
+      modal.close();
+    }
+
+    // Close modal if user clicks on the backdrop
+    document.getElementById('retroAlertModal').addEventListener('click', (e) => {
+      const rect = e.target.getBoundingClientRect();
+      if (
+        e.clientX < rect.left ||
+        e.clientX > rect.right ||
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom
+      ) {
+        closeRetroAlert();
+      }
+    });
+
+    function playAudio() {
+      initAudio();
+      if (isPlaying) return;
+
+      isPlaying = true;
+      document.getElementById('playerStatus').textContent = "PLAYING";
+      document.getElementById('playerStatus').style.color = "#39ff14";
+
+      stopVoices();
+
+      const track = playlist[currentTrackIdx];
+      const now = audioCtx.currentTime;
+
+      // Play vintage melancholic synth arpeggio
+      const freqs = [track.root, track.root * 1.25, track.root * 1.5, track.root * 1.875];
+      freqs.forEach((freq, i) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = track.type;
+        osc.frequency.setValueAtTime(freq + (i * 0.4), now);
+
+        gain.gain.setValueAtTime(0.04 / (i + 1), now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 4);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        activeOscillators.push(osc);
+      });
+
+      // Update Last.fm live simulation
+      document.getElementById('liveScrobble').innerHTML = '<img src="assets/icons/equalizer.svg" class="inline-pixel-icon" alt="Playing"> ' + track.name;
+
+      if (!timerInterval) {
+        timerInterval = setInterval(() => {
+          secondsElapsed++;
+          const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, '0');
+          const secs = String(secondsElapsed % 60).padStart(2, '0');
+          document.getElementById('timeDisplay').textContent = `${mins}:${secs}`;
+        }, 1000);
+      }
+    }
+
+    function pauseAudio() {
+      isPlaying = false;
+      document.getElementById('playerStatus').textContent = "PAUSED";
+      document.getElementById('playerStatus').style.color = "#ffa94d";
+      stopVoices();
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+
+    function stopAudio() {
+      isPlaying = false;
+      document.getElementById('playerStatus').textContent = "STOPPED";
+      document.getElementById('playerStatus').style.color = "#ff4d6d";
+      stopVoices();
+      clearInterval(timerInterval);
+      timerInterval = null;
+      secondsElapsed = 0;
+      document.getElementById('timeDisplay').textContent = "00:00";
+    }
+
+    function stopVoices() {
+      activeOscillators.forEach(osc => {
+        try { osc.stop(); } catch(e) {}
+      });
+      activeOscillators = [];
+    }
+
+    function selectTrack(idx) {
+      currentTrackIdx = idx;
+      document.getElementById('currentTrackDisplay').textContent = playlist[idx].name;
+      
+      const items = document.querySelectorAll('.winamp-item');
+      items.forEach((item, i) => {
+        item.classList.toggle('active', i === idx);
+      });
+
+      if (isPlaying) {
+        stopVoices();
+        isPlaying = false;
+        playAudio();
+      }
+    }
+
+    function nextTrack() {
+      selectTrack((currentTrackIdx + 1) % playlist.length);
+    }
+
+    function prevTrack() {
+      selectTrack((currentTrackIdx - 1 + playlist.length) % playlist.length);
+    }
+
+    function testCompatibility() {
+      const results = [
+        "COMPATIBILIDAD: 0.0%\n\nDiagnóstico: Fuiste visto en la cafetería coreografiando 'We're All in This Together'. Por favor mantén una distancia mínima de 30 metros respecto a la cabina de audio.",
+        "COMPATIBILIDAD: 3.5%\n\nDiagnóstico: Dices que te gusta el rock porque escuchas el solo de guitarra de Troy Bolton. Jaden está profundamente ofendido.",
+        "COMPATIBILIDAD: 14.2%\n\nDiagnóstico: Conoces a Joy Division pero tienes la camiseta solo porque la viste en una tienda departamental. Altamente sospechoso.",
+        "COMPATIBILIDAD: 88.0%\n\nDiagnóstico: Sabes qué es un compás de 7/8 y tienes dolor de espalda por cargar vinilos. Eres bienvenido a sentarte en el rincón oscuro del auditorio."
+      ];
+      showRetroAlert('RESULTADO: TEST DE AFINIDAD SÓNICA', results[Math.floor(Math.random() * results.length)], 'lightning');
+    }
+
+    function submitComment() {
+      const nameInput = document.getElementById('guestName');
+      const msgInput = document.getElementById('guestMsg');
+      const name = nameInput.value.trim();
+      const msg = msgInput.value.trim();
+
+      if (!name || !msg) return;
+
+      const responses = [
+        "Agradezco tu comentario, pero su sintaxis es tan predecible como el segundo tiempo de un partido de básquetbol.",
+        "Interesante postura. Lamentablemente carece de todo fundamento armónico y criterio estético. Vuelve a tus tareas.",
+        "¿Tardaste todo el almuerzo en pensar eso? En ese lapso pude haber calibrado los micrófonos de todo el auditorio.",
+        "Tu opinión ha sido debidamente archivada en la papelera de reciclaje de mi laptop con Windows XP."
+      ];
+      const retort = responses[Math.floor(Math.random() * responses.length)];
+
+      const card = document.createElement('div');
+      card.className = 'comment-entry';
+      card.innerHTML = `
+        <div class="comment-head">
+          <span class="user">${escapeHtml(name)}</span>
+          <span>Justo ahora</span>
+        </div>
+        <div class="comment-text">
+          ${escapeHtml(msg)}
+        </div>
+        <div class="jaden-retort">
+          <strong>Jaden:</strong> ${retort}
+        </div>
+      `;
+
+      const form = document.querySelector('.comment-box-form');
+      form.parentNode.insertBefore(card, form);
+
+      nameInput.value = '';
+      msgInput.value = '';
+
+      showRetroAlert('LIBRO DE VISITAS // MENSAJE PUBLICADO', 'Tu comentario ha sido indexado en el registro de East High. Jaden ha emitido su réplica sarcástica.', 'notepad');
+    }
+
+    function escapeHtml(text) {
+      const d = document.createElement('div');
+      d.textContent = text;
+      return d.innerHTML;
+    }
+  </script>
+
+</body>
+</html>

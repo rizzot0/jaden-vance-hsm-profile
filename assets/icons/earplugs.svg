@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Industrial Foam Earplugs with Connecting Cord -->
+  <!-- Blue Cord -->
+  <path d="M8,18 C8,28 24,28 24,18" fill="none" stroke="#0077cc" stroke-width="1.8" stroke-dasharray="none"/>
+  <!-- Left Yellow Plug -->
+  <g transform="translate(4, 6) rotate(-15)">
+    <polygon points="4,2 10,2 11,14 3,14" fill="#ffcc00" stroke="#cc9900" stroke-width="1"/>
+    <ellipse cx="7" cy="2" rx="3" ry="1.5" fill="#ffee55"/>
+    <line x1="4" y1="6" x2="10" y2="6" stroke="#cc9900" stroke-width="0.8"/>
+    <line x1="3.5" y1="10" x2="10.5" y2="10" stroke="#cc9900" stroke-width="0.8"/>
+  </g>
+  <!-- Right Yellow Plug -->
+  <g transform="translate(18, 5) rotate(15)">
+    <polygon points="4,2 10,2 11,14 3,14" fill="#ffcc00" stroke="#cc9900" stroke-width="1"/>
+    <ellipse cx="7" cy="2" rx="3" ry="1.5" fill="#ffee55"/>
+    <line x1="4" y1="6" x2="10" y2="6" stroke="#cc9900" stroke-width="0.8"/>
+    <line x1="3.5" y1="10" x2="10.5" y2="10" stroke="#cc9900" stroke-width="0.8"/>
+  </g>
+</svg>

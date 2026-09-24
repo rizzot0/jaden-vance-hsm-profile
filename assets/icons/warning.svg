@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Windows XP Style Warning Triangle -->
+  <polygon points="16,2 31,28 1,28" fill="#ffcc00" stroke="#b38600" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="16,5 29,26 3,26" fill="#ffe033"/>
+  <!-- Exclamation Mark -->
+  <rect x="14.5" y="10" width="3" height="9" rx="1.5" fill="#111"/>
+  <circle cx="16" cy="22.5" r="1.8" fill="#111"/>
+  <!-- Bevel highlights -->
+  <line x1="16" y1="5" x2="3" y2="26" stroke="#fff" stroke-width="1.2" opacity="0.6"/>
+</svg>

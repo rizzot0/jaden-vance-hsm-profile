@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Sony MDR-7506 Style Studio Headphones -->
+  <!-- Headband -->
+  <path d="M5,17 C5,8 10,4 16,4 C22,4 27,8 27,17" fill="none" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+  <path d="M7,14 C8,9 11,6 16,6 C21,6 24,9 25,14" fill="none" stroke="#555" stroke-width="1" stroke-linecap="round"/>
+  <!-- Left Ear Cup -->
+  <rect x="2" y="15" width="7" height="12" rx="3.5" fill="#1a1a1a" stroke="#444" stroke-width="1"/>
+  <rect x="4" y="17" width="3" height="8" rx="1.5" fill="#0d0d0d"/>
+  <rect x="2" y="19" width="3" height="4" fill="#0066cc" title="Left Blue Sticker"/>
+  <!-- Right Ear Cup -->
+  <rect x="23" y="15" width="7" height="12" rx="3.5" fill="#1a1a1a" stroke="#444" stroke-width="1"/>
+  <rect x="25" y="17" width="3" height="8" rx="1.5" fill="#0d0d0d"/>
+  <rect x="27" y="19" width="3" height="4" fill="#cc0022" title="Right Red Sticker"/>
+  <!-- Coiled Cable -->
+  <path d="M5.5,27 Q4,29 6,30 Q8,31 5,32" fill="none" stroke="#333" stroke-width="1.8"/>
+</svg>

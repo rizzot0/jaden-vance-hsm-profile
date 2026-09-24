@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Retro Windows XP / Outlook Envelope -->
+  <rect x="2" y="7" width="28" height="19" rx="2" fill="#e8eaed" stroke="#546574" stroke-width="1.5"/>
+  <!-- Envelope Flap & Backing -->
+  <polygon points="2,7 16,19 30,7" fill="#d0d5dc" stroke="#546574" stroke-width="1.2"/>
+  <polyline points="2,26 12,16" stroke="#a0aab5" stroke-width="1.2"/>
+  <polyline points="30,26 20,16" stroke="#a0aab5" stroke-width="1.2"/>
+  <!-- Folded Letter coming out -->
+  <rect x="6" y="3" width="20" height="9" rx="1" fill="#ffffff" stroke="#334455" stroke-width="1"/>
+  <line x1="9" y1="6" x2="19" y2="6" stroke="#891b38" stroke-width="1.2"/>
+  <line x1="9" y1="9" x2="23" y2="9" stroke="#778899" stroke-width="1"/>
+  <!-- Retro Red Postage Stamp -->
+  <rect x="22" y="16" width="6" height="7" fill="#c41e3a" stroke="#fff" stroke-width="0.8"/>
+  <circle cx="25" cy="19.5" r="1.5" fill="#fff" opacity="0.8"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Black Sharpie Permanent Marker (Tilted) -->
+  <g transform="rotate(-45 16 16)">
+    <!-- Chisel Tip -->
+    <polygon points="14,1 18,1 17,6 15,6" fill="#111111"/>
+    <!-- Collar & Grip -->
+    <rect x="14.5" y="6" width="3" height="3" fill="#silver" stroke="#999" stroke-width="0.5"/>
+    <rect x="13.5" y="9" width="5" height="5" fill="#222"/>
+    <!-- Main Body -->
+    <rect x="13" y="14" width="6" height="16" rx="1" fill="#1c1c1c" stroke="#444" stroke-width="0.8"/>
+    <!-- White Sharpie Logo streak -->
+    <line x1="16" y1="17" x2="16" y2="24" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Cap top -->
+    <rect x="13.5" y="30" width="5" height="2" rx="1" fill="#0a0a0a"/>
+  </g>
+</svg>
