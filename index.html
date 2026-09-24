@@ -480,11 +480,66 @@
       color: #00dd55;
       margin-top: 3px;
     }
+    .winamp-seek-container {
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+    }
+    .winamp-seek-slider {
+      width: 100%;
+      height: 5px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #111;
+      border: 1px solid #333;
+      outline: none;
+      cursor: pointer;
+    }
+    .winamp-seek-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 7px;
+      height: 9px;
+      background: #00dd55;
+      border: 1px solid #fff;
+      cursor: pointer;
+    }
+    .winamp-seek-slider::-moz-range-thumb {
+      width: 7px;
+      height: 9px;
+      background: #00dd55;
+      border: 1px solid #fff;
+      cursor: pointer;
+    }
+    .winamp-controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 4px 0;
+      gap: 3px;
+    }
     .winamp-buttons {
       display: flex;
-      gap: 3px;
-      justify-content: center;
-      margin: 4px 0;
+      gap: 2px;
+    }
+    .winamp-vol-slider {
+      width: 42px;
+      height: 5px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #111;
+      border: 1px solid #444;
+      outline: none;
+      cursor: pointer;
+    }
+    .winamp-vol-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 6px;
+      height: 8px;
+      background: #ff3366;
+      border: 1px solid #fff;
+      cursor: pointer;
     }
     .w-btn {
       background: #2b2e3a;
@@ -493,7 +548,7 @@
       color: #eee;
       font-family: var(--font-mono);
       font-size: 9px;
-      padding: 2px 6px;
+      padding: 2px 5px;
       cursor: pointer;
     }
     .w-btn:active {
@@ -502,7 +557,7 @@
     .winamp-list {
       background: #08090b;
       border: 1px solid #333;
-      max-height: 80px;
+      max-height: 85px;
       overflow-y: auto;
       font-size: 9px;
       margin-top: 4px;
@@ -1283,19 +1338,29 @@
             <span>_ □ ✕</span>
           </div>
           <div class="winamp-lcd">
-            <div class="winamp-song-title" id="currentTrackDisplay">1. American Football - Never Meant</div>
+            <div class="winamp-song-title" id="currentTrackDisplay">1. American Football - Never Meant (1999)</div>
             <div class="winamp-subtext">
-              <span id="playerStatus">STOPPED</span>
-              <span>44.1 kHz FLAC</span>
-              <span id="timeDisplay">00:00</span>
+              <span id="playerStatus" style="color: #ff4d6d; font-weight: bold;">STOPPED</span>
+              <span id="formatDisplay">128 kbps MP3</span>
+              <span id="timeDisplay">00:00 / --:--</span>
+            </div>
+            <!-- Vintage Winamp Seek Progress Bar -->
+            <div class="winamp-seek-container">
+              <input type="range" id="winampSeek" class="winamp-seek-slider" min="0" max="100" value="0" step="0.1" oninput="seekAudio(this.value)" title="Seek">
             </div>
           </div>
-          <div class="winamp-buttons">
-            <button class="w-btn" onclick="prevTrack()">|&lt;&lt;</button>
-            <button class="w-btn" onclick="playAudio()">▶ PLAY</button>
-            <button class="w-btn" onclick="pauseAudio()">❚❚ PAUSE</button>
-            <button class="w-btn" onclick="stopAudio()">■ STOP</button>
-            <button class="w-btn" onclick="nextTrack()">&gt;&gt;|</button>
+          <div class="winamp-controls-bar">
+            <div class="winamp-buttons">
+              <button class="w-btn" onclick="prevTrack()" title="Anterior">|&lt;&lt;</button>
+              <button class="w-btn" onclick="playAudio()" title="Reproducir">▶ PLAY</button>
+              <button class="w-btn" onclick="pauseAudio()" title="Pausar">❚❚ PAUSE</button>
+              <button class="w-btn" onclick="stopAudio()" title="Detener">■ STOP</button>
+              <button class="w-btn" onclick="nextTrack()" title="Siguiente">&gt;&gt;|</button>
+            </div>
+            <div class="winamp-vol" style="display:flex; align-items:center; gap:3px;">
+              <span style="font-size:8px; color:#888;">VOL:</span>
+              <input type="range" id="winampVol" class="winamp-vol-slider" min="0" max="1" step="0.05" value="0.8" oninput="setVolume(this.value)" title="Volumen">
+            </div>
           </div>
           <div class="winamp-list">
             <div class="winamp-item active" onclick="selectTrack(0)">1. American Football - Never Meant (1999)</div>
@@ -1891,35 +1956,95 @@
       }
     }
 
-    // Web Audio Synthesizer
-    let audioCtx = null;
+    // Real Winamp Audio Engine using local MP3 files
+    let winampAudio = null;
     let isPlaying = false;
     let currentTrackIdx = 0;
-    let timerInterval = null;
-    let secondsElapsed = 0;
-    let activeOscillators = [];
 
     const playlist = [
-      { name: "1. American Football - Never Meant", root: 220, type: "sawtooth" },
-      { name: "2. Neutral Milk Hotel - Holland, 1945", root: 293.66, type: "square" },
-      { name: "3. Slint - Breadcrumb Trail", root: 146.83, type: "triangle" },
-      { name: "4. Joy Division - Disorder", root: 164.81, type: "sawtooth" },
-      { name: "5. [DEMO SECRETA] Kelsi - Piano Solo Take #3", root: 261.63, type: "sine" }
+      {
+        name: "1. American Football - Never Meant (1999)",
+        file: "assets/audio/american_football_never_meant.mp3",
+        bitrate: "128 kbps MP3",
+        scrobble: "American Football — Never Meant"
+      },
+      {
+        name: "2. Neutral Milk Hotel - Holland, 1945 (1998)",
+        file: "assets/audio/neutral_milk_hotel_holland_1945.mp3",
+        bitrate: "128 kbps MP3",
+        scrobble: "Neutral Milk Hotel — Holland, 1945"
+      },
+      {
+        name: "3. Slint - Breadcrumb Trail (1991)",
+        file: "assets/audio/slint_breadcrumb_trail.mp3",
+        bitrate: "128 kbps MP3",
+        scrobble: "Slint — Breadcrumb Trail"
+      },
+      {
+        name: "4. Joy Division - Disorder (1979)",
+        file: "assets/audio/joy_division_disorder.mp3",
+        bitrate: "128 kbps MP3",
+        scrobble: "Joy Division — Disorder"
+      },
+      {
+        name: "5. [DEMO SECRETA] Kelsi - Piano Solo Take #3",
+        file: "assets/audio/kelsi_piano_solo_demo.mp3",
+        bitrate: "128 kbps TASCAM RIP",
+        scrobble: "Kelsi Nielsen — Piano Demo (East High Aud.)"
+      }
     ];
 
-    function initAudio() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function initWinampAudio() {
+      if (!winampAudio) {
+        winampAudio = new Audio();
+        winampAudio.preload = "metadata";
+        winampAudio.src = playlist[currentTrackIdx].file;
+
+        winampAudio.addEventListener('timeupdate', () => {
+          const cur = winampAudio.currentTime || 0;
+          const dur = winampAudio.duration || 0;
+
+          const curM = String(Math.floor(cur / 60)).padStart(2, '0');
+          const curS = String(Math.floor(cur % 60)).padStart(2, '0');
+          const durM = String(Math.floor(dur / 60)).padStart(2, '0');
+          const durS = String(Math.floor(dur % 60)).padStart(2, '0');
+
+          const timeElem = document.getElementById('timeDisplay');
+          if (timeElem) {
+            timeElem.textContent = `${curM}:${curS} / ${dur ? durM + ':' + durS : '--:--'}`;
+          }
+
+          const seekSlider = document.getElementById('winampSeek');
+          if (seekSlider && dur > 0) {
+            seekSlider.value = (cur / dur) * 100;
+          }
+        });
+
+        winampAudio.addEventListener('ended', () => {
+          nextTrack();
+        });
+
+        winampAudio.addEventListener('error', (e) => {
+          console.error("Audio playback error:", e);
+          const status = document.getElementById('playerStatus');
+          if (status) {
+            status.textContent = "ERR: LOAD";
+            status.style.color = "#ff4d6d";
+          }
+        });
       }
     }
 
-    // Play retro beep sound for custom alerts
+    // Retro beep sound for custom alerts
+    let alertAudioCtx = null;
     function playAlertChime() {
       try {
-        initAudio();
-        const now = audioCtx.currentTime;
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
+        if (!alertAudioCtx) {
+          alertAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        const now = alertAudioCtx.currentTime;
+        const osc = alertAudioCtx.createOscillator();
+        const gain = alertAudioCtx.createGain();
 
         osc.type = "sawtooth";
         osc.frequency.setValueAtTime(440, now);
@@ -1929,7 +2054,7 @@
         gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
 
         osc.connect(gain);
-        gain.connect(audioCtx.destination);
+        gain.connect(alertAudioCtx.destination);
 
         osc.start(now);
         osc.stop(now + 0.2);
@@ -2008,99 +2133,107 @@
     });
 
     function playAudio() {
-      initAudio();
-      if (isPlaying) return;
-
-      isPlaying = true;
-      document.getElementById('playerStatus').textContent = "PLAYING";
-      document.getElementById('playerStatus').style.color = "#39ff14";
-
-      stopVoices();
+      initWinampAudio();
 
       const track = playlist[currentTrackIdx];
-      const now = audioCtx.currentTime;
-
-      // Play vintage melancholic synth arpeggio
-      const freqs = [track.root, track.root * 1.25, track.root * 1.5, track.root * 1.875];
-      freqs.forEach((freq, i) => {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-
-        osc.type = track.type;
-        osc.frequency.setValueAtTime(freq + (i * 0.4), now);
-
-        gain.gain.setValueAtTime(0.04 / (i + 1), now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 4);
-
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-
-        osc.start();
-        activeOscillators.push(osc);
-      });
-
-      // Update Last.fm live simulation
-      document.getElementById('liveScrobble').innerHTML = '<img src="assets/icons/equalizer.svg" class="inline-pixel-icon" alt="Playing"> ' + track.name;
-
-      if (!timerInterval) {
-        timerInterval = setInterval(() => {
-          secondsElapsed++;
-          const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, '0');
-          const secs = String(secondsElapsed % 60).padStart(2, '0');
-          document.getElementById('timeDisplay').textContent = `${mins}:${secs}`;
-        }, 1000);
+      if (!winampAudio.src.endsWith(track.file)) {
+        winampAudio.src = track.file;
       }
+
+      winampAudio.play().then(() => {
+        isPlaying = true;
+        const status = document.getElementById('playerStatus');
+        if (status) {
+          status.textContent = "PLAYING";
+          status.style.color = "#39ff14";
+        }
+        const trackTitle = document.getElementById('currentTrackDisplay');
+        if (trackTitle) trackTitle.textContent = track.name;
+        const formatElem = document.getElementById('formatDisplay');
+        if (formatElem) formatElem.textContent = track.bitrate;
+
+        // Update Last.fm live simulation
+        const liveScrobble = document.getElementById('liveScrobble');
+        if (liveScrobble) {
+          liveScrobble.innerHTML = '<img src="assets/icons/equalizer.svg" class="inline-pixel-icon" alt="Playing"> ' + track.scrobble;
+        }
+      }).catch(err => {
+        console.warn("Audio play error:", err);
+      });
     }
 
     function pauseAudio() {
+      if (winampAudio) {
+        winampAudio.pause();
+      }
       isPlaying = false;
-      document.getElementById('playerStatus').textContent = "PAUSED";
-      document.getElementById('playerStatus').style.color = "#ffa94d";
-      stopVoices();
-      clearInterval(timerInterval);
-      timerInterval = null;
+      const status = document.getElementById('playerStatus');
+      if (status) {
+        status.textContent = "PAUSED";
+        status.style.color = "#ffa94d";
+      }
     }
 
     function stopAudio() {
+      if (winampAudio) {
+        winampAudio.pause();
+        winampAudio.currentTime = 0;
+      }
       isPlaying = false;
-      document.getElementById('playerStatus').textContent = "STOPPED";
-      document.getElementById('playerStatus').style.color = "#ff4d6d";
-      stopVoices();
-      clearInterval(timerInterval);
-      timerInterval = null;
-      secondsElapsed = 0;
-      document.getElementById('timeDisplay').textContent = "00:00";
-    }
-
-    function stopVoices() {
-      activeOscillators.forEach(osc => {
-        try { osc.stop(); } catch(e) {}
-      });
-      activeOscillators = [];
+      const status = document.getElementById('playerStatus');
+      if (status) {
+        status.textContent = "STOPPED";
+        status.style.color = "#ff4d6d";
+      }
+      const timeElem = document.getElementById('timeDisplay');
+      if (timeElem) timeElem.textContent = "00:00 / --:--";
+      const seekSlider = document.getElementById('winampSeek');
+      if (seekSlider) seekSlider.value = 0;
     }
 
     function selectTrack(idx) {
       currentTrackIdx = idx;
-      document.getElementById('currentTrackDisplay').textContent = playlist[idx].name;
-      
+      const track = playlist[idx];
+      initWinampAudio();
+      winampAudio.src = track.file;
+
+      const trackTitle = document.getElementById('currentTrackDisplay');
+      if (trackTitle) trackTitle.textContent = track.name;
+      const formatElem = document.getElementById('formatDisplay');
+      if (formatElem) formatElem.textContent = track.bitrate;
+
       const items = document.querySelectorAll('.winamp-item');
       items.forEach((item, i) => {
         item.classList.toggle('active', i === idx);
       });
 
       if (isPlaying) {
-        stopVoices();
-        isPlaying = false;
         playAudio();
+      } else {
+        stopAudio();
       }
     }
 
     function nextTrack() {
       selectTrack((currentTrackIdx + 1) % playlist.length);
+      playAudio();
     }
 
     function prevTrack() {
       selectTrack((currentTrackIdx - 1 + playlist.length) % playlist.length);
+      playAudio();
+    }
+
+    function seekAudio(val) {
+      if (winampAudio && winampAudio.duration) {
+        winampAudio.currentTime = (val / 100) * winampAudio.duration;
+      }
+    }
+
+    function setVolume(val) {
+      if (winampAudio) {
+        winampAudio.volume = parseFloat(val);
+      }
     }
 
     function testCompatibility() {
