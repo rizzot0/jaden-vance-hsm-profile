@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +39,7 @@
 
     body {
       background-color: var(--bg-dark);
-      background-image: 
+      background-image:
         radial-gradient(ellipse at 50% 0%, rgba(137, 27, 56, 0.25) 0%, transparent 75%),
         url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23190810' fill-opacity='0.45' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
       color: var(--text-main);
@@ -53,16 +54,26 @@
       cursor: url('assets/cursors/cursor_dagger.png') 0 0, crosshair, auto;
     }
 
-    a, button, [onclick], select, .nav-btn, .photo-polaroid, .badge-88x31, .tag {
+    a,
+    button,
+    [onclick],
+    select,
+    .nav-btn,
+    .photo-polaroid,
+    .badge-88x31,
+    .tag {
       cursor: url('assets/cursors/cursor_emo_hand.png') 5 0, pointer !important;
     }
 
     /* CRT Scanlines & TV Monitor Overlay */
     .crt-overlay {
       position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       pointer-events: none;
-      background: 
+      background:
         linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.45) 50%),
         radial-gradient(circle at center, transparent 60%, rgba(0, 0, 0, 0.65) 100%);
       background-size: 100% 4px, 100% 100%;
@@ -71,6 +82,7 @@
       transition: opacity 0.2s ease;
       display: block;
     }
+
     .crt-overlay.crt-off {
       display: none !important;
       opacity: 0 !important;
@@ -87,9 +99,17 @@
       user-select: none;
       animation: particle-fade 0.5s forwards cubic-bezier(0.1, 0.8, 0.3, 1);
     }
+
     @keyframes particle-fade {
-      0% { opacity: 1; transform: translate(0, 0) scale(1); }
-      100% { opacity: 0; transform: translate(0, 14px) scale(0.2); }
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(0, 14px) scale(0.2);
+      }
     }
 
     /* Main Container */
@@ -113,6 +133,7 @@
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .nav-tabs {
       display: flex;
       gap: 8px;
@@ -120,6 +141,7 @@
       font-family: var(--font-ui);
       font-size: 11px;
     }
+
     .nav-tab {
       background: #1c0a12;
       border: 1px solid var(--accent-wine);
@@ -132,10 +154,12 @@
       gap: 4px;
       transition: all 0.15s ease;
     }
+
     .nav-tab:hover {
       background: var(--accent-wine);
       color: #fff;
     }
+
     .nav-tab.active {
       background: #380c1a;
       border-color: var(--accent-wine-bright);
@@ -155,6 +179,7 @@
       border-radius: 2px;
       user-select: none;
     }
+
     .crt-btn.active {
       background: #00220d;
       border-color: #00ff66;
@@ -172,6 +197,7 @@
       align-items: center;
       flex-wrap: wrap;
     }
+
     .dossier-stamp-badge {
       border: 2px dashed #ff3366;
       color: #ff3366;
@@ -183,6 +209,7 @@
       margin-bottom: 8px;
       background: rgba(255, 51, 102, 0.08);
     }
+
     .dossier-title {
       font-family: var(--font-title);
       font-size: 26px;
@@ -191,6 +218,7 @@
       text-transform: uppercase;
       text-shadow: 2px 2px 0 #000;
     }
+
     .dossier-sub {
       font-family: var(--font-ui);
       font-size: 12px;
@@ -210,8 +238,9 @@
     .section-box {
       background: var(--bg-box);
       border: 1px solid var(--border-main);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
+
     .section-header {
       background: linear-gradient(90deg, #2b0b15, #16080e);
       border-bottom: 1px solid var(--accent-wine);
@@ -225,6 +254,7 @@
       align-items: center;
       letter-spacing: 0.5px;
     }
+
     .section-header .tag {
       font-family: var(--font-pixel);
       font-size: 8px;
@@ -232,6 +262,7 @@
       color: #fff;
       padding: 2px 6px;
     }
+
     .section-content {
       padding: 16px;
     }
@@ -244,13 +275,16 @@
       font-size: 12px;
       margin: 10px 0;
     }
+
     .spec-table td {
       padding: 8px 10px;
       border-bottom: 1px solid #1e2230;
     }
+
     .spec-table tr:last-child td {
       border-bottom: none;
     }
+
     .spec-label {
       width: 25%;
       color: #ff85a2;
@@ -258,6 +292,7 @@
       background: #0d0f17;
       border-right: 1px solid #1e2230;
     }
+
     .spec-value {
       color: #e4e7f2;
       background: #11131c;
@@ -270,17 +305,20 @@
       gap: 15px;
       margin-top: 15px;
     }
+
     .polaroid-card {
       background: #181920;
       border: 1px solid #33384c;
       padding: 10px 10px 14px;
-      box-shadow: 2px 3px 8px rgba(0,0,0,0.6);
+      box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.6);
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
+
     .polaroid-card:hover {
       transform: translateY(-3px) scale(1.01);
       border-color: var(--accent-wine-bright);
     }
+
     .polaroid-img-wrap {
       width: 100%;
       aspect-ratio: 4 / 3;
@@ -291,6 +329,7 @@
       align-items: center;
       justify-content: center;
     }
+
     .polaroid-img-wrap img {
       width: 100%;
       height: 100%;
@@ -298,6 +337,7 @@
       display: block;
       filter: contrast(1.08) saturate(0.95);
     }
+
     .polaroid-caption {
       margin-top: 8px;
       font-family: var(--font-mono);
@@ -307,6 +347,7 @@
       border-top: 1px dashed #2d3142;
       padding-top: 6px;
     }
+
     .polaroid-desc {
       font-size: 11px;
       color: #a2a8ba;
@@ -321,12 +362,15 @@
       color: #d6dae8;
       line-height: 1.7;
     }
+
     .prose p:last-child {
       margin-bottom: 0;
     }
+
     .prose strong {
       color: #fff;
     }
+
     .quote-box {
       background: #1a0812;
       border-left: 3px solid var(--accent-wine-bright);
@@ -344,12 +388,14 @@
       gap: 12px;
       margin-top: 10px;
     }
+
     .relation-item {
       background: #0f1118;
       border: 1px solid #282c3c;
       padding: 12px;
       border-left: 3px solid var(--accent-wine);
     }
+
     .relation-title {
       font-family: var(--font-title);
       font-weight: bold;
@@ -359,11 +405,13 @@
       display: flex;
       justify-content: space-between;
     }
+
     .relation-tag {
       font-size: 9px;
       font-family: var(--font-pixel);
       color: #ff4d6d;
     }
+
     .relation-desc {
       font-size: 12px;
       color: #bec3d4;
@@ -381,12 +429,14 @@
       font-size: 12px;
       color: #63697e;
     }
+
     .dossier-footer a {
       color: #ff6b8b;
       text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Toggleable CRT Overlay -->
@@ -410,12 +460,13 @@
     <!-- Hero / Title -->
     <div class="dossier-hero">
       <div style="flex: 1; min-width: 280px;">
-        <div class="dossier-stamp-badge">[ CONFIDENCIAL // REGISTRO EAST HIGH 2006-2007 ]</div>
+        <div class="dossier-stamp-badge">[ CONFIDENCIAL ]</div>
         <h1 class="dossier-title">EXPEDIENTE DEL PERSONAJE: JADEN VANCE</h1>
         <div class="dossier-sub">El operador técnico AV, snob musical de culto y paria sónico de Albuquerque</div>
       </div>
       <div style="text-align: center;">
-        <img src="assets/badges/underground.gif" style="image-rendering:pixelated; margin-bottom: 4px;" alt="Underground">
+        <img src="assets/badges/underground.gif" style="image-rendering:pixelated; margin-bottom: 4px;"
+          alt="Underground">
         <div style="display:flex; gap:4px; justify-content:center;">
           <img src="assets/blinkies/emo-online.gif" style="height:18px;" alt="Emo Online">
           <img src="assets/blinkies/antisocial.gif" style="height:18px;" alt="Antisocial">
@@ -429,30 +480,37 @@
       <!-- 1. Ficha Técnica -->
       <section class="section-box">
         <div class="section-header">
-          <span>01. DATOS BIOGRÁFICOS &amp; IDENTIDAD</span>
-          <span class="tag">FICHA TÉCNICA</span>
+          <span> DATOS BIOGRÁFICOS &amp; IDENTIDAD</span>
         </div>
         <div class="section-content">
           <table class="spec-table">
             <tr>
               <td class="spec-label">Nombre Completo:</td>
-              <td class="spec-value"><strong>Jaden Vance</strong> (a veces firma como <em>j_vance_flac</em> en foros de audio).</td>
+              <td class="spec-value"><strong>Jaden Vance</strong> (a veces firma como <em>j_vance_flac</em> en foros de
+                audio).</td>
             </tr>
             <tr>
               <td class="spec-label">Edad &amp; Grado:</td>
-              <td class="spec-value"><strong>17 años</strong> (Junior / 11º Grado en East High). <em>Coincide con la edad cronológica promedio de Troy Bolton, Gabriella Montez, Sharpay Evans y Chad Danforth durante la primera entrega (2006).</em></td>
+              <td class="spec-value"><strong>17 años</strong></td>
             </tr>
             <tr>
               <td class="spec-label">Ocupación / Rol:</td>
-              <td class="spec-value">Jefe del Club Audiovisual (AV Club) y Operador Principal de Sonido e Iluminación del Auditorio de East High.</td>
+              <td class="spec-value">Jefe del Club Audiovisual (AV Club) y Operador Principal de Sonido e Iluminación
+                del Auditorio de East High.</td>
             </tr>
             <tr>
               <td class="spec-label">Personalidad:</td>
-              <td class="spec-value">Cínico, analítico, introvertido y dotado de un marcado instinto de superioridad estética. Convencido de que el 99% de la música comercial es basura corporativa prediseñada. Solo respeta obras con texturas dinámicas, métricas complejas (5/4, 7/8) y reseñas superiores a 3.8 en <em>RateYourMusic</em> o menciones de Steve Albini.</td>
+              <td class="spec-value">Cínico, analítico, introvertido y dotado de un marcado instinto de superioridad
+                estética. Convencido de que el 99% de la música comercial es basura corporativa prediseñada. Solo
+                respeta obras con texturas dinámicas, métricas complejas (5/4, 7/8) y reseñas superiores a 3.8 en
+                <em>RateYourMusic</em> o menciones de Steve Albini.
+              </td>
             </tr>
             <tr>
               <td class="spec-label">Equipo Inseparable:</td>
-              <td class="spec-value">Audífonos de estudio <strong>Sony MDR-7506</strong> (con cable espiralado al cuello), reproductor <strong>iPod Classic de 80GB</strong> con firmware alternativo Rockbox (cero compresión MP3), y termo metálico con café negro triple carga.</td>
+              <td class="spec-value">Audífonos de estudio <strong>Sony MDR-7506</strong> (con cable espiralado al
+                cuello), reproductor <strong>iPod Classic de 80GB</strong> con firmware alternativo Rockbox (cero
+                compresión MP3), y termo metálico con café negro triple carga.</td>
             </tr>
           </table>
         </div>
@@ -461,21 +519,30 @@
       <!-- 2. Historia y Cómo encaja en High School Musical -->
       <section class="section-box">
         <div class="section-header">
-          <span>02. LORE: ¿CÓMO ENCAJA EN EL UNIVERSO DE HIGH SCHOOL MUSICAL?</span>
-          <span class="tag">CANON EXPANDIDO</span>
+          <span>LORE ?</span>
         </div>
         <div class="section-content prose">
           <p>
-            En un colegio como East High donde la vida estudiantil está ferozmente polarizada entre atletas que coreografían tiros al aro y aficionados al teatro musical que bailan sobre las mesas de la cafetería, <strong>Jaden Vance es la anomalía sónica</strong>. Mientras el lema escolar reza <em>"Stick to the Status Quo"</em>, Jaden no quiere pertenecer a ningún bando: su santuario es la cabina de sonido en lo alto del auditorio escolar, una fortaleza de vidrio templado llena de consolas analógicas, cables XLR y polvo acumulado desde 1994.
+            En un colegio como East High donde la vida estudiantil está ferozmente polarizada entre atletas que
+            coreografían tiros al aro y aficionados al teatro musical que bailan sobre las mesas de la cafetería,Jaden
+            Vance se rehusa a pertenecer a un sitio. Su santuario es la cabina de sonido en lo alto del auditorio
+            escolar,
+            una fortaleza de vidrio lleno de consolas analógicas, cables XLR y polvo acumulado.
           </p>
           <p>
-            La profesora de teatro, la <strong>Sra. Darbus</strong>, lo nombró técnico oficial simplemente porque ningún otro estudiante comprendía cómo encender los transformadores o ecualizar los micrófonos de solapa sin generar retroalimentación ensordecedora. Para Darbus, Jaden es un <em>«joven talentoso pero trágicamente carente de espíritu dramático»</em>; para Jaden, las obras escolares de Darbus son <em>«tortura acústica patrocinada por el distrito escolar»</em>.
+            Nombrado técnico oficial simplemente porque ningún otro estudiante comprendía cómo encender los
+            transformadores o ecualizar los micrófonos de solapa sin generar retroalimentación ensordecedora.
           </p>
           <div class="quote-box">
-            «Todo el mundo en este colegio canta como si estuviera dentro de un comercial de refresco. Nadie entiende la tensión del silencio ni el valor de un crescendo en compás de 7/8. Por eso me encierro con llave en la cabina.» — Jaden Vance, entrada de LiveJournal, octubre 2006.
+            «Todo el mundo en este colegio canta como si estuviera dentro de un comercial de refresco. Nadie entiende la
+            tensión del silencio ni el valor de un crescendo en compás de 7/8. Por eso me encierro con llave en la
+            cabina.» — Jaden Vance
           </div>
           <p>
-            Durante las audiciones del musical de invierno, Jaden observó tras la consola la irrupción de Troy Bolton y Gabriella Montez. Aunque reconoció a regañadientes que Gabriella posee afinación limpia, su veredicto en los foros de <em>RateYourMusic</em> fue demoledor: <em>«Fórmula predecible de Disney Channel para adormecer el pensamiento crítico de los adolescentes»</em>.
+            Durante las audiciones del musical de invierno, Jaden observó tras la consola la irrupción de Troy Bolton y
+            Gabriella Montez. Aunque reconoció a regañadientes que Gabriella posee afinación limpia, su veredicto en los
+            foros de <em>RateYourMusic</em> fue demoledor: <em>«Fórmula predecible de Disney Channel para adormecer el
+              pensamiento crítico de los adolescentes»</em>.
           </p>
         </div>
       </section>
@@ -483,48 +550,51 @@
       <!-- 3. Dinámica con los personajes de HSM -->
       <section class="section-box">
         <div class="section-header">
-          <span>03. DINÁMICA DE CONVIVENCIA CON LOS PERSONAJES PRINCIPALES</span>
-          <span class="tag">INTERACCIONES</span>
+          <span>03. DINÁMICA DE CONVIVENCIA CON LOS PERSONAJES</span>
         </div>
         <div class="section-content">
           <div class="relation-grid">
             <div class="relation-item">
               <div class="relation-title">
                 <span>Sharpay &amp; Ryan Evans</span>
-                <span class="relation-tag">GUERRA FRÍA DE DECIBELIOS</span>
               </div>
               <div class="relation-desc">
-                Sharpay exige que los reflectores sigan cada uno de sus pasos y que sus agudos se escuchen en todo el campus. Jaden aplica filtros pasa-bajos a escondidas para evitar que sus alaridos en "Bop to the Top" dañen los monitores de retorno. Sharpay ha intentado despedirlo tres veces amenazando con donaciones de su padre.
+                Sharpay exige que los reflectores sigan cada uno de sus pasos y que sus agudos se escuchen en todo el
+                campus. Jaden aplica filtros pasa-bajos a escondidas para evitar que sus alaridos en "Bop to the Top"
+                dañen los monitores de retorno. Sharpay ha intentado despedirlo tres veces amenazando con donaciones de
+                su padre.
               </div>
             </div>
 
             <div class="relation-item">
               <div class="relation-title">
                 <span>Kelsi Nielsen (La Compositora)</span>
-                <span class="relation-tag">ALIANZA SECRETA / RESPETO MUTUO</span>
               </div>
               <div class="relation-desc">
-                Es la única persona en East High a quien Jaden respeta discretamente. Reconoce su talento armónico al piano y le presta casetes de Joy Division y post-rock para que "deje de componer himnos para gente que festeja canastas". Jaden conserva una toma secreta en FLAC de un solo de piano melancholic de Kelsi.
+                Es la única persona en East High a quien Jaden respeta discretamente. Reconoce su talento armónico al
+                piano y le presta casetes de Joy Division y post-rock para que "deje de componer himnos para gente que
+                festeja canastas". Jaden conserva una toma secreta en FLAC de un solo de piano melancholic de Kelsi.
               </div>
             </div>
 
             <div class="relation-item">
               <div class="relation-title">
                 <span>Troy Bolton &amp; Chad Danforth</span>
-                <span class="relation-tag">INCOMPRENSIÓN CÓMICA</span>
               </div>
               <div class="relation-desc">
-                Chad no comprende por qué Jaden prefiere cargar una caja de vinilos pesados en vez de escuchar la radio, y Jaden no concibe cómo a alguien le puede importar meter un balón naranja en un aro. Con Troy, Jaden lo apodó irónicamente "El Guitarrista del Pep Rally" por su solo prefabricado.
+                Chad no comprende por qué Jaden prefiere cargar una caja de vinilos pesados en vez de escuchar la radio,
+                y Jaden no concibe cómo a alguien le puede importar meter un balón naranja en un aro.
               </div>
             </div>
 
             <div class="relation-item">
               <div class="relation-title">
                 <span>Sra. Darbus</span>
-                <span class="relation-tag">TOLERANCIA BUROCRÁTICA</span>
               </div>
               <div class="relation-desc">
-                Darbus le impone horas de detención cada vez que Jaden pone discos de Slint o grabaciones de ruidos de trenes por los altavoces durante los ensayos generales. Sin embargo, no puede expulsarlo de la cabina porque nadie más sabe operar la consola de audio.
+                Darbus le impone horas de detención cada vez que Jaden pone discos de Slint o grabaciones de ruidos de
+                trenes por los altavoces durante los ensayos generales. Sin embargo, no puede expulsarlo de la cabina
+                porque nadie más sabe operar la consola de audio.
               </div>
             </div>
           </div>
@@ -534,55 +604,47 @@
       <!-- 4. Estética Visual y Ropa -->
       <section class="section-box">
         <div class="section-header">
-          <span>04. GUÍA VISUAL DE ESTILO: ROPA &amp; ATUENDO EMO 2005</span>
-          <span class="tag">OUTFIT BREAKDOWN</span>
+          <span>04. GUÍA VISUAL DE ESTILO</span>
         </div>
         <div class="section-content prose">
           <p>
-            El estilo visual de Jaden bebe directamente del <strong>Midwest Emo y Post-Hardcore de 1999–2005</strong>, alejándose del glitter chillón de la moda pop escolar de los Wildcats de rojo y blanco:
+            El estilo visual de Jaden bebe directamente del Midwest Emo y Post-Hardcore de 1999–2005,
+            alejándose del glitter chillón de la moda pop escolar de los Wildcats de rojo y blanco:
           </p>
 
           <table class="spec-table">
             <tr>
               <td class="spec-label">Prenda Superior:</td>
-              <td class="spec-value">Sudadera con capucha negra descolorida con cremallera metálica, sobre camisetas de cuello redondo con portadas de sellos independientes (Touch and Go Records, Dischord, Factory Records) o camisetas lisas gris antracita.</td>
+              <td class="spec-value">Sudadera con capucha negra descolorida con cremallera metálica, sobre camisetas de
+                cuello redondo con portadas de sellos independientes (Touch and Go Records, Dischord, Factory Records) o
+                camisetas lisas gris antracita.</td>
             </tr>
             <tr>
               <td class="spec-label">Pantalones &amp; Cinturón:</td>
-              <td class="spec-value">Jeans negros ajustados (estilo pitillo clásico de la época) con roturas naturales en las rodillas por agacharse a conectar cables en el escenario, asegurados con un <strong>cinturón de doble fila de tachas metálicas plateadas (studded belt)</strong>.</td>
+              <td class="spec-value">Jeans negros ajustados (estilo pitillo clásico de la época) con roturas naturales
+                en las rodillas por agacharse a conectar cables en el escenario, asegurados con un cinturón de
+                doble fila de tachas metálicas plateadas (studded belt).</td>
             </tr>
             <tr>
               <td class="spec-label">Calzado:</td>
-              <td class="spec-value">Converse Chuck Taylor All-Star negras de caña alta, con la goma desgastada, sucias por cables del auditorio y garabateadas con fragmentos de letras de American Football y Slint en marcador Sharpie negro.</td>
+              <td class="spec-value">Converse Chuck Taylor All-Star negras de caña alta, con la goma desgastada, sucias
+                por cables del auditorio y garabateadas con letras de canciones con un sharpie permamente negro.</td>
             </tr>
             <tr>
               <td class="spec-label">Accesorios Clave:</td>
-              <td class="spec-value">Audífonos de monitor de estudio <strong>Sony MDR-7506</strong> colgados al cuello; esmalte de uñas negro desgastado y descascarillado en las manos; pulseras de goma negra en la muñeca derecha; y un bolso bandolera de lona verde oliva militar repleto de adaptadores de audio de 6.3mm y plumones.</td>
+              <td class="spec-value">Audífonos de monitor de estudio <strong>Sony MDR-7506</strong> colgados al cuello;
+                esmalte de uñas negro desgastado y descascarillado en las manos; pulseras de goma negra en la muñeca
+                derecha; y un bolso bandolera de lona verde oliva militar repleto de adaptadores de audio de 6.3mm y
+                plumones.</td>
             </tr>
             <tr>
               <td class="spec-label">Cabello:</td>
-              <td class="spec-value">Corte emo desaliñado de principios de los 2000: mechones negros lacios que caen asimétricamente sobre uno de sus ojos, permitiéndole evitar contacto visual con la gente en los pasillos de East High.</td>
+              <td class="spec-value">Corte emo desaliñado de principios de los 2000: mechones negros lacios que caen
+                asimétricamente sobre uno de sus ojos, permitiéndole evitar contacto visual con la gente en los pasillos
+                de East High.</td>
             </tr>
           </table>
 
-          <!-- Visual Showcase -->
-          <div class="visual-grid">
-            <div class="polaroid-card">
-              <div class="polaroid-img-wrap">
-                <img src="jaden_portrait.jpg" alt="Jaden Vance en la cabina">
-              </div>
-              <div class="polaroid-caption">CABINA DE SONIDO // EAST HIGH</div>
-              <div class="polaroid-desc">Retrato en su entorno natural: sudadera oscura, audífonos MDR-7506 al cuello y mirada escéptica tras el vidrio de la cabina.</div>
-            </div>
-
-            <div class="polaroid-card">
-              <div class="polaroid-img-wrap">
-                <img src="jaden_polaroids.jpg" alt="Colección de Polaroids de Jaden">
-              </div>
-              <div class="polaroid-caption">POLAROIDS DE BOLSILLO // EDC</div>
-              <div class="polaroid-desc">Detalles de su indumentaria: Converse gastadas, parches DIY, el iPod 80GB Rockbox y cables espiralados de monitoreo.</div>
-            </div>
-          </div>
 
         </div>
       </section>
@@ -590,46 +652,48 @@
       <!-- 5. La Habitación / Búnker Acústico -->
       <section class="section-box">
         <div class="section-header">
-          <span>05. LA HABITACIÓN DE JADEN: «EL BÚNKER ACÚSTICO»</span>
-          <span class="tag">ESPACIO PERSONAL</span>
+          <span>05. LA HABITACIÓN DE JADEN</span>
         </div>
         <div class="section-content prose">
           <p>
-            La habitación de Jaden en Albuquerque es su santuario absoluto, diseñada para bloquear cualquier vestigio del mundo exterior:
+            La habitación de Jaden en Albuquerque es su santuario absoluto, diseñada para bloquear cualquier vestigio
+            del mundo exterior:
           </p>
 
           <table class="spec-table">
             <tr>
               <td class="spec-label">Aislamiento &amp; Paredes:</td>
-              <td class="spec-value">Paredes parcialmente cubiertas con cartones de huevo y paneles de espuma acústica improvisados para amortiguar el rebote sónico. Afiches originales rasgados de bandas post-punk (Joy Division, Fugazi, Shellac) fijados con cinta aislante negra.</td>
+              <td class="spec-value">Paredes parcialmente cubiertas con cartones de huevo y paneles de espuma acústica
+                improvisados para amortiguar el rebote sónico. Afiches originales rasgados de bandas post-punk (Joy
+                Division, Fugazi, Shellac) fijados con cinta aislante negra.</td>
             </tr>
             <tr>
               <td class="spec-label">La Estantería de Vinilos:</td>
-              <td class="spec-value">Mueble de madera prensada con más de 350 vinilos de 180 gramos, rigurosamente catalogados en orden alfabético por sello discográfico independiente. Prohibido tocar las carátulas sin antes lavarse las manos.</td>
+              <td class="spec-value">Mueble de madera prensada con más de 350 vinilos de 180 gramos, rigurosamente
+                catalogados en orden alfabético por sello discográfico independiente. Prohibido tocar las carátulas sin
+                antes lavarse las manos.</td>
             </tr>
             <tr>
               <td class="spec-label">Estación de Audio Analógica:</td>
-              <td class="spec-value">Una tornamesa Technics SL-1200 clásica conectada a un amplificador estéreo Marantz de 1978 con vúmetros de aguja iluminados en ámbar cálido. Una grabadora de 4 pistas a casete Tascam Portastudio donde hace demos de ruido y slowcore a las 3:00 AM.</td>
+              <td class="spec-value">Una tornamesa Technics SL-1200 clásica conectada a un amplificador estéreo Marantz
+                de 1978 con vúmetros de aguja iluminados en ámbar cálido. Una grabadora de 4 pistas a casete Tascam
+                Portastudio donde hace demos de ruido y slowcore a las 3:00 AM.</td>
             </tr>
             <tr>
               <td class="spec-label">Iluminación &amp; Atmósfera:</td>
-              <td class="spec-value">Persianas venecianas permanentemente cerradas para evitar la luz solar de Nuevo México. Única iluminación provista por una lámpara de lava roja y los LEDs verdes y ámbar de sus ecualizadores analógicos.</td>
+              <td class="spec-value">Persianas venecianas permanentemente cerradas para evitar la luz solar de Nuevo
+                México. Única iluminación provista por una lámpara de lava roja y los LEDs verdes y ámbar de sus
+                ecualizadores analógicos.</td>
             </tr>
             <tr>
               <td class="spec-label">La Laptop ThinkPad:</td>
-              <td class="spec-value">Computadora portátil IBM ThinkPad con Windows XP SP2, corriendo Winamp v2.91 con skin personalizado oscuro, cliente Audioscrobbler activo y carpetas organizadas en formato <code>ARTISTA/AÑO - ÁLBUM [FLAC]</code>.</td>
+              <td class="spec-value">Computadora portátil IBM ThinkPad con Windows XP SP2, corriendo Winamp v2.91 con
+                skin personalizado oscuro, cliente Audioscrobbler activo y carpetas organizadas en formato
+                <code>ARTISTA/AÑO - ÁLBUM [FLAC]</code>.
+              </td>
             </tr>
           </table>
 
-          <div class="visual-grid" style="grid-template-columns: 1fr;">
-            <div class="polaroid-card">
-              <div class="polaroid-img-wrap" style="aspect-ratio: 16 / 9;">
-                <img src="soundbooth_desk.jpg" alt="Mesa de mezclas y cabina de Jaden">
-              </div>
-              <div class="polaroid-caption">EL ENTORNO ANALÓGICO // CONSOLAS &amp; VÚMETROS</div>
-              <div class="polaroid-desc">La consola analógica de 24 canales y los monitores de tubo donde Jaden manipula los faders mientras East High ensaya sus comedias musicales.</div>
-            </div>
-          </div>
 
         </div>
       </section>
@@ -640,7 +704,7 @@
     <footer class="dossier-footer">
       <p>♰ JADEN VANCE // EAST HIGH AUDITORIUM AV CREW // ALBUQUERQUE, NM ♰</p>
       <p style="margin-top: 6px;">
-        <a href="index.html">« Regresar al Perfil MySpace</a> • 
+        <a href="index.html">« Regresar al Perfil MySpace</a> •
         <a href="glossary.html">Ver el Glosario de Referencias Musicales »</a>
       </p>
     </footer>
@@ -708,4 +772,5 @@
     }
   </script>
 </body>
+
 </html>
