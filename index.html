@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
   <title>♰ JADEN.ONLINE // sound booth exile // east high 2007 ♰</title>
   <style>
     /* ==========================================================================
@@ -10,21 +13,26 @@
        Inspired by: lyer-online, eggmothsoup, classic MySpace & Neocities webrings
        ========================================================================== */
     :root {
-      --bg-dark: #090a0d;
-      --bg-page: #0f1116;
-      --bg-box: #151821;
-      --border-main: #331622;
-      --border-dotted: #4d1e2e;
+      --bg-dark: #07080b;
+      --bg-page: #0d0f15;
+      --bg-box: #13151f;
+      --border-main: #4a1727;
+      --border-dotted: #6b2138;
       --accent-wine: #891b38;
       --accent-wine-bright: #d12353;
       --accent-neon-green: #39ff14;
       --accent-terminal-cyan: #5ef1f2;
       --accent-rym-yellow: #f8c025;
-      --text-main: #c9ccd6;
-      --text-dim: #7f8699;
-      --text-links: #f2688b;
-      --font-body: "Verdana", "Tahoma", sans-serif;
-      --font-mono: "Courier New", Courier, monospace;
+      --text-main: #dce0ed;
+      --text-dim: #8b92a6;
+      --text-links: #ff6088;
+
+      /* Authentic 2000-2005 MySpace / Blogspot Typography */
+      --font-body: "Tahoma", "Verdana", Arial, sans-serif;
+      --font-title: "Trebuchet MS", "Lucida Grande", "Tahoma", sans-serif;
+      --font-journal: "Georgia", "Palatino Linotype", "Times New Roman", serif;
+      --font-mono: "Lucida Console", "Courier New", Courier, monospace;
+      --font-pixel: 'Silkscreen', 'VT323', "Courier New", monospace;
     }
 
     * {
@@ -56,13 +64,12 @@
     body {
       background-color: var(--bg-dark);
       background-image: 
-        radial-gradient(ellipse at 50% 0%, rgba(137, 27, 56, 0.25) 0%, transparent 75%),
-        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0px, rgba(0, 0, 0, 0.5) 1px, transparent 1px, transparent 2px),
+        radial-gradient(ellipse at 50% 0%, rgba(137, 27, 56, 0.22) 0%, transparent 75%),
         url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23190810' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
       color: var(--text-main);
       font-family: var(--font-body);
-      font-size: 11px;
-      line-height: 1.5;
+      font-size: 11.5px;
+      line-height: 1.55;
       padding: 10px 5px 40px;
       cursor: crosshair;
     }
@@ -115,15 +122,16 @@
       image-rendering: crisp-edges;
     }
 
-    /* CRT Scanlines Overlay */
+    /* CRT Scanlines Overlay - Softened for clear reading comfort */
     .crt-overlay {
       position: fixed;
       top: 0; left: 0; width: 100vw; height: 100vh;
       pointer-events: none;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.28) 50%);
-      background-size: 100% 4px;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.12) 50%);
+      background-size: 100% 3px;
       z-index: 9999;
-      opacity: 0.7;
+      opacity: 0.18;
+      transition: opacity 0.25s ease;
     }
 
     a {
@@ -172,8 +180,8 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      font-family: var(--font-mono);
-      font-size: 10px;
+      font-family: var(--font-title);
+      font-size: 11px;
     }
     .retro-nav-links {
       display: flex;
@@ -220,20 +228,22 @@
     .neo-box-header {
       background: linear-gradient(90deg, #2b0b15, #16080e);
       border-bottom: 1px solid var(--accent-wine);
-      padding: 5px 10px;
+      padding: 6px 10px;
       color: #fff;
-      font-family: var(--font-mono);
+      font-family: var(--font-title);
       font-weight: bold;
-      font-size: 11px;
+      font-size: 11.5px;
+      letter-spacing: 0.5px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     .neo-box-header .tag {
-      font-size: 9px;
+      font-size: 8.5px;
+      font-family: var(--font-pixel);
       background: var(--accent-wine);
       color: #fff;
-      padding: 1px 5px;
+      padding: 2px 5px;
       border-radius: 2px;
     }
     .neo-box-body {
@@ -245,18 +255,20 @@
       text-align: center;
     }
     .profile-name {
-      font-family: var(--font-mono);
-      font-size: 17px;
-      color: #fff;
-      letter-spacing: 1px;
+      font-family: var(--font-title);
+      font-size: 21px;
+      font-weight: bold;
+      color: #ff3366;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      text-shadow: 0 0 8px rgba(255, 77, 121, 0.6);
-      margin-bottom: 2px;
+      text-shadow: 2px 2px 0 #000, 0 0 10px rgba(255, 51, 102, 0.4);
+      margin-bottom: 3px;
     }
     .profile-sub {
-      color: var(--text-dim);
-      font-size: 10px;
-      font-family: var(--font-mono);
+      color: #9da4b8;
+      font-size: 11px;
+      font-family: var(--font-title);
+      font-style: italic;
       margin-bottom: 10px;
     }
     .avatar-frame {
@@ -291,11 +303,11 @@
     .status-widget {
       background: #0d0e12;
       border: 1px dashed var(--accent-wine);
-      padding: 8px;
+      padding: 8px 10px;
       margin-bottom: 12px;
-      font-size: 10px;
-      line-height: 1.6;
-      font-family: var(--font-mono);
+      font-size: 11px;
+      line-height: 1.65;
+      font-family: var(--font-body);
       text-align: left;
     }
     .status-widget strong {
@@ -516,35 +528,38 @@
       filter: contrast(1.05) saturate(1.02);
     }
     .polaroid-caption {
-      font-family: var(--font-mono);
-      font-size: 10px;
+      font-family: var(--font-journal);
+      font-style: italic;
+      font-size: 11px;
       margin-top: 8px;
-      line-height: 1.35;
+      line-height: 1.4;
       color: #222;
     }
     .polaroid-caption strong {
       color: #8b1122;
     }
 
-    /* Main Content */
+    /* Main Content - Blogspot / LiveJournal Emo Diary */
     .headline-box {
-      background: #141720;
+      background: #12141e;
       border: 1px solid var(--border-main);
-      padding: 12px;
+      padding: 14px 16px;
       margin-bottom: 15px;
     }
     .headline-box h2 {
       font-size: 15px;
       color: #fff;
-      font-family: var(--font-mono);
+      font-family: var(--font-title);
       border-bottom: 1px dashed var(--accent-wine);
-      padding-bottom: 5px;
-      margin-bottom: 8px;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
     }
     .headline-box p {
-      color: #b5bacb;
-      font-size: 11px;
-      line-height: 1.6;
+      color: #dce0f0;
+      font-family: var(--font-journal);
+      font-size: 12.5px;
+      line-height: 1.7;
     }
 
     /* ASCII Art */
@@ -580,26 +595,31 @@
     }
     .likes-column h4 {
       color: var(--accent-neon-green);
-      font-family: var(--font-mono);
-      font-size: 11px;
+      font-family: var(--font-title);
+      font-size: 12px;
+      font-weight: bold;
       margin-bottom: 6px;
       border-bottom: 1px dotted #1d4022;
       padding-bottom: 3px;
+      letter-spacing: 0.5px;
     }
     .dislikes-column h4 {
       color: #ff4d6d;
-      font-family: var(--font-mono);
-      font-size: 11px;
+      font-family: var(--font-title);
+      font-size: 12px;
+      font-weight: bold;
       margin-bottom: 6px;
       border-bottom: 1px dotted #541926;
       padding-bottom: 3px;
+      letter-spacing: 0.5px;
     }
     .list-items {
       list-style-type: square;
       padding-left: 15px;
-      font-size: 10px;
-      color: #b8bdce;
-      line-height: 1.6;
+      font-family: var(--font-body);
+      font-size: 11px;
+      color: #c5cadc;
+      line-height: 1.65;
     }
 
     /* RYM Table with Album Art Thumbs */
@@ -700,7 +720,7 @@
       border: 2px dashed #4e536d;
       padding: 2px;
       text-align: center;
-      font-family: var(--font-mono);
+      font-family: var(--font-pixel);
       font-size: 8px;
       color: #fff;
       font-weight: bold;
@@ -732,7 +752,7 @@
       height: 18px;
       line-height: 14px;
       border: 1px solid #fff;
-      font-family: var(--font-mono);
+      font-family: var(--font-pixel);
       font-size: 8px;
       font-weight: bold;
       text-transform: uppercase;
@@ -883,18 +903,25 @@
     }
     .comment-head .user {
       color: var(--text-links);
+      font-family: var(--font-title);
       font-weight: bold;
+      font-size: 11px;
     }
     .comment-text {
-      color: #d8dce8;
-      font-size: 10px;
+      color: #e2e6f4;
+      font-family: var(--font-body);
+      font-size: 11.5px;
+      line-height: 1.5;
     }
     .jaden-retort {
       background: #200810;
       border-left: 2px solid var(--accent-wine-bright);
-      color: #ff85a1;
-      padding: 4px 6px;
-      font-size: 9px;
+      color: #ffa1b8;
+      font-family: var(--font-journal);
+      font-style: italic;
+      padding: 5px 8px;
+      font-size: 11px;
+      line-height: 1.45;
       margin-top: 5px;
     }
 
