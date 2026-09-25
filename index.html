@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=VT323&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Permanent+Marker&family=Silkscreen:wght@400;700&family=Special+Elite&family=UnifrakturMaguntia&family=VT323&display=swap" rel="stylesheet">
   <title>♰ JADEN.ONLINE // sound booth exile // east high 2007 ♰</title>
   <style>
     /* ==========================================================================
@@ -26,13 +26,18 @@
       --text-dim: #8b92a6;
       --text-links: #ff6088;
 
-      /* Authentic 2000-2005 MySpace / Blogspot Typography */
+      /* Authentic 2000-2007 Typographic Chaos */
       --font-body: "Tahoma", "Verdana", Arial, sans-serif;
       --font-title: "Trebuchet MS", "Lucida Grande", "Tahoma", sans-serif;
       --font-journal: "Georgia", "Palatino Linotype", "Times New Roman", serif;
       --font-mono: "Lucida Console", "Courier New", Courier, monospace;
-      --font-pixel: 'Silkscreen', 'VT323', "Courier New", monospace;
+      --font-pixel: 'Silkscreen', monospace;
       --font-fanzine: 'Special Elite', "Courier New", Courier, monospace;
+      --font-goth: 'UnifrakturMaguntia', 'Old English Text MT', Georgia, serif;
+      --font-sharpie: 'Permanent Marker', cursive, sans-serif;
+      --font-dot: 'DotGothic16', monospace, sans-serif;
+      --font-terminal: 'VT323', monospace;
+      --font-critic: 'Georgia', 'Palatino Linotype', serif;
     }
 
     * {
@@ -316,20 +321,21 @@
       text-align: center;
     }
     .profile-name {
-      font-family: var(--font-title);
-      font-size: 21px;
-      font-weight: bold;
+      font-family: var(--font-goth);
+      font-size: 34px;
+      font-weight: normal;
       color: #ff3366;
-      letter-spacing: 0.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      text-shadow: 2px 2px 0 #000, 0 0 10px rgba(255, 51, 102, 0.4);
-      margin-bottom: 3px;
+      text-shadow: 2px 2px 0 #000, 0 0 15px rgba(255, 51, 102, 0.5);
+      margin-bottom: 2px;
+      line-height: 1.1;
     }
     .profile-sub {
-      color: #9da4b8;
-      font-size: 11px;
-      font-family: var(--font-title);
-      font-style: italic;
+      color: var(--accent-terminal-cyan);
+      font-size: 11.5px;
+      font-family: var(--font-dot);
+      letter-spacing: 0.5px;
       margin-bottom: 10px;
     }
     .avatar-frame {
@@ -349,15 +355,18 @@
     }
     .avatar-sticker {
       position: absolute;
-      bottom: -6px;
-      right: -6px;
-      background: #000;
-      color: var(--accent-neon-green);
-      border: 1px solid var(--accent-neon-green);
-      font-family: var(--font-mono);
-      font-size: 8px;
-      padding: 2px 5px;
-      transform: rotate(-3deg);
+      bottom: -8px;
+      right: -8px;
+      background: #ffff00;
+      color: #000;
+      border: 1px solid #000;
+      font-family: var(--font-sharpie);
+      font-size: 11px;
+      font-weight: normal;
+      padding: 3px 8px;
+      transform: rotate(-6deg);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+      letter-spacing: 0.5px;
     }
 
     /* Mood & Status Box */
@@ -366,9 +375,9 @@
       border: 1px dashed var(--accent-wine);
       padding: 8px 10px;
       margin-bottom: 12px;
-      font-size: 11px;
+      font-size: 12px;
       line-height: 1.65;
-      font-family: var(--font-body);
+      font-family: var(--font-dot);
       text-align: left;
     }
     .status-widget strong {
@@ -407,9 +416,10 @@
       background: #1f212c;
       border: 1px solid #3c4054;
       color: #d1d5e4;
-      font-size: 9px;
-      font-family: var(--font-mono);
-      padding: 5px 4px;
+      font-size: 8.5px;
+      font-family: var(--font-pixel);
+      letter-spacing: 0.5px;
+      padding: 6px 4px;
       cursor: pointer;
       text-align: center;
       transition: background 0.15s, color 0.15s;
@@ -469,20 +479,25 @@
       padding: 5px;
       margin: 5px 0;
       color: var(--accent-neon-green);
-      font-size: 10px;
+      font-family: var(--font-terminal);
     }
     .winamp-song-title {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-weight: bold;
+      font-weight: normal;
+      font-family: var(--font-terminal);
+      font-size: 16px;
+      letter-spacing: 0.6px;
     }
     .winamp-subtext {
       display: flex;
       justify-content: space-between;
-      font-size: 9px;
+      font-family: var(--font-terminal);
+      font-size: 13.5px;
       color: #00dd55;
-      margin-top: 3px;
+      margin-top: 1px;
+      letter-spacing: 0.5px;
     }
     .winamp-seek-container {
       margin-top: 4px;
@@ -644,15 +659,16 @@
       filter: contrast(1.05) saturate(1.02);
     }
     .polaroid-caption {
-      font-family: var(--font-journal);
-      font-style: italic;
-      font-size: 11px;
+      font-family: var(--font-sharpie);
+      font-size: 11.5px;
       margin-top: 8px;
-      line-height: 1.4;
-      color: #222;
+      line-height: 1.45;
+      color: #1a1a1a;
+      letter-spacing: 0.3px;
     }
     .polaroid-caption strong {
       color: #8b1122;
+      font-family: var(--font-sharpie);
     }
 
     /* Main Content - Blogspot / LiveJournal Emo Diary */
@@ -731,11 +747,11 @@
       letter-spacing: 0.8px;
     }
     .list-items {
-      list-style-type: square;
-      padding-left: 18px;
+      list-style-type: none;
+      padding-left: 4px;
       font-family: var(--font-fanzine);
       font-size: 12px;
-      line-height: 1.65;
+      line-height: 1.7;
       letter-spacing: 0.3px;
     }
     .likes-column .list-items {
@@ -794,19 +810,23 @@
       font-size: 11px;
       font-weight: bold;
       color: #fff;
+      font-family: var(--font-title);
     }
     .song-artist {
       color: var(--text-links);
       font-size: 10px;
+      font-family: var(--font-body);
     }
     .song-review {
       margin-top: 4px;
-      padding: 5px 7px;
+      padding: 6px 9px;
       background: #0e0f14;
-      border-left: 2px solid var(--accent-wine);
+      border-left: 3px solid var(--accent-wine);
+      font-family: var(--font-critic);
       font-style: italic;
-      color: #c7cbd8;
-      line-height: 1.4;
+      font-size: 12.5px;
+      color: #d8dbe6;
+      line-height: 1.55;
     }
     .score-badge {
       display: inline-block;
@@ -936,25 +956,31 @@
       filter: contrast(1.15) saturate(1.05);
     }
     .top8-name {
-      font-size: 10px;
-      color: #5ef1f2;
-      font-family: var(--font-mono);
-      font-weight: bold;
+      font-size: 13.5px;
+      color: #ff4d79;
+      font-family: var(--font-goth);
+      font-weight: normal;
+      letter-spacing: 0.8px;
       margin-bottom: 2px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 100%;
       display: block;
+      text-decoration: none;
+    }
+    .top8-slot:hover .top8-name {
+      color: #5ef1f2;
       text-decoration: underline;
     }
     .top8-sub {
-      font-size: 8px;
-      font-family: var(--font-mono);
+      font-size: 9px;
+      font-family: var(--font-dot);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 100%;
+      letter-spacing: 0.3px;
     }
 
     /* Webring */
@@ -988,12 +1014,33 @@
       text-decoration: underline;
     }
 
-    /* Guestbook */
+    /* 2000s Emo Kaomojis & Dingbats */
+    .kaomoji {
+      font-family: var(--font-dot);
+      color: var(--accent-terminal-cyan);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      padding: 0 2px;
+    }
+    .emo-cross {
+      font-family: var(--font-goth);
+      color: #ff3366;
+      font-size: 1.15em;
+      vertical-align: -1px;
+    }
+    .sharpie-tag {
+      font-family: var(--font-sharpie);
+      color: #ffff00;
+      letter-spacing: 0.5px;
+    }
+
+    /* Guestbook Personality Clash Styles */
     .comment-entry {
       background: #0f1016;
       border: 1px solid #262938;
-      padding: 8px;
-      margin-bottom: 8px;
+      padding: 8px 10px;
+      margin-bottom: 10px;
     }
     .comment-head {
       display: flex;
@@ -1002,13 +1049,53 @@
       font-size: 9px;
       border-bottom: 1px dotted #333;
       padding-bottom: 3px;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .comment-head .user {
       color: var(--text-links);
       font-family: var(--font-title);
       font-weight: bold;
       font-size: 11px;
+    }
+    .user-sharpay {
+      font-family: "Comic Sans MS", "Chalkboard SE", cursive !important;
+      color: #ff66cc !important;
+      font-size: 12px !important;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 5px rgba(255, 102, 204, 0.6);
+    }
+    .comment-sharpay {
+      font-family: "Comic Sans MS", cursive, sans-serif !important;
+      color: #ffd6eb !important;
+      font-size: 11.5px !important;
+      line-height: 1.5;
+    }
+    .user-chad {
+      font-family: Impact, "Arial Black", sans-serif !important;
+      color: #ff9933 !important;
+      font-size: 13px !important;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .comment-chad {
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-weight: 500;
+      color: #f0f0f0 !important;
+      font-size: 12px !important;
+      line-height: 1.5;
+    }
+    .user-kelsi {
+      font-family: "Courier New", Courier, monospace !important;
+      color: #5ef1f2 !important;
+      font-size: 11.5px !important;
+      font-weight: bold;
+    }
+    .comment-kelsi {
+      font-family: var(--font-journal) !important;
+      font-style: italic;
+      color: #d5e9f8 !important;
+      font-size: 12px !important;
+      line-height: 1.55;
     }
     .comment-text {
       color: #e2e6f4;
@@ -1020,12 +1107,18 @@
       background: #200810;
       border-left: 2px solid var(--accent-wine-bright);
       color: #ffa1b8;
-      font-family: var(--font-journal);
-      font-style: italic;
-      padding: 5px 8px;
-      font-size: 11px;
-      line-height: 1.45;
-      margin-top: 5px;
+      font-family: var(--font-fanzine);
+      padding: 6px 9px;
+      font-size: 11.5px;
+      line-height: 1.5;
+      margin-top: 6px;
+      letter-spacing: 0.3px;
+    }
+    .jaden-retort strong {
+      font-family: var(--font-pixel);
+      font-size: 9.5px;
+      color: #ff3366;
+      letter-spacing: 0.5px;
     }
 
     /* Form */
@@ -1262,8 +1355,8 @@
             <span>PERFIL</span>
           </div>
           <div class="neo-box-body profile-card">
-            <h1 class="profile-name">JADEN VANCE</h1>
-            <p class="profile-sub">East High AV Tech / Music Purist / 17y</p>
+            <h1 class="profile-name"><span class="emo-cross">♰</span> JADEN VANCE <span class="emo-cross">♰</span></h1>
+            <p class="profile-sub">East High AV Tech // Music Purist // <span class="kaomoji">[x_x]</span> 17y</p>
 
             <div class="avatar-frame">
               <img src="meimei.jpg" alt="meimei" class="avatar-img">
@@ -1279,10 +1372,11 @@
 
             <!-- Mood & Status Widget -->
             <div class="status-widget">
-              <strong>SENTIMIENTO HOY:</strong> Desprecio acústico <img src="assets/icons/coffee.svg" class="inline-pixel-icon" alt="Café"><br>
-              <strong>UBICACIÓN:</strong> Cabina de luces y sonido, East High<br>
-              <strong>DETENCIÓN:</strong> 12 horas acumuladas con Darbus<br>
-              <strong>PITCHFORK SCORE PROMEDIO:</strong> 8.9 / 10.0
+              <strong>SENTIMIENTO HOY:</strong> Desprecio acústico <span class="kaomoji">(¬_¬)</span> <img src="assets/icons/coffee.svg" class="inline-pixel-icon" alt="Café"><br>
+              <strong>UBICACIÓN:</strong> Cabina de luces y sonido #2 <span class="kaomoji">[404: Not Found]</span><br>
+              <strong>DETENCIÓN:</strong> 12 horas acumuladas con Darbus <span class="kaomoji">t(-_-t)</span><br>
+              <strong>ÁMBITO MENTAL:</strong> Midwest Emo / Screamo <span class="kaomoji">\m/ [x_x] \m/</span><br>
+              <strong>PITCHFORK SCORE PROMEDIO:</strong> 8.9 / 10.0 ✦
             </div>
 
             <!-- Last.fm Scrobbler -->
@@ -1323,10 +1417,10 @@
 
             <!-- Quick Action Buttons with Custom Retro Alerts -->
             <div class="action-grid">
-              <div class="btn-action" onclick="testCompatibility()"><img src="assets/icons/lightning.svg" class="inline-pixel-icon" alt="Test"> Test de Afinidad</div>
-              <div class="btn-action" onclick="showRetroAlert('BANDEJA DE ENTRADA BLOQUEADA', 'Jaden: \'Mi bandeja de entrada solo acepta ensayos de más de 1,000 palabras en formato PDF con análisis armónico sobre Steve Albini. Los correos sobre el pep rally son eliminados automáticamente.\'', 'mail')"><img src="assets/icons/mail.svg" class="inline-pixel-icon" alt="Mail"> Enviar Ensayo</div>
-              <div class="btn-action" onclick="showRetroAlert('ERROR 403: ACCESO DENEGADO', 'Jaden ha bloqueado permanentemente las solicitudes de amistad de toda persona que vista rojo universitario o aplauda en sincronía en el gimnasio.', 'error')"><img src="assets/icons/cross.svg" class="inline-pixel-icon" alt="Ban"> Agregar a Amigos</div>
-              <div class="btn-action" onclick="document.getElementById('secretVault').showModal()"><img src="assets/icons/lock.svg" class="inline-pixel-icon" alt="Lock"> Archivo Oculto</div>
+              <div class="btn-action" onclick="testCompatibility()"><img src="assets/icons/lightning.svg" class="inline-pixel-icon" alt="Test"> [?] TEST DE AFINIDAD</div>
+              <div class="btn-action" onclick="showRetroAlert('BANDEJA DE ENTRADA BLOQUEADA', 'Jaden: \'Mi bandeja de entrada solo acepta ensayos de más de 1,000 palabras en formato PDF con análisis armónico sobre Steve Albini. Los correos sobre el pep rally son eliminados automáticamente.\'', 'mail')"><img src="assets/icons/mail.svg" class="inline-pixel-icon" alt="Mail"> [✉] ENVIAR ENSAYO</div>
+              <div class="btn-action" onclick="showRetroAlert('ERROR 403: ACCESO DENEGADO', 'Jaden ha bloqueado permanentemente las solicitudes de amistad de toda persona que vista rojo universitario o aplauda en sincronía en el gimnasio.', 'error')"><img src="assets/icons/cross.svg" class="inline-pixel-icon" alt="Ban"> [✗] AGREGAR AMIGO</div>
+              <div class="btn-action" onclick="document.getElementById('secretVault').showModal()"><img src="assets/icons/lock.svg" class="inline-pixel-icon" alt="Lock"> [!] ARCHIVO OCULTO</div>
             </div>
 
             <!-- Link to full character dossier -->
@@ -1449,7 +1543,7 @@
                 <div class="polaroid-tape"></div>
                 <img src="soundbooth_desk.jpg" alt="Mesa de sonido de la cabina de audio con consola Mackie y casete" class="polaroid-img">
                 <div class="polaroid-caption">
-                  <strong>14/03/2007 — 18:45 hrs.</strong> Mi santuario: consola Mackie 1604, cables XLR enrollados, casete Fall Mix y libreta con calificaciones afiladas. En la pared, el cartel de la obra debidamente intervenido con Sharpie.
+                  <strong>14/03/2007 — 18:45 hrs.</strong> Mi santuario: consola Mackie 1604, cables XLR enrollados, casete Fall Mix y libreta con calificaciones afiladas. En la pared, el cartel de la obra debidamente intervenido con Sharpie. <span class="kaomoji">[x_x]</span>
                 </div>
               </div>
 
@@ -1458,7 +1552,7 @@
                 <div class="polaroid-tape"></div>
                 <img src="jaden_polaroids.jpg" alt="Collage de fotos polaroid, tocadiscos, entrada de básquetbol anulada y stickers emo" class="polaroid-img">
                 <div class="polaroid-caption">
-                  <strong>21/10/2005.</strong> Boleto de los Wildcats sellado como VOID ("f@#k off"), tocadiscos girando en la oscuridad, cinta de casete <em>'For Nobody'</em> y stickers de The Used y MCR.
+                  <strong>21/10/2005.</strong> Boleto de los Wildcats sellado como VOID ("f@#k off"), tocadiscos girando en la oscuridad, cinta de casete <em>'For Nobody'</em> y stickers de The Used y MCR. <span class="kaomoji">\m/</span>
                 </div>
               </div>
 
@@ -1469,28 +1563,28 @@
         <!-- Likes & Dislikes -->
         <div class="likes-dislikes-grid">
           <div class="likes-column">
-            <h4>[+] COSAS QUE JADEN TOLERA</h4>
+            <h4>[+] COSAS QUE JADEN TOLERA <span class="kaomoji">(*_*)</span></h4>
             <ul class="list-items">
-              <li>El silencio absoluto del auditorio a las 6:30 PM</li>
-              <li>Compases irregulares en 7/8 y 11/8</li>
-              <li>El olor a cartón de vinilos usados de segunda mano</li>
-              <li>Las progresiones en menor de Kelsi cuando está sola</li>
-              <li>El chico del chelo que patina (único con cerebro)</li>
-              <li>Suéteres a rayas gastados con orificios en los pulgares</li>
-              <li>Piratear audio sin pérdida en la sala de computación</li>
+              <li>♰ El silencio absoluto del auditorio a las 6:30 PM</li>
+              <li>✦ Compases irregulares en 7/8 y 11/8 (honestidad matemática)</li>
+              <li>☕ El olor a cartón y polvo de vinilos de segunda mano</li>
+              <li>♫ Las progresiones en menor de Kelsi cuando está a solas</li>
+              <li>🛹 El chico del chelo que patina (único con criterio en East High)</li>
+              <li>✄ Suéteres a rayas gastados con orificios en los pulgares</li>
+              <li>💾 Piratear audio FLAC sin compresión en la sala de computación</li>
             </ul>
           </div>
 
           <div class="dislikes-column">
-            <h4>[-] CRÍMENES CONTRA LA HUMANIDAD</h4>
+            <h4>[-] CRÍMENES CONTRA LA HUMANIDAD <span class="kaomoji">(¬_¬)</span></h4>
             <ul class="list-items">
-              <li>Los giros de pelo de Troy Bolton en la cancha</li>
-              <li>Gente que aplaude en los tiempos 1 y 3 en vez de 2 y 4</li>
-              <li>Los solos de pandereta con purpurina de Ryan Evans</li>
-              <li>La pizza grasosa de la cafetería escolar</li>
-              <li>Pep rallies (violación acústica a la Convención de Ginebra)</li>
-              <li>Canciones con autotune emitidas por altavoces de gimnasio</li>
-              <li>El optimismo corporativo no fundamentado</li>
+              <li>☠ Los giros de pelo y sonrisas ensayadas de Troy Bolton</li>
+              <li>✗ Aplaudir a destiempo en los compases 1 y 3 en vez de 2 y 4</li>
+              <li>✧ Los solos de pandereta con purpurina y lentejuelas de Ryan Evans</li>
+              <li>✖ La pizza plástica grasosa de la cafetería escolar</li>
+              <li>⚠ Pep rallies (tortura auditiva que viola la Convención de Ginebra)</li>
+              <li>🔇 Pistas pop con autotune forzado en los altavoces del gimnasio</li>
+              <li>☠ El optimismo corporativo no fundamentado de los Wildcats</li>
             </ul>
           </div>
         </div>
@@ -1747,10 +1841,10 @@
 
             <div class="comment-entry">
               <div class="comment-head">
-                <span class="user">Sharpay_Evans_Official ★</span>
+                <span class="user user-sharpay">✨ Sharpay_Evans_Official ★ ✨</span>
                 <span>Ayer 16:42</span>
               </div>
-              <div class="comment-text">
+              <div class="comment-text comment-sharpay">
                 ¡Oye, bicho raro de la cabina! ¡Exijo que borres esa reseña de 'Bop to the Top'! ¡Mi hermano y yo ensayamos esas patadas en sincronía durante un mes! Si mi padre se entera de este sitio inmundo, comprará los equipos de sonido del colegio y los convertirá en secadores para mis caniches. XOXO.
               </div>
               <div class="jaden-retort">
@@ -1760,10 +1854,10 @@
 
             <div class="comment-entry">
               <div class="comment-head">
-                <span class="user">Chad_Danforth#8_Wildcats</span>
+                <span class="user user-chad">🏀 CHAD_DANFORTH#8_WILDCATS 🏀</span>
                 <span>Ayer 18:15</span>
               </div>
-              <div class="comment-text">
+              <div class="comment-text comment-chad">
                 bro por qué usas palabras tan largas para decir que no sabes encestar un triple? Mañana tenemos final contra West High, deja de poner música de velorio en los altavoces de los vestidores.
               </div>
               <div class="jaden-retort">
@@ -1773,10 +1867,10 @@
 
             <div class="comment-entry">
               <div class="comment-head">
-                <span class="user">Kelsi_Composer</span>
+                <span class="user user-kelsi">♫ Kelsi_Composer ♫</span>
                 <span>Hoy 08:30</span>
               </div>
-              <div class="comment-text">
+              <div class="comment-text comment-kelsi">
                 Hola Jaden... gracias por calibrar el retorno de mi piano ayer. Y... leí tu reseña sobre mi solo. ¿De verdad crees que la modulación era sutil? Nunca nadie me había dicho eso en East High.
               </div>
               <div class="jaden-retort">
@@ -2336,10 +2430,10 @@
       card.className = 'comment-entry';
       card.innerHTML = `
         <div class="comment-head">
-          <span class="user">${escapeHtml(name)}</span>
-          <span>Justo ahora</span>
+          <span class="user" style="font-family: var(--font-pixel); font-size: 10px; color: #5ef1f2;">[+] ${escapeHtml(name)}</span>
+          <span style="font-family: var(--font-mono); font-size: 9px;">Justo ahora</span>
         </div>
-        <div class="comment-text">
+        <div class="comment-text" style="font-family: var(--font-body);">
           ${escapeHtml(msg)}
         </div>
         <div class="jaden-retort">
