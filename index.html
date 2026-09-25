@@ -1302,6 +1302,683 @@
     .retro-alert-btn:active {
       box-shadow: inset 1px 1px 0 #111, inset -1px -1px 0 #888;
     }
+
+    /* ==========================================================================
+       WINAMP SKINS & AUDIO VISUALIZER
+       ========================================================================== */
+    .winamp-skin-select {
+      background: #08090d;
+      color: #ff99bb;
+      border: 1px solid #5a192c;
+      font-family: var(--font-pixel);
+      font-size: 8px;
+      padding: 1px 4px;
+      border-radius: 2px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* Visualizer Bar & Controls */
+    .winamp-vis-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      border: 1px solid #222;
+      padding: 3px 5px;
+      margin: 4px 0 2px;
+      gap: 6px;
+    }
+    .winamp-vis-canvas {
+      flex: 1;
+      height: 24px;
+      display: block;
+      image-rendering: pixelated;
+      cursor: pointer;
+      background: #020305;
+      border: 1px solid #1a1a1a;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.9);
+    }
+    .vis-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .vis-btn {
+      background: #12141a;
+      border: 1px solid #3c4054;
+      color: #777e96;
+      font-family: var(--font-pixel);
+      font-size: 7px;
+      padding: 1px 4px;
+      cursor: pointer;
+      line-height: 1;
+      border-radius: 1px;
+    }
+    .vis-btn:hover, .vis-btn.active {
+      background: #250914;
+      color: #ff4d79;
+      border-color: #ff4d79;
+    }
+
+    /* 1. Skin Goth (Jaden Vance Emo Signature - Default) */
+    .winamp-skin.skin-goth {
+      background: #16080f;
+      border: 2px solid #891b38;
+      box-shadow: inset 1px 1px 0 #bb2d55, inset -1px -1px 0 #111, 0 0 14px rgba(137, 27, 56, 0.45);
+    }
+    .winamp-skin.skin-goth .winamp-top {
+      background: linear-gradient(90deg, #3d0714, #891b38);
+    }
+    .winamp-skin.skin-goth .winamp-lcd {
+      background: #090205;
+      border: 1px solid #541624;
+      color: #ff4d79;
+    }
+    .winamp-skin.skin-goth .winamp-song-title {
+      color: #ff6688;
+    }
+    .winamp-skin.skin-goth .winamp-subtext {
+      color: #ff7597;
+    }
+    .winamp-skin.skin-goth .winamp-seek-slider::-webkit-slider-thumb {
+      background: #ff3366;
+      border-color: #fff;
+    }
+    .winamp-skin.skin-goth .winamp-seek-slider::-moz-range-thumb {
+      background: #ff3366;
+      border-color: #fff;
+    }
+    .winamp-skin.skin-goth .w-btn {
+      background: #240a13;
+      border-color: #5c182c;
+      color: #ffccd7;
+    }
+    .winamp-skin.skin-goth .w-btn:hover {
+      background: #4a1020;
+      color: #fff;
+    }
+    .winamp-skin.skin-goth .winamp-item.active,
+    .winamp-skin.skin-goth .winamp-item:hover {
+      background: #891b38;
+      color: #fff;
+    }
+    .winamp-skin.skin-goth .vis-btn.active {
+      background: #380a18;
+      color: #ff4d79;
+      border-color: #ff4d79;
+    }
+
+    /* 2. Skin Classic (Winamp v2.91 Original) */
+    .winamp-skin.skin-classic {
+      background: #232530;
+      border: 2px solid #5a5d6e;
+      box-shadow: inset 1px 1px 0 #888, inset -1px -1px 0 #111;
+    }
+    .winamp-skin.skin-classic .winamp-top {
+      background: linear-gradient(90deg, #0b1a44, #1b387e);
+    }
+    .winamp-skin.skin-classic .winamp-skin-select {
+      background: #0e121d;
+      color: #9cbaff;
+      border-color: #2b498f;
+    }
+    .winamp-skin.skin-classic .winamp-lcd {
+      background: #000;
+      border: 1px solid #444;
+      color: #00dd55;
+    }
+    .winamp-skin.skin-classic .winamp-song-title {
+      color: #00ff66;
+    }
+    .winamp-skin.skin-classic .winamp-subtext {
+      color: #00dd55;
+    }
+    .winamp-skin.skin-classic .winamp-seek-slider::-webkit-slider-thumb {
+      background: #00dd55;
+      border-color: #fff;
+    }
+    .winamp-skin.skin-classic .winamp-seek-slider::-moz-range-thumb {
+      background: #00dd55;
+      border-color: #fff;
+    }
+    .winamp-skin.skin-classic .w-btn {
+      background: #2b2e3a;
+      border-color: #555;
+      color: #eee;
+    }
+    .winamp-skin.skin-classic .w-btn:hover {
+      background: #3a3e4e;
+    }
+    .winamp-skin.skin-classic .winamp-item.active,
+    .winamp-skin.skin-classic .winamp-item:hover {
+      background: #1b387e;
+      color: #fff;
+    }
+    .winamp-skin.skin-classic .vis-btn.active {
+      background: #0a1b38;
+      color: #00ff66;
+      border-color: #00ff66;
+    }
+
+    /* 3. Skin Matrix (Cyberpunk Phosphor Green) */
+    .winamp-skin.skin-matrix {
+      background: #041007;
+      border: 2px solid #00aa33;
+      box-shadow: inset 1px 1px 0 #00ff55, inset -1px -1px 0 #000, 0 0 12px rgba(0, 255, 85, 0.3);
+    }
+    .winamp-skin.skin-matrix .winamp-top {
+      background: linear-gradient(90deg, #001f0a, #005c1f);
+    }
+    .winamp-skin.skin-matrix .winamp-skin-select {
+      background: #010d05;
+      color: #39ff14;
+      border-color: #00aa33;
+    }
+    .winamp-skin.skin-matrix .winamp-lcd {
+      background: #010803;
+      border: 1px solid #005c1f;
+      color: #39ff14;
+    }
+    .winamp-skin.skin-matrix .winamp-song-title {
+      color: #39ff14;
+    }
+    .winamp-skin.skin-matrix .winamp-subtext {
+      color: #39ff14;
+    }
+    .winamp-skin.skin-matrix .winamp-seek-slider::-webkit-slider-thumb {
+      background: #39ff14;
+      border-color: #fff;
+    }
+    .winamp-skin.skin-matrix .winamp-seek-slider::-moz-range-thumb {
+      background: #39ff14;
+      border-color: #fff;
+    }
+    .winamp-skin.skin-matrix .w-btn {
+      background: #082210;
+      border-color: #00aa33;
+      color: #79ffa0;
+    }
+    .winamp-skin.skin-matrix .w-btn:hover {
+      background: #0d381a;
+      color: #fff;
+    }
+    .winamp-skin.skin-matrix .winamp-item.active,
+    .winamp-skin.skin-matrix .winamp-item:hover {
+      background: #005c1f;
+      color: #fff;
+    }
+    .winamp-skin.skin-matrix .vis-btn.active {
+      background: #04200c;
+      color: #39ff14;
+      border-color: #39ff14;
+    }
+
+    /* 4. Skin Metal (Brushed Aluminum / Industrial Y2K) */
+    .winamp-skin.skin-metal {
+      background: linear-gradient(180deg, #cfd3dc 0%, #a2a8b5 100%);
+      border: 2px solid #555a66;
+      box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #333;
+    }
+    .winamp-skin.skin-metal .winamp-top {
+      background: linear-gradient(90deg, #444852, #757b8a);
+      color: #fff;
+    }
+    .winamp-skin.skin-metal .winamp-skin-select {
+      background: #333740;
+      color: #ffaa22;
+      border-color: #666;
+    }
+    .winamp-skin.skin-metal .winamp-lcd {
+      background: #111417;
+      border: 1px solid #666;
+      color: #ffaa22;
+    }
+    .winamp-skin.skin-metal .winamp-song-title {
+      color: #ffbb33;
+    }
+    .winamp-skin.skin-metal .winamp-subtext {
+      color: #ffaa22;
+    }
+    .winamp-skin.skin-metal .winamp-seek-slider::-webkit-slider-thumb {
+      background: #ffaa22;
+      border-color: #fff;
+    }
+    .winamp-skin.skin-metal .winamp-seek-slider::-moz-range-thumb {
+      background: #ffaa22;
+      border-color: #fff;
+    }
+    .winamp-skin.skin-metal .w-btn {
+      background: #bec2cc;
+      border-color: #555a66;
+      color: #111;
+      box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #444;
+    }
+    .winamp-skin.skin-metal .w-btn:hover {
+      background: #d9dce3;
+    }
+    .winamp-skin.skin-metal .winamp-vol span {
+      color: #222 !important;
+    }
+    .winamp-skin.skin-metal .winamp-item.active,
+    .winamp-skin.skin-metal .winamp-item:hover {
+      background: #555a66;
+      color: #fff;
+    }
+    .winamp-skin.skin-metal .vis-btn.active {
+      background: #2b2e36;
+      color: #ffaa22;
+      border-color: #ffaa22;
+    }
+
+    /* ==========================================================================
+       AUTHENTIC MSN MESSENGER 7.5 FLOATING CHAT WIDGET
+       ========================================================================== */
+    .msn-launcher {
+      position: fixed;
+      bottom: 12px;
+      right: 16px;
+      background: linear-gradient(180deg, #2b5cb8 0%, #173d82 100%);
+      color: #fff;
+      border: 1px solid #7ea8f8;
+      border-radius: 4px 4px 0 0;
+      padding: 6px 14px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+      z-index: 99990;
+      transition: transform 0.15s ease, background 0.15s ease;
+      user-select: none;
+    }
+    .msn-launcher:hover {
+      background: linear-gradient(180deg, #3d72db 0%, #204ea3 100%);
+      transform: translateY(-2px);
+    }
+    .msn-pawn-icon {
+      color: #39ff14;
+      font-size: 13px;
+      text-shadow: 0 0 5px #00ff66;
+    }
+    .msn-unread-badge {
+      background: #ff2a55;
+      color: #fff;
+      font-size: 9.5px;
+      font-weight: bold;
+      padding: 1px 6px;
+      border-radius: 10px;
+      box-shadow: 0 0 6px #ff2a55;
+      animation: msn-pulse 1.2s infinite alternate;
+    }
+    @keyframes msn-pulse {
+      0% { transform: scale(1); filter: brightness(1); }
+      100% { transform: scale(1.15); filter: brightness(1.3); }
+    }
+
+    .msn-window {
+      position: fixed;
+      bottom: 46px;
+      right: 16px;
+      width: 440px;
+      max-width: calc(100vw - 32px);
+      height: 480px;
+      background: #eef2fa;
+      color: #000;
+      border: 2px solid #1a3c78;
+      border-radius: 6px 6px 0 0;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8), 0 0 0 1px #83a5e8;
+      display: flex;
+      flex-direction: column;
+      z-index: 99995;
+      font-family: var(--font-body);
+      overflow: hidden;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .msn-window.msn-hidden {
+      display: none !important;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .msn-window.msn-shaking {
+      animation: msn-shake 0.45s ease-in-out;
+    }
+    @keyframes msn-shake {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      15% { transform: translate(-8px, 6px) rotate(-1.5deg); }
+      30% { transform: translate(8px, -6px) rotate(1.5deg); }
+      45% { transform: translate(-6px, -4px) rotate(-1deg); }
+      60% { transform: translate(6px, 4px) rotate(1deg); }
+      75% { transform: translate(-4px, 2px) rotate(-0.5deg); }
+      90% { transform: translate(3px, -2px) rotate(0.5deg); }
+    }
+
+    /* MSN Titlebar */
+    .msn-titlebar {
+      background: linear-gradient(90deg, #0947b7 0%, #2974ea 70%, #1555c7 100%);
+      color: #fff;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      user-select: none;
+    }
+    .msn-title-left {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .msn-title-btns {
+      display: flex;
+      gap: 3px;
+    }
+    .msn-btn-win {
+      background: linear-gradient(180deg, #497ee3 0%, #1c4bb0 100%);
+      border: 1px solid #fff;
+      color: #fff;
+      font-size: 10px;
+      font-weight: bold;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .msn-btn-win:hover {
+      background: #ff4757;
+    }
+
+    /* MSN Menubar */
+    .msn-menubar {
+      background: #ece9d8;
+      border-bottom: 1px solid #d4cfba;
+      padding: 2px 8px;
+      font-size: 10.5px;
+      display: flex;
+      gap: 12px;
+      color: #222;
+      user-select: none;
+    }
+    .msn-menubar span:hover {
+      background: #316ac5;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* MSN Contact Info */
+    .msn-contact-header {
+      background: linear-gradient(180deg, #ffffff 0%, #e8edf7 100%);
+      border-bottom: 1px solid #b6c6e2;
+      padding: 6px 10px;
+    }
+    .msn-nick {
+      font-size: 11.5px;
+      color: #0c2340;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .msn-nick strong {
+      font-family: var(--font-goth);
+      font-size: 13px;
+      color: #990026;
+      font-weight: normal;
+    }
+    .msn-nick-sub {
+      color: #667285;
+      font-size: 10px;
+      font-family: var(--font-dot);
+    }
+    .msn-online-dot {
+      color: #27ae60;
+      font-size: 11px;
+    }
+    .msn-status-msg {
+      font-size: 10px;
+      color: #555e6c;
+      font-style: italic;
+      margin-top: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* MSN Body & Split layout */
+    .msn-body {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      background: #dbe4f4;
+      padding: 6px;
+      gap: 6px;
+    }
+    .msn-chat-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .msn-messages-log {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #7f9db9;
+      padding: 8px;
+      overflow-y: auto;
+      font-size: 11px;
+      line-height: 1.45;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .msn-sys-msg {
+      color: #777;
+      font-size: 9.5px;
+      font-style: italic;
+      text-align: center;
+      padding: 2px 0;
+    }
+    .msn-msg-head {
+      font-size: 10px;
+      color: #888;
+      margin-bottom: 1px;
+    }
+    .msn-msg-jaden .msn-sender-name {
+      color: #a81134;
+      font-weight: bold;
+      font-family: var(--font-goth);
+      font-size: 12px;
+    }
+    .msn-msg-you .msn-sender-name {
+      color: #0b45b0;
+      font-weight: bold;
+      font-family: var(--font-title);
+    }
+    .msn-msg-jaden .msn-msg-body {
+      color: #1a080e;
+      font-family: var(--font-fanzine);
+      font-size: 11.5px;
+    }
+    .msn-msg-you .msn-msg-body {
+      color: #1a1a1a;
+      font-family: var(--font-body);
+    }
+    .msn-msg-nudge {
+      background: #fff4d9;
+      border: 1px dashed #e6aa00;
+      color: #8a6500;
+      font-weight: bold;
+      padding: 4px 8px;
+      font-size: 10.5px;
+      text-align: center;
+      border-radius: 3px;
+    }
+
+    /* MSN Toolbar */
+    .msn-toolbar {
+      background: #ece9d8;
+      border: 1px solid #7f9db9;
+      border-top: none;
+      padding: 3px 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .msn-tool-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      font-size: 10px;
+      padding: 2px 5px;
+      cursor: pointer;
+      color: #222;
+      border-radius: 2px;
+    }
+    .msn-tool-btn:hover {
+      background: #fff;
+      border-color: #316ac5;
+    }
+    .msn-nudge-btn {
+      background: linear-gradient(180deg, #fff7dc 0%, #fed878 100%);
+      border: 1px solid #c99314;
+      border-radius: 2px;
+      padding: 2px 7px;
+      font-size: 10px;
+      color: #613e00;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-left: auto;
+      box-shadow: inset 0 1px 0 #fff;
+      transition: transform 0.1s;
+    }
+    .msn-nudge-btn:hover {
+      background: linear-gradient(180deg, #fffaeb 0%, #fee49a 100%);
+      transform: scale(1.04);
+    }
+    .msn-nudge-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* MSN Input & Send */
+    .msn-input-row {
+      display: flex;
+      gap: 4px;
+      margin-top: 5px;
+      align-items: flex-end;
+    }
+    .msn-input-box {
+      flex: 1;
+      height: 52px;
+      resize: none;
+      background: #fff;
+      border: 1px solid #7f9db9;
+      padding: 5px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      outline: none;
+    }
+    .msn-input-box:focus {
+      border-color: #2974ea;
+    }
+    .msn-send-btn {
+      height: 52px;
+      background: linear-gradient(180deg, #f0f3f9 0%, #d1daf0 100%);
+      border: 1px solid #5a7bb5;
+      color: #173872;
+      font-weight: bold;
+      font-size: 11px;
+      padding: 0 12px;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    .msn-send-btn:hover {
+      background: linear-gradient(180deg, #ffffff 0%, #e2e8f8 100%);
+      border-color: #2352a1;
+    }
+    .msn-typing-status {
+      font-size: 9.5px;
+      color: #555;
+      font-style: italic;
+      min-height: 14px;
+      margin-top: 2px;
+    }
+
+    /* MSN Avatars column */
+    .msn-dp-column {
+      width: 95px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .msn-dp-card {
+      background: #fff;
+      border: 1px solid #7f9db9;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    .msn-dp-frame {
+      width: 82px;
+      height: 82px;
+      background: #000;
+      border: 1px solid #999;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .msn-dp-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .msn-dp-placeholder {
+      font-size: 34px;
+      color: #667285;
+    }
+    .msn-dp-label {
+      font-size: 9px;
+      color: #555;
+      font-weight: bold;
+      margin-top: 3px;
+    }
+
+    /* MSN Footer */
+    .msn-footer {
+      background: #ece9d8;
+      border-top: 1px solid #d4cfba;
+      padding: 2px 8px;
+      font-size: 9px;
+      color: #777;
+    }
+
+    @media (max-width: 520px) {
+      .msn-window {
+        width: calc(100vw - 20px);
+        right: 10px;
+        height: 430px;
+      }
+      .msn-dp-column {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1433,11 +2110,19 @@
           </div>
         </div>
 
-        <!-- Winamp v2.91 Player -->
-        <div class="winamp-skin">
+        <!-- Winamp v2.91 Player with Skin Switcher & Real Spectrum Visualizer -->
+        <div class="winamp-skin skin-goth" id="winampContainer">
           <div class="winamp-top">
-            <span>WINAMP v2.91 - JADEN_MOD</span>
-            <span>_ □ ✕</span>
+            <span>WINAMP v2.91</span>
+            <div style="display:flex; align-items:center; gap:5px;">
+              <select id="winampSkinSelect" onchange="setWinampSkin(this.value)" class="winamp-skin-select" title="Cambiar Skin de Winamp">
+                <option value="skin-goth" selected>Skin: Goth Emo</option>
+                <option value="skin-classic">Skin: Classic 2.91</option>
+                <option value="skin-matrix">Skin: Cyber Matrix</option>
+                <option value="skin-metal">Skin: Brushed Metal</option>
+              </select>
+              <span style="letter-spacing:1px; cursor:default;">_ □ ✕</span>
+            </div>
           </div>
           <div class="winamp-lcd">
             <div style="display:flex; gap:8px; align-items:center;">
@@ -1451,6 +2136,17 @@
                 </div>
               </div>
             </div>
+
+            <!-- Vintage Winamp Audio Spectrum / Oscilloscope Visualizer -->
+            <div class="winamp-vis-row">
+              <canvas id="winampVis" width="140" height="24" class="winamp-vis-canvas" onclick="cycleVisMode()" title="Haz clic para alternar: Barras de Espectro / Osciloscopio / Apagado"></canvas>
+              <div class="vis-buttons">
+                <button type="button" class="vis-btn active" id="btnVisBars" onclick="setVisMode('bars')" title="Barras de Espectro">BARS</button>
+                <button type="button" class="vis-btn" id="btnVisWave" onclick="setVisMode('wave')" title="Osciloscopio CRT">OSC</button>
+                <button type="button" class="vis-btn" id="btnVisOff" onclick="setVisMode('off')" title="Apagado">OFF</button>
+              </div>
+            </div>
+
             <!-- Vintage Winamp Seek Progress Bar -->
             <div class="winamp-seek-container">
               <input type="range" id="winampSeek" class="winamp-seek-slider" min="0" max="100" value="0" step="0.1" title="Haz clic o arrastra para saltar a un segundo específico">
@@ -1940,6 +2636,102 @@
       </div>
     </footer>
 
+  <!-- ================= MSN MESSENGER 7.5 FLOATING CHAT WIDGET ================= -->
+  <div id="msnLauncher" class="msn-launcher" onclick="toggleMsnWindow()">
+    <span class="msn-pawn-icon">●</span>
+    <span class="msn-launcher-text">MSN (1): Jaden Vance (Conectado)</span>
+    <span class="msn-unread-badge" id="msnUnreadBadge">1</span>
+  </div>
+
+  <div id="msnWindow" class="msn-window msn-hidden">
+    <!-- Titlebar -->
+    <div class="msn-titlebar" id="msnTitlebar">
+      <div class="msn-title-left">
+        <span class="msn-pawn-icon" style="font-size:11px;">●</span>
+        <span>Jaden Vance - Conversación</span>
+      </div>
+      <div class="msn-title-btns">
+        <button type="button" class="msn-btn-win" onclick="minimizeMsn()" title="Minimizar">_</button>
+        <button type="button" class="msn-btn-win" onclick="toggleMsnExpand()" title="Maximizar">□</button>
+        <button type="button" class="msn-btn-win" onclick="closeMsn()" title="Cerrar">✕</button>
+      </div>
+    </div>
+
+    <!-- MSN Menu bar -->
+    <div class="msn-menubar">
+      <span>Archivo</span>
+      <span>Editar</span>
+      <span>Acciones</span>
+      <span>Herramientas</span>
+      <span>Ayuda</span>
+    </div>
+
+    <!-- User Status Header -->
+    <div class="msn-contact-header">
+      <div class="msn-nick">
+        <span class="msn-online-dot">●</span> <strong>♰ · [ J a d e n ] · ♰</strong> <span class="msn-nick-sub">(L) (U) ·· [Escuchando: American Football - Never Meant] ·· (¬_¬)</span>
+      </div>
+      <div class="msn-status-msg">&lt;Estado: En la cabina de audio // No me busquen en el gimnasio&gt;</div>
+    </div>
+
+    <!-- Main Body with Avatars and Chat Log -->
+    <div class="msn-body">
+      <!-- Chat Log Area -->
+      <div class="msn-chat-area">
+        <div class="msn-messages-log" id="msnMessagesLog">
+          <div class="msn-sys-msg">Jaden Vance se ha conectado.</div>
+          <div class="msn-sys-msg">Nunca compartas contraseñas ni información confidencial.</div>
+          <div class="msn-msg msn-msg-jaden">
+            <div class="msn-msg-head">
+              <span class="msn-sender-name">♰ · [ J a d e n ] · ♰</span> dice:
+            </div>
+            <div class="msn-msg-body">
+              ¿Qué quieres? Estoy calibrando la mesa de mezcla del auditorio. Si vienes a hablar del pep rally o de los solos de Troy Bolton, mejor desconéctate ya.
+            </div>
+          </div>
+        </div>
+
+        <!-- Action & Formatting Toolbar -->
+        <div class="msn-toolbar">
+          <button type="button" class="msn-tool-btn" title="Formato de Fuente"><span style="font-family:serif;font-weight:bold;">A</span> Fuente</button>
+          <button type="button" class="msn-tool-btn" title="Emoticonos">☺ Emoticonos</button>
+          <button type="button" class="msn-nudge-btn" id="msnNudgeBtn" onclick="sendMsnNudge()" title="¡Enviar un Zumbido!">
+            <span class="nudge-icon">(!)</span> <strong>Zumbido</strong>
+          </button>
+        </div>
+
+        <!-- Input and Send Box -->
+        <div class="msn-input-row">
+          <textarea id="msnInput" class="msn-input-box" placeholder="Escribe un mensaje aquí..." rows="2" onkeydown="handleMsnKey(event)"></textarea>
+          <button type="button" class="msn-send-btn" onclick="sendMsnMessage()">Enviar</button>
+        </div>
+        <div class="msn-typing-status" id="msnTypingStatus"></div>
+      </div>
+
+      <!-- Side Display Pictures -->
+      <div class="msn-dp-column">
+        <!-- Jaden DP -->
+        <div class="msn-dp-card">
+          <div class="msn-dp-frame">
+            <img src="meimei.jpg" alt="Jaden Vance DP" class="msn-dp-img">
+          </div>
+          <span class="msn-dp-label">Jaden</span>
+        </div>
+
+        <!-- Visitor DP -->
+        <div class="msn-dp-card">
+          <div class="msn-dp-frame">
+            <div class="msn-dp-placeholder">👤</div>
+          </div>
+          <span class="msn-dp-label">Tú</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MSN Status Footer -->
+    <div class="msn-footer">
+      <span>MSN Messenger 7.5 // Red Dial-up 56kbps</span>
+    </div>
   </div>
 
   <!-- ================= SECRET MODAL (EASTER EGG) ================= -->
@@ -2308,6 +3100,7 @@
 
       winampAudio.play().then(() => {
         isPlaying = true;
+        connectAudioToVisualizer();
         const status = document.getElementById('playerStatus');
         if (status) {
           status.textContent = "PLAYING";
@@ -2456,11 +3249,548 @@
       return d.innerHTML;
     }
 
-    // Auto-init audio metadata on page load
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initWinampAudio);
-    } else {
+    // ==========================================================================
+    // WINAMP AUDIO SPECTRUM & OSCILLOSCOPE VISUALIZER ENGINE
+    // ==========================================================================
+    let visAudioCtx = null;
+    let visAnalyser = null;
+    let visSource = null;
+    let visMode = 'bars'; // 'bars', 'wave', 'off'
+    let visAnimId = null;
+    const numBars = 16;
+    let peakBars = new Array(numBars).fill(0);
+    let peakHoldTimers = new Array(numBars).fill(0);
+
+    function initWinampVisualizer() {
+      const canvas = document.getElementById('winampVis');
+      if (!canvas) return;
+
+      // Start rendering animation loop
+      if (!visAnimId) {
+        drawVisualizerFrame();
+      }
+    }
+
+    function connectAudioToVisualizer() {
+      if (!winampAudio) return;
+      try {
+        if (!visAudioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) {
+            visAudioCtx = new AudioContextClass();
+          }
+        }
+        if (visAudioCtx && visAudioCtx.state === 'suspended') {
+          visAudioCtx.resume();
+        }
+        if (visAudioCtx && !visAnalyser) {
+          visAnalyser = visAudioCtx.createAnalyser();
+          visAnalyser.fftSize = 64; // 32 frequency bins
+          visAnalyser.smoothingTimeConstant = 0.75;
+        }
+        if (visAudioCtx && visAnalyser && !visSource) {
+          visSource = visAudioCtx.createMediaElementSource(winampAudio);
+          visSource.connect(visAnalyser);
+          visAnalyser.connect(visAudioCtx.destination);
+        }
+      } catch (err) {
+        // Fallback procedural animation handles visualizer gracefully if Web Audio is restricted
+        console.info("Visualizer audio routing info:", err);
+      }
+    }
+
+    function setVisMode(mode) {
+      visMode = mode;
+      ['bars', 'wave', 'off'].forEach(m => {
+        const btn = document.getElementById('btnVis' + m.charAt(0).toUpperCase() + m.slice(1));
+        if (btn) btn.classList.toggle('active', m === mode);
+      });
+    }
+
+    function cycleVisMode() {
+      if (visMode === 'bars') setVisMode('wave');
+      else if (visMode === 'wave') setVisMode('off');
+      else setVisMode('bars');
+    }
+
+    function drawVisualizerFrame() {
+      visAnimId = requestAnimationFrame(drawVisualizerFrame);
+      const canvas = document.getElementById('winampVis');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+
+      // Clear with dark CRT background
+      ctx.fillStyle = "#020305";
+      ctx.fillRect(0, 0, w, h);
+
+      if (visMode === 'off') {
+        // Draw faint standby grid lines
+        ctx.strokeStyle = "#081014";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(0, h / 2);
+        ctx.lineTo(w, h / 2);
+        ctx.stroke();
+        return;
+      }
+
+      // Determine active skin for LED palette
+      const container = document.getElementById('winampContainer');
+      let currentSkin = 'skin-goth';
+      if (container) {
+        if (container.classList.contains('skin-classic')) currentSkin = 'skin-classic';
+        else if (container.classList.contains('skin-matrix')) currentSkin = 'skin-matrix';
+        else if (container.classList.contains('skin-metal')) currentSkin = 'skin-metal';
+      }
+
+      const activePlaying = isPlaying && winampAudio && !winampAudio.paused && !winampAudio.ended;
+
+      if (visMode === 'bars') {
+        // Spectrum Analyzer Mode: 16 vertical segmented LED bars with peak drop
+        const barWidth = 6;
+        const barGap = 2;
+        const totalWidth = numBars * (barWidth + barGap) - barGap;
+        const startX = Math.floor((w - totalWidth) / 2);
+
+        let freqData = new Uint8Array(32);
+        let hasRealSignal = false;
+
+        if (activePlaying && visAnalyser) {
+          try {
+            visAnalyser.getByteFrequencyData(freqData);
+            for (let k = 0; k < 16; k++) {
+              if (freqData[k] > 0) { hasRealSignal = true; break; }
+            }
+          } catch (e) {}
+        }
+
+        // Draw each of the 16 frequency channels
+        for (let i = 0; i < numBars; i++) {
+          let val = 0;
+          if (activePlaying) {
+            if (hasRealSignal) {
+              val = freqData[i * 2] || freqData[i] || 0;
+            } else {
+              // Rhythmic procedural fallback pulse so bars always dance to the beat
+              const t = Date.now() / 140;
+              val = Math.floor(Math.sin(t + i * 0.6) * 45 + Math.cos(t * 1.6 - i * 0.3) * 40 + 95);
+            }
+          }
+
+          // Target bar height in pixels (0 to h - 2)
+          const targetHeight = Math.floor((val / 255) * (h - 2));
+
+          // Peak drop physics
+          if (targetHeight >= peakBars[i]) {
+            peakBars[i] = targetHeight;
+            peakHoldTimers[i] = 10;
+          } else {
+            if (peakHoldTimers[i] > 0) {
+              peakHoldTimers[i]--;
+            } else {
+              peakBars[i] = Math.max(0, peakBars[i] - 1);
+            }
+          }
+
+          const x = startX + i * (barWidth + barGap);
+
+          // Render discrete LED segments (2px tall with 1px space)
+          const blockHeight = 2;
+          const blockGap = 1;
+          const totalBlocks = Math.floor(h / (blockHeight + blockGap));
+          const activeBlocks = Math.floor(targetHeight / (blockHeight + blockGap));
+
+          for (let b = 0; b < activeBlocks; b++) {
+            const y = h - (b + 1) * (blockHeight + blockGap);
+            const ratio = b / totalBlocks;
+
+            if (currentSkin === 'skin-classic') {
+              ctx.fillStyle = ratio > 0.8 ? "#ff2222" : ratio > 0.55 ? "#ffcc00" : "#00dd44";
+            } else if (currentSkin === 'skin-goth') {
+              ctx.fillStyle = ratio > 0.75 ? "#ffffff" : ratio > 0.45 ? "#ff3366" : "#891b38";
+            } else if (currentSkin === 'skin-matrix') {
+              ctx.fillStyle = ratio > 0.8 ? "#c8ffcc" : ratio > 0.5 ? "#39ff14" : "#009922";
+            } else { // metal
+              ctx.fillStyle = ratio > 0.75 ? "#ffffff" : ratio > 0.45 ? "#ffaa22" : "#cc7700";
+            }
+            ctx.fillRect(x, y, barWidth, blockHeight);
+          }
+
+          // Render falling peak hold dot
+          if (peakBars[i] > 0) {
+            const peakY = Math.max(0, h - peakBars[i]);
+            if (currentSkin === 'skin-classic') ctx.fillStyle = "#ffffff";
+            else if (currentSkin === 'skin-goth') ctx.fillStyle = "#ff99bb";
+            else if (currentSkin === 'skin-matrix') ctx.fillStyle = "#ffffff";
+            else ctx.fillStyle = "#ffdd88";
+            ctx.fillRect(x, peakY, barWidth, 1);
+          }
+        }
+      } else if (visMode === 'wave') {
+        // Oscilloscope Mode: Continuous glowing CRT waveform line
+        let timeData = new Uint8Array(64);
+        let hasWaveSignal = false;
+
+        if (activePlaying && visAnalyser) {
+          try {
+            visAnalyser.getByteTimeDomainData(timeData);
+            for (let k = 0; k < 64; k++) {
+              if (Math.abs(timeData[k] - 128) > 2) { hasWaveSignal = true; break; }
+            }
+          } catch (e) {}
+        }
+
+        if (!hasWaveSignal) {
+          const t = Date.now() / 180;
+          const amp = activePlaying ? 16 : 2;
+          for (let i = 0; i < 64; i++) {
+            timeData[i] = 128 + Math.floor(Math.sin(t + i * 0.25) * amp + (Math.random() * 2 - 1));
+          }
+        }
+
+        ctx.lineWidth = 1.5;
+        if (currentSkin === 'skin-classic') {
+          ctx.strokeStyle = "#00ff66";
+          ctx.shadowColor = "#00ff66";
+        } else if (currentSkin === 'skin-goth') {
+          ctx.strokeStyle = "#ff4d79";
+          ctx.shadowColor = "#ff3366";
+        } else if (currentSkin === 'skin-matrix') {
+          ctx.strokeStyle = "#39ff14";
+          ctx.shadowColor = "#39ff14";
+        } else {
+          ctx.strokeStyle = "#ffaa22";
+          ctx.shadowColor = "#ffaa22";
+        }
+        ctx.shadowBlur = 4;
+
+        ctx.beginPath();
+        const sliceWidth = w / 64;
+        let x = 0;
+        for (let i = 0; i < 64; i++) {
+          const v = timeData[i] / 128.0;
+          const y = (v * h) / 2;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+          x += sliceWidth;
+        }
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    // ==========================================================================
+    // WINAMP SKIN SELECTOR
+    // ==========================================================================
+    function setWinampSkin(skinName) {
+      const container = document.getElementById('winampContainer');
+      if (!container) return;
+      container.classList.remove('skin-goth', 'skin-classic', 'skin-matrix', 'skin-metal');
+      container.classList.add(skinName);
+
+      const select = document.getElementById('winampSkinSelect');
+      if (select) select.value = skinName;
+
+      try {
+        localStorage.setItem('jaden_winamp_skin', skinName);
+      } catch (e) {}
+    }
+
+    function initWinampSkin() {
+      try {
+        const savedSkin = localStorage.getItem('jaden_winamp_skin') || 'skin-goth';
+        setWinampSkin(savedSkin);
+      } catch (e) {
+        setWinampSkin('skin-goth');
+      }
+    }
+
+    // ==========================================================================
+    // MSN MESSENGER 7.5 INTERACTIVE ENGINE & PROCEDURAL AUDIO
+    // ==========================================================================
+    let isMsnOpen = false;
+    let isMsnMaximized = false;
+    let msnUnreadCount = 1;
+    let isJadenTyping = false;
+    let msnAudioCtx = null;
+
+    function getMsnAudioCtx() {
+      if (!msnAudioCtx) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (AudioCtx) msnAudioCtx = new AudioCtx();
+      }
+      if (msnAudioCtx && msnAudioCtx.state === 'suspended') {
+        msnAudioCtx.resume();
+      }
+      return msnAudioCtx;
+    }
+
+    // MSN Incoming Message 3-tone notification sound
+    function playMsnMessageSound() {
+      try {
+        const ctx = getMsnAudioCtx();
+        if (!ctx) return;
+        const notes = [1046.5, 1318.5, 1567.98]; // C6, E6, G6
+        notes.forEach((freq, idx) => {
+          const startTime = ctx.currentTime + (idx * 0.07);
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = "sine";
+          osc.frequency.setValueAtTime(freq, startTime);
+          gain.gain.setValueAtTime(0.06, startTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, startTime + 0.18);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(startTime);
+          osc.stop(startTime + 0.2);
+        });
+      } catch (e) {}
+    }
+
+    // MSN Nudge double vibration buzz
+    function playMsnNudgeSound() {
+      try {
+        const ctx = getMsnAudioCtx();
+        if (!ctx) return;
+        [0, 0.12].forEach((delay) => {
+          const startTime = ctx.currentTime + delay;
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = "sawtooth";
+          osc.frequency.setValueAtTime(140, startTime);
+          osc.frequency.linearRampToValueAtTime(80, startTime + 0.09);
+          gain.gain.setValueAtTime(0.18, startTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.1);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(startTime);
+          osc.stop(startTime + 0.11);
+        });
+      } catch (e) {}
+    }
+
+    // MSN Login sound
+    function playMsnLoginSound() {
+      try {
+        const ctx = getMsnAudioCtx();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        const now = ctx.currentTime;
+        osc.frequency.setValueAtTime(440, now);
+        osc.frequency.exponentialRampToValueAtTime(880, now + 0.2);
+        gain.gain.setValueAtTime(0.05, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.25);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.26);
+      } catch (e) {}
+    }
+
+    function toggleMsnWindow() {
+      const win = document.getElementById('msnWindow');
+      const badge = document.getElementById('msnUnreadBadge');
+      if (!win) return;
+      isMsnOpen = !isMsnOpen;
+      if (isMsnOpen) {
+        win.classList.remove('msn-hidden');
+        msnUnreadCount = 0;
+        if (badge) badge.style.display = 'none';
+        const input = document.getElementById('msnInput');
+        if (input) input.focus();
+        playMsnLoginSound();
+      } else {
+        win.classList.add('msn-hidden');
+      }
+    }
+
+    function minimizeMsn() {
+      const win = document.getElementById('msnWindow');
+      if (win) {
+        win.classList.add('msn-hidden');
+        isMsnOpen = false;
+      }
+    }
+
+    function closeMsn() {
+      minimizeMsn();
+    }
+
+    function toggleMsnExpand() {
+      const win = document.getElementById('msnWindow');
+      if (!win) return;
+      isMsnMaximized = !isMsnMaximized;
+      if (isMsnMaximized) {
+        win.style.width = 'min(640px, calc(100vw - 20px))';
+        win.style.height = 'min(580px, calc(100vh - 60px))';
+      } else {
+        win.style.width = '';
+        win.style.height = '';
+      }
+    }
+
+    function handleMsnKey(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMsnMessage();
+      }
+    }
+
+    function sendMsnMessage() {
+      const input = document.getElementById('msnInput');
+      if (!input) return;
+      const text = input.value.trim();
+      if (!text) return;
+
+      const log = document.getElementById('msnMessagesLog');
+      if (!log) return;
+
+      // Append user message
+      const msgEl = document.createElement('div');
+      msgEl.className = 'msn-msg msn-msg-you';
+      msgEl.innerHTML = `
+        <div class="msn-msg-head"><span class="msn-sender-name">Tú</span> dice:</div>
+        <div class="msn-msg-body">${escapeHtml(text)}</div>
+      `;
+      log.appendChild(msgEl);
+      input.value = '';
+      log.scrollTop = log.scrollHeight;
+
+      // Trigger Jaden's dynamic reply
+      triggerJadenReply(text);
+    }
+
+    function sendMsnNudge() {
+      const log = document.getElementById('msnMessagesLog');
+      const win = document.getElementById('msnWindow');
+      const wrapper = document.querySelector('.neocities-wrapper');
+
+      // Play nudge vibration sound
+      playMsnNudgeSound();
+
+      // Screen & window shake
+      if (win) {
+        win.classList.remove('msn-shaking');
+        void win.offsetWidth;
+        win.classList.add('msn-shaking');
+        setTimeout(() => win.classList.remove('msn-shaking'), 460);
+      }
+      if (wrapper) {
+        wrapper.classList.remove('msn-shaking');
+        void wrapper.offsetWidth;
+        wrapper.classList.add('msn-shaking');
+        setTimeout(() => wrapper.classList.remove('msn-shaking'), 460);
+      }
+
+      // Append nudge log entry
+      if (log) {
+        const nudgeEl = document.createElement('div');
+        nudgeEl.className = 'msn-msg-nudge';
+        nudgeEl.textContent = '¡Has enviado un zumbido!';
+        log.appendChild(nudgeEl);
+        log.scrollTop = log.scrollHeight;
+      }
+
+      // Jaden's annoyed reaction to nudges
+      const nudgeResponses = [
+        "¡Oye! ¿Por qué mandas un zumbido? Casi me haces tirar el café sobre los faders de la consola Mackie.",
+        "Deja de spamear zumbidos. Si quemas la tarjeta de sonido de esta laptop de East High, la Sra. Darbus nos va a poner 20 horas de detención a los dos.",
+        "¿Otro zumbido? Pareces Sharpay cuando un reflector no le apunta a la coronilla. Escribe como la gente normal.",
+        "Un zumbido más y configuro el firewall de Windows XP para bloquear tu IP de toda la red escolar.",
+        "Mis oídos sobrevivieron al ensayo de 'Bop to the Top' hoy, no van a tolerar tus zumbidos. Habla o vete."
+      ];
+
+      triggerJadenReply('', nudgeResponses[Math.floor(Math.random() * nudgeResponses.length)], 800);
+    }
+
+    function triggerJadenReply(userText, overrideMsg = null, customDelay = null) {
+      if (isJadenTyping) return;
+      isJadenTyping = true;
+
+      const typingStatus = document.getElementById('msnTypingStatus');
+      if (typingStatus) {
+        typingStatus.textContent = '♰ · [ J a d e n ] · ♰ está escribiendo un mensaje...';
+      }
+
+      let replyText = overrideMsg;
+      if (!replyText) {
+        const lower = userText.toLowerCase();
+        if (lower.includes('troy') || lower.includes('bolton')) {
+          replyText = "Troy Bolton no sabe la diferencia entre una escala pentatónica y un tiro libre. Por favor no ensucies mi ventana de chat mencionándolo.";
+        } else if (lower.includes('sharpay') || lower.includes('ryan')) {
+          replyText = "Sharpay canta en frecuencias que solo los caniches y los micrófonos baratos pueden captar. Tuve que poner un filtro paso bajo a 4kHz para que no reventara los parlantes.";
+        } else if (lower.includes('kelsi')) {
+          replyText = "Kelsi tiene talento armónico real, pero es demasiado tímida para mandar a volar a los Wildcats. Ayer le dejé una copia en casete de 'Spiderland' de Slint en su casillero.";
+        } else if (lower.includes('musica') || lower.includes('música') || lower.includes('cancion') || lower.includes('canción') || lower.includes('rock') || lower.includes('banda') || lower.includes('emo')) {
+          replyText = "Si no fue grabado en cinta analógica de dos pulgadas con micrófonos de condensador valvulares, para mí es solo ruido comercial procesado por corporaciones.";
+        } else if (lower.includes('hola') || lower.includes('hey') || lower.includes('buenas')) {
+          replyText = "Hola. Tengo exactamente 12 minutos antes de que la Sra. Darbus empiece a hacer gárgaras de miel para el ensayo. Hazlo rápido.";
+        } else if (lower.includes('darbus')) {
+          replyText = "La Sra. Darbus me amenazó con sacarme del club audiovisual si vuelvo a ecualizar los agudos de las audiciones con 'falta de entusiasmo teatral'. No me arrepiento.";
+        } else if (lower.includes('wildcat') || lower.includes('básquet') || lower.includes('basquet') || lower.includes('partido')) {
+          replyText = "El único sonido soportable del gimnasio es cuando se apagan las luces a las 9 PM y el motor del extractor de aire zumba en Do sostenido menor.";
+        } else if (lower.includes('novio') || lower.includes('amor') || lower.includes('lindo')) {
+          replyText = "¿Esto es una trampa de Chad? No tengo tiempo para el melodrama romántico de pasillo. Tengo que desmagnetizar los cabezales de mi pletina Tascam.";
+        } else {
+          const genericQuotes = [
+            "Anotado en mi libreta bajo la categoría de 'ruido blanco innecesario'.",
+            "¿Tardaste toda la hora de almuerzo en escribir eso? Podrías haber aprovechado de escuchar 'In the Aeroplane Over the Sea'.",
+            "Esa opinión tuya suena tan sobreproducida como el coro de 'We're All In This Together'.",
+            "Tu mensaje ha sido comprimido en MP3 de 32kbps y enviado a la papelera de reciclaje.",
+            "Compás de 4/4 detectado... qué predecible. Intenta hablar en compás de 7/8 la próxima vez.",
+            "Estoy ocupado intentando ripear un vinilo de Joy Division a 24-bit. No me distraigas.",
+            "Si necesitas que alguien te sonría y baile con bandejas de comida, toca la puerta del gimnasio, no la cabina de audio."
+          ];
+          replyText = genericQuotes[Math.floor(Math.random() * genericQuotes.length)];
+        }
+      }
+
+      const delay = customDelay || Math.floor(Math.random() * 600 + 800);
+
+      setTimeout(() => {
+        isJadenTyping = false;
+        if (typingStatus) typingStatus.textContent = '';
+
+        const log = document.getElementById('msnMessagesLog');
+        if (log) {
+          const msgEl = document.createElement('div');
+          msgEl.className = 'msn-msg msn-msg-jaden';
+          msgEl.innerHTML = `
+            <div class="msn-msg-head"><span class="msn-sender-name">♰ · [ J a d e n ] · ♰</span> dice:</div>
+            <div class="msn-msg-body">${escapeHtml(replyText)}</div>
+          `;
+          log.appendChild(msgEl);
+          log.scrollTop = log.scrollHeight;
+          playMsnMessageSound();
+
+          // If MSN is minimized or hidden, show/update unread badge
+          if (!isMsnOpen) {
+            msnUnreadCount++;
+            const badge = document.getElementById('msnUnreadBadge');
+            if (badge) {
+              badge.textContent = msnUnreadCount;
+              badge.style.display = 'inline-block';
+            }
+          }
+        }
+      }, delay);
+    }
+
+    // Auto-init visualizer, skins and audio on page load
+    function initAllRetroEngines() {
       initWinampAudio();
+      initWinampVisualizer();
+      initWinampSkin();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAllRetroEngines);
+    } else {
+      initAllRetroEngines();
     }
   </script>
 
