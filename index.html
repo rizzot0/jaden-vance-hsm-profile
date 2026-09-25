@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=VT323&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
   <title>♰ JADEN.ONLINE // sound booth exile // east high 2007 ♰</title>
   <style>
     /* ==========================================================================
@@ -33,6 +32,7 @@
       --font-journal: "Georgia", "Palatino Linotype", "Times New Roman", serif;
       --font-mono: "Lucida Console", "Courier New", Courier, monospace;
       --font-pixel: 'Silkscreen', 'VT323', "Courier New", monospace;
+      --font-fanzine: 'Special Elite', "Courier New", Courier, monospace;
     }
 
     * {
@@ -705,37 +705,44 @@
       }
     }
     .likes-column, .dislikes-column {
-      background: #10121a;
-      border: 1px dashed #2f3448;
-      padding: 10px;
+      background: #0f1016;
+      border: 1px dashed #3a3f55;
+      padding: 12px;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
     }
     .likes-column h4 {
       color: var(--accent-neon-green);
-      font-family: var(--font-title);
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 6px;
+      font-family: var(--font-fanzine);
+      font-size: 13px;
+      font-weight: normal;
+      margin-bottom: 8px;
       border-bottom: 1px dotted #1d4022;
-      padding-bottom: 3px;
-      letter-spacing: 0.5px;
+      padding-bottom: 4px;
+      letter-spacing: 0.8px;
     }
     .dislikes-column h4 {
       color: #ff4d6d;
-      font-family: var(--font-title);
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 6px;
+      font-family: var(--font-fanzine);
+      font-size: 13px;
+      font-weight: normal;
+      margin-bottom: 8px;
       border-bottom: 1px dotted #541926;
-      padding-bottom: 3px;
-      letter-spacing: 0.5px;
+      padding-bottom: 4px;
+      letter-spacing: 0.8px;
     }
     .list-items {
       list-style-type: square;
-      padding-left: 15px;
-      font-family: var(--font-body);
-      font-size: 11px;
-      color: #c5cadc;
+      padding-left: 18px;
+      font-family: var(--font-fanzine);
+      font-size: 12px;
       line-height: 1.65;
+      letter-spacing: 0.3px;
+    }
+    .likes-column .list-items {
+      color: #bbf2be;
+    }
+    .dislikes-column .list-items {
+      color: #f7b2c0;
     }
 
     /* RYM Table with Album Art Thumbs */
