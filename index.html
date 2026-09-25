@@ -763,27 +763,25 @@
     }
     .album-thumb-container {
       display: flex;
-      gap: 8px;
-      align-items: flex-start;
+      gap: 10px;
+      align-items: center;
     }
     .album-mini-art {
-      width: 48px;
-      height: 48px;
-      border: 1px solid #444;
+      width: 52px;
+      height: 52px;
+      object-fit: cover;
+      border: 1px solid var(--accent-wine);
       flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      font-family: var(--font-mono);
-      font-weight: bold;
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-      text-align: center;
+      border-radius: 2px;
+      background: #000;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      cursor: pointer;
     }
-    .mini-bop { background: linear-gradient(135deg, #ff0055, #ffcc00); color: #000; border-color: #ff6699; }
-    .mini-game { background: linear-gradient(135deg, #cc2200, #440000); color: #fff; border-color: #ff4422; }
-    .mini-break { background: linear-gradient(135deg, #001133, #004488); color: #ffccff; border-color: #4488ff; }
-    .mini-kelsi { background: linear-gradient(135deg, #222, #111); color: #00ff66; border-color: #00aa44; }
+    .album-mini-art:hover {
+      transform: scale(1.08);
+      border-color: #ff99b0;
+    }
 
     .song-title {
       font-size: 11px;
@@ -1341,11 +1339,16 @@
             <span>_ □ ✕</span>
           </div>
           <div class="winamp-lcd">
-            <div class="winamp-song-title" id="currentTrackDisplay">1. American Football - Never Meant (1999)</div>
-            <div class="winamp-subtext">
-              <span id="playerStatus" style="color: #ff4d6d; font-weight: bold;">STOPPED</span>
-              <span id="formatDisplay">128 kbps MP3</span>
-              <span id="timeDisplay">00:00 / --:--</span>
+            <div style="display:flex; gap:8px; align-items:center;">
+              <img id="winampCoverThumb" src="assets/glossary/american_football_lp1.png" style="width:34px; height:34px; object-fit:cover; border:1px solid #ff4d6d; flex-shrink:0; background:#000; border-radius:2px;" alt="Cover">
+              <div style="flex:1; min-width:0;">
+                <div class="winamp-song-title" id="currentTrackDisplay">1. American Football - Never Meant (1999)</div>
+                <div class="winamp-subtext">
+                  <span id="playerStatus" style="color: #ff4d6d; font-weight: bold;">STOPPED</span>
+                  <span id="formatDisplay">128 kbps MP3</span>
+                  <span id="timeDisplay">00:00 / --:--</span>
+                </div>
+              </div>
             </div>
             <!-- Vintage Winamp Seek Progress Bar -->
             <div class="winamp-seek-container">
@@ -1551,9 +1554,7 @@
                 <tr>
                   <td>
                     <div class="album-thumb-container">
-                      <div class="album-mini-art mini-bop">
-                        BOP<br>TOP
-                      </div>
+                      <img src="assets/rym/bop_to_the_top.webp" class="album-mini-art" alt="Bop to the Top - Sharpay &amp; Ryan" loading="lazy">
                       <div>
                         <div class="song-title">"Bop to the Top"</div>
                         <div class="song-artist">Sharpay &amp; Ryan Evans</div>
@@ -1576,9 +1577,7 @@
                 <tr>
                   <td>
                     <div class="album-thumb-container">
-                      <div class="album-mini-art mini-game">
-                        HEAD<br>GAME
-                      </div>
+                      <img src="assets/rym/getcha_head.webp" class="album-mini-art" alt="Get'cha Head in the Game - Troy Bolton &amp; Wildcats" loading="lazy">
                       <div>
                         <div class="song-title">"Get'cha Head in the Game"</div>
                         <div class="song-artist">Troy Bolton &amp; Wildcats</div>
@@ -1601,9 +1600,7 @@
                 <tr>
                   <td>
                     <div class="album-thumb-container">
-                      <div class="album-mini-art mini-break">
-                        BREAK<br>FREE
-                      </div>
+                      <img src="assets/rym/breaking_free.webp" class="album-mini-art" alt="Breaking Free - Troy &amp; Gabriella" loading="lazy">
                       <div>
                         <div class="song-title">"Breaking Free"</div>
                         <div class="song-artist">Troy &amp; Gabriella</div>
@@ -1626,9 +1623,7 @@
                 <tr>
                   <td>
                     <div class="album-thumb-container">
-                      <div class="album-mini-art mini-kelsi">
-                        KELSI<br>DEMO
-                      </div>
+                      <img src="assets/rym/kelsi_demo.webp" class="album-mini-art" alt="Piano Soliloquy in Dm - Kelsi Nielsen" loading="lazy">
                       <div>
                         <div class="song-title">"Piano Soliloquy in Dm"</div>
                         <div class="song-artist">Kelsi Nielsen</div>
@@ -1956,30 +1951,35 @@
       {
         name: "1. American Football - Never Meant (1999)",
         file: "assets/audio/american_football_never_meant.mp3",
+        cover: "assets/glossary/american_football_lp1.png",
         bitrate: "128 kbps MP3",
         scrobble: "American Football — Never Meant"
       },
       {
         name: "2. Neutral Milk Hotel - Holland, 1945 (1998)",
         file: "assets/audio/neutral_milk_hotel_holland_1945.mp3",
+        cover: "assets/glossary/neutral_milk_hotel.jpg",
         bitrate: "128 kbps MP3",
         scrobble: "Neutral Milk Hotel — Holland, 1945"
       },
       {
         name: "3. Slint - Breadcrumb Trail (1991)",
         file: "assets/audio/slint_breadcrumb_trail.mp3",
+        cover: "assets/glossary/slint_spiderland.jpg",
         bitrate: "128 kbps MP3",
         scrobble: "Slint — Breadcrumb Trail"
       },
       {
         name: "4. Joy Division - Disorder (1979)",
         file: "assets/audio/joy_division_disorder.mp3",
+        cover: "assets/glossary/joy_division_pulsar.jpg",
         bitrate: "128 kbps MP3",
         scrobble: "Joy Division — Disorder"
       },
       {
         name: "5. [DEMO SECRETA] Kelsi - Piano Solo Take #3",
         file: "assets/audio/kelsi_piano_solo_demo.mp3",
+        cover: "assets/rym/kelsi_demo.webp",
         bitrate: "128 kbps TASCAM RIP",
         scrobble: "Kelsi Nielsen — Piano Demo (East High Aud.)"
       }
@@ -2265,6 +2265,8 @@
       if (trackTitle) trackTitle.textContent = track.name;
       const formatElem = document.getElementById('formatDisplay');
       if (formatElem) formatElem.textContent = track.bitrate;
+      const coverThumb = document.getElementById('winampCoverThumb');
+      if (coverThumb && track.cover) coverThumb.src = track.cover;
 
       const items = document.querySelectorAll('.winamp-item');
       items.forEach((item, i) => {
