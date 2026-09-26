@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Permanent+Marker&family=Silkscreen:wght@400;700&family=Special+Elite&family=UnifrakturMaguntia&family=VT323&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Permanent+Marker&family=Silkscreen:wght@400;700&family=Special+Elite&family=UnifrakturMaguntia&family=VT323&display=swap"
+    rel="stylesheet">
   <title>♰ JADEN.ONLINE // sound booth exile // east high 2007 ♰</title>
   <!-- Gothic Cross Favicon (SVG + PNG + ICO Fallbacks) -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/gothic_cross.svg">
@@ -67,21 +70,24 @@
     ::-webkit-scrollbar {
       width: 10px;
     }
+
     ::-webkit-scrollbar-track {
       background: #090a0d;
       border-left: 1px solid #222;
     }
+
     ::-webkit-scrollbar-thumb {
       background: var(--accent-wine);
       border: 1px solid #ff4d79;
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: var(--accent-wine-bright);
     }
 
     body {
       background-color: var(--bg-dark);
-      background-image: 
+      background-image:
         radial-gradient(ellipse at 50% 0%, rgba(137, 27, 56, 0.22) 0%, transparent 75%),
         url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23190810' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
       color: var(--text-main);
@@ -96,13 +102,31 @@
     html {
       cursor: url('assets/cursors/cursor_dagger.png') 0 0, crosshair, auto;
     }
-    a, button, [onclick], input[type="submit"], input[type="button"], select,
-    .btn-action, .top8-slot, .bag-inspect-item, .winamp-item, .stamp-item,
-    .badge-88x31, .blinkie-badge, .album-thumb-container, .w-btn, .btn-post,
-    .crt-toggle-btn, .webring-nav a, .retro-nav-links a {
+
+    a,
+    button,
+    [onclick],
+    input[type="submit"],
+    input[type="button"],
+    select,
+    .btn-action,
+    .top8-slot,
+    .bag-inspect-item,
+    .winamp-item,
+    .stamp-item,
+    .badge-88x31,
+    .blinkie-badge,
+    .album-thumb-container,
+    .w-btn,
+    .btn-post,
+    .crt-toggle-btn,
+    .webring-nav a,
+    .retro-nav-links a {
       cursor: url('assets/cursors/cursor_emo_hand.png') 5 0, pointer !important;
     }
-    input[type="text"], textarea {
+
+    input[type="text"],
+    textarea {
       cursor: text;
     }
 
@@ -117,12 +141,20 @@
       user-select: none;
       animation: particle-fade 0.5s forwards cubic-bezier(0.1, 0.8, 0.3, 1);
     }
+
     @keyframes particle-fade {
-      0% { opacity: 1; transform: translate(0, 0) scale(1); }
-      100% { opacity: 0; transform: translate(0, 14px) scale(0.2); }
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(0, 14px) scale(0.2);
+      }
     }
 
-    
+
     /* Inline Retro Pixel Icons */
     .inline-pixel-icon {
       width: 14px;
@@ -134,6 +166,7 @@
       display: inline-block;
       margin-right: 4px;
     }
+
     .bag-icon {
       width: 20px;
       height: 20px;
@@ -143,6 +176,7 @@
       image-rendering: -moz-crisp-edges;
       image-rendering: crisp-edges;
     }
+
     .webring-icon {
       width: 14px;
       height: 14px;
@@ -150,6 +184,7 @@
       image-rendering: pixelated;
       margin: 0 3px;
     }
+
     .rym-stars {
       display: inline-flex;
       gap: 2px;
@@ -157,11 +192,13 @@
       vertical-align: middle;
       margin-right: 4px;
     }
+
     .rym-star {
       width: 13px;
       height: 13px;
       image-rendering: pixelated;
     }
+
     .retro-alert-icon-img {
       width: 32px;
       height: 32px;
@@ -173,9 +210,12 @@
     /* CRT Scanlines & TV Monitor Overlay */
     .crt-overlay {
       position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       pointer-events: none;
-      background: 
+      background:
         linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.45) 50%),
         radial-gradient(circle at center, transparent 60%, rgba(0, 0, 0, 0.65) 100%);
       background-size: 100% 4px, 100% 100%;
@@ -184,6 +224,7 @@
       transition: opacity 0.2s ease;
       display: block;
     }
+
     .crt-overlay.crt-off {
       display: none !important;
       opacity: 0 !important;
@@ -193,6 +234,7 @@
       color: var(--text-links);
       text-decoration: underline;
     }
+
     a:hover {
       color: #fff;
       background: var(--accent-wine);
@@ -218,9 +260,11 @@
       font-size: 11px;
       color: #ff6688;
     }
+
     .emo-marquee-container span.accent {
       color: var(--accent-neon-green);
     }
+
     .emo-marquee-container span.lyrics {
       color: #fff;
       font-style: italic;
@@ -238,18 +282,22 @@
       font-family: var(--font-title);
       font-size: 11px;
     }
+
     .retro-nav-links {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
     }
+
     .retro-nav-links a {
       color: var(--text-main);
       text-transform: lowercase;
     }
+
     .retro-nav-links a:hover {
       color: #fff;
     }
+
     .crt-toggle-btn {
       background: #14050a;
       border: 1px solid #4a1322;
@@ -264,15 +312,18 @@
       user-select: none;
       box-shadow: inset 1px 1px 0 #333, inset -1px -1px 0 #000;
     }
+
     .crt-toggle-btn:hover {
       filter: brightness(1.2);
     }
+
     .crt-toggle-btn.crt-active {
       background: #00220d;
       border-color: #00ff66;
       color: var(--accent-neon-green);
       box-shadow: 0 0 8px rgba(57, 255, 20, 0.45);
     }
+
     .crt-toggle-btn.trail-active {
       background: #250914;
       border-color: #ff4d6d;
@@ -287,6 +338,7 @@
       gap: 15px;
       padding: 15px;
     }
+
     @media (max-width: 820px) {
       .content-layout {
         grid-template-columns: 1fr;
@@ -300,6 +352,7 @@
       margin-bottom: 15px;
       position: relative;
     }
+
     .neo-box-header {
       background: #180911;
       border-bottom: 2px solid var(--accent-wine);
@@ -314,6 +367,7 @@
       justify-content: space-between;
       align-items: center;
     }
+
     .header-sublink {
       font-family: var(--font-mono);
       font-size: 11px;
@@ -321,10 +375,12 @@
       text-decoration: none;
       transition: color 0.15s;
     }
+
     .header-sublink:hover {
       color: #fff;
       text-decoration: underline;
     }
+
     .neo-box-body {
       padding: 10px;
     }
@@ -333,6 +389,7 @@
     .profile-card {
       text-align: center;
     }
+
     .profile-name {
       font-family: var(--font-goth);
       font-size: 34px;
@@ -344,6 +401,7 @@
       margin-bottom: 2px;
       line-height: 1.1;
     }
+
     .profile-sub {
       color: var(--accent-terminal-cyan);
       font-size: 11.5px;
@@ -351,6 +409,7 @@
       letter-spacing: 0.5px;
       margin-bottom: 10px;
     }
+
     .avatar-frame {
       border: 2px solid #4a2130;
       padding: 4px;
@@ -360,12 +419,14 @@
       position: relative;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     }
+
     .avatar-img {
       width: 100%;
       height: auto;
       display: block;
       filter: contrast(1.08) saturate(0.95);
     }
+
     .avatar-sticker {
       position: absolute;
       bottom: -8px;
@@ -378,7 +439,7 @@
       font-weight: normal;
       padding: 3px 8px;
       transform: rotate(-6deg);
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
       letter-spacing: 0.5px;
     }
 
@@ -393,6 +454,7 @@
       font-family: var(--font-dot);
       text-align: left;
     }
+
     .status-widget strong {
       color: var(--accent-wine-bright);
     }
@@ -405,15 +467,18 @@
       margin-bottom: 12px;
       text-align: left;
     }
+
     .bio-table td {
       padding: 4px;
       border-bottom: 1px dotted #2b2e3c;
     }
+
     .bio-table td.key {
       color: #9aa1b5;
       font-weight: bold;
       width: 40%;
     }
+
     .bio-table td.val {
       color: #fff;
     }
@@ -425,6 +490,7 @@
       gap: 4px;
       margin-bottom: 12px;
     }
+
     .btn-action {
       background: #1f212c;
       border: 1px solid #3c4054;
@@ -437,6 +503,7 @@
       text-align: center;
       transition: background 0.15s, color 0.15s;
     }
+
     .btn-action:hover {
       background: var(--accent-wine);
       color: #fff;
@@ -453,6 +520,7 @@
       font-size: 9px;
       text-align: left;
     }
+
     .lastfm-title {
       color: #ff4d4d;
       font-weight: bold;
@@ -460,6 +528,7 @@
       justify-content: space-between;
       margin-bottom: 4px;
     }
+
     .lastfm-track {
       color: #fff;
       font-size: 10px;
@@ -477,6 +546,7 @@
       margin-bottom: 15px;
       font-family: var(--font-mono);
     }
+
     .winamp-top {
       background: linear-gradient(90deg, #0b1a44, #1b387e);
       color: #fff;
@@ -486,6 +556,7 @@
       display: flex;
       justify-content: space-between;
     }
+
     .winamp-lcd {
       background: #000;
       border: 1px solid #444;
@@ -494,6 +565,7 @@
       color: var(--accent-neon-green);
       font-family: var(--font-terminal);
     }
+
     .winamp-song-title {
       white-space: nowrap;
       overflow: hidden;
@@ -503,6 +575,7 @@
       font-size: 16px;
       letter-spacing: 0.6px;
     }
+
     .winamp-subtext {
       display: flex;
       justify-content: space-between;
@@ -512,11 +585,13 @@
       margin-top: 1px;
       letter-spacing: 0.5px;
     }
+
     .winamp-seek-container {
       margin-top: 4px;
       display: flex;
       align-items: center;
     }
+
     .winamp-seek-slider {
       width: 100%;
       height: 5px;
@@ -527,6 +602,7 @@
       outline: none;
       cursor: pointer;
     }
+
     .winamp-seek-slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
@@ -536,6 +612,7 @@
       border: 1px solid #fff;
       cursor: pointer;
     }
+
     .winamp-seek-slider::-moz-range-thumb {
       width: 7px;
       height: 9px;
@@ -543,6 +620,7 @@
       border: 1px solid #fff;
       cursor: pointer;
     }
+
     .winamp-controls-bar {
       display: flex;
       justify-content: space-between;
@@ -550,10 +628,12 @@
       margin: 4px 0;
       gap: 3px;
     }
+
     .winamp-buttons {
       display: flex;
       gap: 2px;
     }
+
     .winamp-vol-slider {
       width: 42px;
       height: 5px;
@@ -564,6 +644,7 @@
       outline: none;
       cursor: pointer;
     }
+
     .winamp-vol-slider::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
@@ -573,6 +654,7 @@
       border: 1px solid #fff;
       cursor: pointer;
     }
+
     .w-btn {
       background: #2b2e3a;
       border: 1px solid #555;
@@ -583,9 +665,11 @@
       padding: 2px 5px;
       cursor: pointer;
     }
+
     .w-btn:active {
       box-shadow: inset 1px 1px 0 #111, inset -1px -1px 0 #888;
     }
+
     .winamp-list {
       background: #08090b;
       border: 1px solid #333;
@@ -594,13 +678,16 @@
       font-size: 9px;
       margin-top: 4px;
     }
+
     .winamp-item {
       padding: 3px 5px;
       color: #999;
       cursor: pointer;
       border-bottom: 1px solid #16181f;
     }
-    .winamp-item:hover, .winamp-item.active {
+
+    .winamp-item:hover,
+    .winamp-item.active {
       background: var(--accent-wine);
       color: #fff;
     }
@@ -615,6 +702,7 @@
       cursor: pointer;
       transition: border-color 0.2s, background 0.2s;
     }
+
     .bag-inspect-item:hover {
       border-color: var(--accent-wine-bright);
       background: #1b1c26;
@@ -627,11 +715,13 @@
       gap: 15px;
       margin: 10px 0;
     }
+
     @media (max-width: 650px) {
       .photo-wall-grid {
         grid-template-columns: 1fr;
       }
     }
+
     .polaroid-card {
       background: #f4eedb;
       color: #111;
@@ -641,17 +731,21 @@
       position: relative;
       transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .polaroid-card:hover {
       transform: scale(1.02) rotate(0deg) !important;
       z-index: 10;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
     }
+
     .polaroid-card.tilt-left {
       transform: rotate(-1.5deg);
     }
+
     .polaroid-card.tilt-right {
       transform: rotate(1.5deg);
     }
+
     .polaroid-tape {
       position: absolute;
       top: -8px;
@@ -659,10 +753,11 @@
       width: 70px;
       height: 18px;
       background: rgba(230, 220, 180, 0.65);
-      border-left: 2px dashed rgba(0,0,0,0.1);
-      border-right: 2px dashed rgba(0,0,0,0.1);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      border-left: 2px dashed rgba(0, 0, 0, 0.1);
+      border-right: 2px dashed rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     }
+
     .polaroid-img {
       width: 100%;
       height: 200px;
@@ -671,6 +766,7 @@
       border: 1px solid #333;
       filter: contrast(1.05) saturate(1.02);
     }
+
     .polaroid-caption {
       font-family: var(--font-sharpie);
       font-size: 11.5px;
@@ -679,6 +775,7 @@
       color: #1a1a1a;
       letter-spacing: 0.3px;
     }
+
     .polaroid-caption strong {
       color: #8b1122;
       font-family: var(--font-sharpie);
@@ -691,6 +788,7 @@
       padding: 14px 16px;
       margin-bottom: 15px;
     }
+
     .headline-box h2 {
       font-size: 15px;
       color: #fff;
@@ -700,6 +798,7 @@
       margin-bottom: 10px;
       letter-spacing: 0.5px;
     }
+
     .headline-box p {
       color: #dce0f0;
       font-family: var(--font-journal);
@@ -728,17 +827,21 @@
       gap: 10px;
       margin: 12px 0;
     }
+
     @media (max-width: 600px) {
       .likes-dislikes-grid {
         grid-template-columns: 1fr;
       }
     }
-    .likes-column, .dislikes-column {
+
+    .likes-column,
+    .dislikes-column {
       background: #0f1016;
       border: 1px dashed #3a3f55;
       padding: 12px;
       box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
     }
+
     .likes-column h4 {
       color: var(--accent-neon-green);
       font-family: var(--font-fanzine);
@@ -749,6 +852,7 @@
       padding-bottom: 4px;
       letter-spacing: 0.8px;
     }
+
     .dislikes-column h4 {
       color: #ff4d6d;
       font-family: var(--font-fanzine);
@@ -759,6 +863,7 @@
       padding-bottom: 4px;
       letter-spacing: 0.8px;
     }
+
     .list-items {
       list-style-type: none;
       padding-left: 4px;
@@ -767,9 +872,11 @@
       line-height: 1.7;
       letter-spacing: 0.3px;
     }
+
     .likes-column .list-items {
       color: #bbf2be;
     }
+
     .dislikes-column .list-items {
       color: #f7b2c0;
     }
@@ -781,6 +888,7 @@
       font-size: 10px;
       margin: 8px 0;
     }
+
     .rym-table th {
       background: #0d0f15;
       color: #fff;
@@ -789,19 +897,23 @@
       text-align: left;
       font-family: var(--font-mono);
     }
+
     .rym-table td {
       padding: 8px;
       border-bottom: 1px solid #202432;
       vertical-align: top;
     }
+
     .rym-table tr:hover td {
       background: #181b26;
     }
+
     .album-thumb-container {
       display: flex;
       gap: 10px;
       align-items: center;
     }
+
     .album-mini-art {
       width: 52px;
       height: 52px;
@@ -810,10 +922,11 @@
       flex-shrink: 0;
       border-radius: 2px;
       background: #000;
-      box-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
       transition: transform 0.15s ease, border-color 0.15s ease;
       cursor: pointer;
     }
+
     .album-mini-art:hover {
       transform: scale(1.08);
       border-color: #ff99b0;
@@ -825,11 +938,13 @@
       color: #fff;
       font-family: var(--font-title);
     }
+
     .song-artist {
       color: var(--text-links);
       font-size: 10px;
       font-family: var(--font-body);
     }
+
     .song-review {
       margin-top: 4px;
       padding: 6px 9px;
@@ -841,6 +956,7 @@
       color: #d8dbe6;
       line-height: 1.55;
     }
+
     .score-badge {
       display: inline-block;
       padding: 1px 5px;
@@ -849,10 +965,27 @@
       font-size: 10px;
       border-radius: 2px;
     }
-    .score-05 { background: #4a0815; color: #ff5779; }
-    .score-10 { background: #3d1b09; color: #ff9f43; }
-    .score-25 { background: #222533; color: #ced6e0; }
-    .score-45 { background: #0c3319; color: #51cf66; border: 1px solid #2b8a3e; }
+
+    .score-05 {
+      background: #4a0815;
+      color: #ff5779;
+    }
+
+    .score-10 {
+      background: #3d1b09;
+      color: #ff9f43;
+    }
+
+    .score-25 {
+      background: #222533;
+      color: #ced6e0;
+    }
+
+    .score-45 {
+      background: #0c3319;
+      color: #51cf66;
+      border: 1px solid #2b8a3e;
+    }
 
     /* Authentic Stamps & Blinkies */
     .stamps-grid {
@@ -864,6 +997,7 @@
       background: #08090e;
       border: 1px dotted #3d4257;
     }
+
     .stamp-item {
       width: 99px;
       height: 56px;
@@ -872,10 +1006,11 @@
       display: inline-block;
       border: 1px solid #282a3a;
       background: #111;
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
       transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
       cursor: pointer;
     }
+
     .stamp-item:hover {
       transform: scale(1.12);
       border-color: var(--accent-wine-bright);
@@ -895,16 +1030,18 @@
       background: #07080c;
       border: 1px dashed #242738;
     }
+
     .blinkie-badge {
       height: 20px;
       max-height: 20px;
       image-rendering: pixelated;
       display: inline-block;
       border: 1px solid #202330;
-      box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       transition: transform 0.15s, border-color 0.15s;
       cursor: pointer;
     }
+
     .blinkie-badge:hover {
       transform: scale(1.08);
       border-color: #ff6b8b;
@@ -918,12 +1055,14 @@
       gap: 10px;
       margin: 8px 0;
     }
+
     @media (max-width: 650px) {
       .top8-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
       }
     }
+
     .top8-slot {
       background: #0d0f15;
       border: 1px solid #282c3c;
@@ -935,12 +1074,14 @@
       min-width: 0;
       transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
     }
+
     .top8-slot:hover {
       border-color: var(--accent-wine-bright);
       background: #141722;
       box-shadow: 0 4px 15px rgba(137, 27, 56, 0.45);
       transform: translateY(-2px);
     }
+
     .top8-img-box {
       width: 100%;
       max-width: 105px;
@@ -955,6 +1096,7 @@
       justify-content: center;
       box-shadow: inset 1px 1px 0 #222, inset -1px -1px 0 #000;
     }
+
     .top8-img-box img {
       width: 100% !important;
       height: 100% !important;
@@ -964,10 +1106,12 @@
       filter: contrast(1.06) saturate(0.92);
       transition: transform 0.2s ease, filter 0.2s ease;
     }
+
     .top8-slot:hover .top8-img-box img {
       transform: scale(1.08);
       filter: contrast(1.15) saturate(1.05);
     }
+
     .top8-name {
       font-size: 13.5px;
       color: #ff4d79;
@@ -982,10 +1126,12 @@
       display: block;
       text-decoration: none;
     }
+
     .top8-slot:hover .top8-name {
       color: #5ef1f2;
       text-decoration: underline;
     }
+
     .top8-sub {
       font-size: 9px;
       font-family: var(--font-dot);
@@ -1006,23 +1152,27 @@
       font-family: var(--font-mono);
       font-size: 10px;
     }
+
     .webring-title {
       color: var(--accent-terminal-cyan);
       font-weight: bold;
       margin-bottom: 5px;
     }
+
     .webring-nav {
       display: flex;
       justify-content: center;
       gap: 15px;
       margin-top: 4px;
     }
+
     .webring-nav a {
       color: #ff6b8b;
       font-weight: bold;
       text-decoration: none;
       cursor: pointer;
     }
+
     .webring-nav a:hover {
       text-decoration: underline;
     }
@@ -1036,12 +1186,14 @@
       display: inline-block;
       padding: 0 2px;
     }
+
     .emo-cross {
       font-family: var(--font-goth);
       color: #ff3366;
       font-size: 1.15em;
       vertical-align: -1px;
     }
+
     .sharpie-tag {
       font-family: var(--font-sharpie);
       color: #ffff00;
@@ -1055,6 +1207,7 @@
       padding: 8px 10px;
       margin-bottom: 10px;
     }
+
     .comment-head {
       display: flex;
       justify-content: space-between;
@@ -1064,12 +1217,14 @@
       padding-bottom: 3px;
       margin-bottom: 6px;
     }
+
     .comment-head .user {
       color: var(--text-links);
       font-family: var(--font-title);
       font-weight: bold;
       font-size: 11px;
     }
+
     .user-sharpay {
       font-family: "Comic Sans MS", "Chalkboard SE", cursive !important;
       color: #ff66cc !important;
@@ -1077,12 +1232,14 @@
       letter-spacing: 0.5px;
       text-shadow: 0 0 5px rgba(255, 102, 204, 0.6);
     }
+
     .comment-sharpay {
       font-family: "Comic Sans MS", cursive, sans-serif !important;
       color: #ffd6eb !important;
       font-size: 11.5px !important;
       line-height: 1.5;
     }
+
     .user-chad {
       font-family: Impact, "Arial Black", sans-serif !important;
       color: #ff9933 !important;
@@ -1090,6 +1247,7 @@
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+
     .comment-chad {
       font-family: Arial, Helvetica, sans-serif !important;
       font-weight: 500;
@@ -1097,12 +1255,14 @@
       font-size: 12px !important;
       line-height: 1.5;
     }
+
     .user-kelsi {
       font-family: "Courier New", Courier, monospace !important;
       color: #5ef1f2 !important;
       font-size: 11.5px !important;
       font-weight: bold;
     }
+
     .comment-kelsi {
       font-family: var(--font-journal) !important;
       font-style: italic;
@@ -1110,12 +1270,14 @@
       font-size: 12px !important;
       line-height: 1.55;
     }
+
     .comment-text {
       color: #e2e6f4;
       font-family: var(--font-body);
       font-size: 11.5px;
       line-height: 1.5;
     }
+
     .jaden-retort {
       background: #200810;
       border-left: 2px solid var(--accent-wine-bright);
@@ -1127,6 +1289,7 @@
       margin-top: 6px;
       letter-spacing: 0.3px;
     }
+
     .jaden-retort strong {
       font-family: var(--font-pixel);
       font-size: 9.5px;
@@ -1141,7 +1304,9 @@
       gap: 5px;
       margin-top: 8px;
     }
-    .comment-box-form input, .comment-box-form textarea {
+
+    .comment-box-form input,
+    .comment-box-form textarea {
       background: #08090d;
       border: 1px solid #3c4056;
       color: #fff;
@@ -1149,10 +1314,13 @@
       font-size: 10px;
       font-family: var(--font-body);
     }
-    .comment-box-form input:focus, .comment-box-form textarea:focus {
+
+    .comment-box-form input:focus,
+    .comment-box-form textarea:focus {
       outline: none;
       border-color: var(--accent-wine-bright);
     }
+
     .btn-post {
       background: var(--accent-wine);
       color: #fff;
@@ -1164,6 +1332,7 @@
       cursor: pointer;
       align-self: flex-start;
     }
+
     .btn-post:hover {
       background: var(--accent-wine-bright);
     }
@@ -1178,16 +1347,18 @@
       background: #08090d;
       border-top: 1px dashed var(--border-dotted);
     }
+
     .badge-88x31 {
       width: 88px;
       height: 31px;
       image-rendering: pixelated;
       border: 1px solid #2a2d3e;
       display: inline-block;
-      box-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
       transition: transform 0.15s ease, border-color 0.15s ease, filter 0.15s ease;
       cursor: pointer;
     }
+
     .badge-88x31:hover {
       transform: scale(1.12);
       border-color: var(--accent-wine-bright);
@@ -1205,6 +1376,7 @@
       font-size: 10px;
       color: #6d7386;
     }
+
     .counter-screen {
       background: #000;
       color: #ff2a2a;
@@ -1227,6 +1399,7 @@
       max-width: 480px;
       font-family: var(--font-mono);
     }
+
     dialog#secretVault::backdrop {
       background: rgba(0, 0, 0, 0.88);
     }
@@ -1245,10 +1418,12 @@
       width: 90%;
       font-family: var(--font-body);
     }
+
     dialog#retroAlertModal::backdrop {
       background: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(2px);
     }
+
     .retro-alert-titlebar {
       background: linear-gradient(90deg, #661025, #9c1b3c);
       color: #fff;
@@ -1261,6 +1436,7 @@
       align-items: center;
       border-bottom: 1px solid #ff4d79;
     }
+
     .retro-alert-body {
       padding: 15px;
       display: flex;
@@ -1268,6 +1444,7 @@
       align-items: flex-start;
       background: #13151e;
     }
+
     .retro-alert-icon-box {
       font-size: 26px;
       flex-shrink: 0;
@@ -1280,15 +1457,18 @@
       justify-content: center;
       box-shadow: inset 1px 1px 0 #222, inset -1px -1px 0 #000;
     }
+
     .retro-alert-text {
       font-size: 11px;
       line-height: 1.5;
       color: #d8dce8;
       white-space: pre-line;
     }
+
     .retro-alert-text strong {
       color: #ff6b8b;
     }
+
     .retro-alert-footer {
       background: #0a0b0f;
       border-top: 1px solid #232635;
@@ -1297,6 +1477,7 @@
       justify-content: flex-end;
       gap: 8px;
     }
+
     .retro-alert-btn {
       background: #252834;
       border: 1px solid #555;
@@ -1308,10 +1489,12 @@
       box-shadow: inset 1px 1px 0 #888, inset -1px -1px 0 #111;
       text-transform: uppercase;
     }
+
     .retro-alert-btn:hover {
       background: var(--accent-wine);
       border-color: #ff4d79;
     }
+
     .retro-alert-btn:active {
       box-shadow: inset 1px 1px 0 #111, inset -1px -1px 0 #888;
     }
@@ -1342,6 +1525,7 @@
       margin: 4px 0 2px;
       gap: 6px;
     }
+
     .winamp-vis-canvas {
       flex: 1;
       height: 24px;
@@ -1350,13 +1534,15 @@
       cursor: pointer;
       background: #020305;
       border: 1px solid #1a1a1a;
-      box-shadow: inset 0 0 5px rgba(0,0,0,0.9);
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.9);
     }
+
     .vis-buttons {
       display: flex;
       flex-direction: column;
       gap: 2px;
     }
+
     .vis-btn {
       background: #12141a;
       border: 1px solid #3c4054;
@@ -1368,7 +1554,9 @@
       line-height: 1;
       border-radius: 1px;
     }
-    .vis-btn:hover, .vis-btn.active {
+
+    .vis-btn:hover,
+    .vis-btn.active {
       background: #250914;
       color: #ff4d79;
       border-color: #ff4d79;
@@ -1380,42 +1568,52 @@
       border: 2px solid #891b38;
       box-shadow: inset 1px 1px 0 #bb2d55, inset -1px -1px 0 #111, 0 0 14px rgba(137, 27, 56, 0.45);
     }
+
     .winamp-skin.skin-goth .winamp-top {
       background: linear-gradient(90deg, #3d0714, #891b38);
     }
+
     .winamp-skin.skin-goth .winamp-lcd {
       background: #090205;
       border: 1px solid #541624;
       color: #ff4d79;
     }
+
     .winamp-skin.skin-goth .winamp-song-title {
       color: #ff6688;
     }
+
     .winamp-skin.skin-goth .winamp-subtext {
       color: #ff7597;
     }
+
     .winamp-skin.skin-goth .winamp-seek-slider::-webkit-slider-thumb {
       background: #ff3366;
       border-color: #fff;
     }
+
     .winamp-skin.skin-goth .winamp-seek-slider::-moz-range-thumb {
       background: #ff3366;
       border-color: #fff;
     }
+
     .winamp-skin.skin-goth .w-btn {
       background: #240a13;
       border-color: #5c182c;
       color: #ffccd7;
     }
+
     .winamp-skin.skin-goth .w-btn:hover {
       background: #4a1020;
       color: #fff;
     }
+
     .winamp-skin.skin-goth .winamp-item.active,
     .winamp-skin.skin-goth .winamp-item:hover {
       background: #891b38;
       color: #fff;
     }
+
     .winamp-skin.skin-goth .vis-btn.active {
       background: #380a18;
       color: #ff4d79;
@@ -1428,46 +1626,57 @@
       border: 2px solid #5a5d6e;
       box-shadow: inset 1px 1px 0 #888, inset -1px -1px 0 #111;
     }
+
     .winamp-skin.skin-classic .winamp-top {
       background: linear-gradient(90deg, #0b1a44, #1b387e);
     }
+
     .winamp-skin.skin-classic .winamp-skin-select {
       background: #0e121d;
       color: #9cbaff;
       border-color: #2b498f;
     }
+
     .winamp-skin.skin-classic .winamp-lcd {
       background: #000;
       border: 1px solid #444;
       color: #00dd55;
     }
+
     .winamp-skin.skin-classic .winamp-song-title {
       color: #00ff66;
     }
+
     .winamp-skin.skin-classic .winamp-subtext {
       color: #00dd55;
     }
+
     .winamp-skin.skin-classic .winamp-seek-slider::-webkit-slider-thumb {
       background: #00dd55;
       border-color: #fff;
     }
+
     .winamp-skin.skin-classic .winamp-seek-slider::-moz-range-thumb {
       background: #00dd55;
       border-color: #fff;
     }
+
     .winamp-skin.skin-classic .w-btn {
       background: #2b2e3a;
       border-color: #555;
       color: #eee;
     }
+
     .winamp-skin.skin-classic .w-btn:hover {
       background: #3a3e4e;
     }
+
     .winamp-skin.skin-classic .winamp-item.active,
     .winamp-skin.skin-classic .winamp-item:hover {
       background: #1b387e;
       color: #fff;
     }
+
     .winamp-skin.skin-classic .vis-btn.active {
       background: #0a1b38;
       color: #00ff66;
@@ -1480,47 +1689,58 @@
       border: 2px solid #00aa33;
       box-shadow: inset 1px 1px 0 #00ff55, inset -1px -1px 0 #000, 0 0 12px rgba(0, 255, 85, 0.3);
     }
+
     .winamp-skin.skin-matrix .winamp-top {
       background: linear-gradient(90deg, #001f0a, #005c1f);
     }
+
     .winamp-skin.skin-matrix .winamp-skin-select {
       background: #010d05;
       color: #39ff14;
       border-color: #00aa33;
     }
+
     .winamp-skin.skin-matrix .winamp-lcd {
       background: #010803;
       border: 1px solid #005c1f;
       color: #39ff14;
     }
+
     .winamp-skin.skin-matrix .winamp-song-title {
       color: #39ff14;
     }
+
     .winamp-skin.skin-matrix .winamp-subtext {
       color: #39ff14;
     }
+
     .winamp-skin.skin-matrix .winamp-seek-slider::-webkit-slider-thumb {
       background: #39ff14;
       border-color: #fff;
     }
+
     .winamp-skin.skin-matrix .winamp-seek-slider::-moz-range-thumb {
       background: #39ff14;
       border-color: #fff;
     }
+
     .winamp-skin.skin-matrix .w-btn {
       background: #082210;
       border-color: #00aa33;
       color: #79ffa0;
     }
+
     .winamp-skin.skin-matrix .w-btn:hover {
       background: #0d381a;
       color: #fff;
     }
+
     .winamp-skin.skin-matrix .winamp-item.active,
     .winamp-skin.skin-matrix .winamp-item:hover {
       background: #005c1f;
       color: #fff;
     }
+
     .winamp-skin.skin-matrix .vis-btn.active {
       background: #04200c;
       color: #39ff14;
@@ -1533,51 +1753,63 @@
       border: 2px solid #555a66;
       box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #333;
     }
+
     .winamp-skin.skin-metal .winamp-top {
       background: linear-gradient(90deg, #444852, #757b8a);
       color: #fff;
     }
+
     .winamp-skin.skin-metal .winamp-skin-select {
       background: #333740;
       color: #ffaa22;
       border-color: #666;
     }
+
     .winamp-skin.skin-metal .winamp-lcd {
       background: #111417;
       border: 1px solid #666;
       color: #ffaa22;
     }
+
     .winamp-skin.skin-metal .winamp-song-title {
       color: #ffbb33;
     }
+
     .winamp-skin.skin-metal .winamp-subtext {
       color: #ffaa22;
     }
+
     .winamp-skin.skin-metal .winamp-seek-slider::-webkit-slider-thumb {
       background: #ffaa22;
       border-color: #fff;
     }
+
     .winamp-skin.skin-metal .winamp-seek-slider::-moz-range-thumb {
       background: #ffaa22;
       border-color: #fff;
     }
+
     .winamp-skin.skin-metal .w-btn {
       background: #bec2cc;
       border-color: #555a66;
       color: #111;
       box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #444;
     }
+
     .winamp-skin.skin-metal .w-btn:hover {
       background: #d9dce3;
     }
+
     .winamp-skin.skin-metal .winamp-vol span {
       color: #222 !important;
     }
+
     .winamp-skin.skin-metal .winamp-item.active,
     .winamp-skin.skin-metal .winamp-item:hover {
       background: #555a66;
       color: #fff;
     }
+
     .winamp-skin.skin-metal .vis-btn.active {
       background: #2b2e36;
       color: #ffaa22;
@@ -1608,15 +1840,18 @@
       transition: transform 0.15s ease, background 0.15s ease;
       user-select: none;
     }
+
     .msn-launcher:hover {
       background: linear-gradient(180deg, #3d72db 0%, #204ea3 100%);
       transform: translateY(-2px);
     }
+
     .msn-pawn-icon {
       color: #39ff14;
       font-size: 13px;
       text-shadow: 0 0 5px #00ff66;
     }
+
     .msn-unread-badge {
       background: #ff2a55;
       color: #fff;
@@ -1627,9 +1862,17 @@
       box-shadow: 0 0 6px #ff2a55;
       animation: msn-pulse 1.2s infinite alternate;
     }
+
     @keyframes msn-pulse {
-      0% { transform: scale(1); filter: brightness(1); }
-      100% { transform: scale(1.15); filter: brightness(1.3); }
+      0% {
+        transform: scale(1);
+        filter: brightness(1);
+      }
+
+      100% {
+        transform: scale(1.15);
+        filter: brightness(1.3);
+      }
     }
 
     .msn-window {
@@ -1651,22 +1894,47 @@
       overflow: hidden;
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
+
     .msn-window.msn-hidden {
       display: none !important;
       opacity: 0;
       pointer-events: none;
     }
+
     .msn-window.msn-shaking {
       animation: msn-shake 0.45s ease-in-out;
     }
+
     @keyframes msn-shake {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      15% { transform: translate(-8px, 6px) rotate(-1.5deg); }
-      30% { transform: translate(8px, -6px) rotate(1.5deg); }
-      45% { transform: translate(-6px, -4px) rotate(-1deg); }
-      60% { transform: translate(6px, 4px) rotate(1deg); }
-      75% { transform: translate(-4px, 2px) rotate(-0.5deg); }
-      90% { transform: translate(3px, -2px) rotate(0.5deg); }
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      15% {
+        transform: translate(-8px, 6px) rotate(-1.5deg);
+      }
+
+      30% {
+        transform: translate(8px, -6px) rotate(1.5deg);
+      }
+
+      45% {
+        transform: translate(-6px, -4px) rotate(-1deg);
+      }
+
+      60% {
+        transform: translate(6px, 4px) rotate(1deg);
+      }
+
+      75% {
+        transform: translate(-4px, 2px) rotate(-0.5deg);
+      }
+
+      90% {
+        transform: translate(3px, -2px) rotate(0.5deg);
+      }
     }
 
     /* MSN Titlebar */
@@ -1682,6 +1950,7 @@
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
       user-select: none;
     }
+
     .msn-title-left {
       display: flex;
       align-items: center;
@@ -1690,10 +1959,12 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
+
     .msn-title-btns {
       display: flex;
       gap: 3px;
     }
+
     .msn-btn-win {
       background: linear-gradient(180deg, #497ee3 0%, #1c4bb0 100%);
       border: 1px solid #fff;
@@ -1709,6 +1980,7 @@
       cursor: pointer;
       line-height: 1;
     }
+
     .msn-btn-win:hover {
       background: #ff4757;
     }
@@ -1724,6 +1996,7 @@
       color: #222;
       user-select: none;
     }
+
     .msn-menubar span:hover {
       background: #316ac5;
       color: #fff;
@@ -1736,6 +2009,7 @@
       border-bottom: 1px solid #b6c6e2;
       padding: 6px 10px;
     }
+
     .msn-nick {
       font-size: 11.5px;
       color: #0c2340;
@@ -1743,21 +2017,25 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
     .msn-nick strong {
       font-family: var(--font-goth);
       font-size: 13px;
       color: #990026;
       font-weight: normal;
     }
+
     .msn-nick-sub {
       color: #667285;
       font-size: 10px;
       font-family: var(--font-dot);
     }
+
     .msn-online-dot {
       color: #27ae60;
       font-size: 11px;
     }
+
     .msn-status-msg {
       font-size: 10px;
       color: #555e6c;
@@ -1777,12 +2055,14 @@
       padding: 6px;
       gap: 6px;
     }
+
     .msn-chat-area {
       flex: 1;
       display: flex;
       flex-direction: column;
       min-width: 0;
     }
+
     .msn-messages-log {
       flex: 1;
       background: #fff;
@@ -1796,6 +2076,7 @@
       flex-direction: column;
       gap: 6px;
     }
+
     .msn-sys-msg {
       color: #777;
       font-size: 9.5px;
@@ -1803,31 +2084,37 @@
       text-align: center;
       padding: 2px 0;
     }
+
     .msn-msg-head {
       font-size: 10px;
       color: #888;
       margin-bottom: 1px;
     }
+
     .msn-msg-jaden .msn-sender-name {
       color: #a81134;
       font-weight: bold;
       font-family: var(--font-goth);
       font-size: 12px;
     }
+
     .msn-msg-you .msn-sender-name {
       color: #0b45b0;
       font-weight: bold;
       font-family: var(--font-title);
     }
+
     .msn-msg-jaden .msn-msg-body {
       color: #1a080e;
       font-family: var(--font-fanzine);
       font-size: 11.5px;
     }
+
     .msn-msg-you .msn-msg-body {
       color: #1a1a1a;
       font-family: var(--font-body);
     }
+
     .msn-msg-nudge {
       background: #fff4d9;
       border: 1px dashed #e6aa00;
@@ -1849,6 +2136,7 @@
       align-items: center;
       gap: 6px;
     }
+
     .msn-tool-btn {
       background: transparent;
       border: 1px solid transparent;
@@ -1858,10 +2146,12 @@
       color: #222;
       border-radius: 2px;
     }
+
     .msn-tool-btn:hover {
       background: #fff;
       border-color: #316ac5;
     }
+
     .msn-nudge-btn {
       background: linear-gradient(180deg, #fff7dc 0%, #fed878 100%);
       border: 1px solid #c99314;
@@ -1878,10 +2168,12 @@
       box-shadow: inset 0 1px 0 #fff;
       transition: transform 0.1s;
     }
+
     .msn-nudge-btn:hover {
       background: linear-gradient(180deg, #fffaeb 0%, #fee49a 100%);
       transform: scale(1.04);
     }
+
     .msn-nudge-btn:active {
       transform: scale(0.96);
     }
@@ -1893,6 +2185,7 @@
       margin-top: 5px;
       align-items: flex-end;
     }
+
     .msn-input-box {
       flex: 1;
       height: 52px;
@@ -1904,9 +2197,11 @@
       font-size: 11px;
       outline: none;
     }
+
     .msn-input-box:focus {
       border-color: #2974ea;
     }
+
     .msn-send-btn {
       height: 52px;
       background: linear-gradient(180deg, #f0f3f9 0%, #d1daf0 100%);
@@ -1918,10 +2213,12 @@
       cursor: pointer;
       border-radius: 2px;
     }
+
     .msn-send-btn:hover {
       background: linear-gradient(180deg, #ffffff 0%, #e2e8f8 100%);
       border-color: #2352a1;
     }
+
     .msn-typing-status {
       font-size: 9.5px;
       color: #555;
@@ -1938,6 +2235,7 @@
       justify-content: space-between;
       gap: 6px;
     }
+
     .msn-dp-card {
       background: #fff;
       border: 1px solid #7f9db9;
@@ -1945,8 +2243,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     }
+
     .msn-dp-frame {
       width: 82px;
       height: 82px;
@@ -1957,15 +2256,18 @@
       align-items: center;
       justify-content: center;
     }
+
     .msn-dp-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .msn-dp-placeholder {
       font-size: 34px;
       color: #667285;
     }
+
     .msn-dp-label {
       font-size: 9px;
       color: #555;
@@ -1988,12 +2290,14 @@
         right: 10px;
         height: 430px;
       }
+
       .msn-dp-column {
         display: none;
       }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Toggleable CRT Scanlines Overlay (Default: OFF) -->
@@ -2004,11 +2308,12 @@
     <!-- Top Emo Lyrics Marquee -->
     <div class="emo-marquee-container">
       <marquee scrollamount="6">
-        <span class="lyrics">"I'll see you when we're both not so emotional..."</span> — American Football ✦ 
-        <span class="accent">[ESTADO: Ocupando la cabina de audio #2 sin permiso de la Sra. Darbus]</span> ✦ 
-        <span class="lyrics">"I miss you, not in a slint way, but in a real way..."</span> ✦ 
-        <span class="accent">[AVISO: La música real se escucha en vinilo o casete, no comprimida en ringtones de celular]</span> ✦ 
-        <span class="lyrics">"And in my dreams you're alive and you're crying..."</span> — Neutral Milk Hotel ✦ 
+        <span class="lyrics">"I'll see you when we're both not so emotional..."</span> — American Football ✦
+        <span class="accent">[ESTADO: Ocupando la cabina de audio #2 sin permiso de la Sra. Darbus]</span> ✦
+        <span class="lyrics">"I miss you, not in a slint way, but in a real way..."</span> ✦
+        <span class="accent">[AVISO: La música real se escucha en vinilo o casete, no comprimida en ringtones de
+          celular]</span> ✦
+        <span class="lyrics">"And in my dreams you're alive and you're crying..."</span> — Neutral Milk Hotel ✦
         <span>East High Status Quo = Fábrica de conformidad sonora</span>
       </marquee>
     </div>
@@ -2016,9 +2321,15 @@
     <!-- Navigation Header -->
     <nav class="retro-nav">
       <div class="retro-nav-links">
-        <a href="character.html" target="_blank" style="background:#200710; border:1px solid #ff4d6d; color:#fff; font-weight:bold; padding:2px 7px; text-decoration:none;">👤 [ expediente oc ]</a>
-        <a href="glossary.html" target="_blank" style="background:#071820; border:1px solid #5ef1f2; color:#5ef1f2; font-weight:bold; padding:2px 7px; text-decoration:none;">📖 [ glosario musical ]</a>
-        <a href="javascript:void(0)" onclick="openRizzoModal()" style="background:#181206; border:1px solid #f8c025; color:#f8c025; font-weight:bold; padding:2px 7px; text-decoration:none; cursor:pointer;">✉ [ mensaje rizzo ]</a>
+        <a href="character.html" target="_blank"
+          style="background:#200710; border:1px solid #ff4d6d; color:#fff; font-weight:bold; padding:2px 7px; text-decoration:none;">👤
+          [ expediente oc ]</a>
+        <a href="glossary.html" target="_blank"
+          style="background:#071820; border:1px solid #5ef1f2; color:#5ef1f2; font-weight:bold; padding:2px 7px; text-decoration:none;">📖
+          [ glosario musical ]</a>
+        <a href="#mensaje-rizzo" onclick="openRizzoModal()"
+          style="background:#181206; border:1px solid #f8c025; color:#f8c025; font-weight:bold; padding:2px 7px; text-decoration:none; cursor:pointer;">✉
+          [ mensaje rizzo ]</a>
         <a href="#about">♰ /about-me</a>
         <a href="#photos">♰ /photo-dump</a>
         <a href="#bag">♰ /bag-tour</a>
@@ -2026,11 +2337,13 @@
         <a href="#rym">♰ /rym-reviews</a>
         <a href="#top8">♰ /top-8</a>
         <a href="#guestbook">♰ /guestbook</a>
-        <a href="javascript:void(0)" onclick="document.getElementById('secretVault').showModal()" style="color:#ff3b66;">[!] /secret_confession.txt</a>
+        <a href="javascript:void(0)" onclick="document.getElementById('secretVault').showModal()"
+          style="color:#ff3b66;">[!] /secret_confession.txt</a>
       </div>
       <div style="display:flex; gap:6px;">
         <button class="crt-toggle-btn" id="crtToggleBtn" onclick="toggleCRT()">○ CRT: OFF</button>
-        <button class="crt-toggle-btn trail-active" id="trailToggleBtn" onclick="toggleCursorTrail()">● SPARKLES: ON</button>
+        <button class="crt-toggle-btn trail-active" id="trailToggleBtn" onclick="toggleCursorTrail()">● SPARKLES:
+          ON</button>
       </div>
     </nav>
 
@@ -2050,20 +2363,26 @@
             <p class="profile-sub">East High AV Tech // Music Purist // <span class="kaomoji">[x_x]</span> 17y</p>
 
             <div class="avatar-frame">
-              <img src="assets/images/jaden_avatar.jpg" alt="Jaden Vance - Avatar FaceYourManga (2008)" class="avatar-img">
+              <img src="assets/images/jaden_avatar.jpg" alt="Jaden Vance - Avatar FaceYourManga (2008)"
+                class="avatar-img">
               <div class="avatar-sticker">100% ANALOG</div>
             </div>
 
             <!-- Authentic Mini Blinkies -->
-            <div style="display:flex; justify-content:center; align-items:center; gap:4px; margin: 6px 0 8px; flex-wrap: wrap;">
-              <img src="assets/blinkies/emo-online.gif" style="height:18px; image-rendering:pixelated;" alt="Emo Online" title="Emo Online 2005">
-              <img src="assets/blinkies/antisocial.gif" style="height:18px; image-rendering:pixelated;" alt="Anti-Social" title="Anti-Social">
-              <img src="assets/blinkies/blackcoffee.gif" style="height:18px; image-rendering:pixelated;" alt="Black Coffee" title="Black Coffee Fuel">
+            <div
+              style="display:flex; justify-content:center; align-items:center; gap:4px; margin: 6px 0 8px; flex-wrap: wrap;">
+              <img src="assets/blinkies/emo-online.gif" style="height:18px; image-rendering:pixelated;" alt="Emo Online"
+                title="Emo Online 2005">
+              <img src="assets/blinkies/antisocial.gif" style="height:18px; image-rendering:pixelated;"
+                alt="Anti-Social" title="Anti-Social">
+              <img src="assets/blinkies/blackcoffee.gif" style="height:18px; image-rendering:pixelated;"
+                alt="Black Coffee" title="Black Coffee Fuel">
             </div>
 
             <!-- Mood & Status Widget -->
             <div class="status-widget">
-              <strong>SENTIMIENTO HOY:</strong> Desprecio acústico <span class="kaomoji">(¬_¬)</span> <img src="assets/icons/coffee.svg" class="inline-pixel-icon" alt="Café"><br>
+              <strong>SENTIMIENTO HOY:</strong> Desprecio acústico <span class="kaomoji">(¬_¬)</span> <img
+                src="assets/icons/coffee.svg" class="inline-pixel-icon" alt="Café"><br>
               <strong>UBICACIÓN:</strong> Cabina de luces y sonido #2 <span class="kaomoji">[404: Not Found]</span><br>
               <strong>DETENCIÓN:</strong> 12 horas acumuladas con Darbus <span class="kaomoji">t(-_-t)</span><br>
               <strong>ÁMBITO MENTAL:</strong> Midwest Emo / Screamo <span class="kaomoji">\m/ [x_x] \m/</span><br>
@@ -2108,15 +2427,24 @@
 
             <!-- Quick Action Buttons with Custom Retro Alerts -->
             <div class="action-grid">
-              <div class="btn-action" onclick="testCompatibility()"><img src="assets/icons/lightning.svg" class="inline-pixel-icon" alt="Test"> [?] TEST DE AFINIDAD</div>
-              <div class="btn-action" onclick="showRetroAlert('BANDEJA DE ENTRADA BLOQUEADA', 'Jaden: \'Mi bandeja de entrada solo acepta ensayos de más de 1,000 palabras en formato PDF con análisis armónico sobre Steve Albini. Los correos sobre el pep rally son eliminados automáticamente.\'', 'mail')"><img src="assets/icons/mail.svg" class="inline-pixel-icon" alt="Mail"> [✉] ENVIAR ENSAYO</div>
-              <div class="btn-action" onclick="showRetroAlert('ERROR 403: ACCESO DENEGADO', 'Jaden ha bloqueado permanentemente las solicitudes de amistad de toda persona que vista rojo universitario o aplauda en sincronía en el gimnasio.', 'error')"><img src="assets/icons/cross.svg" class="inline-pixel-icon" alt="Ban"> [✗] AGREGAR AMIGO</div>
-              <div class="btn-action" onclick="document.getElementById('secretVault').showModal()"><img src="assets/icons/lock.svg" class="inline-pixel-icon" alt="Lock"> [!] ARCHIVO OCULTO</div>
+              <div class="btn-action" onclick="testCompatibility()"><img src="assets/icons/lightning.svg"
+                  class="inline-pixel-icon" alt="Test"> [?] TEST DE AFINIDAD</div>
+              <div class="btn-action"
+                onclick="showRetroAlert('BANDEJA DE ENTRADA BLOQUEADA', 'Jaden: \'Mi bandeja de entrada solo acepta ensayos de más de 1,000 palabras en formato PDF con análisis armónico sobre Steve Albini. Los correos sobre el pep rally son eliminados automáticamente.\'', 'mail')">
+                <img src="assets/icons/mail.svg" class="inline-pixel-icon" alt="Mail"> [✉] ENVIAR ENSAYO
+              </div>
+              <div class="btn-action"
+                onclick="showRetroAlert('ERROR 403: ACCESO DENEGADO', 'Jaden ha bloqueado permanentemente las solicitudes de amistad de toda persona que vista rojo universitario o aplauda en sincronía en el gimnasio.', 'error')">
+                <img src="assets/icons/cross.svg" class="inline-pixel-icon" alt="Ban"> [✗] AGREGAR AMIGO
+              </div>
+              <div class="btn-action" onclick="document.getElementById('secretVault').showModal()"><img
+                  src="assets/icons/lock.svg" class="inline-pixel-icon" alt="Lock"> [!] ARCHIVO OCULTO</div>
             </div>
 
             <!-- Link to full character dossier -->
             <div style="margin-top: 10px; text-align: center;">
-              <a href="character.html" target="_blank" style="display:block; background:#1a0710; border:1px solid #ff4d6d; color:#ff99b0; padding:6px; font-family:var(--font-mono); font-size:11px; text-decoration:none; font-weight:bold;">
+              <a href="character.html" target="_blank"
+                style="display:block; background:#1a0710; border:1px solid #ff4d6d; color:#ff99b0; padding:6px; font-family:var(--font-mono); font-size:11px; text-decoration:none; font-weight:bold;">
                 👤 [ VER EXPEDIENTE: CONTEXTO, ROPA &amp; HABITACIÓN ] ➔
               </a>
             </div>
@@ -2129,7 +2457,8 @@
           <div class="winamp-top">
             <span>WINAMP v2.91</span>
             <div style="display:flex; align-items:center; gap:5px;">
-              <select id="winampSkinSelect" onchange="setWinampSkin(this.value)" class="winamp-skin-select" title="Cambiar Skin de Winamp">
+              <select id="winampSkinSelect" onchange="setWinampSkin(this.value)" class="winamp-skin-select"
+                title="Cambiar Skin de Winamp">
                 <option value="skin-goth" selected>Skin: Goth Emo</option>
                 <option value="skin-classic">Skin: Classic 2.91</option>
                 <option value="skin-matrix">Skin: Cyber Matrix</option>
@@ -2140,7 +2469,9 @@
           </div>
           <div class="winamp-lcd">
             <div style="display:flex; gap:8px; align-items:center;">
-              <img id="winampCoverThumb" src="assets/glossary/american_football_lp1.png" style="width:34px; height:34px; object-fit:cover; border:1px solid #ff4d6d; flex-shrink:0; background:#000; border-radius:2px;" alt="Cover">
+              <img id="winampCoverThumb" src="assets/glossary/american_football_lp1.png"
+                style="width:34px; height:34px; object-fit:cover; border:1px solid #ff4d6d; flex-shrink:0; background:#000; border-radius:2px;"
+                alt="Cover">
               <div style="flex:1; min-width:0;">
                 <div class="winamp-song-title" id="currentTrackDisplay">1. American Football - Never Meant (1999)</div>
                 <div class="winamp-subtext">
@@ -2153,17 +2484,22 @@
 
             <!-- Vintage Winamp Audio Spectrum / Oscilloscope Visualizer -->
             <div class="winamp-vis-row">
-              <canvas id="winampVis" width="140" height="24" class="winamp-vis-canvas" onclick="cycleVisMode()" title="Haz clic para alternar: Barras de Espectro / Osciloscopio / Apagado"></canvas>
+              <canvas id="winampVis" width="140" height="24" class="winamp-vis-canvas" onclick="cycleVisMode()"
+                title="Haz clic para alternar: Barras de Espectro / Osciloscopio / Apagado"></canvas>
               <div class="vis-buttons">
-                <button type="button" class="vis-btn active" id="btnVisBars" onclick="setVisMode('bars')" title="Barras de Espectro">BARS</button>
-                <button type="button" class="vis-btn" id="btnVisWave" onclick="setVisMode('wave')" title="Osciloscopio CRT">OSC</button>
-                <button type="button" class="vis-btn" id="btnVisOff" onclick="setVisMode('off')" title="Apagado">OFF</button>
+                <button type="button" class="vis-btn active" id="btnVisBars" onclick="setVisMode('bars')"
+                  title="Barras de Espectro">BARS</button>
+                <button type="button" class="vis-btn" id="btnVisWave" onclick="setVisMode('wave')"
+                  title="Osciloscopio CRT">OSC</button>
+                <button type="button" class="vis-btn" id="btnVisOff" onclick="setVisMode('off')"
+                  title="Apagado">OFF</button>
               </div>
             </div>
 
             <!-- Vintage Winamp Seek Progress Bar -->
             <div class="winamp-seek-container">
-              <input type="range" id="winampSeek" class="winamp-seek-slider" min="0" max="100" value="0" step="0.1" title="Haz clic o arrastra para saltar a un segundo específico">
+              <input type="range" id="winampSeek" class="winamp-seek-slider" min="0" max="100" value="0" step="0.1"
+                title="Haz clic o arrastra para saltar a un segundo específico">
             </div>
           </div>
           <div class="winamp-controls-bar">
@@ -2176,7 +2512,8 @@
             </div>
             <div class="winamp-vol" style="display:flex; align-items:center; gap:3px;">
               <span style="font-size:8px; color:#888;">VOL:</span>
-              <input type="range" id="winampVol" class="winamp-vol-slider" min="0" max="1" step="0.05" value="0.8" oninput="setVolume(this.value)" title="Volumen">
+              <input type="range" id="winampVol" class="winamp-vol-slider" min="0" max="1" step="0.05" value="0.8"
+                oninput="setVolume(this.value)" title="Volumen">
             </div>
           </div>
           <div class="winamp-list">
@@ -2187,7 +2524,9 @@
             <div class="winamp-item" onclick="selectTrack(4)">5. [DEMO SECRETA] Kelsi - Piano Solo Take #3</div>
           </div>
           <div style="text-align:center; padding: 6px 0 4px; background: #000; border-top: 1px solid #1a1a1a;">
-            <img src="assets/badges/winamp.gif" style="width:88px; height:31px; image-rendering:pixelated; border: 1px solid #333;" alt="Winamp Llama" title="Winamp - It Really Whips The Llama's Ass">
+            <img src="assets/badges/winamp.gif"
+              style="width:88px; height:31px; image-rendering:pixelated; border: 1px solid #333;" alt="Winamp Llama"
+              title="Winamp - It Really Whips The Llama's Ass">
           </div>
         </div>
 
@@ -2197,17 +2536,25 @@
             <span>MOCHILA &amp; EQUIPO</span>
           </div>
           <div class="neo-box-body">
-            <div class="bag-inspect-item" onclick="showRetroAlert('EQUIPO: AUDÍFONOS SONY MDR-7506', 'Audífonos con cable en espiral de 3 metros:\nSu escudo acústico impenetrable para no escuchar los alaridos de Sharpay ni el rebote incesante de balones en el pasillo escolar.', 'headphones')">
-              <img src="assets/icons/headphones.svg" class="bag-icon" alt="Audífonos"> <strong>Audífonos de Monitor de Estudio</strong>
+            <div class="bag-inspect-item"
+              onclick="showRetroAlert('EQUIPO: AUDÍFONOS SONY MDR-7506', 'Audífonos con cable en espiral de 3 metros:\nSu escudo acústico impenetrable para no escuchar los alaridos de Sharpay ni el rebote incesante de balones en el pasillo escolar.', 'headphones')">
+              <img src="assets/icons/headphones.svg" class="bag-icon" alt="Audífonos"> <strong>Audífonos de Monitor de
+                Estudio</strong>
             </div>
-            <div class="bag-inspect-item" onclick="showRetroAlert('EQUIPO: IPOD CLASSIC 80GB', 'Con firmware alternativo Rockbox:\nCero canciones de Disney. Contiene 4,200 pistas en FLAC 24-bit ripeadas directamente de sus vinilos a las 3:00 AM bajo la lluvia.', 'ipod')">
-              <img src="assets/icons/ipod.svg" class="bag-icon" alt="iPod"> <strong>iPod Classic con Rueda de Clic</strong>
+            <div class="bag-inspect-item"
+              onclick="showRetroAlert('EQUIPO: IPOD CLASSIC 80GB', 'Con firmware alternativo Rockbox:\nCero canciones de Disney. Contiene 4,200 pistas en FLAC 24-bit ripeadas directamente de sus vinilos a las 3:00 AM bajo la lluvia.', 'ipod')">
+              <img src="assets/icons/ipod.svg" class="bag-icon" alt="iPod"> <strong>iPod Classic con Rueda de
+                Clic</strong>
             </div>
-            <div class="bag-inspect-item" onclick="showRetroAlert('HERRAMIENTA: SHARPIE NEGRO', 'Marcador permanente de punta biselada:\nUtilizado para tachar rostros sonrientes en los afiches de audiciones y escribir comentarios cínicos en los casilleros del gimnasio.', 'pen')">
-              <img src="assets/icons/sharpie.svg" class="bag-icon" alt="Sharpie"> <strong>Sharpie Negro Permanente</strong>
+            <div class="bag-inspect-item"
+              onclick="showRetroAlert('HERRAMIENTA: SHARPIE NEGRO', 'Marcador permanente de punta biselada:\nUtilizado para tachar rostros sonrientes en los afiches de audiciones y escribir comentarios cínicos en los casilleros del gimnasio.', 'pen')">
+              <img src="assets/icons/sharpie.svg" class="bag-icon" alt="Sharpie"> <strong>Sharpie Negro
+                Permanente</strong>
             </div>
-            <div class="bag-inspect-item" onclick="showRetroAlert('SEGURIDAD: TAPONES DE SILICONA', 'Protección auditiva de grado industrial:\nIndispensables cuando la Sra. Darbus realiza sus ejercicios de vocalización y ópera a las 8:00 AM en el vestíbulo.', 'mute')">
-              <img src="assets/icons/earplugs.svg" class="bag-icon" alt="Tapones"> <strong>Tapones de Cancelación de Ruido</strong>
+            <div class="bag-inspect-item"
+              onclick="showRetroAlert('SEGURIDAD: TAPONES DE SILICONA', 'Protección auditiva de grado industrial:\nIndispensables cuando la Sra. Darbus realiza sus ejercicios de vocalización y ópera a las 8:00 AM en el vestíbulo.', 'mute')">
+              <img src="assets/icons/earplugs.svg" class="bag-icon" alt="Tapones"> <strong>Tapones de Cancelación de
+                Ruido</strong>
             </div>
           </div>
         </div>
@@ -2219,13 +2566,38 @@
 
         <!-- ASCII ART BANNER -->
         <div class="ascii-art">
-   _____                       _     ____              _   _     
-  / ____|                     | |   |  _ \            | | | |    
- | (___   ___  _   _ _ __   __| |   | |_) | ___   ___ | |_| |__  
-  \___ \ / _ \| | | | '_ \ / _` |   |  _ < / _ \ / _ \| __| '_ \ 
+          _____ _ ____ _ _
+          / ____| | | | _ \ | | | |
+          | (___ ___ _ _ _ __ __| | | |_) | ___ ___ | |_| |__
+          \___ \ / _ \| | | | '_ \ / _` | | _ < / _ \ / _ \|
+            __| '_ \ 
   ____) | (_) | |_| | | | | (_| |   | |_) | (_) | (_) | |_| | | |
  |_____/ \___/ \__,_|_| |_|\__,_|   |____/ \___/ \___/ \__|_| |_|
   [ EAST HIGH AUDITORIUM // FRECUENCIA PIRATA // NO POP EN LA DUELA ]
+        </div>
+
+        <!-- Mensaje Rizzo -->
+        <div class="neo-box" id="mensaje-rizzo" style="margin-bottom: 15px; scroll-margin-top: 50px;">
+          <div class="neo-box-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <span>MENSAJE RIZZO</span>
+            <button type="button" onclick="openRizzoModal()" style="background:#1a1406; border:1px solid #f8c025; color:#f8c025; font-family:var(--font-pixel); font-size:8px; padding:2px 6px; cursor:pointer;" title="Abrir en ventana emergente">[ ❐ POPUP ]</button>
+          </div>
+          <div class="neo-box-body">
+            <div style="background: #090b10; border: 1px dashed #6b5015; padding: 14px 16px; border-radius: 2px;">
+              <p id="rizzoMessageText" style="margin: 0; min-height: 32px; color: #e4e7f5; font-family: var(--font-journal); font-size: 13.5px; line-height: 1.7;">
+                <!-- ========================================================
+                     ESPACIO PARA MENSAJE DE RIZZO:
+                     Escribe o pega aquí tu texto cuando quieras.
+                     ======================================================== -->
+                !!! LEELO POST DE VER LOS DEMAS LOL (Si te falta ver expediente oc y glosario musical es recomendable xdddd)
+                Bueno, que no estoy en casa ahora LOL asi que dejo este mensaje, ojala hayan disfrutado de esta pagina yaque mis habilidades de dibujo son nulas LOL LMFAO XD añaskd 
+                Ojala hayan interactuado con todo lo de la pagina siendo el reproductor musical, el msn con el zumbnido, la nota en el libro de visitas,etc... :C
+                me acuerdo haber visto hsm muy de chico asi que tengo pocos recuerdos de, pero ojala haber hecho un oc que encaje con el mundo (supongo que alguien que le sepa dira si es acorde o no )
+                eso, despues veo el vod y tal (o obligo a un pudu a decirme que onda)
+                un saluditoooooooo
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Manifesto / Headline -->
@@ -2262,393 +2634,457 @@
                 <div class="polaroid-tape"></div>
                 <img src="jaden_polaroids.jpg" alt="Collage de fotos polaroid, tocadiscos, entrada de básquetbol anulada y stickers emo" class="polaroid-img">
                 <div class="polaroid-caption">
-                  <strong>21/10/2005.</strong> Boleto de los Wildcats sellado como VOID ("f@#k off"), tocadiscos girando en la oscuridad, cinta de casete <em>'For Nobody'</em> y stickers de The Used y MCR. <span class="kaomoji">\m/</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
+                  <strong>21/10/2005.</strong> Boleto de los Wildcats sellado como VOID ("f@#k off"), tocadiscos girando en la oscuridad, cinta de casete <em>' For
+            Nobody'</em> y stickers de The Used y MCR. <span class="kaomoji">\m/</span>
         </div>
-
-        <!-- Likes & Dislikes -->
-        <div class="likes-dislikes-grid">
-          <div class="likes-column">
-            <h4>[+] COSAS QUE JADEN TOLERA <span class="kaomoji">(*_*)</span></h4>
-            <ul class="list-items">
-              <li>♰ El silencio absoluto del auditorio a las 6:30 PM</li>
-              <li>✦ Compases irregulares en 7/8 y 11/8 (honestidad matemática)</li>
-              <li>☕ El olor a cartón y polvo de vinilos de segunda mano</li>
-              <li>♫ Las progresiones en menor de Kelsi cuando está a solas</li>
-              <li>🛹 El chico del chelo que patina (único con criterio en East High)</li>
-              <li>✄ Suéteres a rayas gastados con orificios en los pulgares</li>
-              <li>💾 Piratear audio FLAC sin compresión en la sala de computación</li>
-            </ul>
-          </div>
-
-          <div class="dislikes-column">
-            <h4>[-] CRÍMENES CONTRA LA HUMANIDAD <span class="kaomoji">(¬_¬)</span></h4>
-            <ul class="list-items">
-              <li>☠ Los giros de pelo y sonrisas ensayadas de Troy Bolton</li>
-              <li>✗ Aplaudir a destiempo en los compases 1 y 3 en vez de 2 y 4</li>
-              <li>✧ Los solos de pandereta con purpurina y lentejuelas de Ryan Evans</li>
-              <li>✖ La pizza plástica grasosa de la cafetería escolar</li>
-              <li>⚠ Pep rallies (tortura auditiva que viola la Convención de Ginebra)</li>
-              <li>🔇 Pistas pop con autotune forzado en los altavoces del gimnasio</li>
-              <li>☠ El optimismo corporativo no fundamentado de los Wildcats</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Stamps & Blinkies -->
-        <div class="neo-box" id="stamps">
-          <div class="neo-box-header">
-            <span>STAMPS &amp; BLINKIES</span>
-          </div>
-          <div class="neo-box-body">
-
-            <!-- Authentic Animated Blinkies -->
-            <div class="blinkies-container">
-              <img src="assets/blinkies/radiohead.gif" class="blinkie-badge" alt="Radiohead Blinky" title="Radiohead - OK Computer / Kid A">
-              <img src="assets/blinkies/musicislife.gif" class="blinkie-badge" alt="Music is Life Blinky" title="Music is Life">
-              <img src="assets/blinkies/prettyhatemachine.gif" class="blinkie-badge" alt="Pretty Hate Machine Blinky" title="Nine Inch Nails - Pretty Hate Machine">
-              <img src="assets/blinkies/blackcoffee.gif" class="blinkie-badge" alt="Black Coffee Blinky" title="Dark Roast Coffee">
-              <img src="assets/blinkies/antisocial.gif" class="blinkie-badge" alt="Anti-Social Blinky" title="Anti-Social Sound Booth Operator">
-              <img src="assets/blinkies/emo-online.gif" class="blinkie-badge" alt="Emo Online Blinky" title="Emo Online 2005">
-              <img src="assets/blinkies/shutup.gif" class="blinkie-badge" alt="Shut Up Blinky" title="Shut Up - Sound Tech At Work">
-              <img src="assets/blinkies/leavemealone.gif" class="blinkie-badge" alt="Leave Me Alone Blinky" title="Leave Me Alone">
-              <img src="assets/blinkies/dontlabel.gif" class="blinkie-badge" alt="Don't Label Me Blinky" title="Don't Label Me">
-              <img src="assets/blinkies/nightowl.gif" class="blinkie-badge" alt="Night Owl Blinky" title="Night Owl 4:00 AM Mixing">
-              <img src="assets/blinkies/idontcare.gif" class="blinkie-badge" alt="I Don't Care Blinky" title="I Don't Care">
-            </div>
-
-            <!-- Authentic Postage Stamps Grid -->
-            <div class="stamps-grid">
-              <img src="assets/stamps/guitar.png" class="stamp-item" title="Indie Guitarist / Emo" alt="Guitar Stamp">
-              <img src="assets/stamps/nihilism.gif" class="stamp-item" title="Nihilism" alt="Nihilism Stamp">
-              <img src="assets/stamps/paranoid.gif" class="stamp-item" title="Paranoid Android" alt="Paranoid Stamp">
-              <img src="assets/stamps/staying_up_late.gif" class="stamp-item" title="Staying Up Late" alt="Staying Up Late Stamp">
-              <img src="assets/stamps/this_is_how_i_feel.gif" class="stamp-item" title="This is How I Feel" alt="Feelings Stamp">
-              <img src="assets/stamps/attitude_problem.png" class="stamp-item" title="Attitude Problem" alt="Attitude Stamp">
-              <img src="assets/stamps/old_web.png" class="stamp-item" title="Old Web 2000s" alt="Old Web Stamp">
-              <img src="assets/stamps/bad_decisions.png" class="stamp-item" title="Pretty Good at Bad Decisions" alt="Bad Decisions Stamp">
-              <img src="assets/stamps/scene_queen.png" class="stamp-item" title="Scene / Emo Era" alt="Scene Emo Stamp">
-              <img src="assets/stamps/glow_in_dark.png" class="stamp-item" title="Glow in the Dark" alt="Glow Stamp">
-              <img src="assets/stamps/stars_stamp.gif" class="stamp-item" title="Glitter Stars" alt="Stars Stamp">
-              <img src="assets/stamps/neocities_stamp.gif" class="stamp-item" title="Neocities Webring" alt="Neocities Stamp">
-              <img src="assets/stamps/listen_to_1.png" class="stamp-item" title="Listen to Real Music 01" alt="Listen Stamp 1">
-              <img src="assets/stamps/listen_to_2.png" class="stamp-item" title="Listen to Real Music 02" alt="Listen Stamp 2">
-              <img src="assets/stamps/listen_to_3.png" class="stamp-item" title="Listen to Real Music 03" alt="Listen Stamp 3">
-              <img src="assets/stamps/listen_to_4.png" class="stamp-item" title="Listen to Real Music 04" alt="Listen Stamp 4">
-            </div>
-
-          </div>
-        </div>
-
-        <!-- RateYourMusic Table -->
-        <div class="neo-box" id="rym">
-          <div class="neo-box-header">
-            <span>CRÍTICAS MUSICALES (RATE YOUR MUSIC)</span>
-            <a href="glossary.html" target="_blank" class="header-sublink">Glosario ➔</a>
-          </div>
-          <div class="neo-box-body">
-            <table class="rym-table">
-              <thead>
-                <tr>
-                  <th style="width: 28%;">Canción &amp; Portada</th>
-                  <th style="width: 18%;">Puntaje RYM</th>
-                  <th style="width: 54%;">Reseña Crítica de Jaden</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                <!-- 1. Bop to the Top -->
-                <tr>
-                  <td>
-                    <div class="album-thumb-container">
-                      <img src="assets/rym/bop_to_the_top.webp" class="album-mini-art" alt="Bop to the Top - Sharpay &amp; Ryan" loading="lazy">
-                      <div>
-                        <div class="song-title">"Bop to the Top"</div>
-                        <div class="song-artist">Sharpay &amp; Ryan Evans</div>
-                        <div style="color: #666; font-size: 8px;">Audiciones Musical</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span class="score-badge score-05">0.5 / 5.0</span>
-                    <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img src="assets/icons/star_half.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"></span> [Bomba]</div>
-                  </td>
-                  <td>
-                    <div class="song-review">
-                      «Un insulto descarado a la síncopa cubana y a la tradición del mambo. Sharpay canta como si intentara quebrar cristales con decibelios de histeria y Ryan baila con la motricidad de un juguete a cuerda de club de campo. Tuve que recortar 14dB en los agudos de la consola para evitar hemorragias en el público.»
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- 2. Get'cha Head in the Game -->
-                <tr>
-                  <td>
-                    <div class="album-thumb-container">
-                      <img src="assets/rym/getcha_head.webp" class="album-mini-art" alt="Get'cha Head in the Game - Troy Bolton &amp; Wildcats" loading="lazy">
-                      <div>
-                        <div class="song-title">"Get'cha Head in the Game"</div>
-                        <div class="song-artist">Troy Bolton &amp; Wildcats</div>
-                        <div style="color: #666; font-size: 8px;">Sesión en el Gimnasio</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span class="score-badge score-10">1.0 / 5.0</span>
-                    <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"></span> [Infrasónico]</div>
-                  </td>
-                  <td>
-                    <div class="song-review">
-                      «Intentaron plagiar la 'Música Concreta' de Pierre Schaeffer usando rechinidos de tenis de básquetbol sobre piso barnizado. La respiración entrecortada de Bolton evidencia hipoxia atlética. La lírica es de una pobreza existencial dolorosa: ¿por qué tu corazón siente que salta? Claramente arritmia por exceso de Gatorade.»
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- 3. Breaking Free -->
-                <tr>
-                  <td>
-                    <div class="album-thumb-container">
-                      <img src="assets/rym/breaking_free.webp" class="album-mini-art" alt="Breaking Free - Troy &amp; Gabriella" loading="lazy">
-                      <div>
-                        <div class="song-title">"Breaking Free"</div>
-                        <div class="song-artist">Troy &amp; Gabriella</div>
-                        <div style="color: #666; font-size: 8px;">Callbacks Finales</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span class="score-badge score-25">2.5 / 5.0</span>
-                    <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_half.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"></span> [Mediocre]</div>
-                  </td>
-                  <td>
-                    <div class="song-review">
-                      «Fórmula comercial de laboratorio para conmover a masas incultas... Sin embargo, la resolución armónica de Kelsi al pasar al puente modula con una finura que supera por mucho las capacidades de los dos cantantes. Odio admitir que el estribillo se queda clavado en el lóbulo parietal durante semanas.»
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- 4. Kelsi Solo Demo -->
-                <tr>
-                  <td>
-                    <div class="album-thumb-container">
-                      <img src="assets/rym/kelsi_demo.webp" class="album-mini-art" alt="Piano Soliloquy in Dm - Kelsi Nielsen" loading="lazy">
-                      <div>
-                        <div class="song-title">"Piano Soliloquy in Dm"</div>
-                        <div class="song-artist">Kelsi Nielsen</div>
-                        <div style="color: #666; font-size: 8px;">Copia en Casete #04</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <span class="score-badge score-45">4.5 / 5.0</span>
-                    <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_half.svg" class="rym-star"></span> [Magnum Opus]</div>
-                  </td>
-                  <td>
-                    <div class="song-review">
-                      «Grabada a escondidas con mi micrófono de cañón desde el andamio del techo cuando el auditorio quedó a oscuras. Influencias sutiles de Erik Satie y post-rock instrumental. Si Kelsi dejara de componerle baladas a rubias consentidas y formara un proyecto emo conmigo, este colegio tendría redención.»
-                    </div>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Top 8 -->
-        <div class="neo-box" id="top8">
-          <div class="neo-box-header">
-            <span>TOP 8 DE AMIGOS</span>
-          </div>
-          <div class="neo-box-body">
-            <div class="top8-grid">
-              
-              <!-- 1. Jeff Mangum -->
-              <div class="top8-slot">
-                <div class="top8-img-box">
-                  <img src="top8_images/top8_jeff.png" alt="Jeff Mangum">
-                </div>
-                <strong class="top8-name">Jeff Mangum</strong>
-                <div class="top8-sub" style="color:var(--accent-rym-yellow);">Neutral Milk Hotel</div>
-              </div>
-
-              <!-- 2. Ian Curtis -->
-              <div class="top8-slot">
-                <div class="top8-img-box">
-                  <img src="top8_images/top8_ian.jpg" alt="Ian Curtis / Joy Division">
-                </div>
-                <strong class="top8-name">Ian Curtis</strong>
-                <div class="top8-sub" style="color:var(--accent-rym-yellow);">Joy Division</div>
-              </div>
-
-              <!-- 3. Steve Albini -->
-              <div class="top8-slot">
-                <div class="top8-img-box">
-                  <img src="top8_images/top8_albini.jpg" alt="Steve Albini">
-                </div>
-                <strong class="top8-name">Steve Albini</strong>
-                <div class="top8-sub" style="color:var(--accent-rym-yellow);">Pure Analog Hero</div>
-              </div>
-
-              <!-- 4. Kelsi Nielsen -->
-              <div class="top8-slot">
-                <div class="top8-img-box">
-                  <img src="top8_images/top8_kelsi.jpg" alt="Kelsi Nielsen">
-                </div>
-                <strong class="top8-name">Kelsi Nielsen</strong>
-                <div class="top8-sub" style="color:#51cf66;">Única salvable</div>
-              </div>
-
-              <!-- 5. Ripper / Cello Skater -->
-              <div class="top8-slot">
-                <div class="top8-img-box">
-                  <img src="top8_images/top8_ripper.jpg" alt="Ripper / Skater del Chelo">
-                </div>
-                <strong class="top8-name">Skater del Chelo</strong>
-                <div class="top8-sub" style="color:var(--accent-terminal-cyan);">Ripper / Cello God</div>
-              </div>
-
-              <!-- 6. Technics 1200MK2 -->
-              <div class="top8-slot">
-                <div class="top8-img-box">
-                  <img src="top8_images/top8_turntable.jpg" alt="Tocadiscos Technics 1200">
-                </div>
-                <strong class="top8-name">Mi Tocadiscos</strong>
-                <div class="top8-sub" style="color:#aaa;">Technics 1200MK2</div>
-              </div>
-
-              <!-- 7. Black Coffee -->
-              <div class="top8-slot">
-                <div class="top8-img-box">
-                  <img src="top8_images/top8_coffee.jpg" alt="Café Negro">
-                </div>
-                <strong class="top8-name">Café Negro Frío</strong>
-                <div class="top8-sub" style="color:#888;">Combustible 4:00 AM</div>
-              </div>
-
-              <!-- 8. Nobody / White Noise -->
-              <div class="top8-slot">
-                <div class="top8-img-box">
-                  <img src="top8_images/top8_static.svg" alt="No Signal / Static">
-                </div>
-                <strong class="top8-name" style="color:#666;">Nadie Más</strong>
-                <div class="top8-sub" style="color:#555;">No calificas</div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- Guestbook -->
-        <div class="neo-box" id="guestbook">
-          <div class="neo-box-header">
-            <span>COMENTARIOS &amp; LIBRO DE VISITAS</span>
-          </div>
-          <div class="neo-box-body">
-
-            <div class="comment-entry">
-              <div class="comment-head">
-                <span class="user user-sharpay">✨ Sharpay_Evans_Official ★ ✨</span>
-                <span>Ayer 16:42</span>
-              </div>
-              <div class="comment-text comment-sharpay">
-                ¡Oye, bicho raro de la cabina! ¡Exijo que borres esa reseña de 'Bop to the Top'! ¡Mi hermano y yo ensayamos esas patadas en sincronía durante un mes! Si mi padre se entera de este sitio inmundo, comprará los equipos de sonido del colegio y los convertirá en secadores para mis caniches. XOXO.
-              </div>
-              <div class="jaden-retort">
-                <strong>Jaden:</strong> Sharpay, no existe compresor ni ecualizador en este planeta capaz de camuflar tus agudos estridentes. Sigue bailando con Ryan, los reflectores te tapan la vista.
-              </div>
-            </div>
-
-            <div class="comment-entry">
-              <div class="comment-head">
-                <span class="user user-chad">🏀 CHAD_DANFORTH#8_WILDCATS 🏀</span>
-                <span>Ayer 18:15</span>
-              </div>
-              <div class="comment-text comment-chad">
-                bro por qué usas palabras tan largas para decir que no sabes encestar un triple? Mañana tenemos final contra West High, deja de poner música de velorio en los altavoces de los vestidores.
-              </div>
-              <div class="jaden-retort">
-                <strong>Jaden:</strong> Chad, lo que llamas 'música de velorio' era un cuarteto de cuerdas en compás 5/4. Entiendo que contar hasta cinco supere la capacidad cognitiva del equipo de básquetbol.
-              </div>
-            </div>
-
-            <div class="comment-entry">
-              <div class="comment-head">
-                <span class="user user-kelsi">♫ Kelsi_Composer ♫</span>
-                <span>Hoy 08:30</span>
-              </div>
-              <div class="comment-text comment-kelsi">
-                Hola Jaden... gracias por calibrar el retorno de mi piano ayer. Y... leí tu reseña sobre mi solo. ¿De verdad crees que la modulación era sutil? Nunca nadie me había dicho eso en East High.
-              </div>
-              <div class="jaden-retort">
-                <strong>Jaden:</strong> No te acostumbres a los halagos, Nielsen. Solo digo que estás tirando tu talento a la basura componiendo himnos para gente que baila sobre mesas de cafetería.
-              </div>
-            </div>
-
-            <!-- Comment Form -->
-            <form class="comment-box-form" onsubmit="event.preventDefault(); submitComment();">
-              <input type="text" id="guestName" placeholder="Tu nombre / Nickname de East High..." required>
-              <textarea id="guestMsg" rows="2" placeholder="Déjale un comentario o insulto a Jaden (responderá automáticamente)..." required></textarea>
-              <button type="submit" class="btn-post">Publicar en el Libro de Visitas</button>
-            </form>
-
-          </div>
-        </div>
-
-        <!-- Webrings with Custom Alerts -->
-        <div class="webring-cluster">
-          <div class="webring-title">♰ MIDWEST EMO &amp; MISUNDERSTOOD SOUND TECHS WEBRING ♰</div>
-          <p style="color:#777; font-size:9px;">Eres el sitio #042 en este anillo de la web profunda de 2007</p>
-          <div class="webring-nav">
-            <a onclick="showRetroAlert('WEBRING // NAVEGACIÓN 2007', 'Conectando vía dial-up con el nodo anterior:\n[xX_kurt_cobain_shrine_03_Xx] ... Servidor GeoCities en línea.', 'globe')"><img src="assets/icons/globe.svg" class="webring-icon" alt="Globe"> « Sitio Anterior</a>
-            <a onclick="showRetroAlert('WEBRING // NAVEGACIÓN ALEATORIA', 'Redirigiendo a nodo aleatorio del anillo:\n[slint-and-spiderland-fanpage.neocities.org] ... Conexión cifrada establecida.', 'dice')"><img src="assets/icons/dice.svg" class="webring-icon" alt="Dice"> [ ? ] Aleatorio</a>
-            <a onclick="showRetroAlert('WEBRING // NAVEGACIÓN 2007', 'Conectando con el siguiente sitio del anillo:\n[tape-recorder-hiss-society] ... Transmitiendo paquete de datos FLAC.', 'globe')">Sitio Siguiente » <img src="assets/icons/globe.svg" class="webring-icon" alt="Globe"></a>
-          </div>
-        </div>
-
-      </main>
-
     </div>
 
-    <!-- 88x31 Badges -->
-    <div class="buttons-88x31-rack">
-      <img src="assets/badges/winamp.gif" class="badge-88x31" alt="Winamp" title="Winamp - It Really Whips The Llama's Ass">
-      <img src="assets/badges/winamp2.gif" class="badge-88x31" alt="Winamp v2" title="Winamp 2.x Audio Engine">
-      <img src="assets/badges/cassette.gif" class="badge-88x31" alt="Cassette" title="Analogue Cassette Culture">
-      <img src="assets/badges/dailymp3.gif" class="badge-88x31" alt="Daily MP3" title="Daily MP3 Underground Blog">
-      <img src="assets/badges/cd_rom.gif" class="badge-88x31" alt="CD-ROM" title="Compact Disc Audio">
-      <img src="assets/badges/realaudio.gif" class="badge-88x31" alt="RealAudio" title="RealAudio 28.8k Streaming">
-      <img src="assets/badges/radio-pixel-88x31.gif" class="badge-88x31" alt="College Radio" title="Indie College Radio">
-      <img src="assets/badges/boombarmusic.gif" class="badge-88x31" alt="Boombar Music" title="Boombar Music">
-      <img src="assets/badges/mp3com.gif" class="badge-88x31" alt="MP3.com" title="MP3.com Classic">
-      <img src="assets/badges/underground.gif" class="badge-88x31" alt="Underground" title="Underground Net">
-      <img src="assets/badges/jurassicpunk.gif" class="badge-88x31" alt="Jurassic Punk" title="Punk / DIY Hardcore">
-      <img src="assets/badges/piracy.gif" class="badge-88x31" alt="Home Taping" title="Home Taping is Killing Music... And It's Fun">
-      <img src="assets/badges/notepad.gif" class="badge-88x31" alt="Notepad" title="Coded in Microsoft Notepad">
-      <img src="assets/badges/notepadpp.gif" class="badge-88x31" alt="Notepad++" title="Notepad++ Syntax">
-      <img src="assets/badges/firefox2.gif" class="badge-88x31" alt="Firefox 2.0" title="Best Viewed with Mozilla Firefox 2.0">
-      <img src="assets/badges/geocities.gif" class="badge-88x31" alt="GeoCities" title="GeoCities Archived Site">
-      <img src="assets/badges/neocities.gif" class="badge-88x31" alt="Neocities" title="Powered by Neocities">
-      <img src="assets/badges/myspace.gif" class="badge-88x31" alt="MySpace" title="Find Me on MySpace">
-      <img src="assets/badges/coffee.gif" class="badge-88x31" alt="Coffee" title="Dark Roast Audio Fuel">
-      <img src="assets/badges/acidicdarkness.gif" class="badge-88x31" alt="Acidic Darkness" title="Dark Room Acoustics">
-      <img src="assets/badges/hatems.gif" class="badge-88x31" alt="Hate MS" title="Anti-Proprietary Formats">
-      <img src="assets/badges/jetaudio.gif" class="badge-88x31" alt="JetAudio" title="JetAudio Media Player">
+  </div>
+  </div>
+  </div>
+
+  <!-- Likes & Dislikes -->
+  <div class="likes-dislikes-grid">
+    <div class="likes-column">
+      <h4>[+] COSAS QUE JADEN TOLERA <span class="kaomoji">(*_*)</span></h4>
+      <ul class="list-items">
+        <li>♰ El silencio absoluto del auditorio a las 6:30 PM</li>
+        <li>✦ Compases irregulares en 7/8 y 11/8 (honestidad matemática)</li>
+        <li>☕ El olor a cartón y polvo de vinilos de segunda mano</li>
+        <li>♫ Las progresiones en menor de Kelsi cuando está a solas</li>
+        <li>🛹 El chico del chelo que patina (único con criterio en East High)</li>
+        <li>✄ Suéteres a rayas gastados con orificios en los pulgares</li>
+        <li>💾 Piratear audio FLAC sin compresión en la sala de computación</li>
+      </ul>
     </div>
 
-    <!-- Footer -->
-    <footer class="neo-footer">
-      <p>© 2007 JADEN VANCE // EAST HIGH AUDITORIUM SOUND BOOTH // ALBUQUERQUE, NM</p>
-      <p style="margin-top: 4px; font-size: 9px; color: #555;">
-        Optimizado para resolución de 1024x768. Si usas Internet Explorer, hazle un favor al mundo y bórralo.
-      </p>
-      <div>
-        VISITAS REGISTRADAS: <span class="counter-screen">005184</span>
+    <div class="dislikes-column">
+      <h4>[-] CRÍMENES CONTRA LA HUMANIDAD <span class="kaomoji">(¬_¬)</span></h4>
+      <ul class="list-items">
+        <li>☠ Los giros de pelo y sonrisas ensayadas de Troy Bolton</li>
+        <li>✗ Aplaudir a destiempo en los compases 1 y 3 en vez de 2 y 4</li>
+        <li>✧ Los solos de pandereta con purpurina y lentejuelas de Ryan Evans</li>
+        <li>✖ La pizza plástica grasosa de la cafetería escolar</li>
+        <li>⚠ Pep rallies (tortura auditiva que viola la Convención de Ginebra)</li>
+        <li>🔇 Pistas pop con autotune forzado en los altavoces del gimnasio</li>
+        <li>☠ El optimismo corporativo no fundamentado de los Wildcats</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Stamps & Blinkies -->
+  <div class="neo-box" id="stamps">
+    <div class="neo-box-header">
+      <span>STAMPS &amp; BLINKIES</span>
+    </div>
+    <div class="neo-box-body">
+
+      <!-- Authentic Animated Blinkies -->
+      <div class="blinkies-container">
+        <img src="assets/blinkies/radiohead.gif" class="blinkie-badge" alt="Radiohead Blinky"
+          title="Radiohead - OK Computer / Kid A">
+        <img src="assets/blinkies/musicislife.gif" class="blinkie-badge" alt="Music is Life Blinky"
+          title="Music is Life">
+        <img src="assets/blinkies/prettyhatemachine.gif" class="blinkie-badge" alt="Pretty Hate Machine Blinky"
+          title="Nine Inch Nails - Pretty Hate Machine">
+        <img src="assets/blinkies/blackcoffee.gif" class="blinkie-badge" alt="Black Coffee Blinky"
+          title="Dark Roast Coffee">
+        <img src="assets/blinkies/antisocial.gif" class="blinkie-badge" alt="Anti-Social Blinky"
+          title="Anti-Social Sound Booth Operator">
+        <img src="assets/blinkies/emo-online.gif" class="blinkie-badge" alt="Emo Online Blinky" title="Emo Online 2005">
+        <img src="assets/blinkies/shutup.gif" class="blinkie-badge" alt="Shut Up Blinky"
+          title="Shut Up - Sound Tech At Work">
+        <img src="assets/blinkies/leavemealone.gif" class="blinkie-badge" alt="Leave Me Alone Blinky"
+          title="Leave Me Alone">
+        <img src="assets/blinkies/dontlabel.gif" class="blinkie-badge" alt="Don't Label Me Blinky"
+          title="Don't Label Me">
+        <img src="assets/blinkies/nightowl.gif" class="blinkie-badge" alt="Night Owl Blinky"
+          title="Night Owl 4:00 AM Mixing">
+        <img src="assets/blinkies/idontcare.gif" class="blinkie-badge" alt="I Don't Care Blinky" title="I Don't Care">
       </div>
-    </footer>
+
+      <!-- Authentic Postage Stamps Grid -->
+      <div class="stamps-grid">
+        <img src="assets/stamps/guitar.png" class="stamp-item" title="Indie Guitarist / Emo" alt="Guitar Stamp">
+        <img src="assets/stamps/nihilism.gif" class="stamp-item" title="Nihilism" alt="Nihilism Stamp">
+        <img src="assets/stamps/paranoid.gif" class="stamp-item" title="Paranoid Android" alt="Paranoid Stamp">
+        <img src="assets/stamps/staying_up_late.gif" class="stamp-item" title="Staying Up Late"
+          alt="Staying Up Late Stamp">
+        <img src="assets/stamps/this_is_how_i_feel.gif" class="stamp-item" title="This is How I Feel"
+          alt="Feelings Stamp">
+        <img src="assets/stamps/attitude_problem.png" class="stamp-item" title="Attitude Problem" alt="Attitude Stamp">
+        <img src="assets/stamps/old_web.png" class="stamp-item" title="Old Web 2000s" alt="Old Web Stamp">
+        <img src="assets/stamps/bad_decisions.png" class="stamp-item" title="Pretty Good at Bad Decisions"
+          alt="Bad Decisions Stamp">
+        <img src="assets/stamps/scene_queen.png" class="stamp-item" title="Scene / Emo Era" alt="Scene Emo Stamp">
+        <img src="assets/stamps/glow_in_dark.png" class="stamp-item" title="Glow in the Dark" alt="Glow Stamp">
+        <img src="assets/stamps/stars_stamp.gif" class="stamp-item" title="Glitter Stars" alt="Stars Stamp">
+        <img src="assets/stamps/neocities_stamp.gif" class="stamp-item" title="Neocities Webring" alt="Neocities Stamp">
+        <img src="assets/stamps/listen_to_1.png" class="stamp-item" title="Listen to Real Music 01"
+          alt="Listen Stamp 1">
+        <img src="assets/stamps/listen_to_2.png" class="stamp-item" title="Listen to Real Music 02"
+          alt="Listen Stamp 2">
+        <img src="assets/stamps/listen_to_3.png" class="stamp-item" title="Listen to Real Music 03"
+          alt="Listen Stamp 3">
+        <img src="assets/stamps/listen_to_4.png" class="stamp-item" title="Listen to Real Music 04"
+          alt="Listen Stamp 4">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RateYourMusic Table -->
+  <div class="neo-box" id="rym">
+    <div class="neo-box-header">
+      <span>CRÍTICAS MUSICALES (RATE YOUR MUSIC)</span>
+      <a href="glossary.html" target="_blank" class="header-sublink">Glosario ➔</a>
+    </div>
+    <div class="neo-box-body">
+      <table class="rym-table">
+        <thead>
+          <tr>
+            <th style="width: 28%;">Canción &amp; Portada</th>
+            <th style="width: 18%;">Puntaje RYM</th>
+            <th style="width: 54%;">Reseña Crítica de Jaden</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- 1. Bop to the Top -->
+          <tr>
+            <td>
+              <div class="album-thumb-container">
+                <img src="assets/rym/bop_to_the_top.webp" class="album-mini-art"
+                  alt="Bop to the Top - Sharpay &amp; Ryan" loading="lazy">
+                <div>
+                  <div class="song-title">"Bop to the Top"</div>
+                  <div class="song-artist">Sharpay &amp; Ryan Evans</div>
+                  <div style="color: #666; font-size: 8px;">Audiciones Musical</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="score-badge score-05">0.5 / 5.0</span>
+              <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img
+                    src="assets/icons/star_half.svg" class="rym-star"><img src="assets/icons/star_empty.svg"
+                    class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img
+                    src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg"
+                    class="rym-star"></span> [Bomba]</div>
+            </td>
+            <td>
+              <div class="song-review">
+                «Un insulto descarado a la síncopa cubana y a la tradición del mambo. Sharpay canta como si intentara
+                quebrar cristales con decibelios de histeria y Ryan baila con la motricidad de un juguete a cuerda de
+                club de campo. Tuve que recortar 14dB en los agudos de la consola para evitar hemorragias en el
+                público.»
+              </div>
+            </td>
+          </tr>
+
+          <!-- 2. Get'cha Head in the Game -->
+          <tr>
+            <td>
+              <div class="album-thumb-container">
+                <img src="assets/rym/getcha_head.webp" class="album-mini-art"
+                  alt="Get'cha Head in the Game - Troy Bolton &amp; Wildcats" loading="lazy">
+                <div>
+                  <div class="song-title">"Get'cha Head in the Game"</div>
+                  <div class="song-artist">Troy Bolton &amp; Wildcats</div>
+                  <div style="color: #666; font-size: 8px;">Sesión en el Gimnasio</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="score-badge score-10">1.0 / 5.0</span>
+              <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img
+                    src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_empty.svg"
+                    class="rym-star"><img src="assets/icons/star_empty.svg" class="rym-star"><img
+                    src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg"
+                    class="rym-star"></span> [Infrasónico]</div>
+            </td>
+            <td>
+              <div class="song-review">
+                «Intentaron plagiar la 'Música Concreta' de Pierre Schaeffer usando rechinidos de tenis de básquetbol
+                sobre piso barnizado. La respiración entrecortada de Bolton evidencia hipoxia atlética. La lírica es de
+                una pobreza existencial dolorosa: ¿por qué tu corazón siente que salta? Claramente arritmia por exceso
+                de Gatorade.»
+              </div>
+            </td>
+          </tr>
+
+          <!-- 3. Breaking Free -->
+          <tr>
+            <td>
+              <div class="album-thumb-container">
+                <img src="assets/rym/breaking_free.webp" class="album-mini-art"
+                  alt="Breaking Free - Troy &amp; Gabriella" loading="lazy">
+                <div>
+                  <div class="song-title">"Breaking Free"</div>
+                  <div class="song-artist">Troy &amp; Gabriella</div>
+                  <div style="color: #666; font-size: 8px;">Callbacks Finales</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="score-badge score-25">2.5 / 5.0</span>
+              <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img
+                    src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg"
+                    class="rym-star"><img src="assets/icons/star_half.svg" class="rym-star"><img
+                    src="assets/icons/star_empty.svg" class="rym-star"><img src="assets/icons/star_empty.svg"
+                    class="rym-star"></span> [Mediocre]</div>
+            </td>
+            <td>
+              <div class="song-review">
+                «Fórmula comercial de laboratorio para conmover a masas incultas... Sin embargo, la resolución armónica
+                de Kelsi al pasar al puente modula con una finura que supera por mucho las capacidades de los dos
+                cantantes. Odio admitir que el estribillo se queda clavado en el lóbulo parietal durante semanas.»
+              </div>
+            </td>
+          </tr>
+
+          <!-- 4. Kelsi Solo Demo -->
+          <tr>
+            <td>
+              <div class="album-thumb-container">
+                <img src="assets/rym/kelsi_demo.webp" class="album-mini-art" alt="Piano Soliloquy in Dm - Kelsi Nielsen"
+                  loading="lazy">
+                <div>
+                  <div class="song-title">"Piano Soliloquy in Dm"</div>
+                  <div class="song-artist">Kelsi Nielsen</div>
+                  <div style="color: #666; font-size: 8px;">Copia en Casete #04</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="score-badge score-45">4.5 / 5.0</span>
+              <div style="color: var(--accent-rym-yellow); font-size: 9px;"><span class="rym-stars"><img
+                    src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_full.svg"
+                    class="rym-star"><img src="assets/icons/star_full.svg" class="rym-star"><img
+                    src="assets/icons/star_full.svg" class="rym-star"><img src="assets/icons/star_half.svg"
+                    class="rym-star"></span> [Magnum Opus]</div>
+            </td>
+            <td>
+              <div class="song-review">
+                «Grabada a escondidas con mi micrófono de cañón desde el andamio del techo cuando el auditorio quedó a
+                oscuras. Influencias sutiles de Erik Satie y post-rock instrumental. Si Kelsi dejara de componerle
+                baladas a rubias consentidas y formara un proyecto emo conmigo, este colegio tendría redención.»
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Top 8 -->
+  <div class="neo-box" id="top8">
+    <div class="neo-box-header">
+      <span>TOP 8 DE AMIGOS</span>
+    </div>
+    <div class="neo-box-body">
+      <div class="top8-grid">
+
+        <!-- 1. Jeff Mangum -->
+        <div class="top8-slot">
+          <div class="top8-img-box">
+            <img src="top8_images/top8_jeff.png" alt="Jeff Mangum">
+          </div>
+          <strong class="top8-name">Jeff Mangum</strong>
+          <div class="top8-sub" style="color:var(--accent-rym-yellow);">Neutral Milk Hotel</div>
+        </div>
+
+        <!-- 2. Ian Curtis -->
+        <div class="top8-slot">
+          <div class="top8-img-box">
+            <img src="top8_images/top8_ian.jpg" alt="Ian Curtis / Joy Division">
+          </div>
+          <strong class="top8-name">Ian Curtis</strong>
+          <div class="top8-sub" style="color:var(--accent-rym-yellow);">Joy Division</div>
+        </div>
+
+        <!-- 3. Steve Albini -->
+        <div class="top8-slot">
+          <div class="top8-img-box">
+            <img src="top8_images/top8_albini.jpg" alt="Steve Albini">
+          </div>
+          <strong class="top8-name">Steve Albini</strong>
+          <div class="top8-sub" style="color:var(--accent-rym-yellow);">Pure Analog Hero</div>
+        </div>
+
+        <!-- 4. Kelsi Nielsen -->
+        <div class="top8-slot">
+          <div class="top8-img-box">
+            <img src="top8_images/top8_kelsi.jpg" alt="Kelsi Nielsen">
+          </div>
+          <strong class="top8-name">Kelsi Nielsen</strong>
+          <div class="top8-sub" style="color:#51cf66;">Única salvable</div>
+        </div>
+
+        <!-- 5. Ripper / Cello Skater -->
+        <div class="top8-slot">
+          <div class="top8-img-box">
+            <img src="top8_images/top8_ripper.jpg" alt="Ripper / Skater del Chelo">
+          </div>
+          <strong class="top8-name">Skater del Chelo</strong>
+          <div class="top8-sub" style="color:var(--accent-terminal-cyan);">Ripper / Cello God</div>
+        </div>
+
+        <!-- 6. Technics 1200MK2 -->
+        <div class="top8-slot">
+          <div class="top8-img-box">
+            <img src="top8_images/top8_turntable.jpg" alt="Tocadiscos Technics 1200">
+          </div>
+          <strong class="top8-name">Mi Tocadiscos</strong>
+          <div class="top8-sub" style="color:#aaa;">Technics 1200MK2</div>
+        </div>
+
+        <!-- 7. Black Coffee -->
+        <div class="top8-slot">
+          <div class="top8-img-box">
+            <img src="top8_images/top8_coffee.jpg" alt="Café Negro">
+          </div>
+          <strong class="top8-name">Café Negro Frío</strong>
+          <div class="top8-sub" style="color:#888;">Combustible 4:00 AM</div>
+        </div>
+
+        <!-- 8. Nobody / White Noise -->
+        <div class="top8-slot">
+          <div class="top8-img-box">
+            <img src="top8_images/top8_static.svg" alt="No Signal / Static">
+          </div>
+          <strong class="top8-name" style="color:#666;">Nadie Más</strong>
+          <div class="top8-sub" style="color:#555;">No calificas</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Guestbook -->
+  <div class="neo-box" id="guestbook">
+    <div class="neo-box-header">
+      <span>COMENTARIOS &amp; LIBRO DE VISITAS</span>
+    </div>
+    <div class="neo-box-body">
+
+      <div class="comment-entry">
+        <div class="comment-head">
+          <span class="user user-sharpay">✨ Sharpay_Evans_Official ★ ✨</span>
+          <span>Ayer 16:42</span>
+        </div>
+        <div class="comment-text comment-sharpay">
+          ¡Oye, bicho raro de la cabina! ¡Exijo que borres esa reseña de 'Bop to the Top'! ¡Mi hermano y yo ensayamos
+          esas patadas en sincronía durante un mes! Si mi padre se entera de este sitio inmundo, comprará los equipos de
+          sonido del colegio y los convertirá en secadores para mis caniches. XOXO.
+        </div>
+        <div class="jaden-retort">
+          <strong>Jaden:</strong> Sharpay, no existe compresor ni ecualizador en este planeta capaz de camuflar tus
+          agudos estridentes. Sigue bailando con Ryan, los reflectores te tapan la vista.
+        </div>
+      </div>
+
+      <div class="comment-entry">
+        <div class="comment-head">
+          <span class="user user-chad">🏀 CHAD_DANFORTH#8_WILDCATS 🏀</span>
+          <span>Ayer 18:15</span>
+        </div>
+        <div class="comment-text comment-chad">
+          bro por qué usas palabras tan largas para decir que no sabes encestar un triple? Mañana tenemos final contra
+          West High, deja de poner música de velorio en los altavoces de los vestidores.
+        </div>
+        <div class="jaden-retort">
+          <strong>Jaden:</strong> Chad, lo que llamas 'música de velorio' era un cuarteto de cuerdas en compás 5/4.
+          Entiendo que contar hasta cinco supere la capacidad cognitiva del equipo de básquetbol.
+        </div>
+      </div>
+
+      <div class="comment-entry">
+        <div class="comment-head">
+          <span class="user user-kelsi">♫ Kelsi_Composer ♫</span>
+          <span>Hoy 08:30</span>
+        </div>
+        <div class="comment-text comment-kelsi">
+          Hola Jaden... gracias por calibrar el retorno de mi piano ayer. Y... leí tu reseña sobre mi solo. ¿De verdad
+          crees que la modulación era sutil? Nunca nadie me había dicho eso en East High.
+        </div>
+        <div class="jaden-retort">
+          <strong>Jaden:</strong> No te acostumbres a los halagos, Nielsen. Solo digo que estás tirando tu talento a la
+          basura componiendo himnos para gente que baila sobre mesas de cafetería.
+        </div>
+      </div>
+
+      <!-- Comment Form -->
+      <form class="comment-box-form" onsubmit="event.preventDefault(); submitComment();">
+        <input type="text" id="guestName" placeholder="Tu nombre / Nickname de East High..." required>
+        <textarea id="guestMsg" rows="2"
+          placeholder="Déjale un comentario o insulto a Jaden (responderá automáticamente)..." required></textarea>
+        <button type="submit" class="btn-post">Publicar en el Libro de Visitas</button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Webrings with Custom Alerts -->
+  <div class="webring-cluster">
+    <div class="webring-title">♰ MIDWEST EMO &amp; MISUNDERSTOOD SOUND TECHS WEBRING ♰</div>
+    <p style="color:#777; font-size:9px;">Eres el sitio #042 en este anillo de la web profunda de 2007</p>
+    <div class="webring-nav">
+      <a
+        onclick="showRetroAlert('WEBRING // NAVEGACIÓN 2007', 'Conectando vía dial-up con el nodo anterior:\n[xX_kurt_cobain_shrine_03_Xx] ... Servidor GeoCities en línea.', 'globe')"><img
+          src="assets/icons/globe.svg" class="webring-icon" alt="Globe"> « Sitio Anterior</a>
+      <a
+        onclick="showRetroAlert('WEBRING // NAVEGACIÓN ALEATORIA', 'Redirigiendo a nodo aleatorio del anillo:\n[slint-and-spiderland-fanpage.neocities.org] ... Conexión cifrada establecida.', 'dice')"><img
+          src="assets/icons/dice.svg" class="webring-icon" alt="Dice"> [ ? ] Aleatorio</a>
+      <a
+        onclick="showRetroAlert('WEBRING // NAVEGACIÓN 2007', 'Conectando con el siguiente sitio del anillo:\n[tape-recorder-hiss-society] ... Transmitiendo paquete de datos FLAC.', 'globe')">Sitio
+        Siguiente » <img src="assets/icons/globe.svg" class="webring-icon" alt="Globe"></a>
+    </div>
+  </div>
+
+  </main>
+
+  </div>
+
+  <!-- 88x31 Badges -->
+  <div class="buttons-88x31-rack">
+    <img src="assets/badges/winamp.gif" class="badge-88x31" alt="Winamp"
+      title="Winamp - It Really Whips The Llama's Ass">
+    <img src="assets/badges/winamp2.gif" class="badge-88x31" alt="Winamp v2" title="Winamp 2.x Audio Engine">
+    <img src="assets/badges/cassette.gif" class="badge-88x31" alt="Cassette" title="Analogue Cassette Culture">
+    <img src="assets/badges/dailymp3.gif" class="badge-88x31" alt="Daily MP3" title="Daily MP3 Underground Blog">
+    <img src="assets/badges/cd_rom.gif" class="badge-88x31" alt="CD-ROM" title="Compact Disc Audio">
+    <img src="assets/badges/realaudio.gif" class="badge-88x31" alt="RealAudio" title="RealAudio 28.8k Streaming">
+    <img src="assets/badges/radio-pixel-88x31.gif" class="badge-88x31" alt="College Radio" title="Indie College Radio">
+    <img src="assets/badges/boombarmusic.gif" class="badge-88x31" alt="Boombar Music" title="Boombar Music">
+    <img src="assets/badges/mp3com.gif" class="badge-88x31" alt="MP3.com" title="MP3.com Classic">
+    <img src="assets/badges/underground.gif" class="badge-88x31" alt="Underground" title="Underground Net">
+    <img src="assets/badges/jurassicpunk.gif" class="badge-88x31" alt="Jurassic Punk" title="Punk / DIY Hardcore">
+    <img src="assets/badges/piracy.gif" class="badge-88x31" alt="Home Taping"
+      title="Home Taping is Killing Music... And It's Fun">
+    <img src="assets/badges/notepad.gif" class="badge-88x31" alt="Notepad" title="Coded in Microsoft Notepad">
+    <img src="assets/badges/notepadpp.gif" class="badge-88x31" alt="Notepad++" title="Notepad++ Syntax">
+    <img src="assets/badges/firefox2.gif" class="badge-88x31" alt="Firefox 2.0"
+      title="Best Viewed with Mozilla Firefox 2.0">
+    <img src="assets/badges/geocities.gif" class="badge-88x31" alt="GeoCities" title="GeoCities Archived Site">
+    <img src="assets/badges/neocities.gif" class="badge-88x31" alt="Neocities" title="Powered by Neocities">
+    <img src="assets/badges/myspace.gif" class="badge-88x31" alt="MySpace" title="Find Me on MySpace">
+    <img src="assets/badges/coffee.gif" class="badge-88x31" alt="Coffee" title="Dark Roast Audio Fuel">
+    <img src="assets/badges/acidicdarkness.gif" class="badge-88x31" alt="Acidic Darkness" title="Dark Room Acoustics">
+    <img src="assets/badges/hatems.gif" class="badge-88x31" alt="Hate MS" title="Anti-Proprietary Formats">
+    <img src="assets/badges/jetaudio.gif" class="badge-88x31" alt="JetAudio" title="JetAudio Media Player">
+  </div>
+
+  <!-- Footer -->
+  <footer class="neo-footer">
+    <p>© 2007 JADEN VANCE // EAST HIGH AUDITORIUM SOUND BOOTH // ALBUQUERQUE, NM</p>
+    <p style="margin-top: 4px; font-size: 9px; color: #555;">
+      Optimizado para resolución de 1024x768. Si usas Internet Explorer, hazle un favor al mundo y bórralo.
+    </p>
+    <div>
+      VISITAS REGISTRADAS: <span class="counter-screen">005184</span>
+    </div>
+  </footer>
 
   <!-- ================= MSN MESSENGER 7.5 FLOATING CHAT WIDGET ================= -->
   <div id="msnLauncher" class="msn-launcher" onclick="toggleMsnWindow()">
@@ -2683,7 +3119,8 @@
     <!-- User Status Header -->
     <div class="msn-contact-header">
       <div class="msn-nick">
-        <span class="msn-online-dot">●</span> <strong>♰ · [ J a d e n ] · ♰</strong> <span class="msn-nick-sub">(L) (U) ·· [Escuchando: American Football - Never Meant] ·· (¬_¬)</span>
+        <span class="msn-online-dot">●</span> <strong>♰ · [ J a d e n ] · ♰</strong> <span class="msn-nick-sub">(L) (U)
+          ·· [Escuchando: American Football - Never Meant] ·· (¬_¬)</span>
       </div>
       <div class="msn-status-msg">&lt;Estado: En la cabina de audio // No me busquen en el gimnasio&gt;</div>
     </div>
@@ -2700,23 +3137,27 @@
               <span class="msn-sender-name">♰ · [ J a d e n ] · ♰</span> dice:
             </div>
             <div class="msn-msg-body">
-              ¿Qué quieres? Estoy calibrando la mesa de mezcla del auditorio. Si vienes a hablar del pep rally o de los solos de Troy Bolton, mejor desconéctate ya.
+              ¿Qué quieres? Estoy calibrando la mesa de mezcla del auditorio. Si vienes a hablar del pep rally o de los
+              solos de Troy Bolton, mejor desconéctate ya.
             </div>
           </div>
         </div>
 
         <!-- Action & Formatting Toolbar -->
         <div class="msn-toolbar">
-          <button type="button" class="msn-tool-btn" title="Formato de Fuente"><span style="font-family:serif;font-weight:bold;">A</span> Fuente</button>
+          <button type="button" class="msn-tool-btn" title="Formato de Fuente"><span
+              style="font-family:serif;font-weight:bold;">A</span> Fuente</button>
           <button type="button" class="msn-tool-btn" title="Emoticonos">☺ Emoticonos</button>
-          <button type="button" class="msn-nudge-btn" id="msnNudgeBtn" onclick="sendMsnNudge()" title="¡Enviar un Zumbido!">
+          <button type="button" class="msn-nudge-btn" id="msnNudgeBtn" onclick="sendMsnNudge()"
+            title="¡Enviar un Zumbido!">
             <span class="nudge-icon">(!)</span> <strong>Zumbido</strong>
           </button>
         </div>
 
         <!-- Input and Send Box -->
         <div class="msn-input-row">
-          <textarea id="msnInput" class="msn-input-box" placeholder="Escribe un mensaje aquí..." rows="2" onkeydown="handleMsnKey(event)"></textarea>
+          <textarea id="msnInput" class="msn-input-box" placeholder="Escribe un mensaje aquí..." rows="2"
+            onkeydown="handleMsnKey(event)"></textarea>
           <button type="button" class="msn-send-btn" onclick="sendMsnMessage()">Enviar</button>
         </div>
         <div class="msn-typing-status" id="msnTypingStatus"></div>
@@ -2749,38 +3190,45 @@
   </div>
 
   <!-- ================= MODAL: MENSAJE RIZZO ================= -->
-  <dialog id="rizzoModal" closedby="any" style="background:#0e1017; border:2px solid #f8c025; box-shadow:0 0 30px rgba(0,0,0,0.9); max-width:580px; width:92%; padding:0; color:#fff; border-radius:3px;">
-    <div style="background:#1a1406; border-bottom:1px solid #f8c025; padding:8px 12px; display:flex; justify-content:space-between; align-items:center;">
-      <span style="font-family:var(--font-mono); font-size:11px; font-weight:bold; color:#f8c025; letter-spacing:0.5px;">
+  <dialog id="rizzoModal" closedby="any"
+    style="background:#0e1017; border:2px solid #f8c025; box-shadow:0 0 30px rgba(0,0,0,0.9); max-width:580px; width:92%; padding:0; color:#fff; border-radius:3px;">
+    <div
+      style="background:#1a1406; border-bottom:1px solid #f8c025; padding:8px 12px; display:flex; justify-content:space-between; align-items:center;">
+      <span
+        style="font-family:var(--font-mono); font-size:11px; font-weight:bold; color:#f8c025; letter-spacing:0.5px;">
         ✉ [ MENSAJE RIZZO // NOTA PERSONAL ]
       </span>
-      <span onclick="closeRizzoModal()" style="cursor:pointer; color:#f8c025; font-family:var(--font-mono); font-weight:bold; padding:0 4px; font-size:13px;">✕</span>
+      <span onclick="closeRizzoModal()"
+        style="cursor:pointer; color:#f8c025; font-family:var(--font-mono); font-weight:bold; padding:0 4px; font-size:13px;">✕</span>
     </div>
-    <div style="padding:16px 18px;">
-      <div style="background: rgba(248, 192, 37, 0.1); border: 1px dashed #f8c025; color: #ffd152; font-family: var(--font-pixel); font-size: 9.5px; padding: 7px 10px; margin-bottom: 12px; letter-spacing: 0.5px; line-height: 1.5;">
+    <div style="padding:18px;">
+      <!-- Aviso post-lectura -->
+      <div style="background: rgba(248, 192, 37, 0.12); border: 1px dashed #f8c025; color: #ffd152; font-family: var(--font-pixel); font-size: 9.5px; padding: 8px 12px; margin-bottom: 14px; letter-spacing: 0.5px; line-height: 1.5;">
         ⚠️ !!! LEELO POST DE VER LOS DEMAS LOL <span style="color:#e0e4f0;">(Si te falta ver expediente oc y glosario musical es recomendable xdddd)</span>
       </div>
 
-      <div style="background:#06070a; border:1px dashed #6b5015; padding:16px 18px; border-radius:2px; font-family:var(--font-journal); font-size:13.5px; line-height:1.75; color:#e4e7f5;">
+      <div id="rizzoModalBody"
+        style="background:#06070a; border:1px dashed #6b5015; padding:16px 18px; border-radius:2px; font-family:var(--font-journal); font-size:13.5px; line-height:1.75; color:#e4e7f5;">
         <p style="margin-bottom: 12px;">
-          Bueno, que no estoy en casa ahora LOL asi que dejo este mensaje, ojala hayan disfrutado de esta pagina yaque mis habilidades de dibujo son nulas LOL LMFAO XD añaskd 
+          Bueno, que no estoy en casa ahora LOL asi que dejo este mensaje, ojala hayan disfrutado de esta pagina yaque mis habilidades de dibujo son nulas LOL LMFAO XD añaskd.
         </p>
         <p style="margin-bottom: 12px;">
           Ojala hayan interactuado con todo lo de la pagina siendo el reproductor musical, el msn con el zumbnido, la nota en el libro de visitas,etc... <span style="color:#ff6088; font-weight:bold;">:C</span>
         </p>
         <p style="margin-bottom: 12px;">
-          me acuerdo haber visto hsm muy de chico asi que tengo pocos recuerdos de, pero ojala haber hecho un oc que encaje con el mundo (supongo que alguien que le sepa dira si es acorde o no )
+          me acuerdo haber visto hsm muy de chico asi que tengo pocos recuerdos de, pero ojala haber hecho un oc que encaje con el mundo (supongo que alguien que le sepa dira si es acorde o no ).
         </p>
         <p style="margin-bottom: 12px;">
-          eso, despues veo el vod y tal (o obligo a un pudu a decirme que onda)
+          eso, despues veo el vod y tal (o obligo a un pudu a decirme que onda).
         </p>
-        <p style="margin-top: 14px; color: #f8c025; font-weight: bold; font-family: var(--font-mono); font-size: 12px; border-top: 1px dashed #3a2b0a; padding-top: 8px;">
+        <p style="margin-top: 16px; color: #f8c025; font-weight: bold; font-family: var(--font-mono); font-size: 12px; border-top: 1px dashed #3a2b0a; padding-top: 10px;">
           ♰ un saluditoooooooo ~ Rizzo ♰
         </p>
       </div>
 
-      <div style="margin-top:14px; text-align:right;">
-        <button type="button" onclick="closeRizzoModal()" style="background:#1a1406; border:1px solid #f8c025; color:#f8c025; font-family:var(--font-mono); font-size:10px; font-weight:bold; padding:5px 16px; cursor:pointer;">
+      <div style="margin-top:16px; text-align:right;">
+        <button type="button" onclick="closeRizzoModal()"
+          style="background:#1a1406; border:1px solid #f8c025; color:#f8c025; font-family:var(--font-mono); font-size:10px; font-weight:bold; padding:5px 16px; cursor:pointer;">
           [ CERRAR MENSAJE ]
         </button>
       </div>
@@ -2789,20 +3237,27 @@
 
   <!-- ================= SECRET MODAL (EASTER EGG) ================= -->
   <dialog id="secretVault" closedby="any">
-    <div style="color: #ff3366; font-size: 13px; font-weight: bold; border-bottom: 1px dashed #ff3366; padding-bottom: 5px; margin-bottom: 10px;">
-      <img src="assets/icons/warning.svg" class="inline-pixel-icon" style="width:16px;height:16px;vertical-align:-3px;" alt="!"> ARCHIVO CONFIDENCIAL // PARTICIÓN OCULTA WINDOWS XP
+    <div
+      style="color: #ff3366; font-size: 13px; font-weight: bold; border-bottom: 1px dashed #ff3366; padding-bottom: 5px; margin-bottom: 10px;">
+      <img src="assets/icons/warning.svg" class="inline-pixel-icon" style="width:16px;height:16px;vertical-align:-3px;"
+        alt="!"> ARCHIVO CONFIDENCIAL // PARTICIÓN OCULTA WINDOWS XP
     </div>
     <div style="font-size: 11px; line-height: 1.6; color: #d0d4e4;">
-      <p style="background: #000; padding: 8px; border: 1px solid #333; color: var(--accent-neon-green); margin-bottom: 10px;">
+      <p
+        style="background: #000; padding: 8px; border: 1px solid #333; color: var(--accent-neon-green); margin-bottom: 10px;">
         RUTA: <code>C:\WINDOWS\system32\do_not_open\breaking_free_acoustic.flac</code><br>
         PESO: 38.4 MB (Grabado con micrófono de condensador oculto)
       </p>
       <p style="color: #fff;">
         <strong>NOTA PEGADA CON CINTA AISLANTE NEGRA:</strong><br>
-        <em>«Si estás leyendo esto, lograste pasar la contraseña de mi BIOS. Si te atreves a decirle a Chad, a Troy o a Sharpay que me sé la segunda voz completa de 'Breaking Free' y que tengo el póster del musical doblado en cuatro detrás de mi vinilo de Joy Division... desconectaré los micrófonos inalámbricos durante el segundo cuarto de la final del campeonato. No me desafíes. — Jaden.»</em>
+        <em>«Si estás leyendo esto, lograste pasar la contraseña de mi BIOS. Si te atreves a decirle a Chad, a Troy o a
+          Sharpay que me sé la segunda voz completa de 'Breaking Free' y que tengo el póster del musical doblado en
+          cuatro detrás de mi vinilo de Joy Division... desconectaré los micrófonos inalámbricos durante el segundo
+          cuarto de la final del campeonato. No me desafíes. — Jaden.»</em>
       </p>
       <div style="margin-top: 15px; text-align: right;">
-        <button onclick="document.getElementById('secretVault').close()" style="background:#222; border:1px solid #666; color:#fff; font-family:var(--font-mono); font-size:10px; padding:4px 10px; cursor:pointer;">
+        <button onclick="document.getElementById('secretVault').close()"
+          style="background:#222; border:1px solid #666; color:#fff; font-family:var(--font-mono); font-size:10px; padding:4px 10px; cursor:pointer;">
           [ CERRAR Y GUARDAR SILENCIO ]
         </button>
       </div>
@@ -2812,8 +3267,10 @@
   <!-- ================= AUTHENTIC RETRO MODAL ALERT (WINDOWS XP / 2000s) ================= -->
   <dialog id="retroAlertModal" closedby="any">
     <div class="retro-alert-titlebar">
-      <span id="retroAlertTitle"><img src="assets/icons/warning.svg" id="retroAlertTitleIcon" class="inline-pixel-icon" style="width:13px;height:13px;vertical-align:-2px;" alt="!"> ALERTA DE SISTEMA // JADEN_OS</span>
-      <span onclick="closeRetroAlert()" style="cursor:pointer; color:#fff; font-family:var(--font-mono); padding:0 3px;">✕</span>
+      <span id="retroAlertTitle"><img src="assets/icons/warning.svg" id="retroAlertTitleIcon" class="inline-pixel-icon"
+          style="width:13px;height:13px;vertical-align:-2px;" alt="!"> ALERTA DE SISTEMA // JADEN_OS</span>
+      <span onclick="closeRetroAlert()"
+        style="cursor:pointer; color:#fff; font-family:var(--font-mono); padding:0 3px;">✕</span>
     </div>
     <div class="retro-alert-body">
       <div class="retro-alert-icon-box" id="retroAlertIcon">
@@ -2834,7 +3291,7 @@
       isCrtActive = !isCrtActive;
       const crt = document.getElementById('crtOverlay');
       const btn = document.getElementById('crtToggleBtn');
-      
+
       if (isCrtActive) {
         crt.classList.remove('crt-off');
         if (btn) {
@@ -3069,7 +3526,7 @@
 
         osc.start(now);
         osc.stop(now + 0.2);
-      } catch (e) {}
+      } catch (e) { }
     }
 
     const retroIconMap = {
@@ -3448,7 +3905,7 @@
             for (let k = 0; k < 16; k++) {
               if (freqData[k] > 0) { hasRealSignal = true; break; }
             }
-          } catch (e) {}
+          } catch (e) { }
         }
 
         // Draw each of the 16 frequency channels
@@ -3524,7 +3981,7 @@
             for (let k = 0; k < 64; k++) {
               if (Math.abs(timeData[k] - 128) > 2) { hasWaveSignal = true; break; }
             }
-          } catch (e) {}
+          } catch (e) { }
         }
 
         if (!hasWaveSignal) {
@@ -3580,7 +4037,7 @@
 
       try {
         localStorage.setItem('jaden_winamp_skin', skinName);
-      } catch (e) {}
+      } catch (e) { }
     }
 
     function initWinampSkin() {
@@ -3631,7 +4088,7 @@
           osc.start(startTime);
           osc.stop(startTime + 0.2);
         });
-      } catch (e) {}
+      } catch (e) { }
     }
 
     // MSN Nudge double vibration buzz
@@ -3653,7 +4110,7 @@
           osc.start(startTime);
           osc.stop(startTime + 0.11);
         });
-      } catch (e) {}
+      } catch (e) { }
     }
 
     // MSN Login sound
@@ -3673,7 +4130,7 @@
         gain.connect(ctx.destination);
         osc.start(now);
         osc.stop(now + 0.26);
-      } catch (e) {}
+      } catch (e) { }
     }
 
     function toggleMsnWindow() {
@@ -3880,4 +4337,5 @@
   </script>
 
 </body>
+
 </html>
