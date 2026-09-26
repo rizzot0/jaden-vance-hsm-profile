@@ -44,6 +44,15 @@
       --font-critic: 'Georgia', 'Palatino Linotype', serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #mensaje-rizzo:target {
+      border-color: #f8c025 !important;
+      box-shadow: 0 0 16px rgba(248, 192, 37, 0.45);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -2007,9 +2016,9 @@
     <!-- Navigation Header -->
     <nav class="retro-nav">
       <div class="retro-nav-links">
-        <a href="character.html" target="_blank" style="background:#200710; border:1px solid #ff4d6d; color:#fff; font-weight:bold; padding:2px 7px; text-decoration:none;">👤 [ EXPEDIENTE OC ]</a>
-        <a href="glossary.html" target="_blank" style="background:#071820; border:1px solid #5ef1f2; color:#5ef1f2; font-weight:bold; padding:2px 7px; text-decoration:none;">📖 [ GLOSARIO MUSICAL ]</a>
-        <a href="#mensaje-personal">♰ /mensaje-personal</a>
+        <a href="character.html" target="_blank" style="background:#200710; border:1px solid #ff4d6d; color:#fff; font-weight:bold; padding:2px 7px; text-decoration:none;">👤 [ expediente oc ]</a>
+        <a href="glossary.html" target="_blank" style="background:#071820; border:1px solid #5ef1f2; color:#5ef1f2; font-weight:bold; padding:2px 7px; text-decoration:none;">📖 [ glosario musical ]</a>
+        <a href="#mensaje-rizzo" onclick="openRizzoModal()" style="background:#181206; border:1px solid #f8c025; color:#f8c025; font-weight:bold; padding:2px 7px; text-decoration:none; cursor:pointer;">✉ [ mensaje rizzo ]</a>
         <a href="#about">♰ /about-me</a>
         <a href="#photos">♰ /photo-dump</a>
         <a href="#bag">♰ /bag-tour</a>
@@ -2219,16 +2228,17 @@
   [ EAST HIGH AUDITORIUM // FRECUENCIA PIRATA // NO POP EN LA DUELA ]
         </div>
 
-        <!-- Mensaje Personal -->
-        <div class="neo-box" id="mensaje-personal" style="margin-bottom: 15px;">
-          <div class="neo-box-header">
-            <span>MENSAJE PERSONAL</span>
+        <!-- Mensaje Rizzo -->
+        <div class="neo-box" id="mensaje-rizzo" style="margin-bottom: 15px; scroll-margin-top: 50px;">
+          <div class="neo-box-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <span>MENSAJE RIZZO</span>
+            <button type="button" onclick="openRizzoModal()" style="background:#1a1406; border:1px solid #f8c025; color:#f8c025; font-family:var(--font-pixel); font-size:8px; padding:2px 6px; cursor:pointer;" title="Abrir en ventana emergente">[ ❐ POPUP ]</button>
           </div>
           <div class="neo-box-body">
-            <div style="background: #090b10; border: 1px dashed var(--border-dotted); padding: 14px 16px; border-radius: 2px;">
-              <p style="margin: 0; min-height: 28px; color: #e4e7f5; font-family: var(--font-journal); font-size: 13.5px; line-height: 1.7;">
+            <div style="background: #090b10; border: 1px dashed #6b5015; padding: 14px 16px; border-radius: 2px;">
+              <p id="rizzoMessageText" style="margin: 0; min-height: 32px; color: #e4e7f5; font-family: var(--font-journal); font-size: 13.5px; line-height: 1.7;">
                 <!-- ========================================================
-                     ESPACIO PARA MENSAJE PERSONAL:
+                     ESPACIO PARA MENSAJE DE RIZZO:
                      Escribe o pega aquí tu texto cuando quieras.
                      ======================================================== -->
                 
@@ -2757,6 +2767,26 @@
     </div>
   </div>
 
+  <!-- ================= MODAL: MENSAJE RIZZO ================= -->
+  <dialog id="rizzoModal" closedby="any" style="background:#0e1017; border:2px solid #f8c025; box-shadow:0 0 25px rgba(0,0,0,0.85); max-width:540px; width:92%; padding:0; color:#fff; border-radius:3px;">
+    <div style="background:#1a1406; border-bottom:1px solid #f8c025; padding:8px 12px; display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-family:var(--font-mono); font-size:11px; font-weight:bold; color:#f8c025; letter-spacing:0.5px;">
+        ✉ [ MENSAJE RIZZO // NOTA PERSONAL ]
+      </span>
+      <span onclick="closeRizzoModal()" style="cursor:pointer; color:#f8c025; font-family:var(--font-mono); font-weight:bold; padding:0 4px; font-size:13px;">✕</span>
+    </div>
+    <div style="padding:16px;">
+      <div id="rizzoModalBody" style="background:#06070a; border:1px dashed #6b5015; padding:14px 16px; border-radius:2px; font-family:var(--font-journal); font-size:13.5px; line-height:1.7; color:#e4e7f5; min-height:50px;">
+        <!-- El contenido se sincroniza automáticamente desde #rizzoMessageText -->
+      </div>
+      <div style="margin-top:14px; text-align:right;">
+        <button type="button" onclick="closeRizzoModal()" style="background:#1a1406; border:1px solid #f8c025; color:#f8c025; font-family:var(--font-mono); font-size:10px; font-weight:bold; padding:4px 14px; cursor:pointer;">
+          [ CERRAR ]
+        </button>
+      </div>
+    </div>
+  </dialog>
+
   <!-- ================= SECRET MODAL (EASTER EGG) ================= -->
   <dialog id="secretVault" closedby="any">
     <div style="color: #ff3366; font-size: 13px; font-weight: bold; border-bottom: 1px dashed #ff3366; padding-bottom: 5px; margin-bottom: 10px;">
@@ -3098,6 +3128,39 @@
     function closeRetroAlert() {
       const modal = document.getElementById('retroAlertModal');
       modal.close();
+    }
+
+    // Rizzo Personal Message Modal Handlers
+    function openRizzoModal() {
+      const textEl = document.getElementById('rizzoMessageText');
+      const modalBody = document.getElementById('rizzoModalBody');
+      if (textEl && modalBody) {
+        modalBody.innerHTML = textEl.innerHTML;
+      }
+      const modal = document.getElementById('rizzoModal');
+      if (modal && typeof modal.showModal === 'function') {
+        modal.showModal();
+      }
+    }
+
+    function closeRizzoModal() {
+      const modal = document.getElementById('rizzoModal');
+      if (modal) modal.close();
+    }
+
+    const rizzoModal = document.getElementById('rizzoModal');
+    if (rizzoModal) {
+      rizzoModal.addEventListener('click', (e) => {
+        const rect = rizzoModal.getBoundingClientRect();
+        if (
+          e.clientX < rect.left ||
+          e.clientX > rect.right ||
+          e.clientY < rect.top ||
+          e.clientY > rect.bottom
+        ) {
+          closeRizzoModal();
+        }
+      });
     }
 
     // Close modal if user clicks on the backdrop
