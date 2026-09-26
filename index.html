@@ -1987,8 +1987,8 @@
 </head>
 <body>
 
-  <!-- Toggleable CRT Scanlines Overlay -->
-  <div class="crt-overlay" id="crtOverlay"></div>
+  <!-- Toggleable CRT Scanlines Overlay (Default: OFF) -->
+  <div class="crt-overlay crt-off" id="crtOverlay"></div>
 
   <div class="neocities-wrapper">
 
@@ -2009,6 +2009,7 @@
       <div class="retro-nav-links">
         <a href="character.html" target="_blank" style="background:#200710; border:1px solid #ff4d6d; color:#fff; font-weight:bold; padding:2px 7px; text-decoration:none;">👤 [ EXPEDIENTE OC ]</a>
         <a href="glossary.html" target="_blank" style="background:#071820; border:1px solid #5ef1f2; color:#5ef1f2; font-weight:bold; padding:2px 7px; text-decoration:none;">📖 [ GLOSARIO MUSICAL ]</a>
+        <a href="#mensaje-personal">♰ /mensaje-personal</a>
         <a href="#about">♰ /about-me</a>
         <a href="#photos">♰ /photo-dump</a>
         <a href="#bag">♰ /bag-tour</a>
@@ -2019,7 +2020,7 @@
         <a href="javascript:void(0)" onclick="document.getElementById('secretVault').showModal()" style="color:#ff3b66;">[!] /secret_confession.txt</a>
       </div>
       <div style="display:flex; gap:6px;">
-        <button class="crt-toggle-btn crt-active" id="crtToggleBtn" onclick="toggleCRT()">● CRT: ON</button>
+        <button class="crt-toggle-btn" id="crtToggleBtn" onclick="toggleCRT()">○ CRT: OFF</button>
         <button class="crt-toggle-btn trail-active" id="trailToggleBtn" onclick="toggleCursorTrail()">● SPARKLES: ON</button>
       </div>
     </nav>
@@ -2216,6 +2217,24 @@
   ____) | (_) | |_| | | | | (_| |   | |_) | (_) | (_) | |_| | | |
  |_____/ \___/ \__,_|_| |_|\__,_|   |____/ \___/ \___/ \__|_| |_|
   [ EAST HIGH AUDITORIUM // FRECUENCIA PIRATA // NO POP EN LA DUELA ]
+        </div>
+
+        <!-- Mensaje Personal -->
+        <div class="neo-box" id="mensaje-personal" style="margin-bottom: 15px;">
+          <div class="neo-box-header">
+            <span>MENSAJE PERSONAL</span>
+          </div>
+          <div class="neo-box-body">
+            <div style="background: #090b10; border: 1px dashed var(--border-dotted); padding: 14px 16px; border-radius: 2px;">
+              <p style="margin: 0; min-height: 28px; color: #e4e7f5; font-family: var(--font-journal); font-size: 13.5px; line-height: 1.7;">
+                <!-- ========================================================
+                     ESPACIO PARA MENSAJE PERSONAL:
+                     Escribe o pega aquí tu texto cuando quieras.
+                     ======================================================== -->
+                
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Manifesto / Headline -->
@@ -2779,8 +2798,8 @@
 
   <!-- ================= SCRIPTS & PROCEDURAL AUDIO ================= -->
   <script>
-    // CRT Television Scanline Toggle
-    let isCrtActive = true;
+    // CRT Television Scanline Toggle (Default: OFF)
+    let isCrtActive = false;
     function toggleCRT() {
       isCrtActive = !isCrtActive;
       const crt = document.getElementById('crtOverlay');

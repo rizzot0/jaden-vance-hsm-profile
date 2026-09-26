@@ -444,8 +444,8 @@
 
 <body>
 
-  <!-- Toggleable CRT Overlay -->
-  <div class="crt-overlay" id="crtOverlay"></div>
+  <!-- Toggleable CRT Overlay (Default: OFF) -->
+  <div class="crt-overlay crt-off" id="crtOverlay"></div>
 
   <div class="wrapper">
 
@@ -457,7 +457,7 @@
         <a href="glossary.html" class="nav-tab">📖 GLOSARIO MUSICAL // RYM GUIDE</a>
       </div>
       <div style="display:flex; gap:6px;">
-        <button class="crt-btn active" id="crtToggleBtn" onclick="toggleCRT()">● CRT: ON</button>
+        <button class="crt-btn" id="crtToggleBtn" onclick="toggleCRT()">○ CRT: OFF</button>
         <button class="crt-btn active" id="trailToggleBtn" onclick="toggleCursorTrail()">● SPARKLES: ON</button>
       </div>
     </header>
@@ -730,8 +730,8 @@
 
   <!-- Scripts -->
   <script>
-    // CRT Toggle
-    let isCrtActive = true;
+    // CRT Toggle (Default: OFF)
+    let isCrtActive = false;
     function toggleCRT() {
       isCrtActive = !isCrtActive;
       const crt = document.getElementById('crtOverlay');
