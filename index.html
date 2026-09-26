@@ -2018,7 +2018,7 @@
       <div class="retro-nav-links">
         <a href="character.html" target="_blank" style="background:#200710; border:1px solid #ff4d6d; color:#fff; font-weight:bold; padding:2px 7px; text-decoration:none;">👤 [ expediente oc ]</a>
         <a href="glossary.html" target="_blank" style="background:#071820; border:1px solid #5ef1f2; color:#5ef1f2; font-weight:bold; padding:2px 7px; text-decoration:none;">📖 [ glosario musical ]</a>
-        <a href="#mensaje-rizzo" onclick="openRizzoModal()" style="background:#181206; border:1px solid #f8c025; color:#f8c025; font-weight:bold; padding:2px 7px; text-decoration:none; cursor:pointer;">✉ [ mensaje rizzo ]</a>
+        <a href="javascript:void(0)" onclick="openRizzoModal()" style="background:#181206; border:1px solid #f8c025; color:#f8c025; font-weight:bold; padding:2px 7px; text-decoration:none; cursor:pointer;">✉ [ mensaje rizzo ]</a>
         <a href="#about">♰ /about-me</a>
         <a href="#photos">♰ /photo-dump</a>
         <a href="#bag">♰ /bag-tour</a>
@@ -2226,25 +2226,6 @@
   ____) | (_) | |_| | | | | (_| |   | |_) | (_) | (_) | |_| | | |
  |_____/ \___/ \__,_|_| |_|\__,_|   |____/ \___/ \___/ \__|_| |_|
   [ EAST HIGH AUDITORIUM // FRECUENCIA PIRATA // NO POP EN LA DUELA ]
-        </div>
-
-        <!-- Mensaje Rizzo -->
-        <div class="neo-box" id="mensaje-rizzo" style="margin-bottom: 15px; scroll-margin-top: 50px;">
-          <div class="neo-box-header" style="display:flex; justify-content:space-between; align-items:center;">
-            <span>MENSAJE RIZZO</span>
-            <button type="button" onclick="openRizzoModal()" style="background:#1a1406; border:1px solid #f8c025; color:#f8c025; font-family:var(--font-pixel); font-size:8px; padding:2px 6px; cursor:pointer;" title="Abrir en ventana emergente">[ ❐ POPUP ]</button>
-          </div>
-          <div class="neo-box-body">
-            <div style="background: #090b10; border: 1px dashed #6b5015; padding: 14px 16px; border-radius: 2px;">
-              <p id="rizzoMessageText" style="margin: 0; min-height: 32px; color: #e4e7f5; font-family: var(--font-journal); font-size: 13.5px; line-height: 1.7;">
-                <!-- ========================================================
-                     ESPACIO PARA MENSAJE DE RIZZO:
-                     Escribe o pega aquí tu texto cuando quieras.
-                     ======================================================== -->
-                
-              </p>
-            </div>
-          </div>
         </div>
 
         <!-- Manifesto / Headline -->
@@ -2768,20 +2749,39 @@
   </div>
 
   <!-- ================= MODAL: MENSAJE RIZZO ================= -->
-  <dialog id="rizzoModal" closedby="any" style="background:#0e1017; border:2px solid #f8c025; box-shadow:0 0 25px rgba(0,0,0,0.85); max-width:540px; width:92%; padding:0; color:#fff; border-radius:3px;">
+  <dialog id="rizzoModal" closedby="any" style="background:#0e1017; border:2px solid #f8c025; box-shadow:0 0 30px rgba(0,0,0,0.9); max-width:580px; width:92%; padding:0; color:#fff; border-radius:3px;">
     <div style="background:#1a1406; border-bottom:1px solid #f8c025; padding:8px 12px; display:flex; justify-content:space-between; align-items:center;">
       <span style="font-family:var(--font-mono); font-size:11px; font-weight:bold; color:#f8c025; letter-spacing:0.5px;">
         ✉ [ MENSAJE RIZZO // NOTA PERSONAL ]
       </span>
       <span onclick="closeRizzoModal()" style="cursor:pointer; color:#f8c025; font-family:var(--font-mono); font-weight:bold; padding:0 4px; font-size:13px;">✕</span>
     </div>
-    <div style="padding:16px;">
-      <div id="rizzoModalBody" style="background:#06070a; border:1px dashed #6b5015; padding:14px 16px; border-radius:2px; font-family:var(--font-journal); font-size:13.5px; line-height:1.7; color:#e4e7f5; min-height:50px;">
-        <!-- El contenido se sincroniza automáticamente desde #rizzoMessageText -->
+    <div style="padding:16px 18px;">
+      <div style="background: rgba(248, 192, 37, 0.1); border: 1px dashed #f8c025; color: #ffd152; font-family: var(--font-pixel); font-size: 9.5px; padding: 7px 10px; margin-bottom: 12px; letter-spacing: 0.5px; line-height: 1.5;">
+        ⚠️ !!! LEELO POST DE VER LOS DEMAS LOL <span style="color:#e0e4f0;">(Si te falta ver expediente oc y glosario musical es recomendable xdddd)</span>
       </div>
+
+      <div style="background:#06070a; border:1px dashed #6b5015; padding:16px 18px; border-radius:2px; font-family:var(--font-journal); font-size:13.5px; line-height:1.75; color:#e4e7f5;">
+        <p style="margin-bottom: 12px;">
+          Bueno, que no estoy en casa ahora LOL asi que dejo este mensaje, ojala hayan disfrutado de esta pagina yaque mis habilidades de dibujo son nulas LOL LMFAO XD añaskd 
+        </p>
+        <p style="margin-bottom: 12px;">
+          Ojala hayan interactuado con todo lo de la pagina siendo el reproductor musical, el msn con el zumbnido, la nota en el libro de visitas,etc... <span style="color:#ff6088; font-weight:bold;">:C</span>
+        </p>
+        <p style="margin-bottom: 12px;">
+          me acuerdo haber visto hsm muy de chico asi que tengo pocos recuerdos de, pero ojala haber hecho un oc que encaje con el mundo (supongo que alguien que le sepa dira si es acorde o no )
+        </p>
+        <p style="margin-bottom: 12px;">
+          eso, despues veo el vod y tal (o obligo a un pudu a decirme que onda)
+        </p>
+        <p style="margin-top: 14px; color: #f8c025; font-weight: bold; font-family: var(--font-mono); font-size: 12px; border-top: 1px dashed #3a2b0a; padding-top: 8px;">
+          ♰ un saluditoooooooo ~ Rizzo ♰
+        </p>
+      </div>
+
       <div style="margin-top:14px; text-align:right;">
-        <button type="button" onclick="closeRizzoModal()" style="background:#1a1406; border:1px solid #f8c025; color:#f8c025; font-family:var(--font-mono); font-size:10px; font-weight:bold; padding:4px 14px; cursor:pointer;">
-          [ CERRAR ]
+        <button type="button" onclick="closeRizzoModal()" style="background:#1a1406; border:1px solid #f8c025; color:#f8c025; font-family:var(--font-mono); font-size:10px; font-weight:bold; padding:5px 16px; cursor:pointer;">
+          [ CERRAR MENSAJE ]
         </button>
       </div>
     </div>
@@ -3132,11 +3132,6 @@
 
     // Rizzo Personal Message Modal Handlers
     function openRizzoModal() {
-      const textEl = document.getElementById('rizzoMessageText');
-      const modalBody = document.getElementById('rizzoModalBody');
-      if (textEl && modalBody) {
-        modalBody.innerHTML = textEl.innerHTML;
-      }
       const modal = document.getElementById('rizzoModal');
       if (modal && typeof modal.showModal === 'function') {
         modal.showModal();
@@ -3146,6 +3141,10 @@
     function closeRizzoModal() {
       const modal = document.getElementById('rizzoModal');
       if (modal) modal.close();
+    }
+
+    if (window.location.hash === '#mensaje-rizzo') {
+      setTimeout(openRizzoModal, 300);
     }
 
     const rizzoModal = document.getElementById('rizzoModal');
